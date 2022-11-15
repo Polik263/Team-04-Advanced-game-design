@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 89816825}
   - component: {fileID: 89816824}
   m_Layer: 0
-  m_Name: DialougeController
+  m_Name: DialogueController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -249,8 +249,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1da4cbe430766f34cb58c92a40b88479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialougeBox: {fileID: 1678361741}
-  isInDialouge: 0
+  dialogueBox: {fileID: 0}
+  isInDialogue: 0
 --- !u!4 &89816825
 Transform:
   m_ObjectHideFlags: 0

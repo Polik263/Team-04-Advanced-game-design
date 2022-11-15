@@ -6,11 +6,11 @@ using UnityEngine.InputSystem;
 public class ChangeWeapon : MonoBehaviour
 {
     private PlayerControls playerControls;
-    private InputAction dialouge;
+    private InputAction dialogue;
 
 
-    [SerializeField] private GameObject dialougeBox;
-    [SerializeField] private bool isInDialouge;
+    [SerializeField] private GameObject dialogueBox;
+    [SerializeField] private bool isInDialogue;
 
     void Awake()
     {
@@ -25,22 +25,22 @@ public class ChangeWeapon : MonoBehaviour
 
     private void OnEnable()
     {
-        dialouge = playerControls.Dialouge.Appear;
-        dialouge.Enable();
+        dialogue = playerControls.Dialogue.Appear;
+        dialogue.Enable();
 
-        dialouge.performed += HandleDialouge;
+        dialogue.performed += HandleDialouge;
     }
 
     private void OnDisable()
     {
-        dialouge.Disable();
+        dialogue.Disable();
     }
 
     void HandleDialouge(InputAction.CallbackContext context) 
     {
-        isInDialouge = !isInDialouge;
+        isInDialogue = !isInDialogue;
 
-        if(isInDialouge)
+        if(isInDialogue)
         {
             ActivateDialouge();
         }
@@ -53,12 +53,12 @@ public class ChangeWeapon : MonoBehaviour
 
     public void ActivateDialouge()
     {
-        dialougeBox.SetActive(true);
+        dialogueBox.SetActive(true);
     }
 
     public void DeactivateDialouge()
     {
-        dialougeBox.SetActive(false);
-        isInDialouge= false;
+        dialogueBox.SetActive(false);
+        isInDialogue = false;
     }
 }

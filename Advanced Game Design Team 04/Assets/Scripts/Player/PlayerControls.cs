@@ -189,7 +189,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
             ]
         },
         {
-            ""name"": ""Dialouge"",
+            ""name"": ""Dialogue"",
             ""id"": ""6de163ed-6a89-4051-b73b-9c4386832bdc"",
             ""actions"": [
                 {
@@ -253,9 +253,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Controls_Aim = m_Controls.FindAction("Aim", throwIfNotFound: true);
         m_Controls_Shotgun = m_Controls.FindAction("Shotgun", throwIfNotFound: true);
         m_Controls_Dash = m_Controls.FindAction("Dash", throwIfNotFound: true);
-        // Dialouge
-        m_Dialouge = asset.FindActionMap("Dialouge", throwIfNotFound: true);
-        m_Dialouge_Appear = m_Dialouge.FindAction("Appear", throwIfNotFound: true);
+        // Dialogue
+        m_Dialogue = asset.FindActionMap("Dialogue", throwIfNotFound: true);
+        m_Dialogue_Appear = m_Dialogue.FindAction("Appear", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -369,29 +369,29 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     }
     public ControlsActions @Controls => new ControlsActions(this);
 
-    // Dialouge
-    private readonly InputActionMap m_Dialouge;
-    private IDialougeActions m_DialougeActionsCallbackInterface;
-    private readonly InputAction m_Dialouge_Appear;
-    public struct DialougeActions
+    // Dialogue
+    private readonly InputActionMap m_Dialogue;
+    private IDialogueActions m_DialogueActionsCallbackInterface;
+    private readonly InputAction m_Dialogue_Appear;
+    public struct DialogueActions
     {
         private @PlayerControls m_Wrapper;
-        public DialougeActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Appear => m_Wrapper.m_Dialouge_Appear;
-        public InputActionMap Get() { return m_Wrapper.m_Dialouge; }
+        public DialogueActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Appear => m_Wrapper.m_Dialogue_Appear;
+        public InputActionMap Get() { return m_Wrapper.m_Dialogue; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(DialougeActions set) { return set.Get(); }
-        public void SetCallbacks(IDialougeActions instance)
+        public static implicit operator InputActionMap(DialogueActions set) { return set.Get(); }
+        public void SetCallbacks(IDialogueActions instance)
         {
-            if (m_Wrapper.m_DialougeActionsCallbackInterface != null)
+            if (m_Wrapper.m_DialogueActionsCallbackInterface != null)
             {
-                @Appear.started -= m_Wrapper.m_DialougeActionsCallbackInterface.OnAppear;
-                @Appear.performed -= m_Wrapper.m_DialougeActionsCallbackInterface.OnAppear;
-                @Appear.canceled -= m_Wrapper.m_DialougeActionsCallbackInterface.OnAppear;
+                @Appear.started -= m_Wrapper.m_DialogueActionsCallbackInterface.OnAppear;
+                @Appear.performed -= m_Wrapper.m_DialogueActionsCallbackInterface.OnAppear;
+                @Appear.canceled -= m_Wrapper.m_DialogueActionsCallbackInterface.OnAppear;
             }
-            m_Wrapper.m_DialougeActionsCallbackInterface = instance;
+            m_Wrapper.m_DialogueActionsCallbackInterface = instance;
             if (instance != null)
             {
                 @Appear.started += instance.OnAppear;
@@ -400,7 +400,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
             }
         }
     }
-    public DialougeActions @Dialouge => new DialougeActions(this);
+    public DialogueActions @Dialogue => new DialogueActions(this);
     private int m_GamepadSchemeIndex = -1;
     public InputControlScheme GamepadScheme
     {
@@ -426,7 +426,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnShotgun(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
     }
-    public interface IDialougeActions
+    public interface IDialogueActions
     {
         void OnAppear(InputAction.CallbackContext context);
     }
