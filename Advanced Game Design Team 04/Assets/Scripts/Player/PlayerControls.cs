@@ -187,6 +187,34 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Dialouge"",
+            ""id"": ""6de163ed-6a89-4051-b73b-9c4386832bdc"",
+            ""actions"": [
+                {
+                    ""name"": ""Appear"",
+                    ""type"": ""Button"",
+                    ""id"": ""69788167-c5a6-4e4d-83ee-64fefabc6918"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""5bb93b27-ea40-474d-8fc5-dd2733da8526"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Appear"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -225,6 +253,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Controls_Aim = m_Controls.FindAction("Aim", throwIfNotFound: true);
         m_Controls_Shotgun = m_Controls.FindAction("Shotgun", throwIfNotFound: true);
         m_Controls_Dash = m_Controls.FindAction("Dash", throwIfNotFound: true);
+        // Dialouge
+        m_Dialouge = asset.FindActionMap("Dialouge", throwIfNotFound: true);
+        m_Dialouge_Appear = m_Dialouge.FindAction("Appear", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -337,6 +368,39 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         }
     }
     public ControlsActions @Controls => new ControlsActions(this);
+
+    // Dialouge
+    private readonly InputActionMap m_Dialouge;
+    private IDialougeActions m_DialougeActionsCallbackInterface;
+    private readonly InputAction m_Dialouge_Appear;
+    public struct DialougeActions
+    {
+        private @PlayerControls m_Wrapper;
+        public DialougeActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Appear => m_Wrapper.m_Dialouge_Appear;
+        public InputActionMap Get() { return m_Wrapper.m_Dialouge; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(DialougeActions set) { return set.Get(); }
+        public void SetCallbacks(IDialougeActions instance)
+        {
+            if (m_Wrapper.m_DialougeActionsCallbackInterface != null)
+            {
+                @Appear.started -= m_Wrapper.m_DialougeActionsCallbackInterface.OnAppear;
+                @Appear.performed -= m_Wrapper.m_DialougeActionsCallbackInterface.OnAppear;
+                @Appear.canceled -= m_Wrapper.m_DialougeActionsCallbackInterface.OnAppear;
+            }
+            m_Wrapper.m_DialougeActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Appear.started += instance.OnAppear;
+                @Appear.performed += instance.OnAppear;
+                @Appear.canceled += instance.OnAppear;
+            }
+        }
+    }
+    public DialougeActions @Dialouge => new DialougeActions(this);
     private int m_GamepadSchemeIndex = -1;
     public InputControlScheme GamepadScheme
     {
@@ -361,5 +425,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnAim(InputAction.CallbackContext context);
         void OnShotgun(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
+    }
+    public interface IDialougeActions
+    {
+        void OnAppear(InputAction.CallbackContext context);
     }
 }

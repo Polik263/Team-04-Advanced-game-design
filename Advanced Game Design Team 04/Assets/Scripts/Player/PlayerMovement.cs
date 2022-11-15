@@ -9,7 +9,8 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     //[SerializeField] private PlayerHealth playerHealth;
-    
+    [SerializeField] private GameObject dialougePanel;
+
     [Header("Movement")]
     [SerializeField] private float playerSpeed = 5f;
     [SerializeField] private float gravityValue = -9.81f;
@@ -17,8 +18,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float gamepadRotateSmoothing = 1000f;
     [SerializeField] private float smoothInputSpeed = .2f;
 
-    [Header("Dashing")] 
-    [SerializeField] private AudioSource dashSound;
+    [Header("Dashing")]
+    //[SerializeField] private AudioSource dashSound;
     public float dashSpeed;
     public float dashTime;
     [HideInInspector] public float currentMortalFrame;
@@ -27,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     private float lastTimeDashed = 0;
 
     [SerializeField] private bool isGamepad;
-    
+
     private CharacterController controller;
 
     private Vector2 smoothInputVelocity;
@@ -44,8 +45,10 @@ public class PlayerMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         playerControls = new PlayerControls();
         playerInput = GetComponent<PlayerInput>();
-
-        //playerControls.Controls.Shotgun.performed += ctx => HandleShotgunInput();
+    }
+    private void Start()
+    {
+        dialougePanel.SetActive(false);
     }
     private void OnEnable()
     {
@@ -61,10 +64,10 @@ public class PlayerMovement : MonoBehaviour
         HandleMovement();
         HandleRotation();
         //HandleShootInput();
-        //HandleDash();
+        HandleDash();
     }
     void HandleInput()
-    { 
+    {
         movement = playerControls.Controls.Movement.ReadValue<Vector2>();
         Debug.Log("Works?");
         //aim = playerControls.Controls.Aim.ReadValue<Vector2>();
@@ -80,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
             controller.Move(playerVelocity * Time.deltaTime);
         }
     }
-    
+
     void HandleRotation()
     {
         if (isGamepad)
@@ -130,24 +133,24 @@ public class PlayerMovement : MonoBehaviour
     //        PlayerGun.Instance.Shoot();
     //    }
     //}
-    
+
     //void HandleShotgunInput()
     //{
     //        Shotgun.Instance.ShotgunShoot();
     //}
-    
-    //void HandleDash()
-    //{
-    //    //timers
-    //    currentMortalFrame -= 1 * Time.deltaTime;
-        
-    //    if (currentMortalFrame <= 0)
-    //    {
-    //        currentMortalFrame = 0;
-    //        //playerHealth.mortal = true;
-    //    }
-        
-    //    playerControls.Controls.Dash.performed += ctx => Dash();
+
+    void HandleDash()
+    {
+        //timers
+        currentMortalFrame -= 1 * Time.deltaTime;
+
+        if (currentMortalFrame <= 0)
+        {
+            currentMortalFrame = 0;
+            //playerHealth.mortal = true;
+        }
+
+        playerControls.Controls.Dash.performed += ctx => Dash();
 
         void Dash()
         {
@@ -160,10 +163,10 @@ public class PlayerMovement : MonoBehaviour
 
         IEnumerator DashMove()
         {
-            dashSound.Play();
+            //dashSound.Play();
             currentMortalFrame = maxMortalFrames;
             //playerHealth.mortal = false;
-            
+
             float startTime = Time.time;
 
             while (Time.time < startTime + dashTime)
@@ -174,5 +177,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+}
     
 
