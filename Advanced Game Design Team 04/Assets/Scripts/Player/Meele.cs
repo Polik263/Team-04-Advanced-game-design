@@ -13,6 +13,9 @@ public class Meele : MonoBehaviour
     public bool isCd;
     public float cd;
     float savecd;
+    public float currentForm = 0;
+    public Material darkMaterial;
+    public Material lightMaterial;
     void Start()
     {
         animator = Gun.GetComponent<Animator>();
@@ -57,5 +60,18 @@ public class Meele : MonoBehaviour
         if(attackPoint == null)
         return;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+
+    public void SwitchForm()
+    {
+        if(currentForm == 0)
+        {
+            Gun.GetComponent<MeshRenderer>().material = darkMaterial; 
+        }
+        else if(currentForm == 1)
+        {
+            Gun.GetComponent<MeshRenderer>().material = lightMaterial; 
+        }
+        
     }
 }
