@@ -265,7 +265,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 613e40ed91ff64b4fab798611d12881b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialougePanel: {fileID: 0}
   playerSpeed: 5
   gravityValue: -9.81
   controllerDeadzone: 0.1
