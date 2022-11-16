@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 1109929958232103545}
   - component: {fileID: 3712474795210260264}
   - component: {fileID: 3157115228916005443}
+  - component: {fileID: 4250364040495037778}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,6 +151,19 @@ MonoBehaviour:
   stats: {fileID: 11400000, guid: 8837179023fcad148bbd4d6c26566411, type: 2}
   bulletPosition: {fileID: 5927802631761256127}
   bullet: {fileID: 6226165487294853117, guid: 53545dd7fc1d8a44c90f339a3e7bdbfa, type: 3}
+--- !u!135 &4250364040495037778
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534708258166473998}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 4.8072567
+  m_Center: {x: -1.3679457, y: -0.33586884, z: 0}
 --- !u!1 &5728253990387928607
 GameObject:
   m_ObjectHideFlags: 0

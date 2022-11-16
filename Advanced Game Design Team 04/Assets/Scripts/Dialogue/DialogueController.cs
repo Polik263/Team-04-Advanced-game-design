@@ -2,15 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueManager : MonoBehaviour
+public class DialogueController : MonoBehaviour
 {
     private Queue<string> sentences;
 
-
     void Start()
     {
-        sentences = new Queue<string>();
+        sentences= new Queue<string>();
     }
-
-
 }
