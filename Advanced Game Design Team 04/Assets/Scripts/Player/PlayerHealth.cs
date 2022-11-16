@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     public float currentHealth;
 
     public HealthBar healthBar;
-    [SerializeField] private AudioSource hurt;
+    //[SerializeField] private AudioSource hurt;
 
     void Start()
     {
@@ -46,20 +46,20 @@ public class PlayerHealth : MonoBehaviour
     void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        hurt.Play();
+        //hurt.Play();
         healthBar.SetHealth(currentHealth);
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (mortal == true && other.CompareTag("GoodBullet") || other.CompareTag("BadBullet"))
+        if (mortal == true && other.CompareTag("EnemyBullet"))
         {
             TakeDamage(10);
         }
 
-        if (mortal == true && other.CompareTag("BossGoodBullet") || other.CompareTag("BossBadBullet"))
-        {
-            TakeDamage(20);
-        }
+        //if (mortal == true && other.CompareTag("BossGoodBullet") || other.CompareTag("BossBadBullet"))
+        //{
+        //    TakeDamage(20);
+        //}
 
     }
 }

@@ -7,7 +7,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     private GameObject player;
-    //[SerializeField] private PlayerHealth playerHealth;
+    [SerializeField] private PlayerHealth playerHealth;
     [SerializeField] private EnemyStatsSo stats;
     private Transform playerTransform;
     private Vector3 playerPos;
@@ -17,7 +17,7 @@ public class Bullet : MonoBehaviour
     private void Start()
     {
         player = GameObject.Find("Player");
-        //playerHealth = player.GetComponent<PlayerHealth>();
+        playerHealth = player.GetComponent<PlayerHealth>();
         playerTransform = GameObject.Find("Player").GetComponent<Transform>();
         playerPos = playerTransform.position;
         direction = (playerPos - transform.position).normalized;
@@ -34,7 +34,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (/*playerHealth.mortal*/ /*&&*/ other.CompareTag("Player") || other.CompareTag("Cover"))
+        if (playerHealth.mortal && other.CompareTag("Player"))
         {
             Destroy(gameObject);
 
