@@ -165,6 +165,7 @@ GameObject:
   - component: {fileID: 5632060258103836726}
   - component: {fileID: 5632060258103836727}
   - component: {fileID: 5632060258103836720}
+  - component: {fileID: 5221025996482830862}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -265,7 +266,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 613e40ed91ff64b4fab798611d12881b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialougePanel: {fileID: 0}
   playerSpeed: 5
   gravityValue: -9.81
   controllerDeadzone: 0.1
@@ -373,3 +373,20 @@ MonoBehaviour:
   currentForm: 0
   darkMaterial: {fileID: 2100000, guid: b378beb8911e97e488b90458682866bb, type: 2}
   lightMaterial: {fileID: 2100000, guid: c8af28568dfcd0f499623d3d4b036317, type: 2}
+--- !u!114 &5221025996482830862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5632060258103836721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcffaf134bcbc8e42afaafd8376c2b51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mortal: 1
+  maxHealth: 100
+  currentHealth: 0
+  healthBar: {fileID: 0}
+  hurt: {fileID: 0}
