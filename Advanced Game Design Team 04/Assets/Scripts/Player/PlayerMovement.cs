@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement;
     private Vector2 aim;
     private Vector3 playerVelocity;
+    private Meele meele;
 
     private PlayerControls playerControls;
     private PlayerInput playerInput;
@@ -45,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         playerControls = new PlayerControls();
         playerInput = GetComponent<PlayerInput>();
+        meele = GetComponent<Meele>();
     }
     private void Start()
     {
@@ -65,11 +67,11 @@ public class PlayerMovement : MonoBehaviour
         HandleRotation();
         //HandleShootInput();
         HandleDash();
+        MeeleAttack();
     }
     void HandleInput()
     {
         movement = playerControls.Controls.Movement.ReadValue<Vector2>();
-        Debug.Log("Works?");
         //aim = playerControls.Controls.Aim.ReadValue<Vector2>();
     }
     void HandleMovement()
@@ -119,6 +121,14 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 heightCorrectedPoint = new Vector3(lookPoint.x, transform.position.y, lookPoint.z);
         transform.LookAt(heightCorrectedPoint);
+    }
+    void MeeleAttack()
+    {
+        if(playerControls.Controls.Shotgun.ReadValue<float>()> 0)
+        {
+            Debug.Log("Swing");
+            meele.Attack();
+        }
     }
 
     //public void OnDeviceChange (PlayerInput pi)
