@@ -9,7 +9,6 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     //[SerializeField] private PlayerHealth playerHealth;
-    [SerializeField] private GameObject dialougePanel;
 
     [Header("Movement")]
     [SerializeField] private float playerSpeed = 5f;
@@ -50,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Start()
     {
-        dialougePanel.SetActive(false);
+
     }
     private void OnEnable()
     {
