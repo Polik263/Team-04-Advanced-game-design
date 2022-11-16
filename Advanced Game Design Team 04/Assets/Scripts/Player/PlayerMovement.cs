@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
     private PlayerControls playerControls;
     private PlayerInput playerInput;
+    bool work = false;
 
     private void Awake()
     {
@@ -67,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
         //HandleShootInput();
         HandleDash();
         MeeleAttack();
+        SwitchForm();
     }
     void HandleInput()
     {
@@ -127,6 +129,33 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Swing");
             meele.Attack();
+        }
+    }
+
+    void SwitchForm()
+    {
+        if (playerControls.Controls.SwitchForm.ReadValue <float>()>0)
+        {
+            if(work)
+            {
+                if (meele.currentForm == 0)
+                {
+                    meele.currentForm = 1;
+                    meele.SwitchForm();
+                    work = false;
+                }
+
+                else if (meele.currentForm == 1)
+                {
+                    meele.currentForm = 0;
+                    meele.SwitchForm();
+                    work = false;
+                }
+            }
+        }
+        else
+        {
+            work = true;
         }
     }
 

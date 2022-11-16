@@ -62,6 +62,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwitchForm"",
+                    ""type"": ""Button"",
+                    ""id"": ""6ba279e0-4038-48cc-a2c1-6ca4b86d7b5e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -185,6 +194,17 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7c3a07b9-f833-43d5-94f3-1afe51a79874"",
+                    ""path"": ""<Keyboard>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchForm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -253,6 +273,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Controls_Aim = m_Controls.FindAction("Aim", throwIfNotFound: true);
         m_Controls_Shotgun = m_Controls.FindAction("Shotgun", throwIfNotFound: true);
         m_Controls_Dash = m_Controls.FindAction("Dash", throwIfNotFound: true);
+        m_Controls_SwitchForm = m_Controls.FindAction("SwitchForm", throwIfNotFound: true);
         // Dialogue
         m_Dialogue = asset.FindActionMap("Dialogue", throwIfNotFound: true);
         m_Dialogue_Appear = m_Dialogue.FindAction("Appear", throwIfNotFound: true);
@@ -319,6 +340,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Controls_Aim;
     private readonly InputAction m_Controls_Shotgun;
     private readonly InputAction m_Controls_Dash;
+    private readonly InputAction m_Controls_SwitchForm;
     public struct ControlsActions
     {
         private @PlayerControls m_Wrapper;
@@ -327,6 +349,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @Aim => m_Wrapper.m_Controls_Aim;
         public InputAction @Shotgun => m_Wrapper.m_Controls_Shotgun;
         public InputAction @Dash => m_Wrapper.m_Controls_Dash;
+        public InputAction @SwitchForm => m_Wrapper.m_Controls_SwitchForm;
         public InputActionMap Get() { return m_Wrapper.m_Controls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -348,6 +371,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Dash.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnDash;
                 @Dash.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnDash;
                 @Dash.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnDash;
+                @SwitchForm.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnSwitchForm;
+                @SwitchForm.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnSwitchForm;
+                @SwitchForm.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnSwitchForm;
             }
             m_Wrapper.m_ControlsActionsCallbackInterface = instance;
             if (instance != null)
@@ -364,6 +390,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Dash.started += instance.OnDash;
                 @Dash.performed += instance.OnDash;
                 @Dash.canceled += instance.OnDash;
+                @SwitchForm.started += instance.OnSwitchForm;
+                @SwitchForm.performed += instance.OnSwitchForm;
+                @SwitchForm.canceled += instance.OnSwitchForm;
             }
         }
     }
@@ -425,6 +454,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnAim(InputAction.CallbackContext context);
         void OnShotgun(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
+        void OnSwitchForm(InputAction.CallbackContext context);
     }
     public interface IDialogueActions
     {

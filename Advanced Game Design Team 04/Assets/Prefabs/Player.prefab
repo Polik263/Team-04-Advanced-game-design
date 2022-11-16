@@ -94,7 +94,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9d856344f0d0d7c4fb94dee427d198be, type: 2}
+  - {fileID: 2100000, guid: b378beb8911e97e488b90458682866bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 5632060258103836727}
   - component: {fileID: 5632060258103836720}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -187,7 +187,7 @@ Transform:
   - {fileID: 5632060257358871867}
   - {fileID: 5632060256854109282}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5632060258103836730
 MeshFilter:
@@ -217,7 +217,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b378beb8911e97e488b90458682866bb, type: 2}
+  - {fileID: 2100000, guid: b8cb0a146f567ff4fb362fe21e2ac9de, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -322,6 +322,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 69788167-c5a6-4e4d-83ee-64fefabc6918
     m_ActionName: Dialouge/Appear[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6ba279e0-4038-48cc-a2c1-6ca4b86d7b5e
+    m_ActionName: Controls/SwitchForm[/Keyboard/z]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Controls
@@ -366,3 +370,6 @@ MonoBehaviour:
   animator: {fileID: 0}
   isCd: 0
   cd: 0.5
+  currentForm: 0
+  darkMaterial: {fileID: 2100000, guid: b378beb8911e97e488b90458682866bb, type: 2}
+  lightMaterial: {fileID: 2100000, guid: c8af28568dfcd0f499623d3d4b036317, type: 2}
