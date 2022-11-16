@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //[SerializeField] private PlayerHealth playerHealth;
+    [SerializeField] private PlayerHealth playerHealth;
 
     [Header("Movement")]
     [SerializeField] private float playerSpeed = 5f;
@@ -185,7 +185,7 @@ public class PlayerMovement : MonoBehaviour
         if (currentMortalFrame <= 0)
         {
             currentMortalFrame = 0;
-            //playerHealth.mortal = true;
+            playerHealth.mortal = true;
         }
 
         playerControls.Controls.Dash.performed += ctx => Dash();
@@ -203,7 +203,7 @@ public class PlayerMovement : MonoBehaviour
         {
             //dashSound.Play();
             currentMortalFrame = maxMortalFrames;
-            //playerHealth.mortal = false;
+            playerHealth.mortal = false;
 
             float startTime = Time.time;
 
