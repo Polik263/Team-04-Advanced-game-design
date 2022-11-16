@@ -322,6 +322,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 69788167-c5a6-4e4d-83ee-64fefabc6918
     m_ActionName: Dialouge/Appear[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6ba279e0-4038-48cc-a2c1-6ca4b86d7b5e
+    m_ActionName: Controls/SwitchForm[/Keyboard/z]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Controls
@@ -366,3 +370,6 @@ MonoBehaviour:
   animator: {fileID: 0}
   isCd: 0
   cd: 0.5
+  currentForm: 0
+  darkMaterial: {fileID: 2100000, guid: b378beb8911e97e488b90458682866bb, type: 2}
+  lightMaterial: {fileID: 2100000, guid: c8af28568dfcd0f499623d3d4b036317, type: 2}
