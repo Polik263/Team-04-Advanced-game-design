@@ -24,7 +24,7 @@ public class EnemyCombat : MonoBehaviour
                 bulletPosition.position.z);
             currentFrame = stats.timeUntilNextShot;
 
-            Instantiate(bullet);
+            Instantiate(bullet, BulletSpawn, new Quaternion());
             //Instantiate(bullet[Random.Range(0,2)], BulletSpawn, new Quaternion()); 
         }
     }
