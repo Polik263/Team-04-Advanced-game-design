@@ -53,7 +53,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (mortal == true && other.CompareTag("EnemyBullet"))
         {
-            TakeDamage(10);
+            TakeDamage(0);
         }
 
         //if (mortal == true && other.CompareTag("BossGoodBullet") || other.CompareTag("BossBadBullet"))
