@@ -16,7 +16,8 @@ GameObject:
   - component: {fileID: 3712474795210260264}
   - component: {fileID: 3157115228916005443}
   - component: {fileID: 4250364040495037778}
-  m_Layer: 0
+  - component: {fileID: -7585294393616125340}
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -135,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 8837179023fcad148bbd4d6c26566411, type: 2}
-  player: {fileID: 0}
+  player: {fileID: 2586701654952929463, guid: a9c780f5611a54645b7d50a87a798710, type: 3}
 --- !u!114 &3157115228916005443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,6 +165,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 4.8072567
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-7585294393616125340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534708258166473998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 774c42e129c7ba24ab5523bfdf3d7178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5728253990387928607
 GameObject:
   m_ObjectHideFlags: 0

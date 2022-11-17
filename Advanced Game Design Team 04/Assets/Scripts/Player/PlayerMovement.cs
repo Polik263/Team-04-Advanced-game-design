@@ -41,11 +41,14 @@ public class PlayerMovement : MonoBehaviour
     private PlayerInput playerInput;
     bool work = false;
     public bool canMove = true;
+    public GameObject swordobj;
+    Sword sword;
 
     Dashh dash;
 
     private void Awake()
     {
+        sword = swordobj.GetComponent<Sword>();
         controller = GetComponent<CharacterController>();
         playerControls = new PlayerControls();
         playerInput = GetComponent<PlayerInput>();
@@ -134,7 +137,7 @@ public class PlayerMovement : MonoBehaviour
         if(playerControls.Controls.Shotgun.ReadValue<float>()> 0)
         {
             Debug.Log("Swing");
-            meele.Attack();
+            swordobj.GetComponent<Sword>().Attack();
         }
     }
 
@@ -144,17 +147,17 @@ public class PlayerMovement : MonoBehaviour
         {
             if(work)
             {
-                if (meele.currentForm == 0)
+                if (sword.currentForm == 0)
                 {
-                    meele.currentForm = 1;
-                    meele.SwitchForm();
+                    sword.currentForm = 1;
+                    sword.SwitchForm();
                     work = false;
                 }
 
-                else if (meele.currentForm == 1)
+                else if (sword.currentForm == 1)
                 {
-                    meele.currentForm = 0;
-                    meele.SwitchForm();
+                    sword.currentForm = 0;
+                    sword.SwitchForm();
                     work = false;
                 }
             }
