@@ -70,7 +70,7 @@ public class Sword : MonoBehaviour
                 if(collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
                 {   
                     collision.gameObject.GetComponent<Die>().Dead();
-                    playerHealth.currentHealth -= 5;
+                    playerHealth.TakeDamage(5);
                 }
             }     
         }
@@ -86,7 +86,7 @@ public class Sword : MonoBehaviour
                 if(collider.gameObject.layer == LayerMask.NameToLayer("Bullet"))
                 {
                     Destroy(collider.gameObject);
-                    playerHealth.currentHealth += 5;
+                    playerHealth.Heal(5);
                 }
             }
         }
