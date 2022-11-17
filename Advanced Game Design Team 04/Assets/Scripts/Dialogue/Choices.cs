@@ -13,7 +13,7 @@ public class Choices : MonoBehaviour
 
     public void ChoiceOption1()
     {
-        TextBox.GetComponent<TextMeshProUGUI>().TextMeshProUGUI "gweg";
+        //TextBox.GetComponent<TextMeshProUGUI>().TextMeshProUGUI "gweg";
         ChoiceMade = 1;
     }
 
