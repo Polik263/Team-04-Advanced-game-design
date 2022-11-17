@@ -135,8 +135,9 @@ GameObject:
   - component: {fileID: 488851819}
   - component: {fileID: 488851818}
   - component: {fileID: 488851817}
+  - component: {fileID: 488851820}
   m_Layer: 5
-  m_Name: Option01
+  m_Name: Option11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -257,6 +258,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488851815}
   m_CullTransparentMesh: 1
+--- !u!114 &488851820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488851815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a2b786d7b4ae2645b527bd91b9bb1ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button1: {fileID: 488851817}
+  key: 332
 --- !u!1001 &541117103
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -781,7 +796,7 @@ GameObject:
   - component: {fileID: 1064924862}
   - component: {fileID: 1064924861}
   m_Layer: 5
-  m_Name: Option02
+  m_Name: Option12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -965,6 +980,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 843245737}
+  button1: {fileID: 488851817}
+  key: 332
   dialogueBox11: {fileID: 1182438003}
   dialogueBox12: {fileID: 1417527998}
   dialogueBox13: {fileID: 1491095365}
@@ -985,7 +1002,7 @@ GameObject:
   - component: {fileID: 1182438006}
   - component: {fileID: 1182438005}
   m_Layer: 5
-  m_Name: Dialogue01
+  m_Name: Dialogue11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1417,7 +1434,7 @@ GameObject:
   - component: {fileID: 1417528001}
   - component: {fileID: 1417528000}
   m_Layer: 5
-  m_Name: Dialogue02
+  m_Name: Dialogue12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1650,7 +1667,7 @@ GameObject:
   - component: {fileID: 1491095368}
   - component: {fileID: 1491095367}
   m_Layer: 5
-  m_Name: Dialogue03
+  m_Name: Dialogue13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

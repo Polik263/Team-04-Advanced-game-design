@@ -12,6 +12,10 @@ public class DialogueMaster : MonoBehaviour
 
     [SerializeField] private GameObject panel;
 
+   // [SerializeField] private Button button1;
+
+   // public KeyCode key;
+
 
     [SerializeField] private GameObject dialogueBox11;
     [SerializeField] private GameObject dialogueBox12;
@@ -26,13 +30,25 @@ public class DialogueMaster : MonoBehaviour
     void Awake()
     {
         playerControls = new PlayerControls();
+
+        //button1 = GetComponent<Button>();
     }
+
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(key))
+    //    {
+    //        button1.onClick.Invoke();
+    //    }
+    //}
 
     public void ActivateDialouge()
     {
-        panel.SetActive(true);
-        dialogueBox11.SetActive(true);
-
+        if (panel.activeInHierarchy == false)
+        {
+            panel.SetActive(true);
+            dialogueBox11.SetActive(true);
+        }
         if (dialogueBox11.activeInHierarchy == true)
         {
             Choice11.SetActive(true);
@@ -60,9 +76,9 @@ public class DialogueMaster : MonoBehaviour
     }
 
 
-    public void ChoiceOption11()
+    private void ChoiceOption11()
     {
-        if (isInDialogue)
+        if (isInDialogue && dialogueBox11.activeInHierarchy == true)
         {
             dialogueBox11.SetActive(false);
             dialogueBox12.SetActive(true);
@@ -72,7 +88,7 @@ public class DialogueMaster : MonoBehaviour
         }
     }
 
-    public void ChoiceOption12()
+    private void ChoiceOption12()
     {
         if (isInDialogue)
         {
