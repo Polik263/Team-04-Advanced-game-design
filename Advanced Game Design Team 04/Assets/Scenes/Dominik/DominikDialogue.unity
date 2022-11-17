@@ -1106,6 +1106,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2586701654952929471, guid: a9c780f5611a54645b7d50a87a798710, type: 3}
   m_PrefabInstance: {fileID: 1734162184}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1362247153 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2586701654952929456, guid: a9c780f5611a54645b7d50a87a798710, type: 3}
+  m_PrefabInstance: {fileID: 1734162184}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1362247154 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2586701654952929459, guid: a9c780f5611a54645b7d50a87a798710, type: 3}
+  m_PrefabInstance: {fileID: 1734162184}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 613e40ed91ff64b4fab798611d12881b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1368240771
 GameObject:
   m_ObjectHideFlags: 0
@@ -1753,6 +1775,42 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2586701654952929456, guid: a9c780f5611a54645b7d50a87a798710, type: 3}
+      propertyPath: m_ControlsChangedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2586701654952929456, guid: a9c780f5611a54645b7d50a87a798710, type: 3}
+      propertyPath: m_ControlsChangedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2586701654952929456, guid: a9c780f5611a54645b7d50a87a798710, type: 3}
+      propertyPath: m_ControlsChangedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1362247154}
+    - target: {fileID: 2586701654952929456, guid: a9c780f5611a54645b7d50a87a798710, type: 3}
+      propertyPath: m_ControlsChangedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2586701654952929456, guid: a9c780f5611a54645b7d50a87a798710, type: 3}
+      propertyPath: m_ControlsChangedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnDeviceChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 2586701654952929456, guid: a9c780f5611a54645b7d50a87a798710, type: 3}
+      propertyPath: m_ControlsChangedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerMovement, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2586701654952929456, guid: a9c780f5611a54645b7d50a87a798710, type: 3}
+      propertyPath: m_ControlsChangedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1362247153}
+    - target: {fileID: 2586701654952929456, guid: a9c780f5611a54645b7d50a87a798710, type: 3}
+      propertyPath: m_ControlsChangedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.InputSystem.PlayerInput, Unity.InputSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 2586701654952929459, guid: a9c780f5611a54645b7d50a87a798710, type: 3}
+      propertyPath: isGamepad
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2586701654952929463, guid: a9c780f5611a54645b7d50a87a798710, type: 3}
       propertyPath: m_Name
       value: Player
