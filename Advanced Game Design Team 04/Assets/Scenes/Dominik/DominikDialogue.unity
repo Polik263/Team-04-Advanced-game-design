@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &488851816
 RectTransform:
   m_ObjectHideFlags: 0
@@ -207,9 +207,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1164416758}
-        m_TargetAssemblyTypeName: Choices, Assembly-CSharp
-        m_MethodName: ChoiceOption1
+      - m_Target: {fileID: 1164416760}
+        m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
+        m_MethodName: ChoiceOption11
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -442,7 +442,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &696038359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,7 +548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &843245738
 RectTransform:
   m_ObjectHideFlags: 0
@@ -786,7 +786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1064924860
 RectTransform:
   m_ObjectHideFlags: 0
@@ -852,9 +852,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1164416758}
-        m_TargetAssemblyTypeName: Choices, Assembly-CSharp
-        m_MethodName: ChoiceOption2
+      - m_Target: {fileID: 1164416760}
+        m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
+        m_MethodName: ChoiceOption12
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -964,8 +964,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc65da6f6fbb57241a01a647ddb712fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 696038358}
+  panel: {fileID: 843245737}
+  dialogueBox11: {fileID: 1182438003}
+  dialogueBox12: {fileID: 1417527998}
+  dialogueBox13: {fileID: 1491095365}
+  dialogueBox21: {fileID: 0}
+  dialogueBox31: {fileID: 0}
   isInDialogue: 0
+  Choice11: {fileID: 488851815}
+  Choice12: {fileID: 1064924859}
 --- !u!1 &1182438003
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,7 +990,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1182438004
 RectTransform:
   m_ObjectHideFlags: 0
