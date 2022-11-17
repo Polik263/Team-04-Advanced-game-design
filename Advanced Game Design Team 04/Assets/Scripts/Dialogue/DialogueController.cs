@@ -10,4 +10,9 @@ public class DialogueController : MonoBehaviour
     {
         sentences= new Queue<string>();
     }
+
+    public void StartDialogue (Dialogue dialogue)
+    {
+        Debug.Log("Starting conversation" + dialogue.name);
+    }
 }
