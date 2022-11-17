@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4538161912961998070}
   - component: {fileID: 7822795157263647551}
   - component: {fileID: 1810350909488594717}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemyBullet
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d37a573bffaeece4a89403f942528c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 5221025996482830862, guid: d878fcc80f43de1418d5735d221a7536, type: 3}
+  playerHealth: {fileID: 2717949858442758792, guid: a9c780f5611a54645b7d50a87a798710, type: 3}
   stats: {fileID: 11400000, guid: 8837179023fcad148bbd4d6c26566411, type: 2}
 --- !u!114 &1810350909488594717
 MonoBehaviour:
