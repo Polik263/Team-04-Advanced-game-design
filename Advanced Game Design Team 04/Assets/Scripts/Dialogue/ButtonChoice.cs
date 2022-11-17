@@ -8,7 +8,8 @@ public class ButtonChoice : MonoBehaviour
 
     [SerializeField] private Button button1;
 
-    public KeyCode key;
+    public KeyCode key1; 
+    public KeyCode key2;
 
 
     void Awake()
@@ -19,7 +20,7 @@ public class ButtonChoice : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(key))
+        if (Input.GetKeyDown(key1) || Input.GetKeyDown(key2))
         {
             button1.onClick.Invoke();
         }

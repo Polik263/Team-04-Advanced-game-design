@@ -20,12 +20,16 @@ public class DialogueMaster : MonoBehaviour
     [SerializeField] private GameObject dialogueBox11;
     [SerializeField] private GameObject dialogueBox12;
     [SerializeField] private GameObject dialogueBox13;
+    [SerializeField] private GameObject dialogueBox14;
+    [SerializeField] private GameObject dialogueBox15;
     [SerializeField] private GameObject dialogueBox21;
     [SerializeField] private GameObject dialogueBox31;
     [SerializeField] private bool isInDialogue;
 
     [SerializeField] private GameObject Choice11;
     [SerializeField] private GameObject Choice12;
+    [SerializeField] private GameObject Choice13;
+    [SerializeField] private GameObject Choice14;
 
     void Awake()
     {
@@ -76,7 +80,7 @@ public class DialogueMaster : MonoBehaviour
     }
 
 
-    private void ChoiceOption11()
+    public void ChoiceOption11()
     {
         if (isInDialogue && dialogueBox11.activeInHierarchy == true)
         {
@@ -85,10 +89,13 @@ public class DialogueMaster : MonoBehaviour
 
             Choice11.SetActive(false);
             Choice12.SetActive(false);
+
+            Choice13.SetActive(true);
+            Choice14.SetActive(true);
         }
     }
 
-    private void ChoiceOption12()
+    public void ChoiceOption12()
     {
         if (isInDialogue)
         {
@@ -97,6 +104,30 @@ public class DialogueMaster : MonoBehaviour
 
             Choice11.SetActive(false);
             Choice12.SetActive(false);
+        }
+    }
+
+    public void ChoiceOption13()
+    {
+        if (isInDialogue)
+        {
+            dialogueBox12.SetActive(false);
+            dialogueBox14.SetActive(true);
+
+            Choice13.SetActive(false);
+            Choice14.SetActive(false);
+        }
+    }
+
+    public void ChoiceOption14()
+    {
+        if (isInDialogue)
+        {
+            dialogueBox12.SetActive(false);
+            dialogueBox15.SetActive(true);
+
+            Choice13.SetActive(false);
+            Choice14.SetActive(false);
         }
     }
 }
