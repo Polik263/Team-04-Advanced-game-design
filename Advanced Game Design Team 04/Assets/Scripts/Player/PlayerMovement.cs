@@ -73,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
     void HandleInput()
     {
         movement = playerControls.Controls.Movement.ReadValue<Vector2>();
-        //aim = playerControls.Controls.Aim.ReadValue<Vector2>();
+        aim = playerControls.Controls.Aim.ReadValue<Vector2>();
     }
     void HandleMovement()
     {
@@ -89,8 +89,8 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleRotation()
     {
-        if (isGamepad)
-        {
+        //if (isGamepad)
+        //{
             if (Mathf.Abs(aim.x) > controllerDeadzone || Mathf.Abs(aim.y) > controllerDeadzone)
             {
                 Vector3 playerDirection = Vector3.right * aim.x + Vector3.forward * aim.y;
@@ -100,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
                     transform.rotation = Quaternion.RotateTowards(transform.rotation, newrotation, gamepadRotateSmoothing * Time.deltaTime);
                 }
             }
-        }
+        //}
         else
         {
 
@@ -159,9 +159,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    //public void OnDeviceChange (PlayerInput pi)
+    //public void ondevicechange(playerInput pi)
     //{
-    //    isGamepad = pi.currentControlScheme.Equals("Gamepad") ? true : false;
+    //    isGamepad = pi.currentcontrolscheme.equals("gamepad") ? true : false;
     //}
 
     //void HandleShootInput()
