@@ -43,10 +43,22 @@ public class PlayerHealth : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         //hurt.Play();
+
+        healthBar.SetHealth(currentHealth);
+
+        
+    }
+    public void Heal(int damage)
+    {
+        currentHealth += damage;
+            if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
         healthBar.SetHealth(currentHealth);
     }
     private void OnTriggerEnter(Collider other)

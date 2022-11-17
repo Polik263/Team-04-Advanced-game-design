@@ -36,6 +36,7 @@ public class Bullet : MonoBehaviour
     {
         if (playerHealth.mortal && other.CompareTag("Player"))
         {
+            playerHealth.TakeDamage(5);
             Destroy(gameObject);
 
         }
