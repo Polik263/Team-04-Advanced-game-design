@@ -40,6 +40,9 @@ public class PlayerMovement : MonoBehaviour
     private PlayerControls playerControls;
     private PlayerInput playerInput;
     bool work = false;
+    public bool canMove = true;
+
+    Dashh dash;
 
     private void Awake()
     {
@@ -47,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
         playerControls = new PlayerControls();
         playerInput = GetComponent<PlayerInput>();
         meele = GetComponent<Meele>();
+        dash = GetComponent<Dashh>();
     }
     private void Start()
     {
@@ -62,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
+        if(!canMove) return;
         HandleInput();
         HandleMovement();
         HandleRotation();
@@ -84,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
             controller.Move(move * Time.deltaTime * playerSpeed);
             playerVelocity.y += gravityValue * Time.deltaTime;
             controller.Move(playerVelocity * Time.deltaTime);
+
         }
     }
 
@@ -195,25 +201,11 @@ public class PlayerMovement : MonoBehaviour
             if (lastTimeDashed + dashCooldown < Time.time)
             {
                 lastTimeDashed = Time.time;
-                StartCoroutine(DashMove());
+                dash.ApplyDash(movement, dashSpeed, dashTime);   
             }
         }
 
-        IEnumerator DashMove()
-        {
-            //dashSound.Play();
-            currentMortalFrame = maxMortalFrames;
-            playerHealth.mortal = false;
 
-            float startTime = Time.time;
-
-            while (Time.time < startTime + dashTime)
-            {
-                transform.Translate(Vector3.forward * dashSpeed);
-
-                yield return null;
-            }
-        }
     }
 }
     

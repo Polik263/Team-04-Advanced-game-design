@@ -471,6 +471,7 @@ GameObject:
   - component: {fileID: 5632060258103836727}
   - component: {fileID: 5632060258103836720}
   - component: {fileID: 5221025996482830862}
+  - component: {fileID: 8714860045895614562}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -573,17 +574,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 5221025996482830862}
-  playerSpeed: 5
+  playerSpeed: 8
   gravityValue: -9.81
   controllerDeadzone: 0.1
   gamepadRotateSmoothing: 1000
   smoothInputSpeed: 0.2
-  dashSpeed: 0.5
-  dashTime: 0.15
+  dashSpeed: 30
+  dashTime: 0.17
   currentMortalFrame: 0
   maxMortalFrames: 0.25
   dashCooldown: 1
   isGamepad: 0
+  canMove: 1
 --- !u!114 &5632060258103836726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -696,7 +698,18 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 3798555504288627418}
-  hurt: {fileID: 0}
+--- !u!114 &8714860045895614562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5632060258103836721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8316bf58d9afd234382222a33ade8030, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8606686137007697306
 GameObject:
   m_ObjectHideFlags: 0
