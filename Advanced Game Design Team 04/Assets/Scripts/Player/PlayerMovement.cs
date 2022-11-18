@@ -169,7 +169,13 @@ public class PlayerMovement : MonoBehaviour
             work = true;
         }
     }
-
+        void LevelUp()
+    {
+        if(playerControls.Controls.LevelUp.ReadValue<float>()>0)
+        {
+            xpSystem.Levelup();
+        }
+    }
     public void OnDeviceChange(PlayerInput pi)
     {
         isGamepad = pi.currentControlScheme.Equals("Gamepad") ? true : false;
