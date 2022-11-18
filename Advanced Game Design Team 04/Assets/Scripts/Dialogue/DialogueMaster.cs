@@ -81,8 +81,6 @@ public class DialogueMaster : MonoBehaviour
         dialogueBox23.SetActive(false);
         dialogueBox33.SetActive(false);
         isInDialogue = false;
-        linesCount = 0;
-        linesNumber = 0;
     }
         
 
@@ -148,6 +146,7 @@ public class DialogueMaster : MonoBehaviour
 
         dialogue.performed += HandleDialouge;
     }
+
 
 
     public void ChoiceOption11()
