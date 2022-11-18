@@ -43,11 +43,13 @@ public class PlayerMovement : MonoBehaviour
     public bool canMove = true;
     public GameObject swordobj;
     Sword sword;
+    XpSystem xpSystem;
 
     Dashh dash;
 
     private void Awake()
     {
+        xpSystem = GetComponent<XpSystem>();
         sword = swordobj.GetComponent<Sword>();
         controller = GetComponent<CharacterController>();
         playerControls = new PlayerControls();
@@ -165,6 +167,14 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             work = true;
+        }
+    }
+
+    void LevelUp()
+    {
+        if(playerControls.Controls.LevelUp.ReadValue<float>()>0)
+        {
+            xpSystem.Levelup();
         }
     }
 

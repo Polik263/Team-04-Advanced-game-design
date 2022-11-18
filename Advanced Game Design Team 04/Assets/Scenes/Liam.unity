@@ -322,6 +322,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 14411139}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &34824251 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2586701654952929463, guid: a9c780f5611a54645b7d50a87a798710, type: 3}
+  m_PrefabInstance: {fileID: 377063182}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &63797840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1496,6 +1501,18 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2586701654952929456, guid: a9c780f5611a54645b7d50a87a798710, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2586701654952929456, guid: a9c780f5611a54645b7d50a87a798710, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_ActionId
+      value: adbaa4c1-21b4-42fb-87b5-65c9cda94b65
+      objectReference: {fileID: 0}
+    - target: {fileID: 2586701654952929456, guid: a9c780f5611a54645b7d50a87a798710, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_ActionName
+      value: Controls/LevelUp[/Keyboard/f]
+      objectReference: {fileID: 0}
     - target: {fileID: 2586701654952929463, guid: a9c780f5611a54645b7d50a87a798710, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1855,6 +1872,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7585294393616125340, guid: 082fe6dcf00b7ce45be4fa04e52c7d2c, type: 3}
+      propertyPath: xpSystem
+      value: 
+      objectReference: {fileID: 34824251}
     - target: {fileID: 134221125891901944, guid: 082fe6dcf00b7ce45be4fa04e52c7d2c, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -5787,6 +5808,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2586701654952929471, guid: a9c780f5611a54645b7d50a87a798710, type: 3}
   m_PrefabInstance: {fileID: 377063182}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1827013865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34824251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b90d83156003c640b9412adb781787b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentxp: 0
+  maxxp: 500
 --- !u!1 &1878872087
 GameObject:
   m_ObjectHideFlags: 0

@@ -71,6 +71,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""LevelUp"",
+                    ""type"": ""Button"",
+                    ""id"": ""adbaa4c1-21b4-42fb-87b5-65c9cda94b65"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -205,6 +214,17 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""SwitchForm"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""56a91fbe-f930-405b-9468-1f1067cbe4e8"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LevelUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -274,6 +294,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Controls_Shotgun = m_Controls.FindAction("Shotgun", throwIfNotFound: true);
         m_Controls_Dash = m_Controls.FindAction("Dash", throwIfNotFound: true);
         m_Controls_SwitchForm = m_Controls.FindAction("SwitchForm", throwIfNotFound: true);
+        m_Controls_LevelUp = m_Controls.FindAction("LevelUp", throwIfNotFound: true);
         // Dialogue
         m_Dialogue = asset.FindActionMap("Dialogue", throwIfNotFound: true);
         m_Dialogue_Appear = m_Dialogue.FindAction("Appear", throwIfNotFound: true);
@@ -341,6 +362,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Controls_Shotgun;
     private readonly InputAction m_Controls_Dash;
     private readonly InputAction m_Controls_SwitchForm;
+    private readonly InputAction m_Controls_LevelUp;
     public struct ControlsActions
     {
         private @PlayerControls m_Wrapper;
@@ -350,6 +372,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @Shotgun => m_Wrapper.m_Controls_Shotgun;
         public InputAction @Dash => m_Wrapper.m_Controls_Dash;
         public InputAction @SwitchForm => m_Wrapper.m_Controls_SwitchForm;
+        public InputAction @LevelUp => m_Wrapper.m_Controls_LevelUp;
         public InputActionMap Get() { return m_Wrapper.m_Controls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -374,6 +397,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @SwitchForm.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnSwitchForm;
                 @SwitchForm.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnSwitchForm;
                 @SwitchForm.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnSwitchForm;
+                @LevelUp.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnLevelUp;
+                @LevelUp.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnLevelUp;
+                @LevelUp.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnLevelUp;
             }
             m_Wrapper.m_ControlsActionsCallbackInterface = instance;
             if (instance != null)
@@ -393,6 +419,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @SwitchForm.started += instance.OnSwitchForm;
                 @SwitchForm.performed += instance.OnSwitchForm;
                 @SwitchForm.canceled += instance.OnSwitchForm;
+                @LevelUp.started += instance.OnLevelUp;
+                @LevelUp.performed += instance.OnLevelUp;
+                @LevelUp.canceled += instance.OnLevelUp;
             }
         }
     }
@@ -455,6 +484,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnShotgun(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
         void OnSwitchForm(InputAction.CallbackContext context);
+        void OnLevelUp(InputAction.CallbackContext context);
     }
     public interface IDialogueActions
     {
