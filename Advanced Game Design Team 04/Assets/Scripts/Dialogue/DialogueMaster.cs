@@ -33,6 +33,7 @@ public class DialogueMaster : MonoBehaviour
     [SerializeField] private GameObject dialogueBox32;
     [SerializeField] private GameObject dialogueBox33;
     [SerializeField] private bool isInDialogue;
+    [SerializeField] private bool isClosingDialogue;
 
     [SerializeField] private GameObject Choice11;
     [SerializeField] private GameObject Choice12;
@@ -43,22 +44,14 @@ public class DialogueMaster : MonoBehaviour
     [SerializeField] private GameObject Choice31;
     [SerializeField] private GameObject Choice32;
 
+
     public Animator animator;
 
     void Awake()
     {
         playerControls = new PlayerControls();
-
-        //button1 = GetComponent<Button>();
     }
 
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown(key))
-    //    {
-    //        button1.onClick.Invoke();
-    //    }
-    //}
 
     private void Update()
     {
@@ -70,20 +63,36 @@ public class DialogueMaster : MonoBehaviour
 
         if (dialogueBox33.activeInHierarchy == true || dialogueBox23.activeInHierarchy == true || dialogueBox13.activeInHierarchy == true)
         {
-            Invoke("CloseDialogue", 5.0f);
+            if (isClosingDialogue == false)
+            {
+                StartCoroutine(CloseDialogues());
+                Debug.Log("Preparing to close dialogue!");
+
+            }
+            //Invoke("CloseDialogue", 5.0f);
         }
     }
 
     void CloseDialogue()
     {
+        Debug.Log("Deactivating Dialogue");
         animator.SetBool("IsOpen", false);
         panel.SetActive(false);
         dialogueBox13.SetActive(false);
         dialogueBox23.SetActive(false);
         dialogueBox33.SetActive(false);
         isInDialogue = false;
+        isClosingDialogue = false;
     }
+
+
         
+IEnumerator CloseDialogues () {
+        isClosingDialogue = true;
+
+        yield return new WaitForSeconds(5);
+        CloseDialogue();
+    }
 
     public void ActivateDialouge()
     {
@@ -91,12 +100,12 @@ public class DialogueMaster : MonoBehaviour
 
         if (panel.activeInHierarchy == false)
         {
-            isInDialogue= false;
+            isInDialogue = false;
             panel.SetActive(true);
 
             linesNumber = Random.Range(0, 3);
             linesCount = 0;
-            while (linesCount < 1)
+            while (linesCount < 3)
             {
                 lines[linesCount].SetActive(false);
                 linesCount += 1;
@@ -126,7 +135,9 @@ public class DialogueMaster : MonoBehaviour
 
     void HandleDialouge(InputAction.CallbackContext context)
     {
+
         isInDialogue = !isInDialogue;
+        Debug.Log("We were at " + !isInDialogue + " and now at " + isInDialogue);
 
         if (isInDialogue)
         {
@@ -141,15 +152,20 @@ public class DialogueMaster : MonoBehaviour
         dialogue.Enable();
 
         dialogue.performed += HandleDialouge;
+        //Debug.Log(dialogue);
     }
 
+    private void OnDisable()
+    {
+        dialogue.performed -= HandleDialouge;
 
+    }
 
 
     public void ChoiceOption11()
     {
-        if (isInDialogue && dialogueBox11.activeInHierarchy == true)
-        {
+       
+        
             dialogueBox11.SetActive(false);
             dialogueBox12.SetActive(true);
 
@@ -158,49 +174,49 @@ public class DialogueMaster : MonoBehaviour
 
             Choice13.SetActive(true);
             Choice14.SetActive(true);
-        }
+        
     }
 
     public void ChoiceOption12()
     {
-        if (isInDialogue)
-        {
+       
+        
             dialogueBox11.SetActive(false);
             dialogueBox13.SetActive(true);
 
             Choice11.SetActive(false);
             Choice12.SetActive(false);
-        }
+        
     }
 
     public void ChoiceOption13()
     {
-        if (isInDialogue)
-        {
+       
+        
             dialogueBox12.SetActive(false);
             dialogueBox14.SetActive(true);
 
             Choice13.SetActive(false);
             Choice14.SetActive(false);
-        }
+        
     }
 
     public void ChoiceOption14()
     {
-        if (isInDialogue)
-        {
+       
+        
             dialogueBox12.SetActive(false);
             dialogueBox15.SetActive(true);
 
             Choice13.SetActive(false);
             Choice14.SetActive(false);
-        }
+        
     }
 
     public void ChoiceOption21() 
     {
-        if (isInDialogue && dialogueBox21.activeInHierarchy == true)
-        {
+      
+        
             dialogueBox21.SetActive(false);
             dialogueBox22.SetActive(true);
 
@@ -209,25 +225,25 @@ public class DialogueMaster : MonoBehaviour
 
             //Choice23.SetActive(true);
             //Choice24.SetActive(true);
-        }
+        
     }
 
     public void ChoiceOption22()
     {
-        if (isInDialogue)
-        {
+      
+        
             dialogueBox21.SetActive(false);
             dialogueBox23.SetActive(true);
 
             Choice21.SetActive(false);
             Choice22.SetActive(false);
-        }
+        
     }
 
     public void ChoiceOption31()
     {
-        if (isInDialogue && dialogueBox21.activeInHierarchy == true)
-        {
+        
+        
             dialogueBox31.SetActive(false);
             dialogueBox32.SetActive(true);
 
@@ -236,18 +252,18 @@ public class DialogueMaster : MonoBehaviour
 
             //Choice23.SetActive(true);
             //Choice24.SetActive(true);
-        }
+        
     }
 
     public void ChoiceOption32()
     {
-        if (isInDialogue)
-        {
+      
+        
             dialogueBox31.SetActive(false);
             dialogueBox33.SetActive(true);
 
             Choice31.SetActive(false);
             Choice32.SetActive(false);
-        }
+        
     }
 }
