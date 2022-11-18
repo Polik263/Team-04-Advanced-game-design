@@ -99,12 +99,12 @@ public class Sword : MonoBehaviour
         if(currentForm == 0)
         {
             Debug.Log("dark");
-            Gun.GetComponent<MeshRenderer>().material = darkMaterial; 
+            //Gun.GetComponent<MeshRenderer>().material = darkMaterial; 
         }
         else if(currentForm == 1)
         {
             Debug.Log("light");
-            Gun.GetComponent<MeshRenderer>().material = lightMaterial; 
+            //Gun.GetComponent<MeshRenderer>().material = lightMaterial; 
         }
         
     }
