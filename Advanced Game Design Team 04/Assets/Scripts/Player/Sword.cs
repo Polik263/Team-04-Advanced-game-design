@@ -57,7 +57,14 @@ public class Sword : MonoBehaviour
         {
             isCd = true;
             isacd = true;
-            animator.Play("Slapping");
+            if(currentForm == 0)
+            {
+                animator.Play("Slapping");
+            }
+            if(currentForm == 1) 
+            {
+                animator.Play("DarkSwing");
+            }
         }
         
     }
@@ -99,11 +106,23 @@ public class Sword : MonoBehaviour
         if(currentForm == 0)
         {
             Debug.Log("dark");
+            animator.Play("ToDark");
             //Gun.GetComponent<MeshRenderer>().material = darkMaterial; 
         }
         else if(currentForm == 1)
         {
-            Debug.Log("light");
+            Debug.Log("ToLight");
+            animator.Play("ToLight");
+            float setpos = 0.14f;
+            setpos -= Time.deltaTime;
+            if(setpos <= 0)
+            {
+                
+
+                Quaternion bob = Quaternion.Euler(39.396f,27.271f,-1.9f);
+                gameObject.transform.rotation = bob;
+            }
+
             //Gun.GetComponent<MeshRenderer>().material = lightMaterial; 
         }
         
