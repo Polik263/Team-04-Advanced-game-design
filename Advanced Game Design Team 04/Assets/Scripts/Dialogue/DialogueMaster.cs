@@ -43,9 +43,7 @@ public class DialogueMaster : MonoBehaviour
     [SerializeField] private GameObject Choice31;
     [SerializeField] private GameObject Choice32;
 
-
-    public float offsetTime = 2f;
-    private float timer = 0f;
+    public Animator animator;
 
     void Awake()
     {
@@ -66,7 +64,8 @@ public class DialogueMaster : MonoBehaviour
     {
         if (panel.activeInHierarchy == true)
         {
-            isInDialogue= true;
+            animator.SetBool("IsOpen", true);
+            isInDialogue = true;
         }
 
         if (dialogueBox33.activeInHierarchy == true || dialogueBox23.activeInHierarchy == true || dialogueBox13.activeInHierarchy == true)
@@ -77,6 +76,7 @@ public class DialogueMaster : MonoBehaviour
 
     void CloseDialogue()
     {
+        animator.SetBool("IsOpen", false);
         panel.SetActive(false);
         dialogueBox13.SetActive(false);
         dialogueBox23.SetActive(false);
@@ -87,9 +87,11 @@ public class DialogueMaster : MonoBehaviour
 
     public void ActivateDialouge()
     {
+        
+
         if (panel.activeInHierarchy == false)
         {
-            isInDialogue = false;
+            isInDialogue= false;
             panel.SetActive(true);
 
             linesNumber = Random.Range(0, 3);
@@ -101,6 +103,8 @@ public class DialogueMaster : MonoBehaviour
             }
             lines[linesNumber].SetActive(true);
         }
+
+
         if (dialogueBox11.activeInHierarchy == true)
         {
             Choice11.SetActive(true);
@@ -138,6 +142,8 @@ public class DialogueMaster : MonoBehaviour
 
         dialogue.performed += HandleDialouge;
     }
+
+
 
 
     public void ChoiceOption11()
