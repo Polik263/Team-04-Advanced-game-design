@@ -100,8 +100,8 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleRotation()
     {
-        //if (isGamepad)
-        //{
+        if (isGamepad)
+        {
             if (Mathf.Abs(aim.x) > controllerDeadzone || Mathf.Abs(aim.y) > controllerDeadzone)
             {
                 Vector3 playerDirection = Vector3.right * aim.x + Vector3.forward * aim.y;
@@ -111,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
                     transform.rotation = Quaternion.RotateTowards(transform.rotation, newrotation, gamepadRotateSmoothing * Time.deltaTime);
                 }
             }
-        //}
+        }
         else
         {
 
@@ -170,18 +170,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void LevelUp()
+    public void OnDeviceChange(PlayerInput pi)
     {
-        if(playerControls.Controls.LevelUp.ReadValue<float>()>0)
-        {
-            xpSystem.Levelup();
-        }
+        isGamepad = pi.currentControlScheme.Equals("Gamepad") ? true : false;
     }
-
-    //public void ondevicechange(playerInput pi)
-    //{
-    //    isGamepad = pi.currentcontrolscheme.equals("gamepad") ? true : false;
-    //}
 
     //void HandleShootInput()
     //{
