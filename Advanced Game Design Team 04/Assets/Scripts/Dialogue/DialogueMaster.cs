@@ -62,10 +62,11 @@ public class DialogueMaster : MonoBehaviour
 
     private void Update()
     {
-        //if (panel.activeInHierarchy == true)
-        //{
-        //    isInDialogue= true;
-        //}
+        if (panel.activeInHierarchy == true)
+        {
+            animator.SetBool("IsOpen", true);
+            isInDialogue = true;
+        }
 
         if (dialogueBox33.activeInHierarchy == true || dialogueBox23.activeInHierarchy == true || dialogueBox13.activeInHierarchy == true)
         {
@@ -90,16 +91,10 @@ public class DialogueMaster : MonoBehaviour
 
         if (panel.activeInHierarchy == false)
         {
+            isInDialogue= false;
             panel.SetActive(true);
-        }
 
-        if (panel.activeInHierarchy == true)
-        {
-            isInDialogue = true;
-
-            animator.SetBool("IsOpen", true);
-
-                        linesNumber = Random.Range(0, 3);
+            linesNumber = Random.Range(0, 3);
             linesCount = 0;
             while (linesCount < 1)
             {
@@ -108,6 +103,7 @@ public class DialogueMaster : MonoBehaviour
             }
             lines[linesNumber].SetActive(true);
         }
+
 
         if (dialogueBox11.activeInHierarchy == true)
         {
@@ -146,6 +142,7 @@ public class DialogueMaster : MonoBehaviour
 
         dialogue.performed += HandleDialouge;
     }
+
 
 
 
