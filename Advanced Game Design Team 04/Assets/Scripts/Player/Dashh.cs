@@ -28,7 +28,7 @@ public class Dashh : MonoBehaviour
 
             //rb.MovePosition(transform.position + rb.velocity.normalized * speed * Time.deltaTime);
             controller.Move(new Vector3(Direction.x, 0, Direction.y) * Time.deltaTime * speed);
-
+            
             yield return null;
 
         }
