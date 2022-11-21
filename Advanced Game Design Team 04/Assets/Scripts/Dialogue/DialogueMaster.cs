@@ -71,6 +71,8 @@ public class DialogueMaster : MonoBehaviour
             }
             //Invoke("CloseDialogue", 5.0f);
         }
+
+        StartCoroutine(ActivateOptions());
     }
 
     void CloseDialogue()
@@ -87,12 +89,24 @@ public class DialogueMaster : MonoBehaviour
 
 
         
-IEnumerator CloseDialogues () {
+    IEnumerator CloseDialogues () 
+    {
         isClosingDialogue = true;
 
         yield return new WaitForSeconds(5);
         CloseDialogue();
     }
+
+    IEnumerator ActivateOptions()
+    {
+        yield return new WaitForSeconds(5);
+        if (dialogueBox11.activeInHierarchy == true)
+        {
+            Choice11.SetActive(true);
+            Choice12.SetActive(true);
+        }
+    }
+
 
     public void ActivateDialouge()
     {

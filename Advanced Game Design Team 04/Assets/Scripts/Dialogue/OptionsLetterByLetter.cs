@@ -1,18 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class OptionsLetterByLetter : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float delay = 0.5f;
+    public string fullText;
+    private string currentText = "";
+
+    private PlayerControls playerControls;
+    float currentTime;
+
+
+    private void OnEnable()
     {
-        
+        StartCoroutine(ShowText());
     }
 
-    // Update is called once per frame
-    void Update()
+
+
+
+    IEnumerator ShowText()
     {
-        
+        yield return new WaitForSeconds(5);
+
+        for (int i = 0; i < (fullText.Length + 1); i++)
+        {
+            currentText = fullText.Substring(0, i);
+            this.GetComponent<TextMeshProUGUI>().text = currentText;
+            yield return new WaitForSeconds(delay);
+        }
+
     }
 }
