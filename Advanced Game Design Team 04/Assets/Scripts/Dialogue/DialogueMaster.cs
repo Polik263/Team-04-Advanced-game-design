@@ -93,7 +93,7 @@ public class DialogueMaster : MonoBehaviour
     {
         isClosingDialogue = true;
 
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(10);
         CloseDialogue();
     }
 
@@ -104,6 +104,18 @@ public class DialogueMaster : MonoBehaviour
         {
             Choice11.SetActive(true);
             Choice12.SetActive(true);
+        }
+
+        if (dialogueBox21.activeInHierarchy == true)
+        {
+           Choice21.SetActive(true);
+           Choice22.SetActive(true);
+        }
+        
+        if (dialogueBox31.activeInHierarchy == true)
+        {
+            Choice31.SetActive(true);
+            Choice32.SetActive(true);
         }
     }
 
@@ -128,23 +140,23 @@ public class DialogueMaster : MonoBehaviour
         }
 
 
-        if (dialogueBox11.activeInHierarchy == true)
-        {
-            Choice11.SetActive(true);
-            Choice12.SetActive(true);
-        }
+        //if (dialogueBox11.activeInHierarchy == true)
+        //{
+        //    Choice11.SetActive(true);
+        //    Choice12.SetActive(true);
+        //}
 
-        if (dialogueBox21.activeInHierarchy == true)
-        {
-            Choice21.SetActive(true);
-            Choice22.SetActive(true);
-        }
+        //if (dialogueBox21.activeInHierarchy == true)
+        //{
+        //    Choice21.SetActive(true);
+        //    Choice22.SetActive(true);
+        //}
 
-        if (dialogueBox31.activeInHierarchy == true)
-        {
-            Choice31.SetActive(true);
-            Choice32.SetActive(true);
-        }
+        //if (dialogueBox31.activeInHierarchy == true)
+        //{
+        //    Choice31.SetActive(true);
+        //    Choice32.SetActive(true);
+        //}
     }
 
     void HandleDialouge(InputAction.CallbackContext context)

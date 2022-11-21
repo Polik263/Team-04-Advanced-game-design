@@ -6,7 +6,7 @@ using TMPro;
 
 public class OptionsLetterByLetter : MonoBehaviour
 {
-    public float delay = 0.5f;
+    public float delay = 0.1f;
     public string fullText;
     private string currentText = "";
 
@@ -24,7 +24,7 @@ public class OptionsLetterByLetter : MonoBehaviour
 
     IEnumerator ShowText()
     {
-        yield return new WaitForSeconds(5);
+
 
         for (int i = 0; i < (fullText.Length + 1); i++)
         {

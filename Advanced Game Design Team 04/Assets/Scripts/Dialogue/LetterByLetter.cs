@@ -6,7 +6,7 @@ using TMPro;
 
 public class LetterByLetter : MonoBehaviour
 {
-    public float delay = 0.5f;
+    public float delay = 0.1f;
     public string fullText;
     private string currentText = "";
 
