@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        if(!canMove) return;
+        if (!canMove) return;
         HandleInput();
         HandleMovement();
         HandleRotation();
@@ -136,18 +136,17 @@ public class PlayerMovement : MonoBehaviour
     }
     void MeeleAttack()
     {
-        if(playerControls.Controls.Shotgun.ReadValue<float>()> 0)
+        if (playerControls.Controls.Shotgun.ReadValue<float>() > 0)
         {
-            Debug.Log("Swing");
             swordobj.GetComponent<Sword>().Attack();
         }
     }
 
     void SwitchForm()
     {
-        if (playerControls.Controls.SwitchForm.ReadValue <float>()>0)
+        if (playerControls.Controls.SwitchForm.ReadValue<float>() > 0)
         {
-            if(work)
+            if (work)
             {
                 if (sword.currentForm == 0)
                 {
@@ -169,9 +168,9 @@ public class PlayerMovement : MonoBehaviour
             work = true;
         }
     }
-        void LevelUp()
+    void LevelUp()
     {
-        if(playerControls.Controls.LevelUp.ReadValue<float>()>0)
+        if (playerControls.Controls.LevelUp.ReadValue<float>() > 0)
         {
             xpSystem.Levelup();
         }
@@ -212,12 +211,11 @@ public class PlayerMovement : MonoBehaviour
             if (lastTimeDashed + dashCooldown < Time.time)
             {
                 lastTimeDashed = Time.time;
-                dash.ApplyDash(movement, dashSpeed, dashTime);   
+                dash.ApplyDash(movement, dashSpeed, dashTime);
             }
         }
-
-
     }
+
 }
-    
+
 

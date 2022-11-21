@@ -37,6 +37,7 @@ public class XpSystem : MonoBehaviour
         {
             levelpoint-= 1;
             Debug.Log("LEVEL UP");
+            currentlevel += 1;
             maxxp = maxxp * 1.2f;
             currentxp = 0;
         }
