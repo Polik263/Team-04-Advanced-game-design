@@ -72,7 +72,7 @@ public class DialogueMaster : MonoBehaviour
             //Invoke("CloseDialogue", 5.0f);
         }
 
-        StartCoroutine(ActivateOptions());
+
     }
 
     void CloseDialogue()
@@ -117,6 +117,7 @@ public class DialogueMaster : MonoBehaviour
             Choice31.SetActive(true);
             Choice32.SetActive(true);
         }
+        yield return null;
     }
 
 
@@ -138,7 +139,7 @@ public class DialogueMaster : MonoBehaviour
             }
             lines[linesNumber].SetActive(true);
         }
-
+        StartCoroutine(ActivateOptions());
 
         //if (dialogueBox11.activeInHierarchy == true)
         //{
@@ -179,6 +180,9 @@ public class DialogueMaster : MonoBehaviour
 
         dialogue.performed += HandleDialouge;
         //Debug.Log(dialogue);
+
+
+
     }
 
     private void OnDisable()
