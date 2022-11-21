@@ -117,7 +117,13 @@ public class DialogueMaster : MonoBehaviour
             Choice31.SetActive(true);
             Choice32.SetActive(true);
         }
-        yield return null;
+
+        if (dialogueBox12.activeInHierarchy == true)
+
+        {
+            Choice13.SetActive(true);
+            Choice14.SetActive(true);
+        }
     }
 
 
@@ -202,9 +208,8 @@ public class DialogueMaster : MonoBehaviour
             Choice11.SetActive(false);
             Choice12.SetActive(false);
 
-            Choice13.SetActive(true);
-            Choice14.SetActive(true);
-        
+        StartCoroutine(ActivateOptions());
+
     }
 
     public void ChoiceOption12()
