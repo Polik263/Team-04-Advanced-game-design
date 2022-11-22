@@ -37,29 +37,34 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 playerVelocity;
     private Meele meele;
 
-    private PlayerControls playerControls;
+    public PlayerControls playerControls;
     private PlayerInput playerInput;
     bool work = false;
     public bool canMove = true;
     public GameObject swordobj;
     Sword sword;
     XpSystem xpSystem;
+    Slam slam;
 
     Dashh dash;
+    GameObject player;
+
 
     private void Awake()
     {
+        player = GameObject.Find("Player");
+        slam = GetComponent <Slam>();
         xpSystem = GetComponent<XpSystem>();
         sword = swordobj.GetComponent<Sword>();
         controller = GetComponent<CharacterController>();
         playerControls = new PlayerControls();
         playerInput = GetComponent<PlayerInput>();
-        meele = GetComponent<Meele>();
         dash = GetComponent<Dashh>();
     }
     private void Start()
     {
-
+        meele = player.GetComponent<Meele>();
+        slam = player.GetComponent<Slam>();
     }
     private void OnEnable()
     {
@@ -79,6 +84,8 @@ public class PlayerMovement : MonoBehaviour
         HandleDash();
         MeeleAttack();
         SwitchForm();
+        SlamAttack();
+        
     }
     void HandleInput()
     {
@@ -142,6 +149,24 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+        void SlamAttack()
+    {
+        if(sword.currentForm == 0)
+        {
+            if (playerControls.Controls.Slam.ReadValue<float>() > 0)
+            {
+                if(slam.isCd == false)
+                {
+                    slam.startedd = true;
+                    slam.finishedd = false;
+                    canMove = false;
+                    slam.LeapSlam();
+                }
+            }
+        }
+
+    }
+
     void SwitchForm()
     {
         if (playerControls.Controls.SwitchForm.ReadValue<float>() > 0)
@@ -175,6 +200,9 @@ public class PlayerMovement : MonoBehaviour
             xpSystem.Levelup();
         }
     }
+
+
+
     public void OnDeviceChange(PlayerInput pi)
     {
         isGamepad = pi.currentControlScheme.Equals("Gamepad") ? true : false;
@@ -215,6 +243,9 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+
+
 
 }
 

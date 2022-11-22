@@ -80,6 +80,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Slam"",
+                    ""type"": ""Button"",
+                    ""id"": ""b4bbcdb8-b0ab-4a62-97bf-7da1a45426db"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -236,6 +245,17 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""LevelUp"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bd924d14-20c1-449b-b0ac-8e234f9b17d8"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Slam"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -317,6 +337,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Controls_Dash = m_Controls.FindAction("Dash", throwIfNotFound: true);
         m_Controls_SwitchForm = m_Controls.FindAction("SwitchForm", throwIfNotFound: true);
         m_Controls_LevelUp = m_Controls.FindAction("LevelUp", throwIfNotFound: true);
+        m_Controls_Slam = m_Controls.FindAction("Slam", throwIfNotFound: true);
         // Dialogue
         m_Dialogue = asset.FindActionMap("Dialogue", throwIfNotFound: true);
         m_Dialogue_Appear = m_Dialogue.FindAction("Appear", throwIfNotFound: true);
@@ -385,6 +406,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Controls_Dash;
     private readonly InputAction m_Controls_SwitchForm;
     private readonly InputAction m_Controls_LevelUp;
+    private readonly InputAction m_Controls_Slam;
     public struct ControlsActions
     {
         private @PlayerControls m_Wrapper;
@@ -395,6 +417,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @Dash => m_Wrapper.m_Controls_Dash;
         public InputAction @SwitchForm => m_Wrapper.m_Controls_SwitchForm;
         public InputAction @LevelUp => m_Wrapper.m_Controls_LevelUp;
+        public InputAction @Slam => m_Wrapper.m_Controls_Slam;
         public InputActionMap Get() { return m_Wrapper.m_Controls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -422,6 +445,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @LevelUp.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnLevelUp;
                 @LevelUp.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnLevelUp;
                 @LevelUp.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnLevelUp;
+                @Slam.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnSlam;
+                @Slam.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnSlam;
+                @Slam.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnSlam;
             }
             m_Wrapper.m_ControlsActionsCallbackInterface = instance;
             if (instance != null)
@@ -444,6 +470,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @LevelUp.started += instance.OnLevelUp;
                 @LevelUp.performed += instance.OnLevelUp;
                 @LevelUp.canceled += instance.OnLevelUp;
+                @Slam.started += instance.OnSlam;
+                @Slam.performed += instance.OnSlam;
+                @Slam.canceled += instance.OnSlam;
             }
         }
     }
@@ -507,6 +536,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnDash(InputAction.CallbackContext context);
         void OnSwitchForm(InputAction.CallbackContext context);
         void OnLevelUp(InputAction.CallbackContext context);
+        void OnSlam(InputAction.CallbackContext context);
     }
     public interface IDialogueActions
     {

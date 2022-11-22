@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightDash : MonoBehaviour
+public class SlamDmg : MonoBehaviour
 {
     GameObject player;
     public GameObject swordobj;
