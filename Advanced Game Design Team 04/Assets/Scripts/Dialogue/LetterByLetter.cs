@@ -16,7 +16,7 @@ public class LetterByLetter : MonoBehaviour
 
     private void OnEnable()
     {      
-           StartCoroutine(ShowText()); 
+        StartCoroutine(ShowText()); 
     }
 
 
