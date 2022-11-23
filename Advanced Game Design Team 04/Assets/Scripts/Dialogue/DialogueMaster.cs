@@ -6,9 +6,11 @@ using UnityEngine.InputSystem;
 
 public class DialogueMaster : MonoBehaviour
 {
-    public GameObject[] lines;
-    public int linesNumber;
-    public int linesCount = 0;
+    //public GameObject[] lines;
+    //public int linesNumber;
+    //public int linesCount = 0;
+
+    [SerializeField] private GameObject startDialogue;
 
 
     private PlayerControls playerControls;
@@ -71,7 +73,7 @@ public class DialogueMaster : MonoBehaviour
             isInDialogue = true;
         }
 
-        if (dialogueBox33.activeInHierarchy == true || dialogueBox23.activeInHierarchy == true || dialogueBox13.activeInHierarchy == true)
+        if (dialogueBox33.activeInHierarchy == true || dialogueBox23.activeInHierarchy == true || dialogueBox13.activeInHierarchy == true || dialogueBox422.activeInHierarchy == true)
         {
             if (isClosingDialogue == false)
             {
@@ -93,6 +95,7 @@ public class DialogueMaster : MonoBehaviour
         dialogueBox13.SetActive(false);
         dialogueBox23.SetActive(false);
         dialogueBox33.SetActive(false);
+        dialogueBox422.SetActive(false);
         isInDialogue = false;
         isClosingDialogue = false;
     }
@@ -139,6 +142,7 @@ public class DialogueMaster : MonoBehaviour
         {
             Choice41.SetActive(true);
             Choice42.SetActive(true);
+            StartCoroutine(ActivateOptions());
         }
     }
 
@@ -152,16 +156,20 @@ public class DialogueMaster : MonoBehaviour
             isInDialogue = false;
             panel.SetActive(true);
 
-            linesNumber = Random.Range(0, 3);
-            linesCount = 0;
-            while (linesCount < 3)
-            {
-                lines[linesCount].SetActive(false);
-                linesCount += 1;
-            }
-            lines[linesNumber].SetActive(true);
+            //linesNumber = Random.Range(0, 3);
+            //linesCount = 0;
+            //while (linesCount < 3)
+            //{
+            //    lines[linesCount].SetActive(false);
+            //    linesCount += 1;
+            //}
+            //lines[linesNumber].SetActive(true);
+
+            startDialogue.SetActive(true);
+
+            StartCoroutine(ActivateOptions());
         }
-        StartCoroutine(ActivateOptions());
+        
 
         //if (dialogueBox11.activeInHierarchy == true)
         //{
