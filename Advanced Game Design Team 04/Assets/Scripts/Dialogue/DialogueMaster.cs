@@ -32,6 +32,14 @@ public class DialogueMaster : MonoBehaviour
     [SerializeField] private GameObject dialogueBox31;
     [SerializeField] private GameObject dialogueBox32;
     [SerializeField] private GameObject dialogueBox33;
+
+
+    [SerializeField] private GameObject dialogueBox41;
+    [SerializeField] private GameObject dialogueBox421;
+    [SerializeField] private GameObject dialogueBox422;
+
+
+
     [SerializeField] private bool isInDialogue;
     [SerializeField] private bool isClosingDialogue;
 
@@ -43,9 +51,11 @@ public class DialogueMaster : MonoBehaviour
     [SerializeField] private GameObject Choice22;
     [SerializeField] private GameObject Choice31;
     [SerializeField] private GameObject Choice32;
+    [SerializeField] private GameObject Choice41;
+    [SerializeField] private GameObject Choice42;
 
 
-    public Animator animator;
+    // public Animator animator;
 
     void Awake()
     {
@@ -57,7 +67,7 @@ public class DialogueMaster : MonoBehaviour
     {
         if (panel.activeInHierarchy == true)
         {
-            animator.SetBool("IsOpen", true);
+            //animator.SetBool("IsOpen", true);
             isInDialogue = true;
         }
 
@@ -78,7 +88,7 @@ public class DialogueMaster : MonoBehaviour
     void CloseDialogue()
     {
         Debug.Log("Deactivating Dialogue");
-        animator.SetBool("IsOpen", false);
+        //animator.SetBool("IsOpen", false);
         panel.SetActive(false);
         dialogueBox13.SetActive(false);
         dialogueBox23.SetActive(false);
@@ -99,7 +109,7 @@ public class DialogueMaster : MonoBehaviour
 
     IEnumerator ActivateOptions()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(20);
         if (dialogueBox11.activeInHierarchy == true)
         {
             Choice11.SetActive(true);
@@ -123,6 +133,12 @@ public class DialogueMaster : MonoBehaviour
         {
             Choice13.SetActive(true);
             Choice14.SetActive(true);
+        }
+
+        if (dialogueBox41.activeInHierarchy == true)
+        {
+            Choice41.SetActive(true);
+            Choice42.SetActive(true);
         }
     }
 
@@ -301,4 +317,31 @@ public class DialogueMaster : MonoBehaviour
             Choice32.SetActive(false);
         
     }
+
+    public void ChoiceOption41()
+    {
+
+
+        dialogueBox41.SetActive(false);
+        dialogueBox421.SetActive(true);
+
+        Choice41.SetActive(false);
+        Choice42.SetActive(false);
+
+        StartCoroutine(ActivateOptions());
+    }
+
+    public void ChoiceOption42()
+    {
+
+
+        dialogueBox41.SetActive(false);
+        dialogueBox422.SetActive(true);
+
+        Choice41.SetActive(false);
+        Choice42.SetActive(false);
+
+        StartCoroutine(ActivateOptions());
+    }
+
 }
