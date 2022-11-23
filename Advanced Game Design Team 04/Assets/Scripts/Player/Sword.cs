@@ -17,6 +17,8 @@ public class Sword : MonoBehaviour
     public Material darkMaterial;
     public Material lightMaterial;
     PlayerHealth playerHealth;
+    [SerializeField] private Transform bulletPosition;
+    [SerializeField] private GameObject bullet;
     // Start is called before the first frame update
     void Start()
     {
@@ -92,6 +94,14 @@ public class Sword : MonoBehaviour
                 
                 if(collider.gameObject.layer == LayerMask.NameToLayer("Bullet"))
                 {
+                    if(true)
+                    {
+                        var BulletSpawn = new Vector3(bulletPosition.position.x, bulletPosition.position.y,
+                        bulletPosition.position.z);
+                        
+
+                        Instantiate(bullet, BulletSpawn, new Quaternion());
+                    }
                     Destroy(collider.gameObject);
                     playerHealth.Heal(5);
                 }

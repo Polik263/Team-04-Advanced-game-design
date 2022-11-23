@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 1579184510371518710}
   - component: {fileID: 603813472589437732}
   - component: {fileID: 4538161912961998070}
-  - component: {fileID: 7822795157263647551}
   - component: {fileID: 1810350909488594717}
+  - component: {fileID: 5691906120501372451}
   m_Layer: 7
-  m_Name: EnemyBullet
+  m_Name: ReflectBullets
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6226165487294853117}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.886051, y: 1.8065555, z: 19.128717}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5399621, y: 0.5550282, z: 0.6138793}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c8af28568dfcd0f499623d3d4b036317, type: 2}
+  - {fileID: 2100000, guid: b378beb8911e97e488b90458682866bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99,20 +99,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7822795157263647551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6226165487294853117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d37a573bffaeece4a89403f942528c18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHealth: {fileID: 2717949858442758792, guid: a9c780f5611a54645b7d50a87a798710, type: 3}
-  stats: {fileID: 11400000, guid: 8837179023fcad148bbd4d6c26566411, type: 2}
 --- !u!114 &1810350909488594717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,3 +112,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 20
+--- !u!114 &5691906120501372451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6226165487294853117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04fb50b22a4b23f4b8e594329b6f6e9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 10
