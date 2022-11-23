@@ -39,7 +39,8 @@ public class DialogueMaster : MonoBehaviour
     [SerializeField] private GameObject dialogueBox41;
     [SerializeField] private GameObject dialogueBox421;
     [SerializeField] private GameObject dialogueBox422;
-
+    [SerializeField] private GameObject dialogueBox431;
+    [SerializeField] private GameObject dialogueBox432;
 
 
     [SerializeField] private bool isInDialogue;
@@ -53,8 +54,10 @@ public class DialogueMaster : MonoBehaviour
     [SerializeField] private GameObject Choice22;
     [SerializeField] private GameObject Choice31;
     [SerializeField] private GameObject Choice32;
-    [SerializeField] private GameObject Choice41;
-    [SerializeField] private GameObject Choice42;
+    [SerializeField] private GameObject Choice411;
+    [SerializeField] private GameObject Choice412;
+    [SerializeField] private GameObject Choice421;
+    [SerializeField] private GameObject Choice422;
 
 
     // public Animator animator;
@@ -140,8 +143,15 @@ public class DialogueMaster : MonoBehaviour
 
         if (dialogueBox41.activeInHierarchy == true)
         {
-            Choice41.SetActive(true);
-            Choice42.SetActive(true);
+            Choice411.SetActive(true);
+            Choice412.SetActive(true);
+            StartCoroutine(ActivateOptions());
+        }
+
+        if (dialogueBox421.activeInHierarchy == true)
+        {
+            Choice421.SetActive(true);
+            Choice422.SetActive(true);
             StartCoroutine(ActivateOptions());
         }
     }
@@ -326,30 +336,47 @@ public class DialogueMaster : MonoBehaviour
         
     }
 
-    public void ChoiceOption41()
+    public void ChoiceOption411()
     {
 
 
         dialogueBox41.SetActive(false);
         dialogueBox421.SetActive(true);
 
-        Choice41.SetActive(false);
-        Choice42.SetActive(false);
+        Choice411.SetActive(false);
+        Choice412.SetActive(false);
 
         StartCoroutine(ActivateOptions());
     }
 
-    public void ChoiceOption42()
+    public void ChoiceOption412()
     {
 
 
         dialogueBox41.SetActive(false);
         dialogueBox422.SetActive(true);
 
-        Choice41.SetActive(false);
-        Choice42.SetActive(false);
+        Choice411.SetActive(false);
+        Choice412.SetActive(false);
 
         StartCoroutine(ActivateOptions());
     }
 
+    public void ChoiceOption421()
+    {
+        dialogueBox422.SetActive(false);
+        dialogueBox431.SetActive(true);
+
+        Choice421.SetActive(false);
+        Choice422.SetActive(false);
+    }
+
+    public void ChoiceOption422()
+    {
+        dialogueBox422.SetActive(false);
+        dialogueBox432.SetActive(true);
+
+        Choice421.SetActive(false);
+        Choice422.SetActive(false);
+    }
 }
