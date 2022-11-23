@@ -109,7 +109,7 @@ public class DialogueMaster : MonoBehaviour
     {
         isClosingDialogue = true;
 
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(20);
         CloseDialogue();
     }
 
@@ -364,19 +364,23 @@ public class DialogueMaster : MonoBehaviour
 
     public void ChoiceOption421()
     {
-        dialogueBox422.SetActive(false);
+        dialogueBox421.SetActive(false);
         dialogueBox431.SetActive(true);
 
         Choice421.SetActive(false);
         Choice422.SetActive(false);
+
+        StartCoroutine(ActivateOptions());
     }
 
     public void ChoiceOption422()
     {
-        dialogueBox422.SetActive(false);
+        dialogueBox421.SetActive(false);
         dialogueBox432.SetActive(true);
 
         Choice421.SetActive(false);
         Choice422.SetActive(false);
+
+        StartCoroutine(ActivateOptions());
     }
 }
