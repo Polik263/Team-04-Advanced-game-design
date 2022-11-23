@@ -82,14 +82,40 @@ public class DialogueMaster : MonoBehaviour
     [SerializeField] private bool isInDialogue;
     [SerializeField] private bool isClosingDialogue;
 
-    [SerializeField] private GameObject Choice11;
-    [SerializeField] private GameObject Choice12;
-    [SerializeField] private GameObject Choice13;
-    [SerializeField] private GameObject Choice14;
-    [SerializeField] private GameObject Choice21;
-    [SerializeField] private GameObject Choice22;
-    [SerializeField] private GameObject Choice31;
-    [SerializeField] private GameObject Choice32;
+
+    [SerializeField] private GameObject Choice111;
+    [SerializeField] private GameObject Choice112;
+    [SerializeField] private GameObject Choice121;
+    [SerializeField] private GameObject Choice122;
+    [SerializeField] private GameObject Choice131;
+    [SerializeField] private GameObject Choice132;
+    [SerializeField] private GameObject Choice141;
+    [SerializeField] private GameObject Choice142;
+    [SerializeField] private GameObject Choice151;
+    [SerializeField] private GameObject Choice152;
+
+    [SerializeField] private GameObject Choice211;
+    [SerializeField] private GameObject Choice212;
+    [SerializeField] private GameObject Choice221;
+    [SerializeField] private GameObject Choice222;
+    [SerializeField] private GameObject Choice231;
+    [SerializeField] private GameObject Choice232;
+    [SerializeField] private GameObject Choice241;
+    [SerializeField] private GameObject Choice242;
+    [SerializeField] private GameObject Choice251;
+    [SerializeField] private GameObject Choice252;
+
+    [SerializeField] private GameObject Choice311;
+    [SerializeField] private GameObject Choice312;
+    [SerializeField] private GameObject Choice321;
+    [SerializeField] private GameObject Choice322;
+    [SerializeField] private GameObject Choice331;
+    [SerializeField] private GameObject Choice332;
+    [SerializeField] private GameObject Choice341;
+    [SerializeField] private GameObject Choice342;
+    [SerializeField] private GameObject Choice351;
+    [SerializeField] private GameObject Choice352;
+
     [SerializeField] private GameObject Choice411;
     [SerializeField] private GameObject Choice412;
     [SerializeField] private GameObject Choice421;
@@ -100,6 +126,17 @@ public class DialogueMaster : MonoBehaviour
     [SerializeField] private GameObject Choice442;
     [SerializeField] private GameObject Choice451;
     [SerializeField] private GameObject Choice452;
+
+    [SerializeField] private GameObject Choice511;
+    [SerializeField] private GameObject Choice512;
+    [SerializeField] private GameObject Choice521;
+    [SerializeField] private GameObject Choice522;
+    [SerializeField] private GameObject Choice531;
+    [SerializeField] private GameObject Choice532;
+    [SerializeField] private GameObject Choice541;
+    [SerializeField] private GameObject Choice542;
+    [SerializeField] private GameObject Choice551;
+    [SerializeField] private GameObject Choice552;
 
 
     // public Animator animator;
@@ -118,7 +155,8 @@ public class DialogueMaster : MonoBehaviour
             isInDialogue = true;
         }
 
-        if (dialogueBox422.activeInHierarchy == true || dialogueBox432.activeInHierarchy == true || dialogueBox441.activeInHierarchy == true || dialogueBox452.activeInHierarchy == true || dialogueBox46.activeInHierarchy == true)
+        if (dialogueBox222.activeInHierarchy == true || dialogueBox232.activeInHierarchy == true || dialogueBox241.activeInHierarchy == true || dialogueBox252.activeInHierarchy == true || dialogueBox26.activeInHierarchy == true || dialogueBox322.activeInHierarchy == true || dialogueBox332.activeInHierarchy == true || dialogueBox341.activeInHierarchy == true || dialogueBox352.activeInHierarchy == true || dialogueBox36.activeInHierarchy == true || dialogueBox422.activeInHierarchy == true || dialogueBox432.activeInHierarchy == true || dialogueBox441.activeInHierarchy == true || dialogueBox452.activeInHierarchy == true || dialogueBox46.activeInHierarchy == true || dialogueBox522.activeInHierarchy == true || dialogueBox532.activeInHierarchy == true || dialogueBox541.activeInHierarchy == true || dialogueBox552.activeInHierarchy == true || dialogueBox56.activeInHierarchy == true)
+
         {
             if (isClosingDialogue == false)
             {
@@ -137,13 +175,27 @@ public class DialogueMaster : MonoBehaviour
         Debug.Log("Deactivating Dialogue");
         //animator.SetBool("IsOpen", false);
         panel.SetActive(false);
-        dialogueBox13.SetActive(false);
-        dialogueBox23.SetActive(false);
-        dialogueBox33.SetActive(false);
+
+        dialogueBox222.SetActive(false);
+        dialogueBox232.SetActive(false);
+        dialogueBox241.SetActive(false);
+        dialogueBox252.SetActive(false);
+
+        dialogueBox322.SetActive(false);
+        dialogueBox332.SetActive(false);
+        dialogueBox341.SetActive(false);
+        dialogueBox352.SetActive(false);
+
         dialogueBox422.SetActive(false);
         dialogueBox432.SetActive(false);
         dialogueBox441.SetActive(false);
         dialogueBox452.SetActive(false);
+
+        dialogueBox522.SetActive(false);
+        dialogueBox532.SetActive(false);
+        dialogueBox541.SetActive(false);
+        dialogueBox552.SetActive(false);
+
         isInDialogue = false;
         isClosingDialogue = false;
     }
@@ -161,30 +213,7 @@ public class DialogueMaster : MonoBehaviour
     IEnumerator ActivateOptions()
     {
         yield return new WaitForSeconds(20);
-        if (dialogueBox11.activeInHierarchy == true)
-        {
-            Choice11.SetActive(true);
-            Choice12.SetActive(true);
-        }
 
-        if (dialogueBox21.activeInHierarchy == true)
-        {
-            Choice21.SetActive(true);
-            Choice22.SetActive(true);
-        }
-
-        if (dialogueBox31.activeInHierarchy == true)
-        {
-            Choice31.SetActive(true);
-            Choice32.SetActive(true);
-        }
-
-        if (dialogueBox12.activeInHierarchy == true)
-
-        {
-            Choice13.SetActive(true);
-            Choice14.SetActive(true);
-        }
 
         if (dialogueBox41.activeInHierarchy == true)
         {
@@ -319,109 +348,6 @@ public class DialogueMaster : MonoBehaviour
     }
 
 
-    public void ChoiceOption11()
-    {
-
-
-        dialogueBox11.SetActive(false);
-        dialogueBox12.SetActive(true);
-
-        Choice11.SetActive(false);
-        Choice12.SetActive(false);
-
-        StartCoroutine(ActivateOptions());
-
-    }
-
-    public void ChoiceOption12()
-    {
-
-
-        dialogueBox11.SetActive(false);
-        dialogueBox13.SetActive(true);
-
-        Choice11.SetActive(false);
-        Choice12.SetActive(false);
-
-    }
-
-    public void ChoiceOption13()
-    {
-
-
-        dialogueBox12.SetActive(false);
-        dialogueBox14.SetActive(true);
-
-        Choice13.SetActive(false);
-        Choice14.SetActive(false);
-
-    }
-
-    public void ChoiceOption14()
-    {
-
-
-        dialogueBox12.SetActive(false);
-        dialogueBox15.SetActive(true);
-
-        Choice13.SetActive(false);
-        Choice14.SetActive(false);
-
-    }
-
-    public void ChoiceOption21()
-    {
-
-
-        dialogueBox21.SetActive(false);
-        dialogueBox22.SetActive(true);
-
-        Choice21.SetActive(false);
-        Choice22.SetActive(false);
-
-        //Choice23.SetActive(true);
-        //Choice24.SetActive(true);
-
-    }
-
-    public void ChoiceOption22()
-    {
-
-
-        dialogueBox21.SetActive(false);
-        dialogueBox23.SetActive(true);
-
-        Choice21.SetActive(false);
-        Choice22.SetActive(false);
-
-    }
-
-    public void ChoiceOption31()
-    {
-
-
-        dialogueBox31.SetActive(false);
-        dialogueBox32.SetActive(true);
-
-        Choice31.SetActive(false);
-        Choice32.SetActive(false);
-
-        //Choice23.SetActive(true);
-        //Choice24.SetActive(true);
-
-    }
-
-    public void ChoiceOption32()
-    {
-
-
-        dialogueBox31.SetActive(false);
-        dialogueBox33.SetActive(true);
-
-        Choice31.SetActive(false);
-        Choice32.SetActive(false);
-
-    }
 
     public void ChoiceOption411()
     {
