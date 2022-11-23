@@ -18,9 +18,9 @@ public class DialogueMaster : MonoBehaviour
 
     [SerializeField] private GameObject panel;
 
-   // [SerializeField] private Button button1;
+    // [SerializeField] private Button button1;
 
-   // public KeyCode key;
+    // public KeyCode key;
 
 
     [SerializeField] private GameObject dialogueBox11;
@@ -41,6 +41,11 @@ public class DialogueMaster : MonoBehaviour
     [SerializeField] private GameObject dialogueBox422;
     [SerializeField] private GameObject dialogueBox431;
     [SerializeField] private GameObject dialogueBox432;
+    [SerializeField] private GameObject dialogueBox441;
+    [SerializeField] private GameObject dialogueBox442;
+    [SerializeField] private GameObject dialogueBox451;
+    [SerializeField] private GameObject dialogueBox452;
+    [SerializeField] private GameObject dialogueBox46;
 
 
     [SerializeField] private bool isInDialogue;
@@ -58,6 +63,12 @@ public class DialogueMaster : MonoBehaviour
     [SerializeField] private GameObject Choice412;
     [SerializeField] private GameObject Choice421;
     [SerializeField] private GameObject Choice422;
+    [SerializeField] private GameObject Choice431;
+    [SerializeField] private GameObject Choice432;
+    [SerializeField] private GameObject Choice441;
+    [SerializeField] private GameObject Choice442;
+    [SerializeField] private GameObject Choice451;
+    [SerializeField] private GameObject Choice452;
 
 
     // public Animator animator;
@@ -76,7 +87,7 @@ public class DialogueMaster : MonoBehaviour
             isInDialogue = true;
         }
 
-        if (dialogueBox33.activeInHierarchy == true || dialogueBox23.activeInHierarchy == true || dialogueBox13.activeInHierarchy == true || dialogueBox422.activeInHierarchy == true)
+        if (dialogueBox422.activeInHierarchy == true || dialogueBox432.activeInHierarchy == true || dialogueBox441.activeInHierarchy == true || dialogueBox452.activeInHierarchy == true || dialogueBox46.activeInHierarchy == true)
         {
             if (isClosingDialogue == false)
             {
@@ -99,13 +110,16 @@ public class DialogueMaster : MonoBehaviour
         dialogueBox23.SetActive(false);
         dialogueBox33.SetActive(false);
         dialogueBox422.SetActive(false);
+        dialogueBox432.SetActive(false);
+        dialogueBox441.SetActive(false);
+        dialogueBox452.SetActive(false);
         isInDialogue = false;
         isClosingDialogue = false;
     }
 
 
-        
-    IEnumerator CloseDialogues () 
+
+    IEnumerator CloseDialogues()
     {
         isClosingDialogue = true;
 
@@ -124,10 +138,10 @@ public class DialogueMaster : MonoBehaviour
 
         if (dialogueBox21.activeInHierarchy == true)
         {
-           Choice21.SetActive(true);
-           Choice22.SetActive(true);
+            Choice21.SetActive(true);
+            Choice22.SetActive(true);
         }
-        
+
         if (dialogueBox31.activeInHierarchy == true)
         {
             Choice31.SetActive(true);
@@ -145,21 +159,39 @@ public class DialogueMaster : MonoBehaviour
         {
             Choice411.SetActive(true);
             Choice412.SetActive(true);
-            StartCoroutine(ActivateOptions());
+            //StartCoroutine(ActivateOptions());
         }
 
         if (dialogueBox421.activeInHierarchy == true)
         {
             Choice421.SetActive(true);
             Choice422.SetActive(true);
-            StartCoroutine(ActivateOptions());
+            //StartCoroutine(ActivateOptions());
+        }
+
+        if (dialogueBox431.activeInHierarchy == true)
+        {
+            Choice431.SetActive(true);
+            Choice432.SetActive(true);
+        }
+
+        if (dialogueBox442.activeInHierarchy == true)
+        {
+            Choice441.SetActive(true);
+            Choice442.SetActive(true);
+        }
+
+        if (dialogueBox451.activeInHierarchy == true)
+        {
+            Choice451.SetActive(true);
+            Choice452.SetActive(true);
         }
     }
 
 
     public void ActivateDialouge()
     {
-        
+
 
         if (panel.activeInHierarchy == false)
         {
@@ -177,9 +209,33 @@ public class DialogueMaster : MonoBehaviour
 
             startDialogue.SetActive(true);
 
+            // StartCoroutine(ActivateOptions());
+        }
+
+        if (dialogueBox41.activeInHierarchy == true)
+        {
             StartCoroutine(ActivateOptions());
         }
-        
+
+        if (dialogueBox421.activeInHierarchy == true)
+        {
+            StartCoroutine(ActivateOptions());
+        }
+
+        if (dialogueBox431.activeInHierarchy == true)
+        {
+            StartCoroutine(ActivateOptions());
+        }
+
+        if (dialogueBox442.activeInHierarchy == true)
+        {
+            StartCoroutine(ActivateOptions());
+        }
+
+        if (dialogueBox451.activeInHierarchy == true)
+        {
+            StartCoroutine(ActivateOptions());
+        }
 
         //if (dialogueBox11.activeInHierarchy == true)
         //{
@@ -234,13 +290,13 @@ public class DialogueMaster : MonoBehaviour
 
     public void ChoiceOption11()
     {
-       
-        
-            dialogueBox11.SetActive(false);
-            dialogueBox12.SetActive(true);
 
-            Choice11.SetActive(false);
-            Choice12.SetActive(false);
+
+        dialogueBox11.SetActive(false);
+        dialogueBox12.SetActive(true);
+
+        Choice11.SetActive(false);
+        Choice12.SetActive(false);
 
         StartCoroutine(ActivateOptions());
 
@@ -248,92 +304,92 @@ public class DialogueMaster : MonoBehaviour
 
     public void ChoiceOption12()
     {
-       
-        
-            dialogueBox11.SetActive(false);
-            dialogueBox13.SetActive(true);
 
-            Choice11.SetActive(false);
-            Choice12.SetActive(false);
-        
+
+        dialogueBox11.SetActive(false);
+        dialogueBox13.SetActive(true);
+
+        Choice11.SetActive(false);
+        Choice12.SetActive(false);
+
     }
 
     public void ChoiceOption13()
     {
-       
-        
-            dialogueBox12.SetActive(false);
-            dialogueBox14.SetActive(true);
 
-            Choice13.SetActive(false);
-            Choice14.SetActive(false);
-        
+
+        dialogueBox12.SetActive(false);
+        dialogueBox14.SetActive(true);
+
+        Choice13.SetActive(false);
+        Choice14.SetActive(false);
+
     }
 
     public void ChoiceOption14()
     {
-       
-        
-            dialogueBox12.SetActive(false);
-            dialogueBox15.SetActive(true);
 
-            Choice13.SetActive(false);
-            Choice14.SetActive(false);
-        
+
+        dialogueBox12.SetActive(false);
+        dialogueBox15.SetActive(true);
+
+        Choice13.SetActive(false);
+        Choice14.SetActive(false);
+
     }
 
-    public void ChoiceOption21() 
+    public void ChoiceOption21()
     {
-      
-        
-            dialogueBox21.SetActive(false);
-            dialogueBox22.SetActive(true);
 
-            Choice21.SetActive(false);
-            Choice22.SetActive(false);
 
-            //Choice23.SetActive(true);
-            //Choice24.SetActive(true);
-        
+        dialogueBox21.SetActive(false);
+        dialogueBox22.SetActive(true);
+
+        Choice21.SetActive(false);
+        Choice22.SetActive(false);
+
+        //Choice23.SetActive(true);
+        //Choice24.SetActive(true);
+
     }
 
     public void ChoiceOption22()
     {
-      
-        
-            dialogueBox21.SetActive(false);
-            dialogueBox23.SetActive(true);
 
-            Choice21.SetActive(false);
-            Choice22.SetActive(false);
-        
+
+        dialogueBox21.SetActive(false);
+        dialogueBox23.SetActive(true);
+
+        Choice21.SetActive(false);
+        Choice22.SetActive(false);
+
     }
 
     public void ChoiceOption31()
     {
-        
-        
-            dialogueBox31.SetActive(false);
-            dialogueBox32.SetActive(true);
 
-            Choice31.SetActive(false);
-            Choice32.SetActive(false);
 
-            //Choice23.SetActive(true);
-            //Choice24.SetActive(true);
-        
+        dialogueBox31.SetActive(false);
+        dialogueBox32.SetActive(true);
+
+        Choice31.SetActive(false);
+        Choice32.SetActive(false);
+
+        //Choice23.SetActive(true);
+        //Choice24.SetActive(true);
+
     }
 
     public void ChoiceOption32()
     {
-      
-        
-            dialogueBox31.SetActive(false);
-            dialogueBox33.SetActive(true);
 
-            Choice31.SetActive(false);
-            Choice32.SetActive(false);
-        
+
+        dialogueBox31.SetActive(false);
+        dialogueBox33.SetActive(true);
+
+        Choice31.SetActive(false);
+        Choice32.SetActive(false);
+
     }
 
     public void ChoiceOption411()
@@ -380,6 +436,61 @@ public class DialogueMaster : MonoBehaviour
 
         Choice421.SetActive(false);
         Choice422.SetActive(false);
+
+        StartCoroutine(ActivateOptions());
+    }
+
+    public void ChoiceOption431()
+    {
+        dialogueBox431.SetActive(false);
+        dialogueBox441.SetActive(true);
+
+        Choice431.SetActive(false);
+        Choice432.SetActive(false);
+
+        StartCoroutine(ActivateOptions());
+    }
+
+    public void ChoiceOption432()
+    {
+        dialogueBox431.SetActive(false);
+        dialogueBox442.SetActive(true);
+
+        Choice431.SetActive(false);
+        Choice432.SetActive(false);
+
+        StartCoroutine(ActivateOptions());
+    }
+
+    public void ChoiceOption441()
+    {
+        dialogueBox442.SetActive(false);
+        dialogueBox451.SetActive(true);
+
+        Choice441.SetActive(false);
+        Choice442.SetActive(false);
+
+        StartCoroutine(ActivateOptions());
+    }
+
+    public void ChoiceOption442()
+    {
+        dialogueBox442.SetActive(false);
+        dialogueBox452.SetActive(true);
+
+        Choice441.SetActive(false);
+        Choice442.SetActive(false);
+
+        StartCoroutine(ActivateOptions());
+    }
+
+    public void ChoiceOption451()
+    {
+        dialogueBox451.SetActive(false);
+        dialogueBox46.SetActive(true);
+
+        Choice451.SetActive(false);
+        Choice452.SetActive(false);
 
         StartCoroutine(ActivateOptions());
     }
