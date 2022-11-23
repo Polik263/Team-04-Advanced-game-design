@@ -24,17 +24,37 @@ public class DialogueMaster : MonoBehaviour
 
 
     [SerializeField] private GameObject dialogueBox11;
-    [SerializeField] private GameObject dialogueBox12;
-    [SerializeField] private GameObject dialogueBox13;
-    [SerializeField] private GameObject dialogueBox14;
-    [SerializeField] private GameObject dialogueBox15;
-    [SerializeField] private GameObject dialogueBox21;
-    [SerializeField] private GameObject dialogueBox22;
-    [SerializeField] private GameObject dialogueBox23;
-    [SerializeField] private GameObject dialogueBox31;
-    [SerializeField] private GameObject dialogueBox32;
-    [SerializeField] private GameObject dialogueBox33;
+    [SerializeField] private GameObject dialogueBox121;
+    [SerializeField] private GameObject dialogueBox122;
+    [SerializeField] private GameObject dialogueBox131;
+    [SerializeField] private GameObject dialogueBox132;
+    [SerializeField] private GameObject dialogueBox141;
+    [SerializeField] private GameObject dialogueBox142;
+    [SerializeField] private GameObject dialogueBox151;
+    [SerializeField] private GameObject dialogueBox152;
+    [SerializeField] private GameObject dialogueBox16;
 
+    [SerializeField] private GameObject dialogueBox21;
+    [SerializeField] private GameObject dialogueBox221;
+    [SerializeField] private GameObject dialogueBox222;
+    [SerializeField] private GameObject dialogueBox231;
+    [SerializeField] private GameObject dialogueBox232;
+    [SerializeField] private GameObject dialogueBox241;
+    [SerializeField] private GameObject dialogueBox242;
+    [SerializeField] private GameObject dialogueBox251;
+    [SerializeField] private GameObject dialogueBox252;
+    [SerializeField] private GameObject dialogueBox26;
+
+    [SerializeField] private GameObject dialogueBox31;
+    [SerializeField] private GameObject dialogueBox321;
+    [SerializeField] private GameObject dialogueBox322;
+    [SerializeField] private GameObject dialogueBox331;
+    [SerializeField] private GameObject dialogueBox332;
+    [SerializeField] private GameObject dialogueBox341;
+    [SerializeField] private GameObject dialogueBox342;
+    [SerializeField] private GameObject dialogueBox351;
+    [SerializeField] private GameObject dialogueBox352;
+    [SerializeField] private GameObject dialogueBox36;
 
     [SerializeField] private GameObject dialogueBox41;
     [SerializeField] private GameObject dialogueBox421;
@@ -46,6 +66,17 @@ public class DialogueMaster : MonoBehaviour
     [SerializeField] private GameObject dialogueBox451;
     [SerializeField] private GameObject dialogueBox452;
     [SerializeField] private GameObject dialogueBox46;
+
+    [SerializeField] private GameObject dialogueBox51;
+    [SerializeField] private GameObject dialogueBox521;
+    [SerializeField] private GameObject dialogueBox522;
+    [SerializeField] private GameObject dialogueBox531;
+    [SerializeField] private GameObject dialogueBox532;
+    [SerializeField] private GameObject dialogueBox541;
+    [SerializeField] private GameObject dialogueBox542;
+    [SerializeField] private GameObject dialogueBox551;
+    [SerializeField] private GameObject dialogueBox552;
+    [SerializeField] private GameObject dialogueBox56;
 
 
     [SerializeField] private bool isInDialogue;
