@@ -152,7 +152,7 @@ public class DialogueMaster : MonoBehaviour
             isInDialogue = true;
         }
 
-        if (dialogueBox222.activeInHierarchy == true || dialogueBox232.activeInHierarchy == true || dialogueBox241.activeInHierarchy == true || dialogueBox25.activeInHierarchy == true)
+        if (dialogueBox232.activeInHierarchy == true || dialogueBox241.activeInHierarchy == true || dialogueBox25.activeInHierarchy == true)
         {
             gotSlam = true;
             gotHeal = true;
