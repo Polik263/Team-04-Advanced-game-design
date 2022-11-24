@@ -6701,10 +6701,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.06
-  fullText: Having hard time with reaching all these spirits with your sword... Or
-    should I say with me? I thought that giving you the power of darkness would be
-    enough, but here we are again... And before you make a foolish comment about
-    my length, let me know you that I am very capable of extending our reach.
+  fullText: Having hard time reaching all these spirits with your sword... Or should
+    I say with me? I thought that giving you the power of darkness would be enough,
+    but here we are again... And before you make a foolish comment about my length,
+    let me know you that I am very capable of extending our reach.
 --- !u!114 &668014681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6725,10 +6725,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Having hard time with reaching all these spirits with your sword... Or
-    should I say with me? I thought that giving you the power of darkness would be
-    enough, but here we are again... And before you make a foolish comment about
-    my length, let me know you that I am very capable of extending our reach.
+  m_text: Having hard time reaching all these spirits with your sword... Or should
+    I say with me? I thought that giving you the power of darkness would be enough,
+    but here we are again... And before you make a foolish comment about my length,
+    let me know you that I am very capable of extending our reach.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10843,7 +10843,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1164416759}
-  - component: {fileID: 1164416758}
   - component: {fileID: 1164416760}
   m_Layer: 0
   m_Name: DialogueManager
@@ -10852,23 +10851,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1164416758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1164416757}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c5b87e0e953fa946aa12fa4129cfc55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TextBox03: {fileID: 0}
-  TextBox02: {fileID: 0}
-  TextBox: {fileID: 0}
-  Choice01: {fileID: 0}
-  Choice02: {fileID: 0}
 --- !u!4 &1164416759
 Transform:
   m_ObjectHideFlags: 0
