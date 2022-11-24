@@ -6,12 +6,13 @@ using UnityEngine;
 
 public class ReflectBullets : MonoBehaviour
 {
-    
-    
+
+
     GameObject player;
-    
+
     public float bulletSpeed;
     private Vector3 direction;
+    public int damage;
 
     private void Awake()
     {
@@ -31,13 +32,18 @@ public class ReflectBullets : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider collider)
     {
-        if (other.CompareTag("Enemy"))
-        {
-            Destroy(other.gameObject);
-            Destroy(gameObject);
 
+        //Physics.IgnoreCollision(collider.GetComponent<SphereCollider>(), GetComponent<Collider>());
+
+        Debug.Log(collider.gameObject.layer);
+
+        if (collider.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        {
+            Debug.Log("aaaaa");
+            collider.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
+            Destroy(gameObject);
         }
     }
 }

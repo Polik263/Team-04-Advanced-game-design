@@ -10,6 +10,7 @@ public class Meele : MonoBehaviour
     public LayerMask enemyLayers;
     public GameObject Gun;
     public Animator animator;
+    public int damage;
    
     void Start()
     {
@@ -30,7 +31,7 @@ public class Meele : MonoBehaviour
                 Debug.Log("We hit");
                 if(enemy.TryGetComponent<Die>(out Die die))
                 {
-                    enemy.GetComponent<Die>().Dead();
+                    enemy.GetComponent<PlayerHealth>().TakeDamage(damage);
                 }
             }
     }

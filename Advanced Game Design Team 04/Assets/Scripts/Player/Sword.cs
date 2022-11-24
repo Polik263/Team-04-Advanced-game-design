@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Sword : MonoBehaviour
 {
-     public bool isCd;
+    public bool isCd;
     public float cd;
     public Animator animator;
     public LayerMask enemyLayers;
@@ -19,6 +19,8 @@ public class Sword : MonoBehaviour
     PlayerHealth playerHealth;
     [SerializeField] private Transform bulletPosition;
     [SerializeField] private GameObject bullet;
+    public int damage;
+    public int takeDamage;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,110 +33,123 @@ public class Sword : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isCd == true)
+        if (isCd == true)
         {
-        
+
             cd -= Time.deltaTime;
-            if(cd <= 0)
+            if (cd <= 0)
             {
                 isCd = false;
                 cd = savecd;
             }
 
-        }  
-        if(isacd == true)   
+        }
+        if (isacd == true)
         {
 
             acd -= Time.deltaTime;
             if (acd <= 0)
-                {
-                    isacd = false;
-                    acd = saveacd;
-                }
-        } 
+            {
+                isacd = false;
+                acd = saveacd;
+            }
+        }
     }
     public void Attack()
-    {  
-        if(isCd == false)
+    {
+        if (isCd == false)
         {
             isCd = true;
             isacd = true;
-            if(currentForm == 0)
+            if (currentForm == 0)
             {
                 animator.Play("Slapping");
             }
-            if(currentForm == 1) 
+            if (currentForm == 1)
             {
                 animator.Play("DarkSwing");
             }
         }
-        
+
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(isacd)
+        if (isacd)
         {
-            if(currentForm == 0)
+            if (currentForm == 0)
             {
-                if(collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
-                {   
-                    collision.gameObject.GetComponent<Die>().Dead();
-                    playerHealth.TakeDamage(5);
+                if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+                {
+                    collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
+
+                    playerHealth.TakeDamage(takeDamage);
                 }
-            }     
+            }
         }
 
     }
     private void OnTriggerEnter(Collider collider)
     {
-        if(isacd)
+        if (isacd)
         {
-            if(currentForm == 1)
+            if (currentForm == 1)
             {
-                
-                if(collider.gameObject.layer == LayerMask.NameToLayer("Bullet"))
+
+                if (collider.gameObject.layer == LayerMask.NameToLayer("Bullet"))
                 {
-                    if(true)
+                    if (true)
                     {
                         var BulletSpawn = new Vector3(bulletPosition.position.x, bulletPosition.position.y,
                         bulletPosition.position.z);
-                        
+
 
                         Instantiate(bullet, BulletSpawn, new Quaternion());
                     }
                     Destroy(collider.gameObject);
                     playerHealth.Heal(5);
                 }
+
             }
+            if(currentForm == 0)
+            {
+                if (collider.gameObject.layer == LayerMask.NameToLayer("EnemyHit"))
+                {
+                    collider.gameObject.GetComponent<DmgEnemy>().Damage(damage);
+
+                    playerHealth.TakeDamage(5);
+                }
+            }
+
+
         }
 
     }
 
     public void SwitchForm()
     {
-        
-        if(currentForm == 0)
+
+        if (currentForm == 0)
         {
             Debug.Log("dark");
             animator.Play("ToDark");
             //Gun.GetComponent<MeshRenderer>().material = darkMaterial; 
         }
-        else if(currentForm == 1)
+        else if (currentForm == 1)
         {
             Debug.Log("ToLight");
             animator.Play("ToLight");
             float setpos = 0.14f;
             setpos -= Time.deltaTime;
-            if(setpos <= 0)
+            if (setpos <= 0)
             {
-                
 
-                Quaternion bob = Quaternion.Euler(39.396f,27.271f,-1.9f);
+
+                Quaternion bob = Quaternion.Euler(39.396f, 27.271f, -1.9f);
                 gameObject.transform.rotation = bob;
             }
 
             //Gun.GetComponent<MeshRenderer>().material = lightMaterial; 
         }
-        
+
     }
 }

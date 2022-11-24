@@ -12,17 +12,22 @@ public class Slam : MonoBehaviour
     GameObject bob;
     public bool startedd;
     public bool finishedd;
+    bool isacd;
+    public float acd;
+    float saveacd;
     PlayerMovement bobm;
     Meele meele;
+    PlayerHealth playerHealth;
 
-
+    public int takeDamage;
     private void Awake()
     {
         bob = GameObject.Find("Bob");
     }
     void Start()
     {
-        
+        playerHealth = GetComponent<PlayerHealth>();
+        saveacd = acd;
         bobm = GameObject.Find("Bob").GetComponent<PlayerMovement>();
         animator = GetComponent<Animator>();
         savecd = cd;
@@ -40,14 +45,27 @@ public class Slam : MonoBehaviour
                     isCd = false;
                     cd = savecd;
                 }
-        }  
+        }
+        if(isacd == true)   
+        {
+
+            acd -= Time.deltaTime;
+            if (acd <= 0)
+                {
+                    isacd = false;
+                    acd = saveacd;
+                    meele.Attack();
+                }
+        }   
 
     }
 
     public void EndLeap()
     { 
         bobm.canMove = true;
-        meele.Attack();
+        isacd = true;
+        playerHealth.TakeDamage(takeDamage);
+  
     }
     public void LeapSlam()
     {

@@ -12,29 +12,29 @@ public class SlamDmg : MonoBehaviour
     {
         player = GameObject.Find("Bob");
         sword = swordobj.GetComponent<Sword>();
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-        private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         canMove = player.GetComponent<PlayerMovement>().canMove;
         if (canMove == false)
         {
-            if(sword.currentForm == 1)
+            if (sword.currentForm == 1)
             {
                 Debug.Log(collision.gameObject.layer);
                 if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
                 {
-                
-                    collision.gameObject.GetComponent<Die>().Dead();
+
+                    collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(25);
                 }
             }
-            
+
 
         }
 
