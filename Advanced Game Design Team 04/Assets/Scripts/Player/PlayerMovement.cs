@@ -51,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
     GameObject dialogueManager;
     bool isInDialogue;
+    bool gotSlam;
 
 
     private void Awake()
@@ -157,7 +158,10 @@ public class PlayerMovement : MonoBehaviour
 
         void SlamAttack()
     {
-        if(sword.currentForm == 0)
+        dialogueManager = GameObject.Find("DialogueManager");
+        gotSlam = dialogueManager.GetComponent<DialogueMaster>().gotSlam;
+
+        if (sword.currentForm == 0 && gotSlam == true)
         {
             if (playerControls.Controls.Slam.ReadValue<float>() > 0)
             {
