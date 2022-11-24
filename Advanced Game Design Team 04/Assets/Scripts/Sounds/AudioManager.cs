@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-//using System.Diagnostics;
 
 public class AudioManager : MonoBehaviour
 {
@@ -61,3 +60,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 }
+
+
+// To add SFX in specific script = AudioManager.Instance.PlaySFX("Dash");
+// To stop audio in specific end point script = AudioManager.Instance.musicSource.Stop();
