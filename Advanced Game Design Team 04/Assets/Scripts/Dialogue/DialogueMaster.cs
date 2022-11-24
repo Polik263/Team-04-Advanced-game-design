@@ -75,7 +75,7 @@ public class DialogueMaster : MonoBehaviour
     [SerializeField] private GameObject dialogueBox56;
 
 
-    [SerializeField] private bool isInDialogue;
+    public bool isInDialogue;
     [SerializeField] private bool isClosingDialogue;
 
 
