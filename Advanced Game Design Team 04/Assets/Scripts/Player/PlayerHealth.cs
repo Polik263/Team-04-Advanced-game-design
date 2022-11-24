@@ -14,6 +14,10 @@ public class PlayerHealth : MonoBehaviour
     public HealthBar healthBar;
     //[SerializeField] private AudioSource hurt;
 
+    GameObject dialogueManager;
+
+    bool gotHeal;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -54,7 +58,13 @@ public class PlayerHealth : MonoBehaviour
     }
     public void Heal(int damage)
     {
-        currentHealth += damage;
+        dialogueManager = GameObject.Find("DialogueManager");
+        gotHeal = dialogueManager.GetComponent<DialogueMaster>().gotHeal;
+
+        if (gotHeal == true)
+        {
+            currentHealth += damage;
+        }
             if (currentHealth > maxHealth)
         {
             currentHealth = maxHealth;

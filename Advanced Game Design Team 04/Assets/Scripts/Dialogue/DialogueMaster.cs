@@ -75,7 +75,7 @@ public class DialogueMaster : MonoBehaviour
     [SerializeField] private GameObject dialogueBox56;
 
 
-    [SerializeField] private bool isInDialogue;
+    public bool isInDialogue;
     [SerializeField] private bool isClosingDialogue;
 
 
@@ -130,12 +130,17 @@ public class DialogueMaster : MonoBehaviour
     [SerializeField] private GameObject Choice551;
     [SerializeField] private GameObject Choice552;
 
+    public bool gotSlam;
+    public bool gotHeal;
+
 
     // public Animator animator;
 
     void Awake()
     {
         playerControls = new PlayerControls();
+
+        gotSlam = false;
     }
 
 
@@ -145,6 +150,22 @@ public class DialogueMaster : MonoBehaviour
         {
             //animator.SetBool("IsOpen", true);
             isInDialogue = true;
+        }
+
+        if (dialogueBox232.activeInHierarchy == true || dialogueBox241.activeInHierarchy == true || dialogueBox25.activeInHierarchy == true)
+        {
+            gotSlam = true;
+            gotHeal = true;
+        }
+
+        if (gotSlam == true)
+        {
+            gotSlam = true;
+        }
+
+        if (gotHeal == true)
+        {
+            gotHeal = true;
         }
 
         if (dialogueBox222.activeInHierarchy == true || dialogueBox232.activeInHierarchy == true || dialogueBox241.activeInHierarchy == true || dialogueBox25.activeInHierarchy == true || dialogueBox322.activeInHierarchy == true || dialogueBox332.activeInHierarchy == true || dialogueBox341.activeInHierarchy == true || dialogueBox35.activeInHierarchy == true || dialogueBox422.activeInHierarchy == true || dialogueBox432.activeInHierarchy == true || dialogueBox441.activeInHierarchy == true || dialogueBox452.activeInHierarchy == true || dialogueBox46.activeInHierarchy == true || dialogueBox522.activeInHierarchy == true || dialogueBox532.activeInHierarchy == true || dialogueBox541.activeInHierarchy == true || dialogueBox552.activeInHierarchy == true || dialogueBox56.activeInHierarchy == true)

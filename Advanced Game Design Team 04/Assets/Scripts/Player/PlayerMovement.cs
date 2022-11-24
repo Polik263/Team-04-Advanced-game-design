@@ -49,6 +49,10 @@ public class PlayerMovement : MonoBehaviour
     Dashh dash;
     GameObject player;
 
+    GameObject dialogueManager;
+    bool isInDialogue;
+    bool gotSlam;
+
 
     private void Awake()
     {
@@ -143,15 +147,21 @@ public class PlayerMovement : MonoBehaviour
     }
     void MeeleAttack()
     {
-        if (playerControls.Controls.Shotgun.ReadValue<float>() > 0)
-        {
-            swordobj.GetComponent<Sword>().Attack();
-        }
+        dialogueManager = GameObject.Find("DialogueManager");
+        isInDialogue = dialogueManager.GetComponent<DialogueMaster>().isInDialogue;
+
+        if (playerControls.Controls.Shotgun.ReadValue<float>() > 0 && isInDialogue == false)
+            {
+                swordobj.GetComponent<Sword>().Attack();
+            }    
     }
 
         void SlamAttack()
     {
-        if(sword.currentForm == 0)
+        dialogueManager = GameObject.Find("DialogueManager");
+        gotSlam = dialogueManager.GetComponent<DialogueMaster>().gotSlam;
+
+        if (sword.currentForm == 0 && gotSlam == true)
         {
             if (playerControls.Controls.Slam.ReadValue<float>() > 0)
             {
