@@ -74,6 +74,17 @@ public class DialogueMaster : MonoBehaviour
     [SerializeField] private GameObject dialogueBox552;
     [SerializeField] private GameObject dialogueBox56;
 
+    [SerializeField] private GameObject dialogueBox61;
+    [SerializeField] private GameObject dialogueBox621;
+    [SerializeField] private GameObject dialogueBox622;
+    [SerializeField] private GameObject dialogueBox631;
+    [SerializeField] private GameObject dialogueBox632;
+    [SerializeField] private GameObject dialogueBox641;
+    [SerializeField] private GameObject dialogueBox642;
+    [SerializeField] private GameObject dialogueBox651;
+    [SerializeField] private GameObject dialogueBox652;
+    [SerializeField] private GameObject dialogueBox66;
+
 
     public bool isInDialogue;
     [SerializeField] private bool isClosingDialogue;
@@ -130,11 +141,23 @@ public class DialogueMaster : MonoBehaviour
     [SerializeField] private GameObject Choice551;
     [SerializeField] private GameObject Choice552;
 
+    [SerializeField] private GameObject Choice611;
+    [SerializeField] private GameObject Choice612;
+    [SerializeField] private GameObject Choice621;
+    [SerializeField] private GameObject Choice622;
+    [SerializeField] private GameObject Choice631;
+    [SerializeField] private GameObject Choice632;
+    [SerializeField] private GameObject Choice641;
+    [SerializeField] private GameObject Choice642;
+    [SerializeField] private GameObject Choice651;
+    [SerializeField] private GameObject Choice652;
+
     public bool gotSlam;
     public bool gotHeal;
     public bool gotReflect;
     public bool gotLightDash;
     public bool gotDamage;
+    public bool gotDarkExtension;
 
 
     // public Animator animator;
