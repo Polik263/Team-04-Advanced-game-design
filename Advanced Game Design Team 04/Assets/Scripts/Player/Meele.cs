@@ -29,9 +29,9 @@ public class Meele : MonoBehaviour
             foreach(Collider enemy in hitEnemies)
             {
                 Debug.Log("We hit");
-                if(enemy.TryGetComponent<PlayerHealth>(out PlayerHealth playerHealth))
+                if(enemy.TryGetComponent<EnemyHealth>(out EnemyHealth playerHealth))
                 {
-                    enemy.GetComponent<PlayerHealth>().TakeDamage(damage);
+                    enemy.GetComponent<EnemyHealth>().TakeDamage(damage);
                 }
             }
     }

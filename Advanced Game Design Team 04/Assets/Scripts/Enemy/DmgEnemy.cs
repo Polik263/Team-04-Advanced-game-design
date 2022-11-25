@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DmgEnemy : MonoBehaviour
 {
-    public PlayerHealth playerHealth;
+    public EnemyHealth enemyHealth;
     void Start()
     {
         
@@ -18,6 +18,6 @@ public class DmgEnemy : MonoBehaviour
 
     public void Damage(int damage)
     {
-        playerHealth.TakeDamage(damage);
+        enemyHealth.TakeDamage(damage);
     }
 }

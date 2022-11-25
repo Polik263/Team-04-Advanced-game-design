@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 254514407082641719}
   - component: {fileID: 254514407082641718}
   - component: {fileID: 254514407082641737}
-  - component: {fileID: 254514407082641720}
+  - component: {fileID: 4205052391107146627}
   m_Layer: 6
   m_Name: RealEnemy
   m_TagString: Untagged
@@ -151,7 +151,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &254514407082641720
+--- !u!114 &4205052391107146627
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 254514407082641740}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcffaf134bcbc8e42afaafd8376c2b51, type: 3}
+  m_Script: {fileID: 11500000, guid: c1349617f0158bf4f9aeb8dc12bbb7ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mortal: 1
@@ -725,7 +725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc3863f3759276248bf4897fc140fd02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 254514407082641720}
+  enemyHealth: {fileID: 4205052391107146627}
 --- !u!1 &5564017530800411948
 GameObject:
   m_ObjectHideFlags: 0
