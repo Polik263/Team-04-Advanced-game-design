@@ -80,7 +80,8 @@ public class Sword : MonoBehaviour
             {
                 if(gotDarkExtension == true)
                 {
-                    boxCollider.size = new Vector3(boxCollider.size.x, longerAttack, 3);
+                    boxCollider.size = new Vector3(boxCollider.size.x, longerAttack, 3 );
+                    boxCollider.center = new Vector3 (boxCollider.center.x, longerAttack/2, boxCollider.center.z);
                     animator.Play("Slapping");
                 }
                 else
@@ -130,7 +131,7 @@ public class Sword : MonoBehaviour
                 {
                     collider.gameObject.GetComponent<DmgEnemy>().Damage(damage);
 
-                    playerHealth.TakeDamage(5);
+                    playerHealth.TakeDamage(takeDamage);
                 }
             }
 
