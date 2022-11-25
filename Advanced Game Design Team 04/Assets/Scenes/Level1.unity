@@ -674,8 +674,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 79.76105, y: -64.23401}
-  m_SizeDelta: {x: 159.5, y: -136.53}
+  m_AnchoredPosition: {x: 348.82, y: -64.23401}
+  m_SizeDelta: {x: 697.61, y: -136.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &16474907
 MonoBehaviour:
@@ -738,7 +738,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1709239568}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
-        m_MethodName: ChoiceOption651
+        m_MethodName: ChoiceOption751
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1351,8 +1351,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 190.23, y: 0}
-  m_SizeDelta: {x: 380.43, y: 0}
+  m_AnchoredPosition: {x: 134.58, y: 0}
+  m_SizeDelta: {x: 269.13, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &34958518
 MonoBehaviour:
@@ -1367,7 +1367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.06
-  fullText: 1. It will be worse if you don't help!
+  fullText: 1. Fun is fun. Let's jump
 --- !u!114 &34958519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1388,7 +1388,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1. It will be worse if you don't help!
+  m_text: 1. Fun is fun. Let's jump
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4555,7 +4555,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &131617737
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4855,8 +4855,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 90.639, y: -22.939026}
-  m_SizeDelta: {x: 181.28, y: -141.1}
+  m_AnchoredPosition: {x: 241.46881, y: -22.939026}
+  m_SizeDelta: {x: 482.9477, y: -141.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &139163384
 MonoBehaviour:
@@ -4919,7 +4919,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1709239568}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
-        m_MethodName: ChoiceOption621
+        m_MethodName: ChoiceOption721
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6220,8 +6220,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 132.80994, y: -22.944992}
-  m_SizeDelta: {x: 265.626, y: -141.09}
+  m_AnchoredPosition: {x: 269.60547, y: -22.944992}
+  m_SizeDelta: {x: 539.2172, y: -141.09}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &195977297
 MonoBehaviour:
@@ -6284,7 +6284,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1709239568}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
-        m_MethodName: ChoiceOption611
+        m_MethodName: ChoiceOption711
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7220,7 +7220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.06
-  fullText: "I will! but just to be clear. It won\u2019t actually make you fly for
+  fullText: "It is! But just to be clear. It won\u2019t actually make you fly for
     real. It\u2019s just a big jump. I don't want any complaining that I didn\u2019t
     make you fly. Had enough of that from others. It\u2019s just a jump. A fun jump!
     But just a jump. I know I sold it like I would make you fly but I can\u2019t.
@@ -7245,11 +7245,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "I will! but just to be clear. It won\u2019t actually make you fly for
-    real. It\u2019s just a big jump. I don't want any complaining that I didn\u2019t
-    make you fly. Had enough of that from others. It\u2019s just a jump. A fun jump!
-    But just a jump. I know I sold it like I would make you fly but I can\u2019t.
-    I can do a lot of stuff but make you fly? No."
+  m_text: "It is! But just to be clear. It won\u2019t actually make you fly for real.
+    It\u2019s just a big jump. I don't want any complaining that I didn\u2019t make
+    you fly. Had enough of that from others. It\u2019s just a jump. A fun jump! But
+    just a jump. I know I sold it like I would make you fly but I can\u2019t. I can
+    do a lot of stuff but make you fly? No."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8541,8 +8541,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 120.59631, y: -64.233}
-  m_SizeDelta: {x: 241.1926, y: -136.53}
+  m_AnchoredPosition: {x: 188.06775, y: -64.233}
+  m_SizeDelta: {x: 376.1354, y: -136.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &276682639
 MonoBehaviour:
@@ -8605,7 +8605,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1709239568}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
-        m_MethodName: ChoiceOption622
+        m_MethodName: ChoiceOption722
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14518,8 +14518,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202.23, y: 0}
-  m_SizeDelta: {x: 404.45, y: 0}
+  m_AnchoredPosition: {x: 241.46999, y: 0}
+  m_SizeDelta: {x: 482.92, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &608271916
 MonoBehaviour:
@@ -14534,7 +14534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.06
-  fullText: 2. I might need the power to reach it!
+  fullText: 2. Apology accepted. Now teach me to jump
 --- !u!114 &608271917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14555,7 +14555,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2. I might need the power to reach it!
+  m_text: 2. Apology accepted. Now teach me to jump
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14618,7 +14618,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 1.0377197, w: 0}
+  m_margin: {x: 0, y: 0, z: -0.1194458, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -20694,8 +20694,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 90.64498, y: 0}
-  m_SizeDelta: {x: 181.27, y: 0}
+  m_AnchoredPosition: {x: 241.48, y: 0}
+  m_SizeDelta: {x: 482.94, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &958687740
 MonoBehaviour:
@@ -20710,7 +20710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.06
-  fullText: 1. That is mean
+  fullText: 1. Who were you before becoming a sword?
 --- !u!114 &958687741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20731,7 +20731,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1. That is mean
+  m_text: 1. Who were you before becoming a sword?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -21816,8 +21816,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 118.64, y: 0}
-  m_SizeDelta: {x: 237.29, y: 0}
+  m_AnchoredPosition: {x: 172.46, y: 0}
+  m_SizeDelta: {x: 344.93, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1011872459
 MonoBehaviour:
@@ -21832,7 +21832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.06
-  fullText: 2. You and talents...?
+  fullText: 2. We can do that? Sounds fun
 --- !u!114 &1011872460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21853,7 +21853,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2. You and talents...?
+  m_text: 2. We can do that? Sounds fun
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -23714,8 +23714,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 118.654236, y: -64.23195}
-  m_SizeDelta: {x: 237.2885, y: -136.53}
+  m_AnchoredPosition: {x: 172.46893, y: -64.23195}
+  m_SizeDelta: {x: 344.9279, y: -136.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1114671988
 MonoBehaviour:
@@ -23778,7 +23778,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1709239568}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
-        m_MethodName: ChoiceOption612
+        m_MethodName: ChoiceOption712
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25272,8 +25272,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 79.761055, y: 0}
-  m_SizeDelta: {x: 159.48, y: 0}
+  m_AnchoredPosition: {x: 348.82, y: 0}
+  m_SizeDelta: {x: 697.59, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1197000799
 MonoBehaviour:
@@ -25288,7 +25288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.06
-  fullText: 1. Um... Yeah
+  fullText: 1. I got that from the beginning of this discussion. Just teach me!
 --- !u!114 &1197000800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25309,7 +25309,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1. Um... Yeah
+  m_text: 1. I got that from the beginning of this discussion. Just teach me!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -25814,10 +25814,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.06
-  fullText: Well, good thing I keep track of the conversation. Worry not, my friend!
-    With this new beautiful power you can use me as a mirror  of the enemies projectiles!
-    Yes, you can shoot their magic back at them with the light power, if that was
-    too poetic for you to understand...
+  fullText: "If you did, why aren\u2019t you more precise with your words?? Never
+    mind... Time to make you fly! \u2026 Or jump\u2026 Yes, jump\u2026 I can\u2019t
+    you fly, but you already know that, right\u2026?  Let\u2019s forget about that\u2026 "
 --- !u!114 &1211372108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25838,10 +25837,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Well, good thing I keep track of the conversation. Worry not, my friend!
-    With this new beautiful power you can use me as a mirror  of the enemies projectiles!
-    Yes, you can shoot their magic back at them with the light power, if that was
-    too poetic for you to understand...
+  m_text: "If you did, why aren\u2019t you more precise with your words?? Never mind...
+    Time to make you fly! \u2026 Or jump\u2026 Yes, jump\u2026 I can\u2019t you fly,
+    but you already know that, right\u2026?\r Let\u2019s forget about that\u2026\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -26084,8 +26082,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 79.750046, y: 0}
-  m_SizeDelta: {x: 159.5, y: 0}
+  m_AnchoredPosition: {x: 348.81, y: 0}
+  m_SizeDelta: {x: 697.61, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1223067181
 MonoBehaviour:
@@ -26100,7 +26098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.06
-  fullText: 2. Um... Yeah
+  fullText: 2. I got that from the beginning of this discussion. Just teach me!
 --- !u!114 &1223067182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26121,7 +26119,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2. Um... Yeah
+  m_text: 2. I got that from the beginning of this discussion. Just teach me!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -30067,8 +30065,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 120.59, y: 0}
-  m_SizeDelta: {x: 241.2, y: 0}
+  m_AnchoredPosition: {x: 188.06, y: 0}
+  m_SizeDelta: {x: 376.15, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1365028229
 MonoBehaviour:
@@ -30083,7 +30081,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.06
-  fullText: 2. Offensive POWER
+  fullText: "2. Suuure. Let\u2019s do some jumping!"
 --- !u!114 &1365028230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30104,7 +30102,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2. Offensive POWER
+  m_text: "2. Suuure. Let\u2019s do some jumping!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -32155,8 +32153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 132.82, y: 0}
-  m_SizeDelta: {x: 265.62, y: 0}
+  m_AnchoredPosition: {x: 269.61, y: 0}
+  m_SizeDelta: {x: 539.21, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1476477313
 MonoBehaviour:
@@ -32171,7 +32169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.06
-  fullText: 1. Yeees, more offence!
+  fullText: 1. I don't think you can, you've never mention that
 --- !u!114 &1476477314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32192,7 +32190,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1. Yeees, more offence!
+  m_text: 1. I don't think you can, you've never mention that
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -32440,8 +32438,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 79.76105, y: -22.939026}
-  m_SizeDelta: {x: 159.5021, y: -141.1}
+  m_AnchoredPosition: {x: 348.8152, y: -22.939026}
+  m_SizeDelta: {x: 697.6105, y: -141.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1491758276
 MonoBehaviour:
@@ -32504,7 +32502,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1709239568}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
-        m_MethodName: ChoiceOption651
+        m_MethodName: ChoiceOption751
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -32590,8 +32588,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 190.22, y: -22.945007}
-  m_SizeDelta: {x: 380.44, y: -141.09}
+  m_AnchoredPosition: {x: 134.57343, y: -22.945007}
+  m_SizeDelta: {x: 269.1469, y: -141.09}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1491940976
 MonoBehaviour:
@@ -32654,7 +32652,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1709239568}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
-        m_MethodName: ChoiceOption631
+        m_MethodName: ChoiceOption731
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -33262,8 +33260,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 132.81, y: 0}
-  m_SizeDelta: {x: 265.62, y: 0}
+  m_AnchoredPosition: {x: 196.11, y: 0}
+  m_SizeDelta: {x: 392.22, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1517971546
 MonoBehaviour:
@@ -33278,7 +33276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.06
-  fullText: 2. What's wrong with it?
+  fullText: 2. I don't like the idea of it killing me
 --- !u!114 &1517971547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33299,7 +33297,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2. What's wrong with it?
+  m_text: 2. I don't like the idea of it killing me
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -38246,16 +38244,16 @@ MonoBehaviour:
   dialogueBox651: {fileID: 491255161}
   dialogueBox652: {fileID: 203296466}
   dialogueBox66: {fileID: 467930263}
-  dialogueBox71: {fileID: 0}
-  dialogueBox721: {fileID: 0}
-  dialogueBox722: {fileID: 0}
-  dialogueBox731: {fileID: 0}
-  dialogueBox732: {fileID: 0}
-  dialogueBox741: {fileID: 0}
-  dialogueBox742: {fileID: 0}
-  dialogueBox751: {fileID: 0}
-  dialogueBox752: {fileID: 0}
-  dialogueBox76: {fileID: 0}
+  dialogueBox71: {fileID: 755157387}
+  dialogueBox721: {fileID: 1146220494}
+  dialogueBox722: {fileID: 1445690248}
+  dialogueBox731: {fileID: 1539621978}
+  dialogueBox732: {fileID: 198991051}
+  dialogueBox741: {fileID: 1276890725}
+  dialogueBox742: {fileID: 617948908}
+  dialogueBox751: {fileID: 1551997227}
+  dialogueBox752: {fileID: 240728870}
+  dialogueBox76: {fileID: 1211372105}
   isInDialogue: 0
   isClosingDialogue: 0
   Choice111: {fileID: 1353583046}
@@ -38314,16 +38312,16 @@ MonoBehaviour:
   Choice642: {fileID: 48655251}
   Choice651: {fileID: 611943836}
   Choice652: {fileID: 1060923407}
-  Choice711: {fileID: 0}
-  Choice712: {fileID: 0}
-  Choice721: {fileID: 0}
-  Choice722: {fileID: 0}
-  Choice731: {fileID: 0}
-  Choice732: {fileID: 0}
-  Choice741: {fileID: 0}
-  Choice742: {fileID: 0}
-  Choice751: {fileID: 0}
-  Choice752: {fileID: 0}
+  Choice711: {fileID: 195977295}
+  Choice712: {fileID: 1114671986}
+  Choice721: {fileID: 139163382}
+  Choice722: {fileID: 276682637}
+  Choice731: {fileID: 1491940974}
+  Choice732: {fileID: 1822795941}
+  Choice741: {fileID: 1969613040}
+  Choice742: {fileID: 2138645008}
+  Choice751: {fileID: 1491758274}
+  Choice752: {fileID: 16474905}
   gotSlam: 0
   gotHeal: 0
   gotReflect: 0
@@ -40961,8 +40959,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 132.81, y: -64.23195}
-  m_SizeDelta: {x: 265.62, y: -136.53}
+  m_AnchoredPosition: {x: 196.10791, y: -64.23195}
+  m_SizeDelta: {x: 392.2158, y: -136.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1822795943
 MonoBehaviour:
@@ -41025,7 +41023,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1709239568}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
-        m_MethodName: ChoiceOption632
+        m_MethodName: ChoiceOption732
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -44042,8 +44040,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 84.92261, y: -22.939026}
-  m_SizeDelta: {x: 169.8352, y: -141.1}
+  m_AnchoredPosition: {x: 150.88043, y: -22.939026}
+  m_SizeDelta: {x: 301.7509, y: -141.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1969613042
 MonoBehaviour:
@@ -44106,7 +44104,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1709239568}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
-        m_MethodName: ChoiceOption641
+        m_MethodName: ChoiceOption741
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -47855,8 +47853,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 84.928, y: 0}
-  m_SizeDelta: {x: 169.82, y: 0}
+  m_AnchoredPosition: {x: 150.88, y: 0}
+  m_SizeDelta: {x: 301.73, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2120357764
 MonoBehaviour:
@@ -47871,7 +47869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.06
-  fullText: 1. Tell me now!
+  fullText: 1. Flying really sounds nice
 --- !u!114 &2120357765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47892,7 +47890,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1. Tell me now!
+  m_text: 1. Flying really sounds nice
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -48459,8 +48457,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202.23547, y: -64.23294}
-  m_SizeDelta: {x: 404.451, y: -136.53}
+  m_AnchoredPosition: {x: 241.48, y: -64.23294}
+  m_SizeDelta: {x: 482.93, y: -136.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2138645010
 MonoBehaviour:
@@ -48523,7 +48521,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1709239568}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
-        m_MethodName: ChoiceOption642
+        m_MethodName: ChoiceOption742
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
