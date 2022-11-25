@@ -21,6 +21,13 @@ public class Sword : MonoBehaviour
     [SerializeField] private GameObject bullet;
     public int damage;
     public int takeDamage;
+
+
+
+    GameObject dialogueManager;
+
+    bool gotReflect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -90,6 +97,10 @@ public class Sword : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collider)
     {
+        dialogueManager = GameObject.Find("DialogueManager");
+        gotReflect = dialogueManager.GetComponent<DialogueMaster>().gotReflect;
+
+
         if (isacd)
         {
             if (currentForm == 1)
@@ -97,7 +108,7 @@ public class Sword : MonoBehaviour
 
                 if (collider.gameObject.layer == LayerMask.NameToLayer("Bullet"))
                 {
-                    if (true)
+                    if (true && gotReflect == true)
                     {
                         var BulletSpawn = new Vector3(bulletPosition.position.x, bulletPosition.position.y,
                         bulletPosition.position.z);

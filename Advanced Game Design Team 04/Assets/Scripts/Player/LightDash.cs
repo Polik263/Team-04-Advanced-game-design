@@ -8,6 +8,13 @@ public class LightDash : MonoBehaviour
     public GameObject swordobj;
     Sword sword;
     bool canMove;
+
+    
+    GameObject dialogueManager;
+
+    bool gotLightDash;
+
+
     void Start()
     {
         player = GameObject.Find("Bob");
@@ -22,10 +29,14 @@ public class LightDash : MonoBehaviour
     }
         private void OnCollisionEnter(Collision collision)
     {
+        dialogueManager = GameObject.Find("DialogueManager");
+        gotLightDash = dialogueManager.GetComponent<DialogueMaster>().gotLightDash;
+
+
         canMove = player.GetComponent<PlayerMovement>().canMove;
         if (canMove == false)
         {
-            if(sword.currentForm == 1)
+            if(sword.currentForm == 1 && gotLightDash == true)
             {
                 Debug.Log(collision.gameObject.layer);
                 if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))

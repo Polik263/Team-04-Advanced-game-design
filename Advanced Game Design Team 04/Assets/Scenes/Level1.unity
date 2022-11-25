@@ -30417,6 +30417,7 @@ MonoBehaviour:
   Choice552: {fileID: 934530643}
   gotSlam: 0
   gotHeal: 0
+  gotReflect: 0
 --- !u!4 &1709239569
 Transform:
   m_ObjectHideFlags: 0

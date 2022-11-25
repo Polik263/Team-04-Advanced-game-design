@@ -132,6 +132,8 @@ public class DialogueMaster : MonoBehaviour
 
     public bool gotSlam;
     public bool gotHeal;
+    public bool gotReflect;
+    public bool gotLightDash;
 
 
     // public Animator animator;
@@ -139,8 +141,6 @@ public class DialogueMaster : MonoBehaviour
     void Awake()
     {
         playerControls = new PlayerControls();
-
-        gotSlam = false;
     }
 
 
@@ -156,6 +156,8 @@ public class DialogueMaster : MonoBehaviour
         {
             gotSlam = true;
             gotHeal = true;
+            gotReflect = true;
+            gotLightDash= true;
         }
 
         if (gotSlam == true)
@@ -166,6 +168,16 @@ public class DialogueMaster : MonoBehaviour
         if (gotHeal == true)
         {
             gotHeal = true;
+        }
+
+        if (gotReflect == true)
+        {
+            gotReflect = true;
+        }
+
+        if (gotLightDash == true)
+        {
+            gotLightDash = true;
         }
 
         if (dialogueBox222.activeInHierarchy == true || dialogueBox232.activeInHierarchy == true || dialogueBox241.activeInHierarchy == true || dialogueBox25.activeInHierarchy == true || dialogueBox322.activeInHierarchy == true || dialogueBox332.activeInHierarchy == true || dialogueBox341.activeInHierarchy == true || dialogueBox35.activeInHierarchy == true || dialogueBox422.activeInHierarchy == true || dialogueBox432.activeInHierarchy == true || dialogueBox441.activeInHierarchy == true || dialogueBox452.activeInHierarchy == true || dialogueBox46.activeInHierarchy == true || dialogueBox522.activeInHierarchy == true || dialogueBox532.activeInHierarchy == true || dialogueBox541.activeInHierarchy == true || dialogueBox552.activeInHierarchy == true || dialogueBox56.activeInHierarchy == true)
