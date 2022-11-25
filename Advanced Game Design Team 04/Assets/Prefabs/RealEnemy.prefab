@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 254514407082641718}
   - component: {fileID: 254514407082641737}
   - component: {fileID: 254514407082641720}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RealEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ Transform:
   - {fileID: 5564017529485791495}
   - {fileID: 5564017529887724780}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &254514407082641739
 MeshFilter:
