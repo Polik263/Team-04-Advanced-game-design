@@ -41,7 +41,6 @@ public class ReflectBullets : MonoBehaviour
 
         if (collider.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
-            Debug.Log("aaaaa");
             collider.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
             Destroy(gameObject);
         }

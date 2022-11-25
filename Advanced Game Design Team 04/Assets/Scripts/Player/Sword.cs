@@ -125,7 +125,6 @@ public class Sword : MonoBehaviour
             {
                 if (collider.gameObject.layer == LayerMask.NameToLayer("EnemyHit"))
                 {
-                    Debug.Log("aa");
                     collider.gameObject.GetComponent<DmgEnemy>().Damage(damage);
 
                     playerHealth.TakeDamage(5);
