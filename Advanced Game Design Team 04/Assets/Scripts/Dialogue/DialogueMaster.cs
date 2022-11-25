@@ -294,6 +294,12 @@ public class DialogueMaster : MonoBehaviour
         dialogueBox652.SetActive(false);
         dialogueBox66.SetActive(false);
 
+        dialogueBox722.SetActive(false);
+        dialogueBox732.SetActive(false);
+        dialogueBox741.SetActive(false);
+        dialogueBox752.SetActive(false);
+        dialogueBox76.SetActive(false);
+
         isInDialogue = false;
         isClosingDialogue = false;
     }
@@ -460,6 +466,38 @@ public class DialogueMaster : MonoBehaviour
             Choice651.SetActive(true);
             Choice652.SetActive(true);
         }
+
+        if (dialogueBox71.activeInHierarchy == true)
+        {
+            Choice711.SetActive(true);
+            Choice712.SetActive(true);
+            //StartCoroutine(ActivateOptions());
+        }
+
+        if (dialogueBox721.activeInHierarchy == true)
+        {
+            Choice721.SetActive(true);
+            Choice722.SetActive(true);
+            //StartCoroutine(ActivateOptions());
+        }
+
+        if (dialogueBox731.activeInHierarchy == true)
+        {
+            Choice731.SetActive(true);
+            Choice732.SetActive(true);
+        }
+
+        if (dialogueBox742.activeInHierarchy == true)
+        {
+            Choice741.SetActive(true);
+            Choice742.SetActive(true);
+        }
+
+        if (dialogueBox751.activeInHierarchy == true)
+        {
+            Choice751.SetActive(true);
+            Choice752.SetActive(true);
+        }
     }
 
 
@@ -597,6 +635,31 @@ public class DialogueMaster : MonoBehaviour
         }
 
         if (dialogueBox651.activeInHierarchy == true)
+        {
+            StartCoroutine(ActivateOptions());
+        }
+
+        if (dialogueBox71.activeInHierarchy == true)
+        {
+            StartCoroutine(ActivateOptions());
+        }
+
+        if (dialogueBox721.activeInHierarchy == true)
+        {
+            StartCoroutine(ActivateOptions());
+        }
+
+        if (dialogueBox731.activeInHierarchy == true)
+        {
+            StartCoroutine(ActivateOptions());
+        }
+
+        if (dialogueBox742.activeInHierarchy == true)
+        {
+            StartCoroutine(ActivateOptions());
+        }
+
+        if (dialogueBox751.activeInHierarchy == true)
         {
             StartCoroutine(ActivateOptions());
         }
@@ -1121,6 +1184,109 @@ public class DialogueMaster : MonoBehaviour
 
         Choice651.SetActive(false);
         Choice652.SetActive(false);
+
+        StartCoroutine(ActivateOptions());
+    }
+
+    public void ChoiceOption711()
+    {
+
+
+        dialogueBox71.SetActive(false);
+        dialogueBox721.SetActive(true);
+
+        Choice711.SetActive(false);
+        Choice712.SetActive(false);
+
+        StartCoroutine(ActivateOptions());
+    }
+
+    public void ChoiceOption712()
+    {
+
+
+        dialogueBox71.SetActive(false);
+        dialogueBox722.SetActive(true);
+
+        Choice711.SetActive(false);
+        Choice712.SetActive(false);
+
+        StartCoroutine(ActivateOptions());
+    }
+
+    public void ChoiceOption721()
+    {
+        dialogueBox721.SetActive(false);
+        dialogueBox731.SetActive(true);
+
+        Choice721.SetActive(false);
+        Choice722.SetActive(false);
+
+        StartCoroutine(ActivateOptions());
+    }
+
+    public void ChoiceOption722()
+    {
+        dialogueBox721.SetActive(false);
+        dialogueBox732.SetActive(true);
+
+        Choice721.SetActive(false);
+        Choice722.SetActive(false);
+
+        StartCoroutine(ActivateOptions());
+    }
+
+    public void ChoiceOption731()
+    {
+        dialogueBox731.SetActive(false);
+        dialogueBox741.SetActive(true);
+
+        Choice731.SetActive(false);
+        Choice732.SetActive(false);
+
+        StartCoroutine(ActivateOptions());
+    }
+
+    public void ChoiceOption732()
+    {
+        dialogueBox731.SetActive(false);
+        dialogueBox742.SetActive(true);
+
+        Choice731.SetActive(false);
+        Choice732.SetActive(false);
+
+        StartCoroutine(ActivateOptions());
+    }
+
+    public void ChoiceOption741()
+    {
+        dialogueBox742.SetActive(false);
+        dialogueBox751.SetActive(true);
+
+        Choice741.SetActive(false);
+        Choice742.SetActive(false);
+
+        StartCoroutine(ActivateOptions());
+    }
+
+    public void ChoiceOption742()
+    {
+        dialogueBox742.SetActive(false);
+        dialogueBox752.SetActive(true);
+
+        Choice741.SetActive(false);
+        Choice742.SetActive(false);
+
+        StartCoroutine(ActivateOptions());
+    }
+
+    public void ChoiceOption751()
+    {
+        dialogueBox751.SetActive(false);
+        dialogueBox76.SetActive(true);
+
+        Choice751.SetActive(false);
+        Choice752.SetActive(false);
 
         StartCoroutine(ActivateOptions());
     }

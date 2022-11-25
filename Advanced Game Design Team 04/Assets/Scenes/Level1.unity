@@ -6389,10 +6389,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.06
-  fullText: Oh, power, yes... That's what you meant. I mean, of course I knew what
-    you meant form the very beginning, don't even assume otherwise. Ehm... Let the
-    power of of light accumulate the energy and redirect is as the darkness of your
-    soul! Sounds cool, doesn't it?
+  fullText: "That\u2019s a long and complicated story anyway. Think we should be
+    focusing on these grumpy and annoying spirits. And with focusing on them, I mean
+    of course... jumping on them."
 --- !u!114 &198991054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6413,10 +6412,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Oh, power, yes... That's what you meant. I mean, of course I knew what
-    you meant form the very beginning, don't even assume otherwise. Ehm... Let the
-    power of of light accumulate the energy and redirect is as the darkness of your
-    soul! Sounds cool, doesn't it?
+  m_text: "That\u2019s a long and complicated story anyway. Think we should be focusing
+    on these grumpy and annoying spirits.\nAnd with focusing on them, I mean of course...\njumping
+    on them."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7222,10 +7220,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.06
-  fullText: Oh you want to know it so much? At the top we will carry out a ritual
-    to change everything for the better! Don't get discouraged by the word "ritual".
-    It's completly safe. After that you'll be able to admire your beauty in the reflection
-    of a mirror! Which actually reminds me, didn't you want power or something?
+  fullText: "I will! but just to be clear. It won\u2019t actually make you fly for
+    real. It\u2019s just a big jump. I don't want any complaining that I didn\u2019t
+    make you fly. Had enough of that from others. It\u2019s just a jump. A fun jump!
+    But just a jump. I know I sold it like I would make you fly but I can\u2019t.
+    I can do a lot of stuff but make you fly? No."
 --- !u!114 &240728873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7246,10 +7245,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Oh you want to know it so much? At the top we will carry out a ritual to
-    change everything for the better! Don't get discouraged by the word "ritual".
-    It's completly safe. After that you'll be able to admire your beauty in the reflection
-    of a mirror! Which actually reminds me, didn't you want power or something?
+  m_text: "I will! but just to be clear. It won\u2019t actually make you fly for
+    real. It\u2019s just a big jump. I don't want any complaining that I didn\u2019t
+    make you fly. Had enough of that from others. It\u2019s just a jump. A fun jump!
+    But just a jump. I know I sold it like I would make you fly but I can\u2019t.
+    I can do a lot of stuff but make you fly? No."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15063,11 +15063,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.06
-  fullText: Oh well... You didn't really see other people did you? I would just say
-    you look... Unusual? Nothing to worry about! There are plenty of ways people
-    do to keep themselves good looking. Make up, stylish clothes and much more. I
-    know another way of doing that I might be in a mood to share with you after we
-    reach the top.
+  fullText: "Well, I don\u2019t like the idea of your face!... That was unnecessary,
+    that was crossing the line, forgive me this spitefulness. There is nothing wrong
+    with your nice face. I just get so protective and excited when it comes to jumping.
+    Really makes you feel like flying... which is a nice feeling, but you should
+    be the one to know that..."
 --- !u!114 &617948911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15088,11 +15088,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Oh well... You didn't really see other people did you? I would just say
-    you look... Unusual? Nothing to worry about! There are plenty of ways people
-    do to keep themselves good looking. Make up, stylish clothes and much more. I
-    know another way of doing that I might be in a mood to share with you after we
-    reach the top.
+  m_text: "Well, I don\u2019t like the idea of your face!...\nThat was unnecessary,
+    that was crossing the line, forgive me this spitefulness. There is nothing wrong
+    with your nice face. I just get so protective and excited when it comes to jumping.\nReally
+    makes you feel like flying... which is a nice feeling, but you should be the
+    one to know that..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -17527,10 +17527,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.06
-  fullText: Am I seeing right? You're still struggling to not get hit? Well... some
-    people say that the best defence is more offence maybe we should try to apply
-    it? As you know I'm a sword with many hidden talents, so I could try make us
-    be able to redirect the spirits' magic right back at them! What do you say...?
+  fullText: "It\u2019s sure getting more and more spirits around us. Are you certain
+    that you don\u2019t want to make it easier for you and just jump away from them?
+    Or even better, jump on them? I need to admit, it\u2019s getting a little bit
+    boring here on my end. Come on let\u2019s jump, let\u2019s reach for the sky
+    and feel the wind while demolishing our enemies!"
 --- !u!114 &755157390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17551,10 +17552,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Am I seeing right? You're still struggling to not get hit? Well... some
-    people say that the best defence is more offence maybe we should try to apply
-    it? As you know I'm a sword with many hidden talents, so I could try make us
-    be able to redirect the spirits' magic right back at them! What do you say...?
+  m_text: "It\u2019s sure getting more and more spirits around us. Are you certain
+    that you don\u2019t want to make it easier for you and just jump away from them?
+    Or even better, jump on them?\nI need to admit, it\u2019s getting a little bit
+    boring here on my end. Come on let\u2019s jump, let\u2019s reach for the sky
+    and feel the wind while demolishing our enemies!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -24684,10 +24686,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.06
-  fullText: Wait, you want me to be more offensive? Do you mean in words? I would
-    persume so, as my cutting abilities are incomperably better than of any weapon
-    you could find. Too bad for you, I think being nice is a virtue. Thanks to my
-    patience and kind nature I was able to withstand your company thus far.
+  fullText: "Indeed it is! I don\u2019t know what it is with jumping that makes it
+    so fun. Just makes you feel alive you know. Boy do I miss being alive sometimes.
+    Feeling stuff, smelling stuff, tasting those stuff. One time I felt, smelled
+    and tasted some stuff at the same time! Can you you imagine?! Crazy times, crazy
+    times."
 --- !u!114 &1146220497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24708,14 +24711,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Wait, you want me to be more offensive?
-
-    Do you mean in words? I would
-    persume so, as my cutting abilities are incomperably better than of any weapon
-    you could find.
-
-    Too bad for you, I think being nice is a virtue. Thanks
-    to my patience and kind nature I was able to withstand your company thus far.'
+  m_text: "Indeed it is! I don\u2019t know what it is with jumping that makes it
+    so fun. Just makes you feel alive you know. Boy do I miss being alive sometimes.
+    Feeling stuff, smelling stuff, tasting those stuff. One time I felt, smelled
+    and tasted some stuff at the same time! Can you you imagine?! Crazy times, crazy
+    times."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -27771,9 +27771,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.06
-  fullText: Well, I really wouldn't like to have an even worse view accompany me
-    throught the rest of our journey. I shall lend you my power yet again. Go, make
-    the spirits uglier with their own magic! ... If it is even possible...
+  fullText: Yes! It's time to jump, so let's jump! But do remember to heal yourself
+    once and a while cause it can actually kill you....
 --- !u!114 &1276890728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27794,9 +27793,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Well, I really wouldn't like to have an even worse view accompany me throught
-    the rest of our journey. I shall lend you my power yet again. Go, make the spirits
-    uglier with their own magic! ... If it is even possible...
+  m_text: Yes! It's time to jump, so let's jump! But do remember to heal yourself
+    once and a while cause it can actually kill you....
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -31644,10 +31642,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.06
-  fullText: Are you insluting me again? Or did you decide to try and redirect my
-    very words back at me? Oh, no problem. We can play this little game of yours..............................................
-    Are you expecting something from me? I'm redirecting my attention in the opposite
-    direction to you.
+  fullText: "Never mentioned it?! It's like you never listen to me. I have mentioned
+    it so many times that we can easily jump on our problems. Probably mentioned
+    it like 100 times... or maybe 43... or 12? or maybe I actually\_ haven't mentioned
+    it yet. huh... Let me take a moment to consider that..."
 --- !u!114 &1445690251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31668,10 +31666,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Are you insluting me again? Or did you decide to try and redirect my very
-    words back at me? Oh, no problem. We can play this little game of yours..............................................
-    Are you expecting something from me? I'm redirecting my attention in the opposite
-    direction to you.
+  m_text: "Never mentioned it?! It's like you never listen to me.\nI have mentioned
+    it so many times that we can easily jump on our problems. Probably mentioned
+    it like 100 times... or maybe 43... or 12? or maybe I actually\_ haven't mentioned
+    it yet. huh... Let me take a moment to consider that..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -34002,10 +34000,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.06
-  fullText: Nonsense! If I were to be mean, I would already make a comment about
-    how lucky you are that there are no mirrors in this tower! You can't even imagine
-    how hurtful to my eyes is having to watch you all this time... Your movements
-    are one thing, but just this body... Gross...
+  fullText: "Oh it is quite a story, but it's no time to be nostalgic. Let's make
+    you fly up in the air and smash down to the ground while looking super awesome.
+    It's super fun. It demands some dark magic which can technically kill you, but
+    trust me it\u2019s definitely worth it... ok maybe more fun than worth it but
+    hey! Fun is fun right?"
 --- !u!114 &1539621981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34026,10 +34025,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nonsense! If I were to be mean, I would already make a comment about how
-    lucky you are that there are no mirrors in this tower! You can't even imagine
-    how hurtful to my eyes is having to watch you all this time... Your movements
-    are one thing, but just this body... Gross...
+  m_text: "Oh it is quite a story, but it's no time to be nostalgic. Let's make you
+    fly up in the air and smash down to the ground while looking super awesome. It's
+    super fun. It demands some dark magic which can technically kill you, but trust
+    me it\u2019s definitely worth it... ok maybe more fun than worth it but hey!
+    Fun is fun right?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -34450,10 +34450,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.06
-  fullText: Yes, I think it would be beneficial for both of us... Here, enjoy the
-    new power. You know that keeping you alive all the time can be a pain? I think
-    that is just the price I pay for being such an amazing companion. I would kiss
-    myself if I could see my reflection now.... and if I had some lips...
+  fullText: I will not only just teach you I will also!... oh no wait, I will just
+    only teach you. There is nothing to add to that.
 --- !u!114 &1551997230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34474,10 +34472,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Yes, I think it would be beneficial for both of us... Here, enjoy the new
-    power. You know that keeping you alive all the time can be a pain? I think that
-    is just the price I pay for being such an amazing companion. I would kiss myself
-    if I could see my reflection now.... and if I had some lips...
+  m_text: I will not only just teach you I will also!... oh no wait, I will just
+    only teach you. There is nothing to add to that.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
