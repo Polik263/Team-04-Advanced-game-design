@@ -30,6 +30,7 @@ public class Sword : MonoBehaviour
 
     bool gotReflect;
     bool gotDamage;
+    bool gotDarkExtension;
 
     // Start is called before the first frame update
     void Start()
@@ -67,13 +68,17 @@ public class Sword : MonoBehaviour
     }
     public void Attack()
     {
+
+        dialogueManager = GameObject.Find("DialogueManager");
+        gotDarkExtension = dialogueManager.GetComponent<DialogueMaster>().gotDarkExtension;
+
         if (isCd == false)
         {
             isCd = true;
             isacd = true;
             if (currentForm == 0)
             {
-                if(darkPassive == true)
+                if(gotDarkExtension == true)
                 {
                     boxCollider.size = new Vector3(boxCollider.size.x, longerAttack, 3);
                     animator.Play("Slapping");

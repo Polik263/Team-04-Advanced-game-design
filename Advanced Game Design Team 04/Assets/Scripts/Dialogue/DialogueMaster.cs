@@ -195,6 +195,11 @@ public class DialogueMaster : MonoBehaviour
             gotLightDash = true;
         }
 
+        if (dialogueBox532.activeInHierarchy == true || dialogueBox541.activeInHierarchy == true || dialogueBox552.activeInHierarchy == true || dialogueBox56.activeInHierarchy == true)
+        {
+            gotDarkExtension = true;
+        }
+
         if (gotSlam == true)
         {
             gotSlam = true;
