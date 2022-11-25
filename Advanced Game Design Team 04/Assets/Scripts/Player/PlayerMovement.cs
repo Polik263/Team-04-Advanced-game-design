@@ -160,8 +160,9 @@ public class PlayerMovement : MonoBehaviour
     {
         dialogueManager = GameObject.Find("DialogueManager");
         gotSlam = dialogueManager.GetComponent<DialogueMaster>().gotSlam;
+        isInDialogue = dialogueManager.GetComponent<DialogueMaster>().isInDialogue;
 
-        if (sword.currentForm == 0 && gotSlam == true)
+        if (sword.currentForm == 0 && gotSlam == true && isInDialogue == false)
         {
             if (playerControls.Controls.Slam.ReadValue<float>() > 0)
             {

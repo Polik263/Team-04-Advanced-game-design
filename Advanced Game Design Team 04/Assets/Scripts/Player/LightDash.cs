@@ -13,7 +13,7 @@ public class LightDash : MonoBehaviour
     GameObject dialogueManager;
 
     bool gotLightDash;
-
+    bool isInDialogue;
 
     void Start()
     {
@@ -31,12 +31,12 @@ public class LightDash : MonoBehaviour
     {
         dialogueManager = GameObject.Find("DialogueManager");
         gotLightDash = dialogueManager.GetComponent<DialogueMaster>().gotLightDash;
-
+        isInDialogue = dialogueManager.GetComponent<DialogueMaster>().isInDialogue;
 
         canMove = player.GetComponent<PlayerMovement>().canMove;
         if (canMove == false)
         {
-            if(sword.currentForm == 1 && gotLightDash == true)
+            if(sword.currentForm == 1 && gotLightDash == true && isInDialogue == false)
             {
                 Debug.Log(collision.gameObject.layer);
                 if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
