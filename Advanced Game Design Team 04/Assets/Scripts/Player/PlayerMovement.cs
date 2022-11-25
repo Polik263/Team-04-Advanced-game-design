@@ -53,7 +53,6 @@ public class PlayerMovement : MonoBehaviour
     bool isInDialogue;
     bool gotSlam;
 
-
     private void Awake()
     {
         player = GameObject.Find("Player");

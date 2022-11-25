@@ -22,9 +22,11 @@ public class Sword : MonoBehaviour
     public int damage;
     public int takeDamage;
 
-
+    bool darkPassive = true;
+    public float longerAttack;
 
     GameObject dialogueManager;
+    public BoxCollider boxCollider;
 
     bool gotReflect;
 
@@ -70,7 +72,17 @@ public class Sword : MonoBehaviour
             isacd = true;
             if (currentForm == 0)
             {
-                animator.Play("Slapping");
+                if(darkPassive == true)
+                {
+                    boxCollider.size = new Vector3(boxCollider.size.x, longerAttack, 3);
+                    animator.Play("Slapping");
+                }
+                else
+                {
+                    animator.Play("Slapping");
+                }
+                
+
             }
             if (currentForm == 1)
             {

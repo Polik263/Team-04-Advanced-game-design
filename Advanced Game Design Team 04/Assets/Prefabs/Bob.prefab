@@ -276,7 +276,9 @@ MonoBehaviour:
   bulletPosition: {fileID: 5121204382556836366}
   bullet: {fileID: 6226165487294853117, guid: 4cb3efcbb601e5341b979defcce616c7, type: 3}
   damage: 25
-  takeDamage: 0
+  takeDamage: 10
+  longerAttack: 10
+  boxCollider: {fileID: 6818237979111167130}
 --- !u!1 &2089758140142101097
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,7 +999,7 @@ MonoBehaviour:
   startedd: 0
   finishedd: 0
   acd: 0
-  takeDamage: 0
+  takeDamage: 20
 --- !u!114 &7921307131477319524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1219,7 +1221,7 @@ Transform:
   m_Children:
   - {fileID: 5623849888209998286}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &7921307132585182284
 CharacterController:
@@ -1309,6 +1311,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 69788167-c5a6-4e4d-83ee-64fefabc6918
     m_ActionName: Dialogue/Appear[/Keyboard/q,/XInputControllerWindows/start]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e83819ec-9b96-4453-8417-26127a80f7ad
+    m_ActionName: Controls/LongerAttack[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Controls
@@ -1340,7 +1346,6 @@ MonoBehaviour:
   isGamepad: 0
   canMove: 1
   swordobj: {fileID: 1895247611286891868}
-  isInDialogue: 0
 --- !u!114 &7921307132585182286
 MonoBehaviour:
   m_ObjectHideFlags: 0

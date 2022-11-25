@@ -89,6 +89,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""LongerAttack"",
+                    ""type"": ""Button"",
+                    ""id"": ""e83819ec-9b96-4453-8417-26127a80f7ad"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -278,6 +287,17 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""Slam"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5f9d2320-e273-4bf2-9e91-df8894060999"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KBM"",
+                    ""action"": ""LongerAttack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -360,6 +380,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Controls_SwitchForm = m_Controls.FindAction("SwitchForm", throwIfNotFound: true);
         m_Controls_LevelUp = m_Controls.FindAction("LevelUp", throwIfNotFound: true);
         m_Controls_Slam = m_Controls.FindAction("Slam", throwIfNotFound: true);
+        m_Controls_LongerAttack = m_Controls.FindAction("LongerAttack", throwIfNotFound: true);
         // Dialogue
         m_Dialogue = asset.FindActionMap("Dialogue", throwIfNotFound: true);
         m_Dialogue_Appear = m_Dialogue.FindAction("Appear", throwIfNotFound: true);
@@ -429,6 +450,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Controls_SwitchForm;
     private readonly InputAction m_Controls_LevelUp;
     private readonly InputAction m_Controls_Slam;
+    private readonly InputAction m_Controls_LongerAttack;
     public struct ControlsActions
     {
         private @PlayerControls m_Wrapper;
@@ -440,6 +462,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @SwitchForm => m_Wrapper.m_Controls_SwitchForm;
         public InputAction @LevelUp => m_Wrapper.m_Controls_LevelUp;
         public InputAction @Slam => m_Wrapper.m_Controls_Slam;
+        public InputAction @LongerAttack => m_Wrapper.m_Controls_LongerAttack;
         public InputActionMap Get() { return m_Wrapper.m_Controls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -470,6 +493,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Slam.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnSlam;
                 @Slam.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnSlam;
                 @Slam.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnSlam;
+                @LongerAttack.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnLongerAttack;
+                @LongerAttack.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnLongerAttack;
+                @LongerAttack.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnLongerAttack;
             }
             m_Wrapper.m_ControlsActionsCallbackInterface = instance;
             if (instance != null)
@@ -495,6 +521,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Slam.started += instance.OnSlam;
                 @Slam.performed += instance.OnSlam;
                 @Slam.canceled += instance.OnSlam;
+                @LongerAttack.started += instance.OnLongerAttack;
+                @LongerAttack.performed += instance.OnLongerAttack;
+                @LongerAttack.canceled += instance.OnLongerAttack;
             }
         }
     }
@@ -559,6 +588,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnSwitchForm(InputAction.CallbackContext context);
         void OnLevelUp(InputAction.CallbackContext context);
         void OnSlam(InputAction.CallbackContext context);
+        void OnLongerAttack(InputAction.CallbackContext context);
     }
     public interface IDialogueActions
     {
