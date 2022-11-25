@@ -27,6 +27,7 @@ public class Sword : MonoBehaviour
     GameObject dialogueManager;
 
     bool gotReflect;
+    bool gotDamage;
 
     // Start is called before the first frame update
     void Start()
@@ -79,27 +80,12 @@ public class Sword : MonoBehaviour
         }
 
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (isacd)
-        {
-            if (currentForm == 0)
-            {
-                if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
-                {
-                    collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
 
-                    playerHealth.TakeDamage(takeDamage);
-                }
-            }
-        }
-
-    }
     private void OnTriggerEnter(Collider collider)
     {
         dialogueManager = GameObject.Find("DialogueManager");
         gotReflect = dialogueManager.GetComponent<DialogueMaster>().gotReflect;
-
+        gotDamage = dialogueManager.GetComponent<DialogueMaster>().gotDamage;
 
         if (isacd)
         {
@@ -121,7 +107,7 @@ public class Sword : MonoBehaviour
                 }
 
             }
-            if(currentForm == 0)
+            if(currentForm == 0 && gotDamage == true)
             {
                 if (collider.gameObject.layer == LayerMask.NameToLayer("EnemyHit"))
                 {

@@ -16712,6 +16712,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RealEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 5564017529485791496, guid: 5a05175c995cafe4d93a39c9ab351d8e, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1681876033}
     - target: {fileID: 5564017529794590812, guid: 5a05175c995cafe4d93a39c9ab351d8e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -30482,6 +30486,7 @@ MonoBehaviour:
   gotHeal: 0
   gotReflect: 0
   gotLightDash: 0
+  gotDamage: 0
 --- !u!4 &1709239569
 Transform:
   m_ObjectHideFlags: 0
