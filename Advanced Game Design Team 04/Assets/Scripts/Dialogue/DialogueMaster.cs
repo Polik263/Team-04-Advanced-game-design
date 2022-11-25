@@ -158,8 +158,18 @@ public class DialogueMaster : MonoBehaviour
             gotSlam = true;
             gotHeal = true;
             gotReflect = true;
-            gotLightDash = true;
+            
+            
+        }
+
+        if (dialogueBox332.activeInHierarchy == true || dialogueBox341.activeInHierarchy == true || dialogueBox35.activeInHierarchy == true)
+        {
             gotDamage = true;
+        }
+
+        if (dialogueBox432.activeInHierarchy == true || dialogueBox441.activeInHierarchy == true || dialogueBox452.activeInHierarchy == true || dialogueBox46.activeInHierarchy == true)
+        {
+            gotLightDash = true;
         }
 
         if (gotSlam == true)
