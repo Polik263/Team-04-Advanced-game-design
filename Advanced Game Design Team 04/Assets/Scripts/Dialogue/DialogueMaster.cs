@@ -259,6 +259,12 @@ public class DialogueMaster : MonoBehaviour
             StartCoroutine(FirstDialogue());
         }
 
+        if (dialogueBox322.activeInHierarchy == true || dialogueBox222.activeInHierarchy == true || dialogueBox422.activeInHierarchy == true || dialogueBox522.activeInHierarchy == true || dialogueBox622.activeInHierarchy == true || dialogueBox722.activeInHierarchy == true)
+        {
+            StartCoroutine(ReopenDialogue());
+            StartCoroutine(ActivateOptions());
+        }
+
     }
 
 
@@ -534,8 +540,31 @@ public class DialogueMaster : MonoBehaviour
         }
     }
 
+    IEnumerator ReopenDialogue()
+    {
+        yield return new WaitForSeconds(30);
 
-    IEnumerator ActivateDialouge()
+        if (panel.activeInHierarchy == false)
+        {
+            isInDialogue = false;
+            panel.SetActive(true);
+
+            //linesNumber = Random.Range(0, 3);
+            //linesCount = 0;
+            //while (linesCount < 3)
+            //{
+            //    lines[linesCount].SetActive(false);
+            //    linesCount += 1;
+            //}
+            //lines[linesNumber].SetActive(true);
+
+            startDialogue.SetActive(true);
+
+            // StartCoroutine(ActivateOptions());
+        }
+    }
+
+        IEnumerator ActivateDialouge()
     {
         yield return new WaitForSeconds(10);
 
@@ -557,6 +586,8 @@ public class DialogueMaster : MonoBehaviour
 
             // StartCoroutine(ActivateOptions());
         }
+
+
 
         if (dialogueBox41.activeInHierarchy == true)
         {
