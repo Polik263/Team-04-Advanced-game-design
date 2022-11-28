@@ -44,7 +44,15 @@ public class LightDash : MonoBehaviour
                 
                     collision.gameObject.GetComponent<Die>().Dead();
                 }
+
+                if (collision.rigidbody.CompareTag("Breakable Wall"))
+                {
+                    Debug.Log("Dash!");
+                    Destroy(collision.gameObject);
+                }
             }
+
+           
             
 
         }
