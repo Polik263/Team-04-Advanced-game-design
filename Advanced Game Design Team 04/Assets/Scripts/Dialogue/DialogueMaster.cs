@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using System.Runtime.ExceptionServices;
 
 public class DialogueMaster : MonoBehaviour
 {
@@ -257,6 +258,10 @@ public class DialogueMaster : MonoBehaviour
             //Invoke("CloseDialogue", 5.0f);
         }
 
+        if (dialogueBox11.activeInHierarchy == true)
+        {
+            StartCoroutine(FirstDialogue());
+        }
 
     }
 
@@ -302,6 +307,37 @@ public class DialogueMaster : MonoBehaviour
 
         isInDialogue = false;
         isClosingDialogue = false;
+    }
+
+    void FirstLine()
+    {
+        
+        
+            dialogueBox11.SetActive(false);
+            dialogueBox121.SetActive(true);
+
+    }
+
+    void SecondLine()
+    {
+        if(dialogueBox121.activeInHierarchy == true)
+        {
+            dialogueBox121.SetActive(false);
+            dialogueBox122.SetActive(true);
+        }
+    }
+
+
+
+    IEnumerator FirstDialogue()
+    {
+        isClosingDialogue = true;
+
+        yield return new WaitForSeconds(5);
+        FirstLine ();
+        yield return new WaitForSeconds(5);
+        SecondLine();
+
     }
 
 
