@@ -39,7 +39,7 @@ Transform:
   - {fileID: 5564017529485791495}
   - {fileID: 5564017529887724780}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &254514407082641739
 MeshFilter:
@@ -592,7 +592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb9671263beff104f8432dad940a306a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 144747567703663835, guid: 5505828588bdf0a41a8276bda646b371, type: 3}
 --- !u!1 &5564017529794590811
 GameObject:
   m_ObjectHideFlags: 0

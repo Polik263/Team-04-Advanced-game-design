@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.InputSystem;
 using System.Runtime.ExceptionServices;
 
 public class DialogueMaster : MonoBehaviour
@@ -12,10 +11,6 @@ public class DialogueMaster : MonoBehaviour
     //public int linesCount = 0;
 
     [SerializeField] private GameObject startDialogue;
-
-
-    private PlayerControls playerControls;
-    private InputAction dialogue;
 
     [SerializeField] private GameObject panel;
 
@@ -185,9 +180,10 @@ public class DialogueMaster : MonoBehaviour
 
     // public Animator animator;
 
-    void Awake()
+
+    private void Start()
     {
-        playerControls = new PlayerControls();
+        StartCoroutine(ActivateDialouge());
     }
 
 
@@ -264,6 +260,8 @@ public class DialogueMaster : MonoBehaviour
         }
 
     }
+
+
 
     void CloseDialogue()
     {
@@ -537,9 +535,9 @@ public class DialogueMaster : MonoBehaviour
     }
 
 
-    public void ActivateDialouge()
+    IEnumerator ActivateDialouge()
     {
-
+        yield return new WaitForSeconds(10);
 
         if (panel.activeInHierarchy == false)
         {
@@ -719,37 +717,7 @@ public class DialogueMaster : MonoBehaviour
         //    Choice32.SetActive(true);
         //}
     }
-
-    void HandleDialouge(InputAction.CallbackContext context)
-    {
-
-        isInDialogue = !isInDialogue;
-        Debug.Log("We were at " + !isInDialogue + " and now at " + isInDialogue);
-
-        if (isInDialogue)
-        {
-            ActivateDialouge();
-        }
-
-    }
-
-    private void OnEnable()
-    {
-        dialogue = playerControls.Dialogue.Appear;
-        dialogue.Enable();
-
-        dialogue.performed += HandleDialouge;
-        //Debug.Log(dialogue);
-
-
-
-    }
-
-    private void OnDisable()
-    {
-        dialogue.performed -= HandleDialouge;
-
-    }
+    
 
 
 
