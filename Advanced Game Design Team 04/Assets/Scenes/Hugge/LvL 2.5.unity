@@ -4605,7 +4605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc65da6f6fbb57241a01a647ddb712fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startDialogue: {fileID: 1432772476}
+  startDialogue: {fileID: 2133580826}
   panel: {fileID: 1740624469}
   dialogueBox11: {fileID: 1179983241}
   dialogueBox121: {fileID: 1826468570}
@@ -4745,7 +4745,7 @@ MonoBehaviour:
   gotHeal: 0
   gotReflect: 0
   gotLightDash: 0
-  gotDamage: 0
+  gotDamage: 1
   gotDarkExtension: 0
 --- !u!4 &300673538
 Transform:
@@ -17482,8 +17482,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.839518, y: 12.97612, z: 20.103561}
-  m_Center: {x: -2.966132, y: 5.864498, z: -1.3075409}
+  m_Size: {x: 3.792655, y: 12.97612, z: 26.17005}
+  m_Center: {x: -42.203648, y: 5.864498, z: -4.340786}
 --- !u!4 &1325016580
 Transform:
   m_ObjectHideFlags: 0
@@ -21655,6 +21655,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597262219}
   m_CullTransparentMesh: 1
+--- !u!1 &1600494032
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1600494034}
+  - component: {fileID: 1600494033}
+  m_Layer: 0
+  m_Name: Entrence (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1600494033
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600494032}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4197996, y: 12.97612, z: 26.17005}
+  m_Center: {x: -0.47114235, y: 5.864498, z: -4.340786}
+--- !u!4 &1600494034
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600494032}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 56.22, y: 27.49, z: 78.98}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1611392686
 GameObject:
   m_ObjectHideFlags: 0

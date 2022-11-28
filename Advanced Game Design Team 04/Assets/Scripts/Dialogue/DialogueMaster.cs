@@ -197,9 +197,7 @@ public class DialogueMaster : MonoBehaviour
 
         if (dialogueBox232.activeInHierarchy == true || dialogueBox241.activeInHierarchy == true || dialogueBox25.activeInHierarchy == true)
         {
-            gotSlam = true;
-            gotHeal = true;
-            gotReflect = true;         
+            gotHeal = true;        
         }
 
         if (dialogueBox332.activeInHierarchy == true || dialogueBox341.activeInHierarchy == true || dialogueBox35.activeInHierarchy == true)
@@ -215,6 +213,16 @@ public class DialogueMaster : MonoBehaviour
         if (dialogueBox532.activeInHierarchy == true || dialogueBox541.activeInHierarchy == true || dialogueBox552.activeInHierarchy == true || dialogueBox56.activeInHierarchy == true)
         {
             gotDarkExtension = true;
+        }
+
+        if (dialogueBox632.activeInHierarchy == true || dialogueBox641.activeInHierarchy == true || dialogueBox652.activeInHierarchy == true || dialogueBox66.activeInHierarchy == true)
+        {
+            gotReflect = true;
+        }
+
+        if (dialogueBox732.activeInHierarchy == true || dialogueBox741.activeInHierarchy == true || dialogueBox752.activeInHierarchy == true || dialogueBox76.activeInHierarchy == true)
+        {
+            gotSlam = true;
         }
 
         if (gotSlam == true)
