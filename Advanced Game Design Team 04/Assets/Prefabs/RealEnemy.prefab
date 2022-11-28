@@ -39,7 +39,7 @@ Transform:
   - {fileID: 5564017529485791495}
   - {fileID: 5564017529887724780}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &254514407082641739
 MeshFilter:
@@ -167,6 +167,9 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 5564017529259557802}
+  FloatingTextPrefab: {fileID: 2129474227162458063, guid: 760ad6b24b0a6db41b35e122e15b9767, type: 3}
+  crit: {fileID: 2985908469821778425, guid: f4e7eb39131e7f849b79788c3e40aba1, type: 3}
+  gigaCrit: {fileID: 2985908469821778425, guid: 8044ff87b7393254c9aa1cada1fb0082, type: 3}
 --- !u!1 &254514408026156578
 GameObject:
   m_ObjectHideFlags: 0

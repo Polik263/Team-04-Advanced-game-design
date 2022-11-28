@@ -258,7 +258,7 @@ MonoBehaviour:
   lightMaterial: {fileID: 2100000, guid: c8af28568dfcd0f499623d3d4b036317, type: 2}
   bulletPosition: {fileID: 5121204382556836366}
   bullet: {fileID: 6226165487294853117, guid: 4cb3efcbb601e5341b979defcce616c7, type: 3}
-  damage: 25
+  damage: 34
   takeDamage: 10
   longerAttack: 6
   boxCollider: {fileID: 6818237979111167130}
@@ -995,14 +995,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1708922588721184da6694f5c4704333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 2.98
+  attackRange: 4
   attackPoint: {fileID: 5623849888209998286}
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 256
   Gun: {fileID: 1895247611286891868}
   animator: {fileID: 0}
-  damage: 25
+  damage: 66
+  cd: 1
 --- !u!1 &6058298947244891403
 GameObject:
   m_ObjectHideFlags: 0
@@ -1204,7 +1205,7 @@ Transform:
   m_Children:
   - {fileID: 5623849888209998286}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &7921307132585182284
 CharacterController:

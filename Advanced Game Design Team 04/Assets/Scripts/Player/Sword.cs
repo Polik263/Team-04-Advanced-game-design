@@ -127,10 +127,9 @@ public class Sword : MonoBehaviour
             }
             if(currentForm == 0 && gotDamage == true)
             {
-                if (collider.gameObject.layer == LayerMask.NameToLayer("EnemyHit"))
+                if (collider.gameObject.layer == LayerMask.NameToLayer("EnemyHit") && isacd == true)
                 {
                     collider.gameObject.GetComponent<DmgEnemy>().Damage(damage);
-
                     playerHealth.TakeDamage(takeDamage);
                 }
             }

@@ -7,17 +7,18 @@ using UnityEngine.SceneManagement;
 public class EnemyHealth : MonoBehaviour
 {
     public bool mortal = true;
-    
     public float maxHealth = 100;
     public float currentHealth;
     GameObject player;
     XpSystem xpSystem;
     public HealthBar healthBar;
     //[SerializeField] private AudioSource hurt;
-
     GameObject dialogueManager;
-
     bool gotHeal;
+
+    public GameObject FloatingTextPrefab;
+    public GameObject crit;
+    public GameObject gigaCrit;
 
     void Awake()
     {
@@ -33,7 +34,7 @@ public class EnemyHealth : MonoBehaviour
     void Update()
     {
         CheckPlayerHealth();
-        Death();
+        
     }
 
     void CheckPlayerHealth()
@@ -56,12 +57,46 @@ public class EnemyHealth : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
+        float ch = currentHealth;
         currentHealth -= damage;
         //hurt.Play();
 
         healthBar.SetHealth(currentHealth);
-
+        if(gigaCrit && ch > currentHealth + 50)
+        {
+            GigaCrit(damage);
+            Death();
+        }
+        else if(crit && ch > currentHealth + 32)
+        {
+            Crit(damage);
+            Death();
+        }  
+        else if(FloatingTextPrefab && ch > currentHealth)
+        {
+            ShowFloatingText(damage);
+            Death();
+        }
         
+    }
+
+    void ShowFloatingText(int damage)
+    {
+        var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity);
+        go.GetComponent<TextMesh>().text = damage.ToString();
+        
+    }
+
+    void Crit(int damage)
+    {
+        var go = Instantiate(crit, transform.position, Quaternion.identity);
+        go.GetComponent<TextMesh>().text = damage.ToString();
+    }
+
+    void GigaCrit(int damage)
+    {
+        var go = Instantiate(gigaCrit, transform.position, Quaternion.identity);
+        go.GetComponent<TextMesh>().text = damage.ToString();
     }
     public void Heal(int damage)
     {

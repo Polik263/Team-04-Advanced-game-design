@@ -11,29 +11,49 @@ public class Meele : MonoBehaviour
     public GameObject Gun;
     public Animator animator;
     public int damage;
+    public float cd;
+    float savecd;
+    bool isCd;
    
     void Start()
     {
         animator = Gun.GetComponent<Animator>();
+        savecd = cd;
     }
 
     // Update is called once per frame
     void Update()
     {
- 
+        if (isCd == true)
+        {
+
+            cd -= Time.deltaTime;
+            if (cd <= 0)
+            {
+                isCd = false;
+                cd = savecd;
+            }
+
+        }
         
     }
     public void Attack()
     {
-            Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
-            foreach(Collider enemy in hitEnemies)
+
+            if(isCd == false)
             {
-                Debug.Log("We hit");
-                if(enemy.TryGetComponent<EnemyHealth>(out EnemyHealth playerHealth))
+                isCd = true;
+                Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
+                foreach(Collider enemy in hitEnemies)
                 {
-                    enemy.GetComponent<EnemyHealth>().TakeDamage(damage);
+                    Debug.Log("We hit");
+                    if(enemy.TryGetComponent<DmgEnemy>(out DmgEnemy dmgEnemy))
+                    {
+                        enemy.GetComponent<DmgEnemy>().Damage(damage);
+                    }
                 }
             }
+ 
     }
 
     void OnDrawGizmosSelected()
@@ -42,6 +62,4 @@ public class Meele : MonoBehaviour
         return;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
-
-
 }
