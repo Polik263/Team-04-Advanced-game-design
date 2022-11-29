@@ -22,7 +22,7 @@ public class CameraController : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, target.position + targetOffset, movementSpeed * Time.deltaTime);
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         MoveCamera();
     }
