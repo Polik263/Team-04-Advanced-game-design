@@ -9,6 +9,11 @@ public class Dashh : MonoBehaviour
     Sword sword;
     public float multiplier;
     public Action<bool> isDashing;
+
+    GameObject dialogueManager;
+
+    bool gotLightDash;
+
     private void Awake()
     {
         playermovement = GetComponent<PlayerMovement>();
@@ -21,9 +26,12 @@ public class Dashh : MonoBehaviour
 
     IEnumerator Execute(Vector3 Direction, float speed, float duration)
     {
+        dialogueManager = GameObject.Find("DialogueManager");
+        gotLightDash = dialogueManager.GetComponent<DialogueMaster>().gotLightDash;
+
         isDashing?.Invoke(true);
         playermovement.canMove = false;
-        if(sword.currentForm == 1)
+        if(sword.currentForm == 1 && gotLightDash == true)
         {
             while(duration > 0)
             {
