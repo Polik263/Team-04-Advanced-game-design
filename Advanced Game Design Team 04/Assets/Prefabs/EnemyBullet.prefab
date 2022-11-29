@@ -113,6 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2717949858442758792, guid: a9c780f5611a54645b7d50a87a798710, type: 3}
   stats: {fileID: 11400000, guid: 8837179023fcad148bbd4d6c26566411, type: 2}
+  hitParticles: {fileID: 8771972552311404798, guid: bbf9e36a48d6c5648a13889afab076fd, type: 3}
 --- !u!114 &1810350909488594717
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,7 +13,6 @@ public class Bullet : MonoBehaviour
     private Vector3 playerPos;
 
     private Vector3 direction;
-
     private void Start()
     {
         player = GameObject.Find("Player");

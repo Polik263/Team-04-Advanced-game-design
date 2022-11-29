@@ -31,6 +31,7 @@ public class Sword : MonoBehaviour
     bool gotReflect;
     bool gotDamage;
     bool gotDarkExtension;
+    public ParticleSystem hitParticles;
 
     // Start is called before the first frame update
     void Start()
@@ -117,7 +118,7 @@ public class Sword : MonoBehaviour
                         var BulletSpawn = new Vector3(bulletPosition.position.x, bulletPosition.position.y,
                         bulletPosition.position.z);
 
-
+                        Instantiate(hitParticles, collider.transform.position, collider.transform.rotation);
                         Instantiate(bullet, BulletSpawn, new Quaternion());
                     }
                     Destroy(collider.gameObject);

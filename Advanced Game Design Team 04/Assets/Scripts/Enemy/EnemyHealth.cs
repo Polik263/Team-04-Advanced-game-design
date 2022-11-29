@@ -19,6 +19,8 @@ public class EnemyHealth : MonoBehaviour
     public GameObject FloatingTextPrefab;
     public GameObject crit;
     public GameObject gigaCrit;
+    public ParticleSystem deathParticles;
+    public ParticleSystem hitParticles;
 
     void Awake()
     {
@@ -52,6 +54,7 @@ public class EnemyHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             xpSystem.GainXp(250);
+            Instantiate(deathParticles, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
@@ -65,16 +68,19 @@ public class EnemyHealth : MonoBehaviour
         if(gigaCrit && ch > currentHealth + 50)
         {
             GigaCrit(damage);
+            //Instantiate(hitParticles, transform.position, Quaternion.identity);
             Death();
         }
         else if(crit && ch > currentHealth + 32)
         {
             Crit(damage);
+            Instantiate(hitParticles, transform.position, Quaternion.identity);
             Death();
         }  
         else if(FloatingTextPrefab && ch > currentHealth)
         {
             ShowFloatingText(damage);
+            //Instantiate(hitParticles, transform.position, Quaternion.identity);
             Death();
         }
         
