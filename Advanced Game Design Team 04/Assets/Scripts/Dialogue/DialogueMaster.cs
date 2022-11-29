@@ -550,7 +550,7 @@ public class DialogueMaster : MonoBehaviour
 
     IEnumerator ReopenDialogue()
     {
-        yield return new WaitForSeconds(30);
+        yield return new WaitForSeconds(25);
 
         if (panel.activeInHierarchy == false)
         {
@@ -574,7 +574,7 @@ public class DialogueMaster : MonoBehaviour
 
         IEnumerator ActivateDialouge()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(5);
 
         if (panel.activeInHierarchy == false)
         {
