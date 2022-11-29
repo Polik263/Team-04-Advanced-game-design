@@ -32,10 +32,13 @@ public class Sword : MonoBehaviour
     bool gotDamage;
     bool gotDarkExtension;
     public ParticleSystem hitParticles;
+    public ParticleSystem darkParticle;
+    GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player");
         playerHealth = GetComponentInParent<PlayerHealth>();
         animator = Gun.GetComponent<Animator>();
         savecd = cd;
@@ -81,9 +84,20 @@ public class Sword : MonoBehaviour
             {
                 if(gotDarkExtension == true)
                 {
+                    float timerr = 0.15f;
+                    
                     boxCollider.size = new Vector3(boxCollider.size.x, longerAttack, 3 );
                     boxCollider.center = new Vector3 (boxCollider.center.x, longerAttack/2, boxCollider.center.z);
                     animator.Play("Slapping");
+                    while(timerr > 0)
+                    {
+                        timerr -= Time.deltaTime;
+                    }
+                    if(timerr < 0)
+                    {
+                        Instantiate(darkParticle, player.transform.position, Quaternion.Euler(-90,0,0));
+                    }
+                    
                 }
                 else
                 {
@@ -130,6 +144,7 @@ public class Sword : MonoBehaviour
             {
                 if (collider.gameObject.layer == LayerMask.NameToLayer("EnemyHit") && isacd == true)
                 {
+                    
                     collider.gameObject.GetComponent<DmgEnemy>().Damage(damage);
                     playerHealth.TakeDamage(takeDamage);
                 }

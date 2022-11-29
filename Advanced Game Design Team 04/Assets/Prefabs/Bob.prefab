@@ -263,6 +263,7 @@ MonoBehaviour:
   longerAttack: 6
   boxCollider: {fileID: 6818237979111167130}
   hitParticles: {fileID: 8771972552311404798, guid: bbf9e36a48d6c5648a13889afab076fd, type: 3}
+  darkParticle: {fileID: 4425544509863617629, guid: d552e90926df03a4596ccf40851b2dce, type: 3}
 --- !u!1 &2089758140142101097
 GameObject:
   m_ObjectHideFlags: 0
