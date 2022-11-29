@@ -358,13 +358,13 @@ public class DialogueMaster : MonoBehaviour
     {
         isClosingDialogue = true;
 
-        yield return new WaitForSeconds(20);
+        yield return new WaitForSeconds(22);
         CloseDialogue();
     }
 
     IEnumerator ActivateOptions()
     {
-        yield return new WaitForSeconds(20);
+        yield return new WaitForSeconds(22);
 
 
         if (dialogueBox41.activeInHierarchy == true)
