@@ -254,14 +254,14 @@ MonoBehaviour:
   isacd: 0
   acd: 0.45
   currentForm: 0
-  darkMaterial: {fileID: 2100000, guid: b378beb8911e97e488b90458682866bb, type: 2}
-  lightMaterial: {fileID: 2100000, guid: c8af28568dfcd0f499623d3d4b036317, type: 2}
   bulletPosition: {fileID: 5121204382556836366}
   bullet: {fileID: 6226165487294853117, guid: 4cb3efcbb601e5341b979defcce616c7, type: 3}
   damage: 34
   takeDamage: 10
   longerAttack: 6
   boxCollider: {fileID: 6818237979111167130}
+  hitParticles: {fileID: 8771972552311404798, guid: bbf9e36a48d6c5648a13889afab076fd, type: 3}
+  darkParticle: {fileID: 4425544509863617629, guid: d552e90926df03a4596ccf40851b2dce, type: 3}
 --- !u!1 &2089758140142101097
 GameObject:
   m_ObjectHideFlags: 0
@@ -932,6 +932,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 3789175732404824877}
+  particle: {fileID: 6823200998282874672, guid: 8f8fe12323625f5499b2853dd2ad3e58, type: 3}
 --- !u!114 &2200849796025539808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1005,6 +1006,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   damage: 66
   cd: 1
+  particle: {fileID: 7226888052703040407, guid: 7ec363c8df426644ea85f8d6d570561c, type: 3}
 --- !u!1 &6058298947244891403
 GameObject:
   m_ObjectHideFlags: 0
@@ -1206,7 +1208,7 @@ Transform:
   m_Children:
   - {fileID: 5623849888209998286}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &7921307132585182284
 CharacterController:

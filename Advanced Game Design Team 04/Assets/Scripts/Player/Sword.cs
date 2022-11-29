@@ -14,8 +14,6 @@ public class Sword : MonoBehaviour
     public float acd;
     float savecd;
     public float currentForm = 0;
-    public Material darkMaterial;
-    public Material lightMaterial;
     PlayerHealth playerHealth;
     [SerializeField] private Transform bulletPosition;
     [SerializeField] private GameObject bullet;
@@ -31,14 +29,22 @@ public class Sword : MonoBehaviour
     bool gotReflect;
     bool gotDamage;
     bool gotDarkExtension;
+    public ParticleSystem hitParticles;
+    public ParticleSystem darkParticle;
+    GameObject player;
+    float pcd = 0.15f;
+    float savepcd;
+    bool ispcd;
 
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player");
         playerHealth = GetComponentInParent<PlayerHealth>();
         animator = Gun.GetComponent<Animator>();
         savecd = cd;
         saveacd = acd;
+        savepcd = pcd;
     }
 
     // Update is called once per frame
@@ -65,6 +71,17 @@ public class Sword : MonoBehaviour
                 acd = saveacd;
             }
         }
+            if (ispcd == true)
+        {
+
+            pcd -= Time.deltaTime;
+            if (pcd <= 0)
+            {
+                ispcd = false;
+                pcd = savepcd;
+                Instantiate(darkParticle, player.transform.position, Quaternion.Euler(-90,0,0));
+            }
+        }
     }
     public void Attack()
     {
@@ -82,7 +99,8 @@ public class Sword : MonoBehaviour
                 {
                     boxCollider.size = new Vector3(boxCollider.size.x, longerAttack, 3 );
                     boxCollider.center = new Vector3 (boxCollider.center.x, longerAttack/2, boxCollider.center.z);
-                    animator.Play("Slapping");
+                    animator.Play("Slapping");  
+                    ispcd = true;
                 }
                 else
                 {
@@ -117,7 +135,7 @@ public class Sword : MonoBehaviour
                         var BulletSpawn = new Vector3(bulletPosition.position.x, bulletPosition.position.y,
                         bulletPosition.position.z);
 
-
+                        Instantiate(hitParticles, collider.transform.position, collider.transform.rotation);
                         Instantiate(bullet, BulletSpawn, new Quaternion());
                     }
                     Destroy(collider.gameObject);
@@ -129,6 +147,7 @@ public class Sword : MonoBehaviour
             {
                 if (collider.gameObject.layer == LayerMask.NameToLayer("EnemyHit") && isacd == true)
                 {
+                    
                     collider.gameObject.GetComponent<DmgEnemy>().Damage(damage);
                     playerHealth.TakeDamage(takeDamage);
                 }
