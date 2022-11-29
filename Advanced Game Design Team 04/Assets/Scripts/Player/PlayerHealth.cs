@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
     GameObject dialogueManager;
 
     bool gotHeal;
+    public ParticleSystem particle;
 
     void Start()
     {
@@ -54,7 +55,7 @@ public class PlayerHealth : MonoBehaviour
         //hurt.Play();
 
         healthBar.SetHealth(currentHealth);
-
+        Instantiate(particle,transform.position, transform.rotation);
         
     }
     public void Heal(int damage)

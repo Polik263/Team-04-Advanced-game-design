@@ -14,6 +14,7 @@ public class Meele : MonoBehaviour
     public float cd;
     float savecd;
     bool isCd;
+    public ParticleSystem particle;
    
     void Start()
     {
@@ -42,8 +43,10 @@ public class Meele : MonoBehaviour
 
             if(isCd == false)
             {
+                
                 isCd = true;
                 Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
+                Instantiate(particle,transform.position - new Vector3(0,1,0), Quaternion.Euler(-90,0,0));
                 foreach(Collider enemy in hitEnemies)
                 {
                     Debug.Log("We hit");
