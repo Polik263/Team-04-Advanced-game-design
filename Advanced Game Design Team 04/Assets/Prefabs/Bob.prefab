@@ -1187,6 +1187,7 @@ GameObject:
   - component: {fileID: 7921307132585182282}
   - component: {fileID: 7921307132585182286}
   - component: {fileID: 7921307132585182273}
+  - component: {fileID: 1013805105418419290}
   m_Layer: 0
   m_Name: Bob
   m_TagString: Player
@@ -1208,7 +1209,7 @@ Transform:
   m_Children:
   - {fileID: 5623849888209998286}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &7921307132585182284
 CharacterController:
@@ -1362,6 +1363,18 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 126
   m_CollisionDetection: 2
+--- !u!114 &1013805105418419290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7921307132585182283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74a1607c1e4725448b1cb064cdd5788e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7951773637335568413
 GameObject:
   m_ObjectHideFlags: 0
