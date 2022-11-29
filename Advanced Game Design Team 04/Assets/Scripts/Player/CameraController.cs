@@ -8,14 +8,6 @@ public class CameraController : MonoBehaviour
     [SerializeField] private Vector3 targetOffset;
     [SerializeField] private float movementSpeed;
 
-    private void Start()
-    {
-        if (target == null)
-        {
-            Debug.LogWarning("No target");
-            target = FindObjectOfType<PlayerHealth>().gameObject.transform.parent.transform;
-        }
-    }
 
     void MoveCamera()
     {

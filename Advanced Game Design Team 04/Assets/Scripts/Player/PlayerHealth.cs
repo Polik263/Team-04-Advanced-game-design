@@ -44,9 +44,8 @@ public class PlayerHealth : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            Destroy(gameObject.transform.parent.gameObject);
-            //Destroy(Camera.current, 0f);
-            SceneManager.LoadScene("LvL 2");
+            Destroy(gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
     public void TakeDamage(int damage)
