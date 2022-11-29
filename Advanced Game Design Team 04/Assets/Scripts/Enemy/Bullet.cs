@@ -40,7 +40,7 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
 
         }
-        else if (other.CompareTag("Enemy") || (other.CompareTag("Wall") || (other.CompareTag("Breakable Wall"))))
+        else if (other.CompareTag("Enemy") || (other.CompareTag("Wall")))
         {
             Destroy(gameObject);
         }
