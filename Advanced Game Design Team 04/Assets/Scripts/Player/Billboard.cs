@@ -6,9 +6,18 @@ public class Billboard : MonoBehaviour
 {
     public Transform cam;
 
-    private void LateUpdate()
+    private void Start()
     {
-        transform.LookAt(transform.position + cam.forward);   
+        if(cam == null)
+        {
+            Debug.LogWarning("No camera");
+            cam = Camera.main.transform;
+        }
+    }
+
+    private void Update()
+    {
+        transform.LookAt(transform.position + Camera.main.transform.forward);   
     }
     
 }
