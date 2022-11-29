@@ -20,5 +20,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hugge/LvL 4.unity
     guid: c58beada0315df845a888127a04f3f2d
+  - enabled: 1
+    path: Assets/Scenes/Hugge/LvL 5.unity
+    guid: 6c25e2de4eb4fb6428b4057926c86e2e
+  - enabled: 1
+    path: Assets/Scenes/Hugge/LvL 6.unity
+    guid: b724679ac3926954d88c99dd83ef7c33
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 0b07160c969881b46ba82c7f5dd52fba, type: 2}
