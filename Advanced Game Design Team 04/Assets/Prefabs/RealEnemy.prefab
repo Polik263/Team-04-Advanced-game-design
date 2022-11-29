@@ -40,7 +40,7 @@ Transform:
   - {fileID: 5564017529887724780}
   - {fileID: 816102146786510815}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &254514407082641739
 MeshFilter:
@@ -171,6 +171,8 @@ MonoBehaviour:
   FloatingTextPrefab: {fileID: 2129474227162458063, guid: 760ad6b24b0a6db41b35e122e15b9767, type: 3}
   crit: {fileID: 2985908469821778425, guid: f4e7eb39131e7f849b79788c3e40aba1, type: 3}
   gigaCrit: {fileID: 2985908469821778425, guid: 8044ff87b7393254c9aa1cada1fb0082, type: 3}
+  deathParticles: {fileID: 141433446842962268, guid: 9fe8f8b3288e45a44af36ff8aa04486e, type: 3}
+  hitParticles: {fileID: 1429954232896169632, guid: 83036083a4ebcd34f98131bd3cf6f4d2, type: 3}
 --- !u!1 &254514408026156578
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,7 +626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb9671263beff104f8432dad940a306a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 144747567703663835, guid: 5505828588bdf0a41a8276bda646b371, type: 3}
+  cam: {fileID: 0}
 --- !u!1 &5564017529794590811
 GameObject:
   m_ObjectHideFlags: 0

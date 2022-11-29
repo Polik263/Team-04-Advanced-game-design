@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1042269290, guid: 69d8f05fda8421849a84b27b8c0d773d, type: 3}
       propertyPath: startDelay.scalar
-      value: 0.15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1042269290, guid: 69d8f05fda8421849a84b27b8c0d773d, type: 3}
       propertyPath: ShapeModule.radius.value
@@ -42,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2297254cc96f53141bb29fae4fcca6ea, type: 2}
     - target: {fileID: 761604341259354313, guid: 69d8f05fda8421849a84b27b8c0d773d, type: 3}
       propertyPath: startDelay.scalar
-      value: 0.15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 761604341259354313, guid: 69d8f05fda8421849a84b27b8c0d773d, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
@@ -90,7 +90,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5318118474938795682, guid: 69d8f05fda8421849a84b27b8c0d773d, type: 3}
       propertyPath: startDelay.scalar
-      value: 0.15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5318118474938795683, guid: 69d8f05fda8421849a84b27b8c0d773d, type: 3}
       propertyPath: m_Mesh

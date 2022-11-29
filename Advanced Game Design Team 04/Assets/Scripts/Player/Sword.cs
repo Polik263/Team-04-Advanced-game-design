@@ -14,8 +14,6 @@ public class Sword : MonoBehaviour
     public float acd;
     float savecd;
     public float currentForm = 0;
-    public Material darkMaterial;
-    public Material lightMaterial;
     PlayerHealth playerHealth;
     [SerializeField] private Transform bulletPosition;
     [SerializeField] private GameObject bullet;
@@ -34,6 +32,9 @@ public class Sword : MonoBehaviour
     public ParticleSystem hitParticles;
     public ParticleSystem darkParticle;
     GameObject player;
+    float pcd = 0.15f;
+    float savepcd;
+    bool ispcd;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +44,7 @@ public class Sword : MonoBehaviour
         animator = Gun.GetComponent<Animator>();
         savecd = cd;
         saveacd = acd;
+        savepcd = pcd;
     }
 
     // Update is called once per frame
@@ -69,6 +71,17 @@ public class Sword : MonoBehaviour
                 acd = saveacd;
             }
         }
+            if (ispcd == true)
+        {
+
+            pcd -= Time.deltaTime;
+            if (pcd <= 0)
+            {
+                ispcd = false;
+                pcd = savepcd;
+                Instantiate(darkParticle, player.transform.position, Quaternion.Euler(-90,0,0));
+            }
+        }
     }
     public void Attack()
     {
@@ -84,20 +97,10 @@ public class Sword : MonoBehaviour
             {
                 if(gotDarkExtension == true)
                 {
-                    float timerr = 0.15f;
-                    
                     boxCollider.size = new Vector3(boxCollider.size.x, longerAttack, 3 );
                     boxCollider.center = new Vector3 (boxCollider.center.x, longerAttack/2, boxCollider.center.z);
-                    animator.Play("Slapping");
-                    while(timerr > 0)
-                    {
-                        timerr -= Time.deltaTime;
-                    }
-                    if(timerr < 0)
-                    {
-                        Instantiate(darkParticle, player.transform.position, Quaternion.Euler(-90,0,0));
-                    }
-                    
+                    animator.Play("Slapping");  
+                    ispcd = true;
                 }
                 else
                 {
