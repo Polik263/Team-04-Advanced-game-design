@@ -5,7 +5,6 @@ using UnityEngine;
 public class DeathManager : MonoBehaviour
 {
     public GameObject door;
-    public GameObject[] enemy;
 
     private void Update()
     {
