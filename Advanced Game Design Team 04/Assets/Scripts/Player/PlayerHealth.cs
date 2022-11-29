@@ -43,11 +43,19 @@ public class PlayerHealth : MonoBehaviour
     }
     private void Death()
     {
-        if (currentHealth <= 0)
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+
+        if (currentHealth <= 0 && sceneName != "LvL 1")
         {
             Destroy(gameObject.transform.parent.gameObject);
-            //Destroy(Camera.current, 0f);
             SceneManager.LoadScene("LvL 2");
+        }
+
+        else if (currentHealth <= 0 && sceneName == "LvL 1")
+        {
+            Destroy(gameObject.transform.parent.gameObject);
+            SceneManager.LoadScene("LvL 1");
         }
     }
     public void TakeDamage(int damage)

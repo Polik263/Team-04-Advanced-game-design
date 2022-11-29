@@ -364,7 +364,7 @@ public class DialogueMaster : MonoBehaviour
 
     IEnumerator ActivateOptions()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(20);
 
 
         if (dialogueBox41.activeInHierarchy == true)

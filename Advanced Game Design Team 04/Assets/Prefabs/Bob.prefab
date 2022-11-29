@@ -1321,7 +1321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 5212417532107895801}
-  playerSpeed: 8
+  playerSpeed: 12
   gravityValue: -9.81
   controllerDeadzone: 0.1
   gamepadRotateSmoothing: 1000
