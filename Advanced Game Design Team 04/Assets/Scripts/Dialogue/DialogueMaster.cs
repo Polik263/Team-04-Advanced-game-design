@@ -270,7 +270,7 @@ public class DialogueMaster : MonoBehaviour
         if (dialogueBox322.activeInHierarchy == true || dialogueBox222.activeInHierarchy == true || dialogueBox422.activeInHierarchy == true || dialogueBox522.activeInHierarchy == true || dialogueBox622.activeInHierarchy == true || dialogueBox722.activeInHierarchy == true)
         {
             StartCoroutine(ReopenDialogue());
-            StartCoroutine(ActivateOptions());
+            
         }
 
     }
@@ -358,13 +358,13 @@ public class DialogueMaster : MonoBehaviour
     {
         isClosingDialogue = true;
 
-        yield return new WaitForSeconds(22);
+        yield return new WaitForSeconds(21);
         CloseDialogue();
     }
 
     IEnumerator ActivateOptions()
     {
-        yield return new WaitForSeconds(22);
+        yield return new WaitForSeconds(21);
 
 
         if (dialogueBox41.activeInHierarchy == true)
@@ -569,6 +569,8 @@ public class DialogueMaster : MonoBehaviour
             startDialogue.SetActive(true);
 
             // StartCoroutine(ActivateOptions());
+
+            StartCoroutine(ActivateOptions());
         }
     }
 
