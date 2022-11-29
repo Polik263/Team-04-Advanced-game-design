@@ -18185,9 +18185,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.06
-  fullText: "That answer makes my heart dashing with excitement! Or... It would...
-    If I had one... About that, did you know the spirits don\u2019t actually have
-    hearts? Neither any other organs. Sounds natural, I know, considering how disgusting
+  fullText: "That answer makes my heart dash with excitement! Or... It would... If
+    I had one... About that, did you know the spirits don\u2019t actually have hearts?
+    Neither any other organs. Sounds natural, I know, considering how disgusting
     these creatures are... Don\u2019t you think the lack of consciousness fits them
     so well...?"
 --- !u!114 &1248653934
@@ -18210,9 +18210,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "That answer makes my heart dashing with excitement! Or... It would...
-    If I had one... About that, did you know the spirits don\u2019t actually have
-    hearts? Neither any other organs. Sounds natural, I know, considering how disgusting
+  m_text: "That answer makes my heart dash with excitement! Or... It would... If
+    I had one... About that, did you know the spirits don\u2019t actually have hearts?
+    Neither any other organs. Sounds natural, I know, considering how disgusting
     these creatures are... Don\u2019t you think the lack of consciousness fits them
     so well...?"
   m_isRightToLeft: 0
