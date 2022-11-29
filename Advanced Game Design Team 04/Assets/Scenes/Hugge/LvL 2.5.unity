@@ -17979,7 +17979,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 1325016577}
-  enemy: []
 --- !u!4 &1366967934
 Transform:
   m_ObjectHideFlags: 0

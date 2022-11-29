@@ -44,6 +44,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
+            Destroy(gameObject);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
