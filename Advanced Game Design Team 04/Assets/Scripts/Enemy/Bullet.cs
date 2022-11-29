@@ -1,18 +1,29 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
 public class Bullet : MonoBehaviour
 {
     private GameObject player;
+    public GameObject destroyableWall;
     [SerializeField] private PlayerHealth playerHealth;
     [SerializeField] private EnemyStatsSo stats;
     private Transform playerTransform;
     private Vector3 playerPos;
+    WallHealth wallHealth;
 
     private Vector3 direction;
+
+
+    private void Awake()
+    {
+        
+    }
+
+
     private void Start()
     {
         player = GameObject.Find("Player");
@@ -20,6 +31,9 @@ public class Bullet : MonoBehaviour
         playerTransform = GameObject.Find("Player").GetComponent<Transform>();
         playerPos = playerTransform.position;
         direction = (playerPos - transform.position).normalized;
+
+
+
     }
 
     private void Update()
@@ -43,8 +57,14 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        else if (other.CompareTag("Destroyable Wall"))
+        {
+            other.GetComponent<WallHealth>().TakeDamage(5);
 
-        
+            Destroy(gameObject);
+        }
+
+
     }
 
 
