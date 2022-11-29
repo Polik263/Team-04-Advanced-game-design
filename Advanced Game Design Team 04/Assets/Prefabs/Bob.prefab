@@ -808,6 +808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swordobj: {fileID: 1895247611286891868}
+  dmg: 10
 --- !u!1 &5623849888209998278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,6 +1343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8316bf58d9afd234382222a33ade8030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiplier: 1.75
 --- !u!54 &7921307132585182273
 Rigidbody:
   m_ObjectHideFlags: 0

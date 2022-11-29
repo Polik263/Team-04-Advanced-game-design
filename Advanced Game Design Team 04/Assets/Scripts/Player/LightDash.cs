@@ -8,7 +8,7 @@ public class LightDash : MonoBehaviour
     public GameObject swordobj;
     Sword sword;
     bool canMove;
-
+    public int dmg;
     
     GameObject dialogueManager;
 
@@ -38,11 +38,11 @@ public class LightDash : MonoBehaviour
         {
             if(sword.currentForm == 1 && gotLightDash == true && isInDialogue == false)
             {
-                Debug.Log(collision.gameObject.layer);
+                //Debug.Log(collision.gameObject.layer);
                 if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
                 {
                 
-                    collision.gameObject.GetComponent<Die>().Dead();
+                    //collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(dmg);
                 }
 
                 else if (collision.rigidbody.CompareTag("Breakable Wall"))

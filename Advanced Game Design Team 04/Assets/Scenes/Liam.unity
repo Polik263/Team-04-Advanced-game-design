@@ -21562,6 +21562,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 825740959022456856, guid: 00118b1330efa9c4580354769112dcbe, type: 3}
+      propertyPath: dmg
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2420710840984337403, guid: 00118b1330efa9c4580354769112dcbe, type: 3}
       propertyPath: cam
       value: 
