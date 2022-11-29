@@ -5,8 +5,22 @@ using UnityEngine;
 public class SamePlayer : MonoBehaviour
 {
 
-    void Start()
+    void Awake()
     {
+        for (int i = 0; i < Object.FindObjectsOfType<SamePlayer>().Length; i++)
+        {
+            if (Object.FindObjectsOfType<SamePlayer>()[i] != this)
+            {
+
+                if (Object.FindObjectsOfType<SamePlayer>()[i].name == gameObject.name)
+                {
+                    Destroy(gameObject);
+                }
+            }
+        }
+
+
+
         DontDestroyOnLoad(gameObject);
     }
 
