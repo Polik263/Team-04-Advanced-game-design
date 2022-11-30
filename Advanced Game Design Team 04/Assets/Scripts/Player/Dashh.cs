@@ -9,8 +9,10 @@ public class Dashh : MonoBehaviour
     Sword sword;
     public float multiplier;
     public Action<bool> isDashing;
-
+    //public ParticleSystem lightDash;
     GameObject dialogueManager;
+    //public Transform bobPosition;
+
 
     bool gotLightDash;
 
@@ -39,7 +41,8 @@ public class Dashh : MonoBehaviour
 
                 //rb.MovePosition(transform.position + rb.velocity.normalized * speed * Time.deltaTime);
                 controller.Move(new Vector3(Direction.x, 0, Direction.y) * Time.deltaTime * speed * multiplier);
-                
+                //Instantiate(lightDash, bobPosition.transform.position, Quaternion.Euler(0, 0, 90));
+                //lightDash.Play();
                 yield return null;
 
             }
