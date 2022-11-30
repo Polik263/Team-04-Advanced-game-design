@@ -12158,6 +12158,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6818237979111167130, guid: 00118b1330efa9c4580354769112dcbe, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7921307132585182273, guid: 00118b1330efa9c4580354769112dcbe, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7921307132585182283, guid: 00118b1330efa9c4580354769112dcbe, type: 3}
       propertyPath: m_Name
       value: Bob

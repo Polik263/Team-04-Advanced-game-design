@@ -65,10 +65,10 @@ public class EnemyHealth : MonoBehaviour
         //hurt.Play();
 
         healthBar.SetHealth(currentHealth);
-        if(gigaCrit && ch > currentHealth + 50)
+        if(gigaCrit && ch > currentHealth + 49)
         {
             GigaCrit(damage);
-            //Instantiate(hitParticles, transform.position, Quaternion.identity);
+            Instantiate(hitParticles, transform.position, Quaternion.identity);
             Death();
         }
         else if(crit && ch > currentHealth + 32)
