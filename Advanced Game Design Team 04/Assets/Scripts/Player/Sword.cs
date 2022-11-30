@@ -144,6 +144,7 @@ public class Sword : MonoBehaviour
                     }
                     Destroy(collider.gameObject);
                     playerHealth.Heal(5);
+                    AudioManager.Instance.PlaySFX("Heal");
                 }
 
             }
@@ -153,8 +154,9 @@ public class Sword : MonoBehaviour
                 {
                     if (gotDarkExtension == true)
                     {
+                        AudioManager.Instance.PlaySFX("Dark Attack");
                         collider.gameObject.GetComponent<DmgEnemy>().Damage(extentiondmg);
-                        if(playerHealth.currentHealth <= takeDamage)
+                        if (playerHealth.currentHealth <= takeDamage)
                         {
                             playerHealth.currentHealth = 1;
                         }
@@ -166,6 +168,7 @@ public class Sword : MonoBehaviour
                     }
                     else
                     {
+                        AudioManager.Instance.PlaySFX("Normal Swing");
                         collider.gameObject.GetComponent<DmgEnemy>().Damage(damage);
                         if(playerHealth.currentHealth <= takeDamage)
                         {
