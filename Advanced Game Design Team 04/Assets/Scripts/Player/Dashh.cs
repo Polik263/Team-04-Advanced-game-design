@@ -60,6 +60,7 @@ public class Dashh : MonoBehaviour
 
         playermovement.canMove = true;
         isDashing?.Invoke(false);
+        AudioManager.Instance.PlaySFX("Dash");
 
     }
 }

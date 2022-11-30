@@ -32,6 +32,7 @@ public class SlamDmg : MonoBehaviour
                 {
 
                     collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(25);
+                    
                 }
             }
 

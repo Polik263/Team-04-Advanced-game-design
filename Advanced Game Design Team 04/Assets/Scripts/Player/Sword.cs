@@ -115,6 +115,7 @@ public class Sword : MonoBehaviour
             if (currentForm == 1)
             {
                 animator.Play("DarkSwing");
+                
             }
         }
 

@@ -81,6 +81,7 @@ public class Slam : MonoBehaviour
         {
             isCd = true;
             animator.Play("LeapSlam");
+            AudioManager.Instance.PlaySFX("Jump");
         }   
     }
 
@@ -100,6 +101,7 @@ public class Slam : MonoBehaviour
             animator.transform.parent.gameObject.transform.position = animator.transform.position;
             transform.localPosition = Vector3.zero;
             animator.Play("New State");
+            AudioManager.Instance.PlaySFX("Slam");
             EndLeap();
             
         } 
