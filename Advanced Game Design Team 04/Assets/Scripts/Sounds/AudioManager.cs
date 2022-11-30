@@ -25,11 +25,27 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-       
-        PlayMusic("Level 1");
-    }
+
+     void Start()
+     {
+        //if (SceneManager.GetActiveScene().name == "LvL 1")
+        {
+          PlayMusic("Level 1");
+        }     
+
+     }
+
+    //void Update()
+    //{
+    //    if (SceneManager.GetActiveScene().name == "LvL 2")
+    //    {
+    //        PlayMusic("Level 2");
+    //    }
+
+    //}
+
+
+
 
 
 

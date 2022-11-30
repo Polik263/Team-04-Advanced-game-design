@@ -53,8 +53,7 @@ public class Meele : MonoBehaviour
                     if(enemy.TryGetComponent<DmgEnemy>(out DmgEnemy dmgEnemy))
                     {
                         enemy.GetComponent<DmgEnemy>().Damage(damage);
-                        
-                }
+                    }
                 }
             }
  

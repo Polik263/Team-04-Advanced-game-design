@@ -104,6 +104,7 @@ public class Sword : MonoBehaviour
                     boxCollider.center = new Vector3(boxCollider.center.x, longerAttack / 2, boxCollider.center.z);
                     animator.Play("Slapping");
                     ispcd = true;
+                    
                 }
                 else
                 {
@@ -144,6 +145,7 @@ public class Sword : MonoBehaviour
                     }
                     Destroy(collider.gameObject);
                     playerHealth.Heal(5);
+                    AudioManager.Instance.PlaySFX("Heal");
                 }
 
             }
@@ -154,7 +156,8 @@ public class Sword : MonoBehaviour
                     if (gotDarkExtension == true)
                     {
                         collider.gameObject.GetComponent<DmgEnemy>().Damage(extentiondmg);
-                        if(playerHealth.currentHealth <= takeDamage)
+                        AudioManager.Instance.PlaySFX("Dark Attack");
+                        if (playerHealth.currentHealth <= takeDamage)
                         {
                             playerHealth.currentHealth = 1;
                         }
@@ -167,7 +170,8 @@ public class Sword : MonoBehaviour
                     else
                     {
                         collider.gameObject.GetComponent<DmgEnemy>().Damage(damage);
-                        if(playerHealth.currentHealth <= takeDamage)
+                        AudioManager.Instance.PlaySFX("Normal Swing");
+                        if (playerHealth.currentHealth <= takeDamage)
                         {
                             playerHealth.currentHealth = 1;
                         }
