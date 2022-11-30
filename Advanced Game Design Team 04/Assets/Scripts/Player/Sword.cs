@@ -37,9 +37,12 @@ public class Sword : MonoBehaviour
     bool ispcd;
     public int extentiondmg;
 
+    public bool canTakeDamage;
+
     // Start is called before the first frame update
     void Start()
     {
+        canTakeDamage = true;
         player = GameObject.Find("Player");
         playerHealth = GetComponentInParent<PlayerHealth>();
         animator = Gun.GetComponent<Animator>();
@@ -160,9 +163,10 @@ public class Sword : MonoBehaviour
                         {
                             playerHealth.currentHealth = 1;
                         }
-                        else
+                        else if(canTakeDamage == true)
                         {
                             playerHealth.TakeDamage(takeDamage);
+                            StartCoroutine(TakeDamange());
                         }
                         
                     }
@@ -174,9 +178,10 @@ public class Sword : MonoBehaviour
                         {
                             playerHealth.currentHealth = 1;
                         }
-                        else
+                        else if( canTakeDamage == true)
                         {
                             playerHealth.TakeDamage(takeDamage);
+                            StartCoroutine(TakeDamange());
                         }
                         
                     }
@@ -188,6 +193,7 @@ public class Sword : MonoBehaviour
         }
 
     }
+
 
     public void SwitchForm()
     {
@@ -215,5 +221,13 @@ public class Sword : MonoBehaviour
             //Gun.GetComponent<MeshRenderer>().material = lightMaterial; 
         }
 
+    }
+
+    IEnumerator TakeDamange()
+    {
+        canTakeDamage = false;
+
+        yield return new WaitForSeconds(0.4f);
+        canTakeDamage = true;
     }
 }
