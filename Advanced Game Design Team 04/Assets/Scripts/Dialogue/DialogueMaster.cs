@@ -17,6 +17,9 @@ public class DialogueMaster : MonoBehaviour
     // [SerializeField] private Button button1;
 
     // public KeyCode key;
+    public float dialogueDuration = 21;
+    public float optionSpawn = 21;
+    public float dialogueReopen = 25;
 
 
     [SerializeField] private GameObject dialogueBox11;
@@ -358,13 +361,13 @@ public class DialogueMaster : MonoBehaviour
     {
         isClosingDialogue = true;
 
-        yield return new WaitForSeconds(21);
+        yield return new WaitForSeconds(dialogueDuration);
         CloseDialogue();
     }
 
     IEnumerator ActivateOptions()
     {
-        yield return new WaitForSeconds(21);
+        yield return new WaitForSeconds(optionSpawn);
 
 
         if (dialogueBox41.activeInHierarchy == true)
@@ -550,7 +553,7 @@ public class DialogueMaster : MonoBehaviour
 
     IEnumerator ReopenDialogue()
     {
-        yield return new WaitForSeconds(25);
+        yield return new WaitForSeconds(dialogueReopen);
 
         if (panel.activeInHierarchy == false)
         {
@@ -576,7 +579,7 @@ public class DialogueMaster : MonoBehaviour
 
         IEnumerator ActivateDialouge()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(7);
 
         if (panel.activeInHierarchy == false)
         {

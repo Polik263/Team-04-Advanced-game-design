@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Sure thing Ding-a-ling! I\u2019m so proud of you. Wanting to forge straight
     ahead. Such ambition, such drive. A real team player. I one hundred percent believe
     in us. Together I know we can do this. Together we can beat the odds, we can
@@ -494,7 +494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: Well, I really wouldn't like to have an even worse view accompany me
     throught the rest of our journey. I shall lend you my power yet again. Go, make
     the spirits uglier with their own magic! ... If it is even possible...
@@ -1143,7 +1143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Well, I don\u2019t like the idea of your face!... That was unnecessary,
     that was crossing the line, forgive me this spitefulness. There is nothing wrong
     with your nice face. I just get so protective and excited when it comes to jumping.
@@ -1301,7 +1301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: Quick, enter the tower!
 --- !u!114 &63339582
 MonoBehaviour:
@@ -1451,7 +1451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Oh yeah... That really wasn\u2019t something I would call a pleasant
     experience. It would be a shame to repeat that. So how about you start making
     sense and make some use out of me with the new power I just gave you, hmmm??"
@@ -1605,7 +1605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 2. Um... Yeah
 --- !u!114 &89707685
 MonoBehaviour:
@@ -1905,7 +1905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 2. Lend me some power so we won't scream in agony
 --- !u!114 &95664106
 MonoBehaviour:
@@ -2268,7 +2268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "1. YES, PLEASE\_"
 --- !u!114 &100424364
 MonoBehaviour:
@@ -2635,7 +2635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "2. Suuure. Let\u2019s do some jumping!"
 --- !u!114 &127918450
 MonoBehaviour:
@@ -2883,7 +2883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Yeah, you see. I used to be in the hands of this hero. I mean, a REAL
     Hero. Oh man, they really knew how to swing a sword. Thrusting here, chopping
     there, a bit of the ol\u2019 slicing. We even had this nickname... The Bringer
@@ -3233,7 +3233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Oh, \u201CMaster\u201D? I like it! Maybe I should share some destructive
     power with you? As you\u2019re being so nice. Add some power onto that... fleshy
     frame of yours. It\u2019s really quite impressive how far you\u2019ve gotten
@@ -3391,7 +3391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: Wait, you want me to be more offensive? Do you mean in words? I would
     persume so, as my cutting abilities are incomperably better than of any weapon
     you could find. Too bad for you, I think being nice is a virtue. Thanks to my
@@ -3701,7 +3701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 2. We can do that? Sounds fun
 --- !u!114 &204099847
 MonoBehaviour:
@@ -4036,7 +4036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "2.\_UM... BUT I DON'T WANT..."
 --- !u!114 &230201500
 MonoBehaviour:
@@ -4363,7 +4363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 2. UPGRADE PLEASE!!!!
 --- !u!114 &260853601
 MonoBehaviour:
@@ -4663,7 +4663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "2.\_ I'd rather keep the full control"
 --- !u!114 &281574661
 MonoBehaviour:
@@ -4813,7 +4813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 1. YOU ALREADY SAID THAT
 --- !u!114 &302844956
 MonoBehaviour:
@@ -5263,7 +5263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 1. I'M NOT SURE I WANT TO RISK IT...
 --- !u!114 &344025054
 MonoBehaviour:
@@ -5563,7 +5563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: My, my, how cold of you. Well, your loss... Have fun with running into
     each and every possible projectile. Who knows, maybe it will help you learn how
     to absorb magic with your face?
@@ -5930,7 +5930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Never mentioned it?! It's like you never listen to me. I have mentioned
     it so many times that we can easily jump on our problems. Probably mentioned
     it like 100 times... or maybe 43... or 12? or maybe I actually\_ haven't mentioned
@@ -6433,7 +6433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 1. OLD AGE....?
 --- !u!114 &441020575
 MonoBehaviour:
@@ -6583,7 +6583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Ok, so how about this. I can\u2019t just heal you. No that would be
     silly. I can help keep you safe and provide a way for you to heal yourself! Just
     hit back those glowing enemy attacks and boom-ka-zoom, avoiding certain death
@@ -6741,7 +6741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 2. NO, SHUT UP
 --- !u!114 &452230710
 MonoBehaviour:
@@ -7017,7 +7017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 1. I CAN DESTROY TOO!
 --- !u!114 &485971634
 MonoBehaviour:
@@ -7167,7 +7167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 1. Flying really sounds nice
 --- !u!114 &494785147
 MonoBehaviour:
@@ -7317,7 +7317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Indeed it is! I don\u2019t know what it is with jumping that makes it
     so fun. Just makes you feel alive you know. Boy do I miss being alive sometimes.
     Feeling stuff, smelling stuff, tasting those stuff. One time I felt, smelled
@@ -7475,7 +7475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 2. ... Long-reaching ears?
 --- !u!114 &501795201
 MonoBehaviour:
@@ -7625,7 +7625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: Wow, I've never met such a squishy... human... before. You're really
     taking those hits like a champ. I personally don't need to worry about things
     like that... seen as I'm a sword and all... Wouldn't it be cool if you had someone,
@@ -7781,7 +7781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: Are you insluting me again? Or did you decide to try and redirect my
     very words back at me? Oh, no problem. We can play this little game of yours..............................................
     Are you expecting something from me? I'm redirecting my attention in the opposite
@@ -7937,7 +7937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 1. JUST GIVE IT ALREADY
 --- !u!114 &521142503
 MonoBehaviour:
@@ -8087,7 +8087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 2. Offensive POWER
 --- !u!114 &527794290
 MonoBehaviour:
@@ -8237,7 +8237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 2. WHY NOT?
 --- !u!114 &530439188
 MonoBehaviour:
@@ -8568,7 +8568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "1.\_You also don\u2019t have a heart\_ "
 --- !u!114 &545073329
 MonoBehaviour:
@@ -8868,7 +8868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "It\u2019s sure getting more and more spirits around us. Are you certain
     that you don\u2019t want to make it easier for you and just jump away from them?
     Or even better, jump on them? I need to admit, it\u2019s getting a little bit
@@ -9156,7 +9156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "2. What you\u2019re doing now then?"
 --- !u!114 &602045674
 MonoBehaviour:
@@ -9766,7 +9766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 2. What's wrong with it?
 --- !u!114 &659274935
 MonoBehaviour:
@@ -10066,7 +10066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 2. EXACTLY!
 --- !u!114 &681446098
 MonoBehaviour:
@@ -10216,7 +10216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 1. I got that from the beginning of this discussion. Just teach me!
 --- !u!114 &693121948
 MonoBehaviour:
@@ -10366,7 +10366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "I thought so. Now excuse me, but I\u2019m about to give you the power
     with been talking about for almost an hour now. No need to thank me, although
     I would say you should be grateful that I managed to withstand your behaviour."
@@ -10733,7 +10733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 1. Enough trivia, give me speed!
 --- !u!114 &724267171
 MonoBehaviour:
@@ -11291,7 +11291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 2. I got that from the beginning of this discussion. Just teach me!
 --- !u!114 &745807364
 MonoBehaviour:
@@ -11831,7 +11831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 2. You and talents...?
 --- !u!114 &760675839
 MonoBehaviour:
@@ -11981,7 +11981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Well, why didn't you say so? Let's do this thing! We can team up and
     destroy like the good old times. I mean, it won\u2019t be the same of course,
     you\u2019re not them, but we can power you up all the same. It\u2019ll be good
@@ -12138,7 +12138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: As short as this discussion! Yet again here I am, offering you a helping
     hand and instead of any gratitude all I hear are some shameless jokes... Good
     luck without my help, I hope that even without extension you will last LONG
@@ -12292,7 +12292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: I'll help you from there...
 --- !u!114 &773885088
 MonoBehaviour:
@@ -12442,7 +12442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Yea. Another meat bag issue, right? Sure sucks to be as powerless and
     squishy as you are. I\u2019m not judging of course. I would never presume to
     offend you and your jiggly bits. They\u2019re just... easier to chop off... damageable
@@ -13645,7 +13645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "It is! But just to be clear. It won\u2019t actually make you fly for
     real. It\u2019s just a big jump. I don't want any complaining that I didn\u2019t
     make you fly. Had enough of that from others. It\u2019s just a jump. A fun jump!
@@ -13953,7 +13953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 1. I'm all ears
 --- !u!114 &965586010
 MonoBehaviour:
@@ -14217,7 +14217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Oh, normally I don\u2019t like spirits, but I need to say, I like YOUR
     spirit for sure... So, as you\u2019re so interested, all started when people
     and spirits have built this tower. Soon afterwards people started dying. I think
@@ -14525,7 +14525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "\u201CAll ears\u201D you say? You know what have very long ears? Elves!
     They are very much humans but somehow magical, long-living and with comically
     long ears. If that was a price for immortality I would pass! That is at least
@@ -14841,7 +14841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 2. Funny, power please?
 --- !u!114 &1022249006
 MonoBehaviour:
@@ -15141,7 +15141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: Having hard time reaching all these spirits with your sword... Or should
     I say with me? I thought that giving you the power of darkness would be enough,
     but here we are again... And before you make a foolish comment about my length,
@@ -15297,7 +15297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: Well, good thing I keep track of the conversation. Worry not, my friend!
     With this new beautiful power you can use me as a mirror  of the enemies projectiles!
     Yes, you can shoot their magic back at them with the light power, if that was
@@ -15453,7 +15453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Oh, for God\u2019s sake! Shout your mouth already! You\u2019re acting
     like a child! Stop derailing the conversation with these nonsensical topics of
     yours... Let me grant you the power already! Unless you have more stupid comments
@@ -15609,7 +15609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 2. I might need the power to reach it!
 --- !u!114 &1059969824
 MonoBehaviour:
@@ -15920,7 +15920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: Yes! It's time to jump, so let's jump! But do remember to heal yourself
     once and a while cause it can actually kill you....
 --- !u!114 &1072081952
@@ -16130,7 +16130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Oh, wow... These dodges of yours indeed are sluggish. When I was your
     age, I was swift as a knife! Not like a kitchen knife, don\u2019t get the wrong
     idea... More like... a dagger? Anyway! It\u2019s a pity to see a creature with
@@ -16288,7 +16288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Oh my lord! Who taught you to be so ignorant... I need to say, you truly
     do remind me of someone... But don\u2019t worry, I will grant you the power.
     You really wanted to dash through the topic as fast as possible, didn\u2019t
@@ -16444,7 +16444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Funny you say? You really don\u2019t get sarcasm, do you? I think in
     that situation I really should do it I shall enhance your movement with the power
     of light... Who knows... Hopefully it will enlighten your mind  as well, at least
@@ -16663,7 +16663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Wow, rude. Seriously, who told you it was OK to talk to someone like
     that? I\u2019m sure you\u2019ve had a bad day, but there\u2019s no need to take
     it out on me. I honestly don\u2019t think anyone has ever talked to me in that
@@ -17121,7 +17121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: Oh well... You didn't really see other people did you? I would just say
     you look... Unusual? Nothing to worry about! There are plenty of ways people
     do to keep themselves good looking. Make up, stylish clothes and much more. I
@@ -17506,7 +17506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 2. I'M GOOD...
 --- !u!114 &1187494200
 MonoBehaviour:
@@ -17656,7 +17656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: I will not only just teach you I will also!... oh no wait, I will just
     only teach you. There is nothing to add to that.
 --- !u!114 &1190706175
@@ -17808,7 +17808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: Hey... psst... hey you. You're not dealing much damage. Want me to help?
     I could improve your terrible form. Make it sharper. More pointier? Of course
     I'm sure you've got this. Don't let me, an actual sword, tell you how to stab
@@ -17964,7 +17964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Are you suggesting that I forgot about something? If you think that
     I *Insert name* dared to forget about extending your attacks range with shockwave
     of powerful dark magic... You... um... might have a point... But don\u2019t let
@@ -18122,7 +18122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Yes, don\u2019t you know that? I thought it was quite hard to miss all
     these sounds of suffering and death. All started after building this tower. Nobody
     knew why but the land seemed to be cursed afterwards. Plague has been scattered
@@ -18280,7 +18280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 1. Fun is fun. Let's jump
 --- !u!114 &1218914573
 MonoBehaviour:
@@ -18527,7 +18527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 2. WHAT HAPPENED TO THEM?
 --- !u!114 &1228549821
 MonoBehaviour:
@@ -18941,7 +18941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: Am I seeing right? You're still struggling to not get hit? Well... some
     people say that the best defence is more offence maybe we should try to apply
     it? As you know I'm a sword with many hidden talents, so I could try make us
@@ -19314,7 +19314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "That answer makes my heart dash with excitement! Or... It would... If
     I had one... About that, did you know the spirits don\u2019t actually have hearts?
     Neither any other organs. Sounds natural, I know, considering how disgusting
@@ -19622,7 +19622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 2. PLEASE SHUT UP!
 --- !u!114 &1284628473
 MonoBehaviour:
@@ -19772,7 +19772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "That\u2019s a long and complicated story anyway. Think we should be
     focusing on these grumpy and annoying spirits. And with focusing on them, I mean
     of course... jumping on them."
@@ -20139,7 +20139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 1. It will be worse if you don't help!
 --- !u!114 &1313951630
 MonoBehaviour:
@@ -20289,7 +20289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Just be happy I'm in a good mood! I could have taken that the wrong
     way you know. You should be more careful of what you say and how you say it.
     But it\u2019s OK, I forgive you... This time... I\u2019ll help you out. Prove
@@ -20447,7 +20447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Oh it is quite a story, but it's no time to be nostalgic. Let's make
     you fly up in the air and smash down to the ground while looking super awesome.
     It's super fun. It demands some dark magic which can technically kill you, but
@@ -20905,7 +20905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "I hope you\u2019re not suggesting me being a relative to these dreadful
     creatures, do you? You, on the other hand, possess a pair of hands and a pair
     of legs very similar to them. Yet I do suppress myself from wasting your time
@@ -21061,7 +21061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Oh my, chill there, little one... I see the darkness in your heart is
     already growing. But you need not worry about trying to stay alive too much,
     it\u2019s not like we won\u2019t have another try if you fail here...We always
@@ -21217,7 +21217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: Yes, I think it would be beneficial for both of us... Here, enjoy the
     new power. You know that keeping you alive all the time can be a pain? I think
     that is just the price I pay for being such an amazing companion. I would kiss
@@ -21681,7 +21681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 2. OLD AGE....?
 --- !u!114 &1396181520
 MonoBehaviour:
@@ -22228,7 +22228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "1.\_UM... BUT I DON'T WANT..."
 --- !u!114 &1407917977
 MonoBehaviour:
@@ -22441,7 +22441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 1. NO, NO I DIDN'T MEAN IT LIKE THAT. SURE LET'S TRY IT OUT
 --- !u!114 &1453914640
 MonoBehaviour:
@@ -22591,7 +22591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "If you did, why aren\u2019t you more precise with your words?? Never
     mind... Time to make you fly! \u2026 Or jump\u2026 Yes, jump\u2026 I can\u2019t
     you fly, but you already know that, right\u2026?  Let\u2019s forget about that\u2026 "
@@ -22745,7 +22745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 1. That is mean
 --- !u!114 &1468159399
 MonoBehaviour:
@@ -23045,7 +23045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: Oh you want to know it so much? At the top we will carry out a ritual
     to change everything for the better! Don't get discouraged by the word "ritual".
     It's completly safe. After that you'll be able to admire your beauty in the reflection
@@ -23201,7 +23201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 2. JUST GIVE IT ALREADY
 --- !u!114 &1526354285
 MonoBehaviour:
@@ -23351,7 +23351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Oh really? I'm not good enough for you now? Is that how it is? Don't
     think that you can trust a mysterious talking sword, you just happened to stumble
     across? Sure, I\u2019m cool with that. Why wouldn\u2019t I be. You didn\u2019t
@@ -23659,7 +23659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 1. GO ON...
 --- !u!114 &1576545534
 MonoBehaviour:
@@ -23906,7 +23906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 1. OH REALLY?
 --- !u!114 &1586496422
 MonoBehaviour:
@@ -24056,7 +24056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 2. You're... Short?
 --- !u!114 &1589873719
 MonoBehaviour:
@@ -24366,7 +24366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 2. I don't like the idea of it killing me
 --- !u!114 &1615004259
 MonoBehaviour:
@@ -24516,7 +24516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 1. Sure, why not...
 --- !u!114 &1620484558
 MonoBehaviour:
@@ -24666,7 +24666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 1. YES PLEASE, TEACH ME OH MASTER!
 --- !u!114 &1621351791
 MonoBehaviour:
@@ -24966,7 +24966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Well, do you know what? I'm going to prove you wrong... I am! I\u2019m
     not going to leave you alone. I am going to help you, and you'll see. Together
     we can be a team. A good, trusting team. A slaughter machine... Team slaughter
@@ -25124,7 +25124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 1. Um... Yeah
 --- !u!114 &1641092181
 MonoBehaviour:
@@ -25538,7 +25538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 2. ...
 --- !u!114 &1660231972
 MonoBehaviour:
@@ -25688,7 +25688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 2. Apology accepted. Now teach me to jump
 --- !u!114 &1661312602
 MonoBehaviour:
@@ -26201,7 +26201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 1. Tell me now!
 --- !u!114 &1685428575
 MonoBehaviour:
@@ -26501,7 +26501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "2. Interesting, where\u2019s the power?"
 --- !u!114 &1699404545
 MonoBehaviour:
@@ -26651,7 +26651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Oh, you mean me? Yes, I guess I am a magical weapon. Does talking count
     as magical? I mean if you think it does, then that\u2019s all that matters! If
     you want me to try, I'm sure I could do something to help? I can't guarantee
@@ -27176,7 +27176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 1. "Used to?"
 --- !u!114 &1744794401
 MonoBehaviour:
@@ -27393,7 +27393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "1.\_Stop insulting me!\_"
 --- !u!114 &1758831864
 MonoBehaviour:
@@ -27543,7 +27543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Well, I thought you wanted to learn something new for a change. I guess
     it\u2019s another mistake of mine trying to have some hope in you. You do know
     that the knowledge is the key to obtain the true power, right? Guess you only
@@ -27701,7 +27701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 1. Yeees, more offence!
 --- !u!114 &1774179021
 MonoBehaviour:
@@ -28063,7 +28063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "I\u2019m not the one commenting on trivial matters here! But yes, we
     can agree that it\u2019s time to give you the power now... Don\u2019t waste so
     much of my time in the future!"
@@ -28217,7 +28217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Alright, alright. Maybe I will honour you with some history lesson when
     you\u2019ll make sure nothing is in the duration of killing us. Therefore, let
     me do that... Oh and this... Yes... Now the reaching area should be longer thanks
@@ -28653,6 +28653,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startDialogue: {fileID: 1091970052}
   panel: {fileID: 1811421570}
+  dialogueDuration: 11
+  optionSpawn: 11
+  dialogueReopen: 15
   dialogueBox11: {fileID: 1875243238}
   dialogueBox121: {fileID: 63339579}
   dialogueBox122: {fileID: 773885085}
@@ -29106,7 +29109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: Hey... Come here...
 --- !u!114 &1875243241
 MonoBehaviour:
@@ -30298,7 +30301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: Nonsense! If I were to be mean, I would already make a comment about
     how lucky you are that there are no mirrors in this tower! You can't even imagine
     how hurtful to my eyes is having to watch you all this time... Your movements
@@ -30454,7 +30457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 1. Who were you before becoming a sword?
 --- !u!114 &1954684409
 MonoBehaviour:
@@ -30754,7 +30757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "Now? What I\u2019m doing now?! I\u2019m trying to give you the power
     we\u2019ve been talking about for the past few minutes! I could have guessed
     that your brain is as sluggish as your movements... And that body almost as disgusting
@@ -30911,7 +30914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: Oh, power, yes... That's what you meant. I mean, of course I knew what
     you meant form the very beginning, don't even assume otherwise. Ehm... Let the
     power of of light accumulate the energy and redirect is as the darkness of your
@@ -31359,7 +31362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "I see. Well continue to smash your way with a dull old blade, no power
     ups, no help. See if I care. I\u2019m an immortal blade, I\u2019m totally fine.
     Let's see how you feel about it when the REAL tough guys start showing up. Oh
@@ -31665,7 +31668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: 1. I don't think you can, you've never mention that
 --- !u!114 &2100610805
 MonoBehaviour:
@@ -31815,7 +31818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "1.\_..."
 --- !u!114 &2123287013
 MonoBehaviour:
@@ -32036,7 +32039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "*Deep in thought* Mmmmmm, yes. Mmmhummm. *Deep in thought* I really
     like that name... Good new name... Is it possibly even better than before? *Deep
     in thought* Yes, I think this is a better name. It\u2019s so on the nose. No
@@ -32192,7 +32195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6165ea9253b21743bbffb75000f2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.06
+  delay: 0.03
   fullText: "The same thing that happens to us all. Now isn\u2019t that a story to
     tell. It was Ignorance that killed The Bringer of Destruction. That day-old problem,
     you flesh bags have. Plain old stupidity. They got overconfident, sloppy, careless
