@@ -14,7 +14,7 @@ public class Bullet : MonoBehaviour
     private Transform playerTransform;
     private Vector3 playerPos;
     WallHealth wallHealth;
-
+    public int dmg;
     private Vector3 direction;
 
 
@@ -49,7 +49,7 @@ public class Bullet : MonoBehaviour
     {
         if (playerHealth.mortal && other.CompareTag("Player"))
         {
-            playerHealth.TakeDamage(5);
+            playerHealth.TakeDamage(dmg);
             Destroy(gameObject);
 
         }

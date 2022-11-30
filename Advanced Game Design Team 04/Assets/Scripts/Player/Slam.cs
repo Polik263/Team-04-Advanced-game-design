@@ -64,7 +64,15 @@ public class Slam : MonoBehaviour
     { 
         bobm.canMove = true;
         isacd = true;
-        playerHealth.TakeDamage(takeDamage);
+        if(playerHealth.currentHealth <= takeDamage)
+        {
+            playerHealth.currentHealth = 1;
+        }
+        else
+        {
+            playerHealth.TakeDamage(takeDamage);
+        }
+        
   
     }
     public void LeapSlam()

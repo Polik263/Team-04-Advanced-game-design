@@ -35,6 +35,7 @@ public class Sword : MonoBehaviour
     float pcd = 0.15f;
     float savepcd;
     bool ispcd;
+    public int extentiondmg;
 
     // Start is called before the first frame update
     void Start()
@@ -71,7 +72,7 @@ public class Sword : MonoBehaviour
                 acd = saveacd;
             }
         }
-            if (ispcd == true)
+        if (ispcd == true)
         {
 
             pcd -= Time.deltaTime;
@@ -79,7 +80,7 @@ public class Sword : MonoBehaviour
             {
                 ispcd = false;
                 pcd = savepcd;
-                Instantiate(darkParticle, player.transform.position, Quaternion.Euler(-90,0,0));
+                Instantiate(darkParticle, player.transform.position, Quaternion.Euler(-90, 0, 0));
             }
         }
     }
@@ -95,18 +96,18 @@ public class Sword : MonoBehaviour
             isacd = true;
             if (currentForm == 0)
             {
-                if(gotDarkExtension == true)
+                if (gotDarkExtension == true)
                 {
-                    boxCollider.size = new Vector3(boxCollider.size.x, longerAttack, 3 );
-                    boxCollider.center = new Vector3 (boxCollider.center.x, longerAttack/2, boxCollider.center.z);
-                    animator.Play("Slapping");  
+                    boxCollider.size = new Vector3(boxCollider.size.x, longerAttack, 3);
+                    boxCollider.center = new Vector3(boxCollider.center.x, longerAttack / 2, boxCollider.center.z);
+                    animator.Play("Slapping");
                     ispcd = true;
                 }
                 else
                 {
                     animator.Play("Slapping");
                 }
-                
+
 
             }
             if (currentForm == 1)
@@ -143,13 +144,37 @@ public class Sword : MonoBehaviour
                 }
 
             }
-            if(currentForm == 0 && gotDamage == true)
+            if (currentForm == 0 && gotDamage == true)
             {
                 if (collider.gameObject.layer == LayerMask.NameToLayer("EnemyHit") && isacd == true)
                 {
-                    
-                    collider.gameObject.GetComponent<DmgEnemy>().Damage(damage);
-                    playerHealth.TakeDamage(takeDamage);
+                    if (gotDarkExtension == true)
+                    {
+                        collider.gameObject.GetComponent<DmgEnemy>().Damage(extentiondmg);
+                        if(playerHealth.currentHealth <= takeDamage)
+                        {
+                            playerHealth.currentHealth = 1;
+                        }
+                        else
+                        {
+                            playerHealth.TakeDamage(takeDamage);
+                        }
+                        
+                    }
+                    else
+                    {
+                        collider.gameObject.GetComponent<DmgEnemy>().Damage(damage);
+                        if(playerHealth.currentHealth <= takeDamage)
+                        {
+                            playerHealth.currentHealth = 1;
+                        }
+                        else
+                        {
+                            playerHealth.TakeDamage(takeDamage);
+                        }
+                        
+                    }
+
                 }
             }
 
