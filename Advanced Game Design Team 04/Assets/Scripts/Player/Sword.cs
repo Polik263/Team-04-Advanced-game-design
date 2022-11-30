@@ -70,6 +70,7 @@ public class Sword : MonoBehaviour
             {
                 isacd = false;
                 acd = saveacd;
+                boxCollider.enabled = false;
             }
         }
         if (ispcd == true)
@@ -92,6 +93,7 @@ public class Sword : MonoBehaviour
 
         if (isCd == false)
         {
+            boxCollider.enabled = true;
             isCd = true;
             isacd = true;
             if (currentForm == 0)
