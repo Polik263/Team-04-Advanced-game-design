@@ -73,7 +73,7 @@ public class Sword : MonoBehaviour
             {
                 isacd = false;
                 acd = saveacd;
-                //boxCollider.enabled = false;
+                boxCollider.enabled = false;
             }
         }
         if (ispcd == true)
