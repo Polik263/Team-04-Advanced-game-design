@@ -43,7 +43,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 5}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 87
+  controlID: 158
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 88
+  controlID: 98
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 89
+  controlID: 99
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -289,8 +289,8 @@ MonoBehaviour:
     y: 0
     width: 1213
     height: 633
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -480,24 +480,24 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 145}
-      m_SelectedIDs: 724ffcff
-      m_LastClickedID: -241806
-      m_ExpandedIDs: f457fcff3c67fcff706cfcff307bfcff8e84fcff1e89fcff224dfdffd45cfdff3847feff7853feffd058feff9a5cfeffce61fefffa28ffff5e38ffff1e47ffff764cffff1650ffff2452ffff605cffff4c6bffffca70ffff9c74ffffb277ffff1083fffff686ffff7a9dffffa4aeffff86dafffff6eaffff30fbffffbc65000066820000a08c0000a8ae000090060100d4410100
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 7411e8ff5ca9e8ff586fe9ffce79e9ff707fe9ff00a1e9ffb228eaff8834eafff2d5eaffcadaeaff5ce8eaffaa1cebffaa2debff8c4bebffdaefebffc60decffc013ecff041decff9423f2fff840f2ff3647f2ff904cf2ffac54f2ff5453fcff7613fdff521ffdff8029fdff3436fdfff43cfdff484ffdff8c5bfdffa06cfdfffceffdff44f5fdffd005feffb27ffeffb488feff3e8dfeff6251ffff38f4ffff9afaffff30ca0000bacc000012e70000ba390100fc900100ca200e0096871600
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Bob
+        m_OriginalName: Bob
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -1466112
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 11}
       m_SearchString: 
@@ -765,9 +765,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 56.4723, y: 51.05495, z: 267.45007}
+    m_Target: {x: 45.329803, y: 30.210169, z: 69.919876}
     speed: 2
-    m_Value: {x: 56.4723, y: 51.05495, z: 267.45007}
+    m_Value: {x: 45.329803, y: 30.210169, z: 69.919876}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -813,13 +813,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.37845907, y: 0.0033848365, z: -0.011040356, w: 0.9240014}
+    m_Target: {x: 0.3338095, y: -0.052155457, z: 0.007552409, w: 0.9396301}
     speed: 2
-    m_Value: {x: 0.37898383, y: 0.004777664, z: -0.011624649, w: 0.92531794}
+    m_Value: {x: 0.33426857, y: -0.0550537, z: 0.008566186, w: 0.9408296}
   m_Size:
-    m_Target: 10.823431
+    m_Target: 2.7694917
     speed: 2
-    m_Value: 10.823431
+    m_Value: 2.7694917
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -983,23 +983,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes/Hugge
+    - Assets/Polytope Studio/Lowpoly Medieval Environments/Prefabs/Shrubs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes/Hugge
+  - Assets/Polytope Studio/Lowpoly Medieval Environments/Prefabs/Shrubs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\charles.hugo.olsson\Documents\Team4\Team-04-Advanced-game-design\Advanced
     Game Design Team 04
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 359}
-    m_SelectedIDs: 746b0000
-    m_LastClickedID: 27508
-    m_ExpandedIDs: 00000000a26a0000a46a0000a66a0000a86a0000aa6a0000ac6a0000ae6a0000b06a0000b26a0000b46a0000b66a0000b86a0000ba6a0000bc6a0000be6a0000c06a0000c26a000000ca9a3b
+    scrollPos: {x: 0, y: 295}
+    m_SelectedIDs: 02230e00
+    m_LastClickedID: 926466
+    m_ExpandedIDs: 000000008a6b00008c6b00008e6b0000906b0000926b0000946b0000966b00009a6b00009c6b00009e6b0000a06b0000a26b0000a46b0000a66b0000a86b0000aa6b0000526c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1027,7 +1027,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a26a0000a46a0000a66a0000a86a0000aa6a0000ac6a0000ae6a0000b06a0000b26a0000b46a0000b66a0000b86a0000ba6a0000bc6a0000be6a0000c06a0000c26a0000
+    m_ExpandedIDs: 000000008a6b00008c6b00008e6b0000906b0000926b0000946b0000966b0000986b00009a6b00009c6b00009e6b0000a06b0000a26b0000a46b0000a66b0000a86b0000aa6b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
