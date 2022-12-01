@@ -111,6 +111,7 @@ public class Sword : MonoBehaviour
                 else
                 {
                     animator.Play("Slapping");
+                    
                 }
 
 

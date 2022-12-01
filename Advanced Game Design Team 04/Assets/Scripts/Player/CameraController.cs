@@ -13,7 +13,8 @@ public class CameraController : MonoBehaviour
         if (target == null)
         {
             Debug.LogWarning("No target");
-            target = FindObjectOfType<PlayerHealth>().gameObject.transform.parent.transform;
+            target = GameObject.Find("Player").transform;
+            
         }
     }
 
