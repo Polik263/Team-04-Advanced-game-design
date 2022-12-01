@@ -12217,13 +12217,9 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6818237979111167130, guid: 00118b1330efa9c4580354769112dcbe, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7921307132585182273, guid: 00118b1330efa9c4580354769112dcbe, type: 3}
       propertyPath: m_Interpolate
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7921307132585182283, guid: 00118b1330efa9c4580354769112dcbe, type: 3}
       propertyPath: m_Name
@@ -16431,7 +16427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc65da6f6fbb57241a01a647ddb712fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startDialogue: {fileID: 1161142185}
+  startDialogue: {fileID: 985453318}
   panel: {fileID: 1590775174}
   dialogueDuration: 21
   optionSpawn: 21
