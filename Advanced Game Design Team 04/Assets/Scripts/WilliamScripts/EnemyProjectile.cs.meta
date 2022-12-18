@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8eb410374a5a35f4ab6043740ce48330
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - destroyableWall: {instanceID: 0}
+  - playerHealth: {instanceID: 0}
+  - stats: {fileID: 11400000, guid: 8837179023fcad148bbd4d6c26566411, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

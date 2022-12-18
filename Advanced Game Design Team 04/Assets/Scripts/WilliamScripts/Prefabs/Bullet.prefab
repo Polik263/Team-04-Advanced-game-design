@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 1579184510371518710}
   - component: {fileID: 603813472589437732}
   - component: {fileID: 4538161912961998070}
-  - component: {fileID: 7822795157263647551}
   - component: {fileID: 1810350909488594717}
+  - component: {fileID: -5026306527741096871}
   m_Layer: 7
-  m_Name: EnemyBullet
+  m_Name: Bullet
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,22 +99,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7822795157263647551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6226165487294853117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d37a573bffaeece4a89403f942528c18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyableWall: {fileID: 0}
-  playerHealth: {fileID: 2717949858442758792, guid: a9c780f5611a54645b7d50a87a798710, type: 3}
-  stats: {fileID: 11400000, guid: 8837179023fcad148bbd4d6c26566411, type: 2}
-  dmg: 0
 --- !u!114 &1810350909488594717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,3 +112,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 5
+--- !u!114 &-5026306527741096871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6226165487294853117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb410374a5a35f4ab6043740ce48330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerGO: {fileID: 0}
+  destroyableWall: {fileID: 0}
+  playerHealth: {fileID: 0}
+  stats: {fileID: 11400000, guid: 8837179023fcad148bbd4d6c26566411, type: 2}
+  dmg: 0

@@ -22,13 +22,10 @@ public class EnemyHealth : MonoBehaviour
     public ParticleSystem deathParticles;
     public ParticleSystem hitParticles;
 
-    void Awake()
-    {
-        player = GameObject.Find("Player");
-    }
     void Start()
     {
-        xpSystem = player.GetComponent<XpSystem>();
+        player = PlayerController.Instance.gameObject;
+        xpSystem = player.GetComponentInChildren<XpSystem>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }

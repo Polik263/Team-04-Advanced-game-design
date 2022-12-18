@@ -84,15 +84,18 @@ public class Sword : MonoBehaviour
             {
                 ispcd = false;
                 pcd = savepcd;
-                Instantiate(darkParticle, player.transform.position, Quaternion.Euler(-90, 0, 0));
+
+                ParticleSystem weaponSwingParticleEffect = Instantiate(darkParticle, player.transform.position, Quaternion.Euler(-90, 0, 0));
+
+                weaponSwingParticleEffect.transform.SetParent(gameObject.transform);
             }
         }
     }
     public void Attack()
     {
 
-        dialogueManager = GameObject.Find("DialogueManager");
-        gotDarkExtension = dialogueManager.GetComponent<DialogueMaster>().gotDarkExtension;
+        //dialogueManager = GameObject.Find("DialogueManager");
+        //gotDarkExtension = dialogueManager.GetComponent<DialogueMaster>().gotDarkExtension;
 
         if (isCd == false)
         {
