@@ -16830,9 +16830,11 @@ MonoBehaviour:
   _attackCooldown: 0.75
   _parryCooldown: 0.15
   _longerAttackMultiplier: 6
-  _weaponExtensionDamage: 10
+  _ExtensionDamage: 34
   _damage: 10
   _selfDamage: 10
+  _normaldmg: 20
+  _conedmg: 10
   currentForm: 0
   _dialogueManagerGO: {fileID: 0}
   _reflectedBulletGO: {fileID: 0}

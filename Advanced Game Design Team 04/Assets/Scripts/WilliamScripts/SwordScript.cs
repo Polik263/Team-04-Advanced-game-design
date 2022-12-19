@@ -14,9 +14,11 @@ public class SwordScript : MonoBehaviour
     private float _currentParryCooldown;
 
     [SerializeField] private float _longerAttackMultiplier;
-    [SerializeField] private int _weaponExtensionDamage;
+    [SerializeField] private int _ExtensionDamage = 34;
     [SerializeField] private int _damage;
-    [SerializeField] private int _selfDamage;
+    [SerializeField] private int _selfDamage = 5;
+    [SerializeField] private int _normaldmg = 20;
+    [SerializeField] private int _conedmg = 10;
 
     public int currentForm = 0;
 
@@ -51,7 +53,6 @@ public class SwordScript : MonoBehaviour
     private Vector3 startCenter = new Vector3(0,2,0);
 
     private Vector3 ExtentionCenter = new Vector3(0,3,0);
-
 
     void Start()
     {
@@ -131,7 +132,7 @@ public class SwordScript : MonoBehaviour
                     _parryCoolingDown = true;
                 }*/
                 
-                
+                _damage = _conedmg;
                 _animator.Play("DarkFrontal");
                     
                 
@@ -152,6 +153,7 @@ public class SwordScript : MonoBehaviour
                     _weaponHitbox.enabled = true;
                     _coolingDown = true;
                     _attackCoolingDown = true;
+                    
                     if (currentForm == 0)
                     {
                         if (gotDarkExtension == true)
@@ -160,11 +162,15 @@ public class SwordScript : MonoBehaviour
                             _weaponHitbox.center = ExtentionCenter;
                             _animator.Play("Slapping");
                             _parryCoolingDown = true;
+                            AudioManager.Instance.PlaySFX("Dark Attack");
+                            _damage = _ExtensionDamage;
                         }
                         else
                         {
-                            _animator.Play("Slapping");     
+                            _animator.Play("Slapping");
+                            _damage = _normaldmg;     
                         }
+                        
                     }
                 }        
     }
@@ -198,35 +204,22 @@ public class SwordScript : MonoBehaviour
             {
                 if (collider.gameObject.layer == LayerMask.NameToLayer("EnemyHit") && _attackCoolingDown == true)
                 {
-                    if (gotDarkExtension == true)
-                    {
-                        AudioManager.Instance.PlaySFX("Dark Attack");
-                        collider.gameObject.GetComponent<DmgEnemy>().Damage(_weaponExtensionDamage);
+                    
+                    
+                        
+                        collider.gameObject.GetComponent<DmgEnemy>().Damage(_damage);
                         if (_playerHealth.currentHealth <= _selfDamage)
                         {
-                            _playerHealth.currentHealth = 1;
+                        _playerHealth.currentHealth = 1;
                         }
                         else if(canTakeDamage == true)
                         {
                             _playerHealth.TakeDamage(_selfDamage);
                             StartCoroutine(TakeDamange());
                         }
+
                         
-                    }
-                    else
-                    {
-                        AudioManager.Instance.PlaySFX("Normal Swing");
-                        collider.gameObject.GetComponent<DmgEnemy>().Damage(_damage);
-                        if(_playerHealth.currentHealth <= _selfDamage)
-                        {
-                            _playerHealth.currentHealth = 1;
-                        }
-                        else if( canTakeDamage == true)
-                        {
-                            _playerHealth.TakeDamage(_selfDamage);
-                            StartCoroutine(TakeDamange());
-                        }
-                    }
+                                
                 }
             }
         }
