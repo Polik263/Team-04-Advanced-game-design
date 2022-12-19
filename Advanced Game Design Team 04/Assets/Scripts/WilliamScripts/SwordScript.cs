@@ -46,6 +46,12 @@ public class SwordScript : MonoBehaviour
     [SerializeField] private ParticleSystem hitParticles;
     [SerializeField] private ParticleSystem darkParticle;
     [SerializeField] private ParticleSystem _darkSwordTrail;
+    private Vector3 startHitbox = new Vector3(1f,3.4f,1f);
+    private Vector3 ExtentionHitbox = new Vector3(1f,6f,1f);
+    private Vector3 startCenter = new Vector3(0,2,0);
+
+    private Vector3 ExtentionCenter = new Vector3(0,3,0);
+
 
     void Start()
     {
@@ -112,20 +118,23 @@ public class SwordScript : MonoBehaviour
             _weaponHitbox.enabled = true;
             _coolingDown = true;
             _attackCoolingDown = true;
-            if (currentForm == 0)
+            _weaponHitbox.size = startHitbox;
+            _weaponHitbox.center = startCenter;
+             if (currentForm == 0)
             {
-                if (gotDarkExtension == true)
+                 /*if (gotDarkExtension == true)
                 {
+                    
                     _weaponHitbox.size = new Vector3(_weaponHitbox.size.x, _longerAttackMultiplier, 1);
                     _weaponHitbox.center = new Vector3(_weaponHitbox.center.x, _longerAttackMultiplier / 2, _weaponHitbox.center.z);
-                    _animator.Play("Slapping");
+                    _animator.Play("DarkFrontal");
                     _parryCoolingDown = true;
-                }
-                else
-                {
-                    _animator.Play("Slapping");
+                }*/
+                
+                
+                _animator.Play("DarkFrontal");
                     
-                }
+                
             }
             if (currentForm == 1)
             {
@@ -135,6 +144,31 @@ public class SwordScript : MonoBehaviour
         }
 
     }
+
+    public void LongerAttack()
+    {
+        if (_coolingDown == false)
+                {
+                    _weaponHitbox.enabled = true;
+                    _coolingDown = true;
+                    _attackCoolingDown = true;
+                    if (currentForm == 0)
+                    {
+                        if (gotDarkExtension == true)
+                        {
+                            _weaponHitbox.size = ExtentionHitbox;
+                            _weaponHitbox.center = ExtentionCenter;
+                            _animator.Play("Slapping");
+                            _parryCoolingDown = true;
+                        }
+                        else
+                        {
+                            _animator.Play("Slapping");     
+                        }
+                    }
+                }        
+    }
+
 
     private void OnTriggerEnter(Collider collider)
     {

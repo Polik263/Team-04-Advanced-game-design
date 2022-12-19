@@ -88,6 +88,7 @@ public class PlayerMovement : MonoBehaviour
         MeeleAttack();
         SwitchForm();
         SlamAttack();
+        HardMeeleAttack();
         
     }
     void HandleInput()
@@ -153,6 +154,14 @@ public class PlayerMovement : MonoBehaviour
             {
                 swordobj.GetComponent<Sword>().Attack();
             }    
+    }
+
+    void HardMeeleAttack()
+    {
+        if(playerControls.Controls.LongerAttack.ReadValue<float>() > 0)
+        {
+            swordobj.GetComponent<Sword>().LongerAttack();
+        }
     }
 
         void SlamAttack()

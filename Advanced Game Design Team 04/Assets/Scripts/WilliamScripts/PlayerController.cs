@@ -101,6 +101,7 @@ public class PlayerController : MonoBehaviour
         MeeleAttack();
         SwitchForm();
         SlamAttack();
+        LongAttack();
 
         Debug.Log(Instance);
         
@@ -163,13 +164,18 @@ public class PlayerController : MonoBehaviour
     {
         //dialogueManager = GameObject.Find("DialogueManager");
         //isInDialogue = dialogueManager.GetComponent<DialogueMaster>().isInDialogue;
-
         if (playerControls.Controls.Shotgun.ReadValue<float>() > 0 && isInDialogue == false)
         {
             sword.Attack();
         }    
     }
-
+    void LongAttack()
+    {
+        if(playerControls.Controls.LongerAttack.ReadValue<float>() > 0)
+        {
+            sword.LongerAttack();
+        }
+    }
     void SlamAttack()
     {
         //dialogueManager = GameObject.Find("DialogueManager");

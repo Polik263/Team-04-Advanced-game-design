@@ -108,12 +108,12 @@ public class Sword : MonoBehaviour
                 {
                     boxCollider.size = new Vector3(boxCollider.size.x, longerAttack, 3);
                     boxCollider.center = new Vector3(boxCollider.center.x, longerAttack / 2, boxCollider.center.z);
-                    animator.Play("Slapping");
+                    animator.Play("DarkFrontal");
                     ispcd = true;
                 }
                 else
                 {
-                    animator.Play("Slapping");
+                    animator.Play("DarkFrontal");
                     
                 }
 
@@ -126,6 +126,24 @@ public class Sword : MonoBehaviour
             }
         }
 
+    }
+
+    public void LongerAttack()
+    {
+        
+        if (isCd == false)
+        {
+            boxCollider.enabled = true;
+            isCd = true;
+            isacd = true;
+            if (currentForm == 0)
+            {
+                boxCollider.size = new Vector3(boxCollider.size.x, longerAttack, 3);
+                boxCollider.center = new Vector3(boxCollider.center.x, longerAttack / 2, boxCollider.center.z);
+                animator.Play("Slapping");
+                ispcd = true;
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider collider)

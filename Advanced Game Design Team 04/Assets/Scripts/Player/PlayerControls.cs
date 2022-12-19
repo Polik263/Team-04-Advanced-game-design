@@ -298,6 +298,17 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""LongerAttack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d6e8c8ff-7153-45e8-b72b-baff32c6f676"",
+                    ""path"": ""<Keyboard>/b"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LongerAttack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
