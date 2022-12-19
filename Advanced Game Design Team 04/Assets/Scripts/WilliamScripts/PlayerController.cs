@@ -46,9 +46,9 @@ public class PlayerController : MonoBehaviour
     public GameObject SwordGO;
     public SwordScript sword;
     XpSystem xpSystem;
-    Slam slam;
+    SlamScript slam;
 
-    Dashh dash;
+    [SerializeField] private DashScript _dash;
     GameObject player;
 
     GameObject dialogueManager;
@@ -71,16 +71,17 @@ public class PlayerController : MonoBehaviour
             DontDestroyOnLoad(this);
         }
 
-        player = GameObject.Find("Player");
-        slam = GetComponent <Slam>();
-        xpSystem = GetComponent<XpSystem>();
-        sword = SwordGO.GetComponent<SwordScript>();
-        controller = GetComponent<CharacterController>();
         playerControls = new PlayerControls();
+
+        xpSystem = GetComponent<XpSystem>();
+        controller = GetComponent<CharacterController>();
+
         playerInput = GetComponent<PlayerInput>();
-        dash = GetComponent<Dashh>();
-        meele = player.GetComponent<Meele>();
-        slam = player.GetComponent<Slam>();
+
+        _dash = GetComponent<DashScript>();
+        slam = GetComponentInChildren<SlamScript>();
+
+        sword = SwordScript.Instance;
     }
 
     private void OnEnable()
@@ -162,8 +163,6 @@ public class PlayerController : MonoBehaviour
     }
     void MeeleAttack()
     {
-        //dialogueManager = GameObject.Find("DialogueManager");
-        //isInDialogue = dialogueManager.GetComponent<DialogueMaster>().isInDialogue;
         if (playerControls.Controls.Shotgun.ReadValue<float>() > 0 && isInDialogue == false)
         {
             sword.Attack();
@@ -178,18 +177,14 @@ public class PlayerController : MonoBehaviour
     }
     void SlamAttack()
     {
-        //dialogueManager = GameObject.Find("DialogueManager");
-        //gotSlam = dialogueManager.GetComponent<DialogueMaster>().gotSlam;
-        //isInDialogue = dialogueManager.GetComponent<DialogueMaster>().isInDialogue;
-
         if (sword.currentForm == 0 && gotSlam == true && isInDialogue == false)
         {
             if (playerControls.Controls.Slam.ReadValue<float>() > 0)
             {
-                if(slam.isCd == false)
+                if(slam.isCoolingDown == false)
                 {
-                    slam.startedd = true;
-                    slam.finishedd = false;
+                    slam.slamInitiated = true;
+                    slam.slamEnding = false;
                     canMove = false;
                     slam.LeapSlam();
                 }
@@ -256,7 +251,7 @@ public class PlayerController : MonoBehaviour
             if (lastTimeDashed + dashCooldown < Time.time)
             {
                 lastTimeDashed = Time.time;
-                dash.ApplyDash(movement, dashSpeed, dashTime);
+                _dash.ApplyDash(movement, dashSpeed, dashTime);
             }
         }
     }

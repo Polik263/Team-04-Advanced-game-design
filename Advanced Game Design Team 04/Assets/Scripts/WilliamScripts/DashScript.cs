@@ -4,66 +4,42 @@ using UnityEngine;
 
 public class DashScript : MonoBehaviour
 {
-    PlayerMovement playermovement;
-    CharacterController controller;
-    Sword sword;
-    public float multiplier;
-    public Action<bool> isDashing;
-    //public ParticleSystem lightDash;
-    GameObject dialogueManager;
-    //public Transform bobPosition;
+    [SerializeField] private CharacterController controller;
 
-
-    bool gotLightDash;
+    [SerializeField] private float multiplier;
+    [SerializeField] private Action<bool> isDashing;
 
     private void Awake()
     {
-        playermovement = GetComponent<PlayerMovement>();
         controller = GetComponent<CharacterController>();
-        sword = GameObject.Find("Sword").GetComponent<Sword>();
     }
 
     public void ApplyDash(Vector3 Direction, float speed, float duration) => StartCoroutine(Execute(Direction, speed, duration));
 
-
     IEnumerator Execute(Vector3 Direction, float speed, float duration)
     {
-        dialogueManager = GameObject.Find("DialogueManager");
-        gotLightDash = dialogueManager.GetComponent<DialogueMaster>().gotLightDash;
-
         isDashing?.Invoke(true);
-        playermovement.canMove = false;
-        if(sword.currentForm == 1 && gotLightDash == true)
+        AudioManager.Instance.PlaySFX("Dash");
+        PlayerController.Instance.canMove = false;
+
+        if (SwordScript.Instance.currentForm == 1 && PlayerController.Instance.gotLightDash == true)
         {
-            while(duration > 0)
-            {
-                duration -= Time.deltaTime;
-
-                //rb.MovePosition(transform.position + rb.velocity.normalized * speed * Time.deltaTime);
-                controller.Move(new Vector3(Direction.x, 0, Direction.y) * Time.deltaTime * speed * multiplier);
-                //Instantiate(lightDash, bobPosition.transform.position, Quaternion.Euler(0, 0, 90));
-                //lightDash.Play();
-                yield return null;
-
-            }
+            multiplier = 1.75f;
         }
         else
         {
-            while(duration > 0)
-            {
-                duration -= Time.deltaTime;
-
-                //rb.MovePosition(transform.position + rb.velocity.normalized * speed * Time.deltaTime);
-                controller.Move(new Vector3(Direction.x, 0, Direction.y) * Time.deltaTime * speed);
-                
-                yield return null;
-
-            }
+            multiplier = 1f;
         }
 
-        playermovement.canMove = true;
-        isDashing?.Invoke(false);
-        AudioManager.Instance.PlaySFX("Dash");
+        while(duration > 0)
+        {
+            duration -= Time.deltaTime;
+            controller.Move(new Vector3(Direction.x, 0, Direction.y) * Time.deltaTime * speed * multiplier);
+            yield return null;
+        }
 
+        PlayerController.Instance.canMove = true;
+
+        isDashing?.Invoke(false);
     }
 }
