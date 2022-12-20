@@ -165,7 +165,6 @@ MonoBehaviour:
   _reflectedBulletGO: {fileID: 0}
   _swordGO: {fileID: 0}
   _playerGO: {fileID: 0}
-  _bulletPosition: {fileID: 0}
   _animator: {fileID: 0}
   _playerHealth: {fileID: 0}
   _weaponHitbox: {fileID: 0}
@@ -591,7 +590,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption442
         m_Mode: 1
@@ -891,7 +890,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption412
         m_Mode: 1
@@ -1191,7 +1190,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption341
         m_Mode: 1
@@ -1849,7 +1848,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption322
         m_Mode: 1
@@ -2420,6 +2419,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 45e462c844bf31542a52d07f2b519a1e, type: 3}
+--- !u!114 &301203700 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1345600517803814537, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+  m_PrefabInstance: {fileID: 878945032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &329308295
 GameObject:
   m_ObjectHideFlags: 0
@@ -2832,7 +2842,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption431
         m_Mode: 1
@@ -3178,7 +3188,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption241
         m_Mode: 1
@@ -3581,7 +3591,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption542
         m_Mode: 1
@@ -3731,7 +3741,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption451
         m_Mode: 1
@@ -4643,7 +4653,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption321
         m_Mode: 1
@@ -5099,7 +5109,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption531
         m_Mode: 1
@@ -5249,7 +5259,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption422
         m_Mode: 1
@@ -5399,7 +5409,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption241
         m_Mode: 1
@@ -5738,7 +5748,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption522
         m_Mode: 1
@@ -6038,7 +6048,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption312
         m_Mode: 1
@@ -6302,7 +6312,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption512
         m_Mode: 1
@@ -6531,7 +6541,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption432
         m_Mode: 1
@@ -7087,7 +7097,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption222
         m_Mode: 1
@@ -7758,6 +7768,263 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871079447}
   m_CullTransparentMesh: 1
+--- !u!1001 &878945032
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 1527031405}
+    m_Modifications:
+    - target: {fileID: 1345600517232764399, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_Name
+      value: Choice4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345600517232764400, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -281.54736
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345600517232764400, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 416
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345600517232764400, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -164
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345600517803814536, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345600517803814537, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: fullText
+      value: DEFAULT
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345600517803814538, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345600517803814538, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982951597022716102, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_Name
+      value: Choice3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982951597022716121, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -231.5474
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982951597022716121, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 416
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982951597022716121, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -138.99998
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982951597728050080, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: fullText
+      value: DEFAULT
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982951597728050081, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982951597728050083, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982951597728050083, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834707789502590285, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834707789502590285, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834707789502590286, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: fullText
+      value: DEFAULT
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834707789502590287, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834707790212048424, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_Name
+      value: Choice2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834707790212048439, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -181.5474
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834707790212048439, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 416
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834707790212048439, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -113.999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731778653887713916, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: fullText
+      value: DEFAULT
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731778653887713917, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731778653887713919, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731778653887713919, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731778654529018117, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -131.5474
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731778654529018117, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 416
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731778654529018117, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -89
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731778654529018138, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_Name
+      value: Choice1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751744, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: fullText
+      value: DEFAULT
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751745, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751745, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751745, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751745, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751745, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751745, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751745, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751745, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1918.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751745, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -1080.4996
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751745, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751745, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751745, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.378556
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751745, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751745, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751745, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751745, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751745, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 975
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751745, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -318
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751745, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751745, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751745, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751746, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_Name
+      value: DialogueBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751746, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751751, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_text
+      value: DEFAULT
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751751, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751751, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+--- !u!224 &878945034 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8909463311496751745, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+  m_PrefabInstance: {fileID: 878945032}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &878945038 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8909463311496751746, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+  m_PrefabInstance: {fileID: 878945032}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &879544527
 GameObject:
   m_ObjectHideFlags: 0
@@ -7837,7 +8104,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption551
         m_Mode: 1
@@ -8110,7 +8377,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption532
         m_Mode: 1
@@ -8410,7 +8677,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption551
         m_Mode: 1
@@ -8717,7 +8984,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption521
         m_Mode: 1
@@ -9752,7 +10019,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption211
         m_Mode: 1
@@ -10208,7 +10475,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption451
         m_Mode: 1
@@ -11102,7 +11369,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption511
         m_Mode: 1
@@ -11718,7 +11985,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption441
         m_Mode: 1
@@ -12628,6 +12895,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1451147917}
   m_CullTransparentMesh: 1
+--- !u!114 &1459149214 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5731778653887713916, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+  m_PrefabInstance: {fileID: 878945032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1465844896 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4834707789502590286, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+  m_PrefabInstance: {fileID: 878945032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1466523037
 GameObject:
   m_ObjectHideFlags: 0
@@ -13028,7 +13317,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption212
         m_Mode: 1
@@ -13087,171 +13376,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1496362192}
-  - component: {fileID: 1496362191}
+  - component: {fileID: 1496362193}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1496362191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1496362190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc65da6f6fbb57241a01a647ddb712fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startDialogue: {fileID: 0}
-  panel: {fileID: 1590775174}
-  dialogueDuration: 21
-  optionSpawn: 21
-  dialogueReopen: 25
-  dialogueBox11: {fileID: 0}
-  dialogueBox121: {fileID: 0}
-  dialogueBox122: {fileID: 0}
-  dialogueBox131: {fileID: 0}
-  dialogueBox132: {fileID: 0}
-  dialogueBox141: {fileID: 0}
-  dialogueBox142: {fileID: 0}
-  dialogueBox151: {fileID: 0}
-  dialogueBox152: {fileID: 0}
-  dialogueBox16: {fileID: 0}
-  dialogueBox21: {fileID: 1161142185}
-  dialogueBox221: {fileID: 1399978448}
-  dialogueBox222: {fileID: 1820850944}
-  dialogueBox231: {fileID: 1980608067}
-  dialogueBox232: {fileID: 191941547}
-  dialogueBox241: {fileID: 1350432390}
-  dialogueBox242: {fileID: 1854837721}
-  dialogueBox25: {fileID: 1646523490}
-  dialogueBox31: {fileID: 412641747}
-  dialogueBox321: {fileID: 497315131}
-  dialogueBox322: {fileID: 187757093}
-  dialogueBox331: {fileID: 737818493}
-  dialogueBox332: {fileID: 1414147682}
-  dialogueBox341: {fileID: 1063595252}
-  dialogueBox342: {fileID: 1451147917}
-  dialogueBox35: {fileID: 330140746}
-  dialogueBox41: {fileID: 663325099}
-  dialogueBox421: {fileID: 1363613344}
-  dialogueBox422: {fileID: 1766169192}
-  dialogueBox431: {fileID: 1423706513}
-  dialogueBox432: {fileID: 1892732190}
-  dialogueBox441: {fileID: 530899931}
-  dialogueBox442: {fileID: 1267647839}
-  dialogueBox451: {fileID: 1593789159}
-  dialogueBox452: {fileID: 871079447}
-  dialogueBox46: {fileID: 1803022628}
-  dialogueBox51: {fileID: 329308295}
-  dialogueBox521: {fileID: 1772133158}
-  dialogueBox522: {fileID: 1127448315}
-  dialogueBox531: {fileID: 273488979}
-  dialogueBox532: {fileID: 60767393}
-  dialogueBox541: {fileID: 2077899903}
-  dialogueBox542: {fileID: 1724296556}
-  dialogueBox551: {fileID: 1691283952}
-  dialogueBox552: {fileID: 283970071}
-  dialogueBox56: {fileID: 606549191}
-  dialogueBox61: {fileID: 0}
-  dialogueBox621: {fileID: 0}
-  dialogueBox622: {fileID: 0}
-  dialogueBox631: {fileID: 0}
-  dialogueBox632: {fileID: 0}
-  dialogueBox641: {fileID: 0}
-  dialogueBox642: {fileID: 0}
-  dialogueBox651: {fileID: 0}
-  dialogueBox652: {fileID: 0}
-  dialogueBox66: {fileID: 0}
-  dialogueBox71: {fileID: 0}
-  dialogueBox721: {fileID: 0}
-  dialogueBox722: {fileID: 0}
-  dialogueBox731: {fileID: 0}
-  dialogueBox732: {fileID: 0}
-  dialogueBox741: {fileID: 0}
-  dialogueBox742: {fileID: 0}
-  dialogueBox751: {fileID: 0}
-  dialogueBox752: {fileID: 0}
-  dialogueBox76: {fileID: 0}
-  isInDialogue: 0
-  isClosingDialogue: 0
-  Choice111: {fileID: 0}
-  Choice112: {fileID: 0}
-  Choice121: {fileID: 0}
-  Choice122: {fileID: 0}
-  Choice131: {fileID: 0}
-  Choice132: {fileID: 0}
-  Choice141: {fileID: 0}
-  Choice142: {fileID: 0}
-  Choice151: {fileID: 0}
-  Choice152: {fileID: 0}
-  Choice211: {fileID: 1134047823}
-  Choice212: {fileID: 1487248964}
-  Choice221: {fileID: 1650119808}
-  Choice222: {fileID: 782839357}
-  Choice231: {fileID: 1815015710}
-  Choice232: {fileID: 1977217948}
-  Choice241: {fileID: 406487208}
-  Choice242: {fileID: 641503009}
-  Choice311: {fileID: 2092743259}
-  Choice312: {fileID: 691574477}
-  Choice321: {fileID: 551803773}
-  Choice322: {fileID: 245008397}
-  Choice331: {fileID: 1750573273}
-  Choice332: {fileID: 1951376311}
-  Choice341: {fileID: 1610491190}
-  Choice342: {fileID: 173903568}
-  Choice411: {fileID: 1741646206}
-  Choice412: {fileID: 98951145}
-  Choice421: {fileID: 1532089585}
-  Choice422: {fileID: 630791379}
-  Choice431: {fileID: 343852741}
-  Choice432: {fileID: 725531272}
-  Choice441: {fileID: 1394975339}
-  Choice442: {fileID: 73836039}
-  Choice451: {fileID: 1221523004}
-  Choice452: {fileID: 451695078}
-  Choice511: {fileID: 1326645472}
-  Choice512: {fileID: 709674271}
-  Choice521: {fileID: 1074941011}
-  Choice522: {fileID: 666784390}
-  Choice531: {fileID: 627575388}
-  Choice532: {fileID: 903609835}
-  Choice541: {fileID: 1627441523}
-  Choice542: {fileID: 424898815}
-  Choice551: {fileID: 1035317966}
-  Choice552: {fileID: 879544527}
-  Choice611: {fileID: 0}
-  Choice612: {fileID: 0}
-  Choice621: {fileID: 0}
-  Choice622: {fileID: 0}
-  Choice631: {fileID: 0}
-  Choice632: {fileID: 0}
-  Choice641: {fileID: 0}
-  Choice642: {fileID: 0}
-  Choice651: {fileID: 0}
-  Choice652: {fileID: 0}
-  Choice711: {fileID: 0}
-  Choice712: {fileID: 0}
-  Choice721: {fileID: 0}
-  Choice722: {fileID: 0}
-  Choice731: {fileID: 0}
-  Choice732: {fileID: 0}
-  Choice741: {fileID: 0}
-  Choice742: {fileID: 0}
-  Choice751: {fileID: 0}
-  Choice752: {fileID: 0}
-  gotSlam: 1
-  gotHeal: 1
-  gotReflect: 1
-  gotLightDash: 1
-  gotDamage: 1
-  gotDarkExtension: 1
+  m_IsActive: 1
 --- !u!4 &1496362192
 Transform:
   m_ObjectHideFlags: 0
@@ -13263,10 +13395,142 @@ Transform:
   m_LocalPosition: {x: 113.054306, y: 39.485126, z: -0.378556}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1527031405}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1496362193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496362190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13359ddef36fe4540bb56c283ee8fc7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startDialogue: {fileID: 0}
+  panel: {fileID: 878945038}
+  _player: {fileID: 0}
+  _letterByLetterScript: {fileID: 0}
+  _optionsLetterByLetterScript: {fileID: 0}
+  DialogueBox: {fileID: 878945038}
+  DialogueBoxTMP: {fileID: 0}
+  choiceBoxes:
+  - {fileID: 1459149214}
+  - {fileID: 1465844896}
+  - {fileID: 2087535937}
+  - {fileID: 301203700}
+  dialogueDuration: 21
+  optionSpawn: 21
+  dialogueReopen: 25
+  isInDialogue: 0
+  isClosingDialogue: 0
+--- !u!1 &1527031404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1527031405}
+  - component: {fileID: 1527031408}
+  - component: {fileID: 1527031407}
+  - component: {fileID: 1527031406}
+  m_Layer: 0
+  m_Name: DialogueCanvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1527031405
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527031404}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 878945034}
+  m_Father: {fileID: 1496362192}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1527031406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527031404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1527031407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527031404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1527031408
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527031404}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &1532089585
 GameObject:
   m_ObjectHideFlags: 0
@@ -13367,7 +13631,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption421
         m_Mode: 1
@@ -14142,7 +14406,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption341
         m_Mode: 1
@@ -14292,7 +14556,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption541
         m_Mode: 1
@@ -14748,7 +15012,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption221
         m_Mode: 1
@@ -15214,7 +15478,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption411
         m_Mode: 1
@@ -15364,7 +15628,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption331
         m_Mode: 1
@@ -16128,7 +16392,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption231
         m_Mode: 1
@@ -17350,7 +17614,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption332
         m_Mode: 1
@@ -17500,7 +17764,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption232
         m_Mode: 1
@@ -18235,6 +18499,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077899903}
   m_CullTransparentMesh: 1
+--- !u!114 &2087535937 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2982951597728050080, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+  m_PrefabInstance: {fileID: 878945032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6480feca54c02349a03219981d672e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2092743259
 GameObject:
   m_ObjectHideFlags: 0
@@ -18335,7 +18610,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496362191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueMaster, Assembly-CSharp
         m_MethodName: ChoiceOption311
         m_Mode: 1
@@ -20985,28 +21260,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c8b8465356575f40a018a93e2faeefd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 5212417530979652207}
   playerSpeed: 12
   gravityValue: -9.81
   controllerDeadzone: 0.1
   gamepadRotateSmoothing: 1000
   smoothInputSpeed: 0.05
-  dashSpeed: 30
-  dashTime: 0.17
-  currentMortalFrame: 0
-  maxMortalFrames: 0.25
-  dashCooldown: 1
-  isGamepad: 0
-  canMove: 1
+  controller: {fileID: 0}
+  playerInput: {fileID: 0}
   SwordGO: {fileID: 1895247612448672970}
   sword: {fileID: 8451862}
   _dash: {fileID: 0}
+  dashSpeed: 30
+  dashTime: 0.17
+  maxMortalFrames: 0.25
+  dashCooldown: 1
+  lastTimeDashed: 0
+  slam: {fileID: 0}
+  smoothInputVelocity: {x: 0, y: 0}
+  currentInputVector: {x: 0, y: 0}
+  movement: {x: 0, y: 0}
+  aim: {x: 0, y: 0}
+  playerVelocity: {x: 0, y: 0, z: 0}
+  isGamepad: 0
+  _canSwitch: 0
+  canMove: 1
   gotSlam: 1
   gotHeal: 1
   gotReflect: 1
   gotLightDash: 1
   gotDamage: 1
   gotDarkExtension: 1
+  xpSystem: {fileID: 0}
+  playerHealth: {fileID: 5212417530979652207}
 --- !u!114 &7921307131599562207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21055,9 +21340,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _slamCooldown: 1
   animator: {fileID: 0}
-  _isCoolingDown: 0
-  _slamInitiated: 0
-  _slamEnding: 0
+  isCoolingDown: 0
+  slamInitiated: 0
+  slamEnding: 0
   playerHealth: {fileID: 0}
   _selfDamage: 10
 --- !u!1 &7951773638463811979

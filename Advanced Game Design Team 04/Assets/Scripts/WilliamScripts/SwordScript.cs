@@ -120,6 +120,8 @@ public class SwordScript : MonoBehaviour
 
     public void Attack()
     {
+        DialogueManagerScript.Instance.PlayDialogue("Glorious, is it not? The creatures who walk its surface, always looking to the light, never seeing the untold oceans of darkness beyond. There are more humans alive today than in all of its pitiful history. The Garden of Eden. A garden of flesh.", 2, "This is my body. This is my blood. Happy are they who come to my supper.", "There is a world out there, waiting to yield to us.", null, null);
+
         if (_coolingDown == false)
         {
             _weaponHitbox.enabled = true;

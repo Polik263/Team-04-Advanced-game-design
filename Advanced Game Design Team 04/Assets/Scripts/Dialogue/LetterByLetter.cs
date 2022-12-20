@@ -11,30 +11,26 @@ public class LetterByLetter : MonoBehaviour
     private string currentText = "";
 
     private PlayerControls playerControls;
+    TextMeshProUGUI TMP;
     float currentTime;
 
-
-    private void OnEnable()
-    {      
-        StartCoroutine(ShowText()); 
+    private void Awake()
+    {
+        TMP = GetComponent<TextMeshProUGUI>();
     }
 
-
-
+    private void OnEnable()
+    {
+        StartCoroutine(ShowText());
+    }
 
     IEnumerator ShowText()
     {
-
-
         for (int i = 0; i < (fullText.Length + 1); i ++) 
         {
             currentText = fullText.Substring(0, i);
-            this.GetComponent<TextMeshProUGUI>().text = currentText;
+            TMP.text = currentText;
             yield return new WaitForSeconds(delay);
         }
-        
     }
-
-
-
 }
