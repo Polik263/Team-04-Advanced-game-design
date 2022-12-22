@@ -87,7 +87,7 @@ public class DialogueManagerScript : MonoBehaviour
 
         }
 
-        if (currentDialogueNode < 4)
+        if (currentDialogueNode < 4 && panel.activeInHierarchy)
         {
             currentDialogueNode++;
         }
@@ -107,11 +107,6 @@ public class DialogueManagerScript : MonoBehaviour
         {
             choiceBoxes[i].gameObject.SetActive(false);
         }
-
-        //for (int i = 0; i < numberOfChoices; i++)
-        //{
-        //    choiceBoxes[i].gameObject.SetActive(true);
-        //}
 
         DialogueBoxTMP.text = textToBeDisplayed;
         _letterByLetterScript.fullText = textToBeDisplayed;
@@ -171,6 +166,16 @@ public class DialogueManagerScript : MonoBehaviour
 
         isInDialogue = false;
         isClosingDialogue = false;
+
+        if (setEventFunction)
+        {
+            for (int i = 0; i < 1; i++)
+            {
+                currentDialogueNode = 0;
+                choiceBoxes[i].ButtonFunction.onClick.AddListener(null);
+            }
+            setEventFunction = false;
+        }
     }
     
     IEnumerator CloseDialogues()
