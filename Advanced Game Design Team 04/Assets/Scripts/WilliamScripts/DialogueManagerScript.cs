@@ -87,7 +87,10 @@ public class DialogueManagerScript : MonoBehaviour
 
         }
 
-        currentDialogueNode++;
+        if (currentDialogueNode < 4)
+        {
+            currentDialogueNode++;
+        }
     }
 
 
@@ -164,6 +167,7 @@ public class DialogueManagerScript : MonoBehaviour
         Debug.Log("Deactivating Dialogue");
 
         panel.SetActive(false);
+        DialogueBox.SetActive(false);
 
         isInDialogue = false;
         isClosingDialogue = false;
