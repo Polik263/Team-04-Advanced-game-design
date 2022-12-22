@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &1956638 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2982951597022716123, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+  m_PrefabInstance: {fileID: 878945032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &8451856
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -235,6 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. EXACTLY!
+  ButtonFunction: {fileID: 0}
 --- !u!114 &10118571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,6 +401,7 @@ MonoBehaviour:
     of powerful dark magic... You... um... might have a point... But don\u2019t let
     it go to your head. Let me grant you the power and let\u2019s forget about that
     little thing..."
+  currentText: 
 --- !u!114 &60767396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -693,6 +706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. I CAN DESTROY TOO!
+  ButtonFunction: {fileID: 0}
 --- !u!114 &81975038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -993,6 +1007,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. OLD AGE....?
+  ButtonFunction: {fileID: 0}
 --- !u!114 &163474809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1296,6 +1311,7 @@ MonoBehaviour:
     ups, no help. See if I care. I\u2019m an immortal blade, I\u2019m totally fine.
     Let's see how you feel about it when the REAL tough guys start showing up. Oh
     yea, it gets worse. BELIEVE me! You won't blow me off so quickly then I bet."
+  currentText: 
 --- !u!114 &187757096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1453,6 +1469,7 @@ MonoBehaviour:
     hit back those glowing enemy attacks and boom-ka-zoom, avoiding certain death
     AND a health boost! Not bad for a random sword you found on the ground! You\u2019re
     welcome!"
+  currentText: 
 --- !u!114 &191941550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1955,6 +1972,7 @@ MonoBehaviour:
     knew why but the land seemed to be cursed afterwards. Plague has been scattered
     across this world. Surely, you\u2019re not interested. Should I give you the
     power?"
+  currentText: 
 --- !u!114 &273488982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2111,6 +2129,7 @@ MonoBehaviour:
   fullText: "Oh yeah... That really wasn\u2019t something I would call a pleasant
     experience. It would be a shame to repeat that. So how about you start making
     sense and make some use out of me with the new power I just gave you, hmmm??"
+  currentText: 
 --- !u!114 &283970074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2263,6 +2282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: "2.\_UM... BUT I DON'T WANT..."
+  ButtonFunction: {fileID: 0}
 --- !u!114 &288725893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2416,6 +2436,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6416455492075023083, guid: 45e462c844bf31542a52d07f2b519a1e, type: 3}
+      propertyPath: sfxSounds.Array.size
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6416455492075023083, guid: 45e462c844bf31542a52d07f2b519a1e, type: 3}
+      propertyPath: sfxSounds.Array.data[12].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: cc245b85db45e6243946639d697df9ce, type: 3}
+    - target: {fileID: 6416455492075023083, guid: 45e462c844bf31542a52d07f2b519a1e, type: 3}
+      propertyPath: sfxSounds.Array.data[12].name
+      value: Dialogue1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6416455492075023083, guid: 45e462c844bf31542a52d07f2b519a1e, type: 3}
+      propertyPath: sfxSounds.Array.data[13].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2e511ed3e7b0e5c47ab30742edd5adc0, type: 3}
+    - target: {fileID: 6416455492075023083, guid: 45e462c844bf31542a52d07f2b519a1e, type: 3}
+      propertyPath: sfxSounds.Array.data[13].name
+      value: Dialogue2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6416455492075023083, guid: 45e462c844bf31542a52d07f2b519a1e, type: 3}
+      propertyPath: sfxSounds.Array.data[14].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d495ec2418881854d95ac759d66561cb, type: 3}
+    - target: {fileID: 6416455492075023083, guid: 45e462c844bf31542a52d07f2b519a1e, type: 3}
+      propertyPath: sfxSounds.Array.data[14].name
+      value: Dialogue3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6416455492075023083, guid: 45e462c844bf31542a52d07f2b519a1e, type: 3}
+      propertyPath: sfxSounds.Array.data[15].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8766186f5404bf64688a9b16b2224563, type: 3}
+    - target: {fileID: 6416455492075023083, guid: 45e462c844bf31542a52d07f2b519a1e, type: 3}
+      propertyPath: sfxSounds.Array.data[15].name
+      value: Dialogue4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 45e462c844bf31542a52d07f2b519a1e, type: 3}
@@ -2486,6 +2542,7 @@ MonoBehaviour:
     I say with me? I thought that giving you the power of darkness would be enough,
     but here we are again... And before you make a foolish comment about my length,
     let me know you that I am very capable of extending our reach.
+  currentText: 
 --- !u!114 &329308298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2642,6 +2699,7 @@ MonoBehaviour:
     squishy as you are. I\u2019m not judging of course. I would never presume to
     offend you and your jiggly bits. They\u2019re just... easier to chop off... damageable
     you know? I guess we should give you more damage to keep you alive... a bit longer."
+  currentText: 
 --- !u!114 &330140749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3294,6 +3352,7 @@ MonoBehaviour:
     I could improve your terrible form. Make it sharper. More pointier? Of course
     I'm sure you've got this. Don't let me, an actual sword, tell you how to stab
     the bad guys. But if you want, I could help you along with your stabby stab?
+  currentText: 
 --- !u!114 &412641750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3844,6 +3903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. UPGRADE PLEASE!!!!
+  ButtonFunction: {fileID: 0}
 --- !u!114 &465495127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3994,6 +4054,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. JUST GIVE IT ALREADY
+  ButtonFunction: {fileID: 0}
 --- !u!114 &474773472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4144,6 +4205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. YOU ALREADY SAID THAT
+  ButtonFunction: {fileID: 0}
 --- !u!114 &482226600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4298,6 +4360,7 @@ MonoBehaviour:
     frame of yours. It\u2019s really quite impressive how far you\u2019ve gotten
     already. I\u2019ve seen people who were way more capable than you. In fact, I
     even teamed up with one of them..."
+  currentText: 
 --- !u!114 &497315134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4454,6 +4517,7 @@ MonoBehaviour:
   fullText: "I\u2019m not the one commenting on trivial matters here! But yes, we
     can agree that it\u2019s time to give you the power now... Don\u2019t waste so
     much of my time in the future!"
+  currentText: 
 --- !u!114 &530899934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4756,6 +4820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. I'M NOT SURE I WANT TO RISK IT...
+  ButtonFunction: {fileID: 0}
 --- !u!114 &597561857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4853,6 +4918,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597561854}
   m_CullTransparentMesh: 1
+--- !u!1 &597578787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 597578788}
+  m_Layer: 0
+  m_Name: Border
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &597578788
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597578787}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.378556}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 730077085}
+  - {fileID: 932673375}
+  m_Father: {fileID: 1527031405}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -4, y: -430}
+  m_SizeDelta: {x: 1929.9724, y: 249.60965}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &606549191
 GameObject:
   m_ObjectHideFlags: 0
@@ -4909,6 +5012,7 @@ MonoBehaviour:
     already growing. But you need not worry about trying to stay alive too much,
     it\u2019s not like we won\u2019t have another try if you fail here...We always
     do..."
+  currentText: 
 --- !u!114 &606549194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5547,6 +5651,7 @@ MonoBehaviour:
     idea... More like... a dagger? Anyway! It\u2019s a pity to see a creature with
     so many flexible limbs performing so poorly. If I had some access to your body,
     I could enhance it."
+  currentText: 
 --- !u!114 &663325102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5851,6 +5956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: "1.\_You also don\u2019t have a heart\_ "
+  ButtonFunction: {fileID: 0}
 --- !u!114 &690884616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6591,6 +6697,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 725531272}
   m_CullTransparentMesh: 1
+--- !u!1 &730077084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 730077085}
+  - component: {fileID: 730077087}
+  - component: {fileID: 730077086}
+  m_Layer: 5
+  m_Name: Image (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &730077085
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730077084}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 19.299725, y: 2.4960966, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 597578788}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &730077086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730077084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.5372549}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &730077087
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730077084}
+  m_CullTransparentMesh: 1
 --- !u!1 &736762708
 GameObject:
   m_ObjectHideFlags: 0
@@ -6747,6 +6929,7 @@ MonoBehaviour:
     Hero. Oh man, they really knew how to swing a sword. Thrusting here, chopping
     there, a bit of the ol\u2019 slicing. We even had this nickname... The Bringer
     of Destruction. I loved that. Really boosts your confidence you know. Good times!"
+  currentText: 
 --- !u!114 &737818496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6900,6 +7083,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. I'm all ears
+  ButtonFunction: {fileID: 0}
 --- !u!114 &769944220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7268,6 +7452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: "1.\_..."
+  ButtonFunction: {fileID: 0}
 --- !u!114 &824670259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7418,6 +7603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: "1. YES, PLEASE\_"
+  ButtonFunction: {fileID: 0}
 --- !u!114 &827055306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7668,6 +7854,7 @@ MonoBehaviour:
     that situation I really should do it I shall enhance your movement with the power
     of light... Who knows... Hopefully it will enlighten your mind  as well, at least
     a little bit..."
+  currentText: 
 --- !u!114 &871079450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7786,19 +7973,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1345600517232764400, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 416
+      value: 507
       objectReference: {fileID: 0}
     - target: {fileID: 1345600517232764400, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -164
+      value: -183
       objectReference: {fileID: 0}
     - target: {fileID: 1345600517803814536, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 800
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1345600517803814537, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
       propertyPath: fullText
       value: DEFAULT
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345600517803814537, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: ButtonFunction
+      value: 
+      objectReference: {fileID: 1135768744}
+    - target: {fileID: 1345600517803814538, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.77976125
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345600517803814538, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.8301887
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345600517803814538, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.40334642
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345600517803814538, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4291286119
       objectReference: {fileID: 0}
     - target: {fileID: 1345600517803814538, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
       propertyPath: m_VerticalAlignment
@@ -7818,19 +8025,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2982951597022716121, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 416
+      value: 507
       objectReference: {fileID: 0}
     - target: {fileID: 2982951597022716121, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -138.99998
+      value: -157.99998
       objectReference: {fileID: 0}
     - target: {fileID: 2982951597728050080, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
       propertyPath: fullText
       value: DEFAULT
       objectReference: {fileID: 0}
+    - target: {fileID: 2982951597728050080, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: ButtonFunction
+      value: 
+      objectReference: {fileID: 1956638}
     - target: {fileID: 2982951597728050081, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 800
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982951597728050083, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.77976125
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982951597728050083, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.8301887
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982951597728050083, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.40334642
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982951597728050083, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4291286119
       objectReference: {fileID: 0}
     - target: {fileID: 2982951597728050083, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
       propertyPath: m_VerticalAlignment
@@ -7839,6 +8066,22 @@ PrefabInstance:
     - target: {fileID: 2982951597728050083, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834707789502590285, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.77976125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834707789502590285, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.8301887
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834707789502590285, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.40334642
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834707789502590285, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4291286119
       objectReference: {fileID: 0}
     - target: {fileID: 4834707789502590285, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
       propertyPath: m_VerticalAlignment
@@ -7852,9 +8095,13 @@ PrefabInstance:
       propertyPath: fullText
       value: DEFAULT
       objectReference: {fileID: 0}
+    - target: {fileID: 4834707789502590286, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: ButtonFunction
+      value: 
+      objectReference: {fileID: 1944237479}
     - target: {fileID: 4834707789502590287, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 800
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4834707790212048424, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
       propertyPath: m_Name
@@ -7866,19 +8113,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4834707790212048439, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 416
+      value: 507
       objectReference: {fileID: 0}
     - target: {fileID: 4834707790212048439, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -113.999985
+      value: -132.99998
       objectReference: {fileID: 0}
     - target: {fileID: 5731778653887713916, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
       propertyPath: fullText
       value: DEFAULT
       objectReference: {fileID: 0}
+    - target: {fileID: 5731778653887713916, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: ButtonFunction
+      value: 
+      objectReference: {fileID: 1099593615}
     - target: {fileID: 5731778653887713917, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 800
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731778653887713919, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.77976125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731778653887713919, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.8301887
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731778653887713919, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.40334642
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731778653887713919, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4291286119
       objectReference: {fileID: 0}
     - target: {fileID: 5731778653887713919, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
       propertyPath: m_VerticalAlignment
@@ -7894,11 +8161,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5731778654529018117, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 416
+      value: 507
       objectReference: {fileID: 0}
     - target: {fileID: 5731778654529018117, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -89
+      value: -108
       objectReference: {fileID: 0}
     - target: {fileID: 5731778654529018138, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
       propertyPath: m_Name
@@ -7978,7 +8245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8909463311496751745, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -318
+      value: -328
       objectReference: {fileID: 0}
     - target: {fileID: 8909463311496751745, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8009,8 +8276,28 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8909463311496751751, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751751, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.7300144
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751751, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.764151
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751751, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.38568
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751751, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
       propertyPath: m_fontSizeBase
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909463311496751751, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4290429794
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -8427,6 +8714,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 903609835}
   m_CullTransparentMesh: 1
+--- !u!1 &932673374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 932673375}
+  - component: {fileID: 932673377}
+  - component: {fileID: 932673376}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &932673375
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932673374}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 19, y: 2.1287596, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 597578788}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 3, y: 5}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &932673376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932673374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.8352941}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &932673377
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932673374}
+  m_CullTransparentMesh: 1
 --- !u!1 &970586184
 GameObject:
   m_ObjectHideFlags: 0
@@ -8480,6 +8843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. "Used to?"
+  ButtonFunction: {fileID: 0}
 --- !u!114 &970586187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8784,6 +9148,7 @@ MonoBehaviour:
     you\u2019re not them, but we can power you up all the same. It\u2019ll be good
     enough. Then we can do some destruction of our very own! Oh yes, this will be
     fun!"
+  currentText: 
 --- !u!114 &1063595255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9087,6 +9452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. Lend me some power so we won't scream in agony
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1077191604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9184,6 +9550,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077191601}
   m_CullTransparentMesh: 1
+--- !u!114 &1099593615 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5731778654529018119, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+  m_PrefabInstance: {fileID: 878945032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1104317276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9329,6 +9706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. You're... Short?
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1109797889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9479,6 +9857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. Funny, power please?
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1110301748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9668,6 +10047,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. Sure, why not...
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1124288600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9820,6 +10200,7 @@ MonoBehaviour:
   fullText: As short as this discussion! Yet again here I am, offering you a helping
     hand and instead of any gratitude all I hear are some shameless jokes... Good
     luck without my help, I hope that even without extension you will last LONG
+  currentText: 
 --- !u!114 &1127448318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10069,6 +10450,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1134047823}
   m_CullTransparentMesh: 1
+--- !u!114 &1135768744 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1345600517232764402, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+  m_PrefabInstance: {fileID: 878945032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1161142185
 GameObject:
   m_ObjectHideFlags: 0
@@ -10125,6 +10517,7 @@ MonoBehaviour:
     taking those hits like a champ. I personally don't need to worry about things
     like that... seen as I'm a sword and all... Wouldn't it be cool if you had someone,
     something, that could help you out. Or even heal you?
+  currentText: 
 --- !u!114 &1161142188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10278,6 +10671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. ...
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1196086060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10659,6 +11053,7 @@ MonoBehaviour:
     that your brain is as sluggish as your movements... And that body almost as disgusting
     as the one spirits possess... Why do I always need to end up with people like
     you?"
+  currentText: 
 --- !u!114 &1267647842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10812,6 +11207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: "1.\_Stop insulting me!\_"
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1284752978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11037,6 +11433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. NO, SHUT UP
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1313253456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11476,6 +11873,7 @@ MonoBehaviour:
     But it\u2019s OK, I forgive you... This time... I\u2019ll help you out. Prove
     that you can really trust me. I\u2019ll help you out as much as possible, while
     you're alive at least."
+  currentText: 
 --- !u!114 &1350432393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11630,6 +12028,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. OLD AGE....?
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1355411797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11784,6 +12183,7 @@ MonoBehaviour:
     hearts? Neither any other organs. Sounds natural, I know, considering how disgusting
     these creatures are... Don\u2019t you think the lack of consciousness fits them
     so well...?"
+  currentText: 
 --- !u!114 &1363613347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12176,6 +12576,7 @@ MonoBehaviour:
     you want me to try, I'm sure I could do something to help? I can't guarantee
     anything, but I guess there\u2019s only one way to find out? It couldn\u2019t
     possibly make things any worse..."
+  currentText: 
 --- !u!114 &1399978451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12330,6 +12731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. ... Long-reaching ears?
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1409800311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12483,6 +12885,7 @@ MonoBehaviour:
     ahead. Such ambition, such drive. A real team player. I one hundred percent believe
     in us. Together I know we can do this. Together we can beat the odds, we can
     beat whatever comes in our way. Literally. Oh yes, literally my friend."
+  currentText: 
 --- !u!114 &1414147685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12639,6 +13042,7 @@ MonoBehaviour:
     creatures, do you? You, on the other hand, possess a pair of hands and a pair
     of legs very similar to them. Yet I do suppress myself from wasting your time
     on such trivial, yet harmful comments!"
+  currentText: 
 --- !u!114 &1423706516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12795,6 +13199,7 @@ MonoBehaviour:
     tell. It was Ignorance that killed The Bringer of Destruction. That day-old problem,
     you flesh bags have. Plain old stupidity. They got overconfident, sloppy, careless
     even. They stopped taking advice from me, then boom... Died of old age."
+  currentText: 
 --- !u!114 &1451147920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12970,6 +13375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. NO, NO I DIDN'T MEAN IT LIKE THAT. SURE LET'S TRY IT OUT
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1466523040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13120,6 +13526,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. Enough trivia, give me speed!
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1472041488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13413,7 +13820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDialogue: {fileID: 0}
-  panel: {fileID: 878945038}
+  panel: {fileID: 597578787}
   _player: {fileID: 0}
   _letterByLetterScript: {fileID: 0}
   _optionsLetterByLetterScript: {fileID: 0}
@@ -13424,10 +13831,14 @@ MonoBehaviour:
   - {fileID: 1465844896}
   - {fileID: 2087535937}
   - {fileID: 301203700}
+  dialogue1: {fileID: 0}
+  dialogue2: {fileID: 0}
   dialogueDuration: 21
   optionSpawn: 21
   dialogueReopen: 25
   isInDialogue: 0
+  currentDialogueNode: 0
+  selectedOption: 0
   isClosingDialogue: 0
 --- !u!1 &1527031404
 GameObject:
@@ -13460,6 +13871,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 597578788}
   - {fileID: 878945034}
   m_Father: {fileID: 1496362192}
   m_RootOrder: -1
@@ -13734,6 +14146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: "2. What you\u2019re doing now then?"
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1565624178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13884,6 +14297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. WHAT HAPPENED TO THEM?
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1568308452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14206,6 +14620,7 @@ MonoBehaviour:
     like a child! Stop derailing the conversation with these nonsensical topics of
     yours... Let me grant you the power already! Unless you have more stupid comments
     you would like to share with me, hmm??"
+  currentText: 
 --- !u!114 &1593789162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14659,6 +15074,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. OH REALLY?
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1628569483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14812,6 +15228,7 @@ MonoBehaviour:
     like that name... Good new name... Is it possibly even better than before? *Deep
     in thought* Yes, I think this is a better name. It\u2019s so on the nose. No
     messing about. Straight to the point. *Deep in thought* Mmmmhummm, I love it."
+  currentText: 
 --- !u!114 &1646523493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15119,6 +15536,7 @@ MonoBehaviour:
     that the knowledge is the key to obtain the true power, right? Guess you only
     care about the physical aspect of it. So, allow me to bless you with this new
     ability"
+  currentText: 
 --- !u!114 &1691283955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15277,6 +15695,7 @@ MonoBehaviour:
     and spirits have built this tower. Soon afterwards people started dying. I think
     the spirits cursed us... All left for the rest of humans\u2019 existence were
     screams of agony"
+  currentText: 
 --- !u!114 &1724296559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15733,6 +16152,7 @@ MonoBehaviour:
   fullText: My, my, how cold of you. Well, your loss... Have fun with running into
     each and every possible projectile. Who knows, maybe it will help you learn how
     to absorb magic with your face?
+  currentText: 
 --- !u!114 &1766169195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15888,6 +16308,7 @@ MonoBehaviour:
     They are very much humans but somehow magical, long-living and with comically
     long ears. If that was a price for immortality I would pass! That is at least
     what can be found in some of the fairy tales humans used to tell."
+  currentText: 
 --- !u!114 &1772133161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16041,6 +16462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. WHY NOT?
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1790784892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16193,6 +16615,7 @@ MonoBehaviour:
   fullText: "I thought so. Now excuse me, but I\u2019m about to give you the power
     with been talking about for almost an hour now. No need to thank me, although
     I would say you should be grateful that I managed to withstand your behaviour."
+  currentText: 
 --- !u!114 &1803022631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16499,6 +16922,7 @@ MonoBehaviour:
     it out on me. I honestly don\u2019t think anyone has ever talked to me in that
     way before, ever. And I\u2019ve lived a long time. I think you need a moment
     to calm yourself down."
+  currentText: 
 --- !u!114 &1820850947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16653,6 +17077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. GO ON...
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1843575082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16803,6 +17228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. JUST GIVE IT ALREADY
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1853316898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16957,6 +17383,7 @@ MonoBehaviour:
     we can be a team. A good, trusting team. A slaughter machine... Team slaughter
     machine. What do you think of that? Slaughter machine, now I like that for a
     nickname!"
+  currentText: 
 --- !u!114 &1854837724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17111,6 +17538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. I'M GOOD...
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1862404674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17261,6 +17689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. PLEASE SHUT UP!
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1887078147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17414,6 +17843,7 @@ MonoBehaviour:
     do remind me of someone... But don\u2019t worry, I will grant you the power.
     You really wanted to dash through the topic as fast as possible, didn\u2019t
     you? Guess you\u2019re just the fit..."
+  currentText: 
 --- !u!114 &1892732193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17514,6 +17944,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1892732190}
   m_CullTransparentMesh: 1
+--- !u!114 &1944237479 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4834707790212048437, guid: d53a5a8a8293ac944ab5ae5f98ba9dca, type: 3}
+  m_PrefabInstance: {fileID: 878945032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1951376311
 GameObject:
   m_ObjectHideFlags: 0
@@ -17871,6 +18312,7 @@ MonoBehaviour:
     across? Sure, I\u2019m cool with that. Why wouldn\u2019t I be. You didn\u2019t
     hurt my feelings. A sword with feelings, that\u2019s not a thing.It\u2019s fine,
     I\u2019ll leave you alone."
+  currentText: 
 --- !u!114 &1980608070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18096,6 +18538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: "2.\_ I'd rather keep the full control"
+  ButtonFunction: {fileID: 0}
 --- !u!114 &2023067827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18246,6 +18689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: "2. Interesting, where\u2019s the power?"
+  ButtonFunction: {fileID: 0}
 --- !u!114 &2069692578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18399,6 +18843,7 @@ MonoBehaviour:
     you\u2019ll make sure nothing is in the duration of killing us. Therefore, let
     me do that... Oh and this... Yes... Now the reaching area should be longer thanks
     to the energy released after swinging."
+  currentText: 
 --- !u!114 &2077899906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18810,6 +19255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. YES PLEASE, TEACH ME OH MASTER!
+  ButtonFunction: {fileID: 0}
 --- !u!114 &2110086189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18960,6 +19406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: "1.\_UM... BUT I DON'T WANT..."
+  ButtonFunction: {fileID: 0}
 --- !u!114 &2142690198
 MonoBehaviour:
   m_ObjectHideFlags: 0

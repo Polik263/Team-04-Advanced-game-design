@@ -10,6 +10,7 @@ public class OptionsLetterByLetter : MonoBehaviour
     public string fullText;
     private string currentText = "";
 
+    public Button ButtonFunction;
     private PlayerControls playerControls;
     private TextMeshProUGUI TMP;
     float currentTime;
