@@ -13,12 +13,13 @@ public class DialogueManagerScript : MonoBehaviour
 
     [SerializeField] private PlayerController _player;
 
-    [SerializeField] private LetterByLetter _letterByLetterScript;
+    [SerializeField] public LetterByLetter letterByLetterScript;
     [SerializeField] private OptionsLetterByLetter _optionsLetterByLetterScript;
 
-    [SerializeField] private GameObject DialogueBox;
+    [SerializeField] public GameObject DialogueBox;
     [SerializeField] private TextMeshProUGUI DialogueBoxTMP;
     [SerializeField] public OptionsLetterByLetter[] choiceBoxes;
+    [SerializeField] public GameObject[] choiceBoxesButtons;
 
     public AudioClip dialogue1;
     public AudioClip dialogue2;
@@ -35,6 +36,8 @@ public class DialogueManagerScript : MonoBehaviour
 
     private bool setEventFunction = false;
 
+    public int choicesToBeDisplayed;
+
 
     [SerializeField] private bool isClosingDialogue;
 
@@ -45,74 +48,33 @@ public class DialogueManagerScript : MonoBehaviour
         _player = PlayerController.Instance;
 
         DialogueBoxTMP = DialogueBox.GetComponent<TextMeshProUGUI>();
-        _letterByLetterScript = DialogueBox.GetComponent<LetterByLetter>();
-    }
-
-    public void Event1()
-    {
-        if (!setEventFunction)
-        {
-            for (int i = 0; i < 1; i++)
-            {
-                choiceBoxes[i].ButtonFunction.onClick.AddListener(Event1);
-            }
-            setEventFunction = true;
-        }
-
-        switch (currentDialogueNode)
-        {
-            // ENTRY POINT FOR DIALOGUE
-            case 0:
-                PlayDialogue("You solved the puzzle. You unleashed the power. There is no turning back - I will not rest until I get what I want. And what I want... is you.", 1, "Where did you take them?!", null, null, null);
-                AudioManager.Instance.PlaySFX("Dialogue1");
-                break;
-            // PLAYERS FIRST CHOICE
-            case 1:
-                PlayDialogue("They are all with me now... But the balance is only four souls, and that, as you now know, was not our contract.", 1, "No...", null, null, null);
-                AudioManager.Instance.PlaySFX("Dialogue2");
-                break;
-            // PLAYERS SECOND CHOICE
-            case 2:
-                PlayDialogue("Welcome to the worst nightmare of all.", 1, "No!", null, null, null);
-                AudioManager.Instance.PlaySFX("Dialogue3");
-                break;
-            // PLAYERS THIRD CHOICE - PLAYER DIES
-            case 3:
-                PlayDialogue("Reality.", 1, "NOOO!", null, null, null);
-                AudioManager.Instance.PlaySFX("Dialogue4");
-                break;
-            case 4:
-                CloseDialogue();
-                break;
-
-        }
-
-        if (currentDialogueNode < 4 && panel.activeInHierarchy)
-        {
-            currentDialogueNode++;
-        }
-    }
-
-
-    private void Start()
-    {
-        StartCoroutine(ActivateDialouge());
+        letterByLetterScript = DialogueBox.GetComponent<LetterByLetter>();
     }
 
     public void PlayDialogue(string textToBeDisplayed, int numberOfChoices, string choice1, string choice2, string choice3, string choice4)
     {
+        AudioManager.Instance.sfxSource.Stop();
+        panel.SetActive(true);
+
+        choicesToBeDisplayed = numberOfChoices;
+
         DialogueBox.SetActive(false);
 
         for (int i = 0; i < choiceBoxes.Length; i++)
         {
             choiceBoxes[i].gameObject.SetActive(false);
+            choiceBoxesButtons[i].SetActive(false);
+        }
+
+        for (int i = 0; i < numberOfChoices; i++)
+        {
+            choiceBoxesButtons[i].SetActive(true);
         }
 
         DialogueBoxTMP.text = textToBeDisplayed;
-        _letterByLetterScript.fullText = textToBeDisplayed;
+        letterByLetterScript.fullText = textToBeDisplayed;
 
         DialogueBox.SetActive(true);
-        panel.SetActive(true);
 
         switch (numberOfChoices)
         {
@@ -144,23 +106,19 @@ public class DialogueManagerScript : MonoBehaviour
         {
             isInDialogue = true;
         }
+    }
 
-        Debug.Log("current node" + currentDialogueNode);
-
+    public void EndOfDialogue()
+    {
+        for (int i = 0; i < choiceBoxes.Length; i++)
         {
-            if (isClosingDialogue == false)
-            {
-                //StartCoroutine(CloseDialogues());
-                Debug.Log("Preparing to close dialogue!");
-            }
-
+            choiceBoxes[i].ButtonFunction.onClick.RemoveAllListeners();
         }
     }
 
     void CloseDialogue()
     {
-        Debug.Log("Deactivating Dialogue");
-
+        currentDialogueNode = 0;
         panel.SetActive(false);
         DialogueBox.SetActive(false);
 
@@ -171,47 +129,72 @@ public class DialogueManagerScript : MonoBehaviour
         {
             for (int i = 0; i < 1; i++)
             {
-                currentDialogueNode = 0;
-                choiceBoxes[i].ButtonFunction.onClick.AddListener(null);
+                choiceBoxes[i].ButtonFunction.onClick.RemoveAllListeners();
+                setEventFunction = false;
             }
-            setEventFunction = false;
         }
     }
-    
-    IEnumerator CloseDialogues()
+
+    #region Events
+    public void Event1()
     {
-        isClosingDialogue = true;
-
-        yield return new WaitForSeconds(dialogueDuration);
-        CloseDialogue();
-    }
-
-    IEnumerator ReopenDialogue()
-    {
-        yield return new WaitForSeconds(dialogueReopen);
-
-        if (panel.activeInHierarchy == false)
+        if (currentDialogueNode < 4)
         {
-            isInDialogue = false;
-            panel.SetActive(true);
-
-            startDialogue.SetActive(true);
-
+            if (!setEventFunction)
+            {
+                for (int i = 0; i < choiceBoxes.Length; i++)
+                {
+                    choiceBoxes[i].ButtonFunction.onClick.AddListener(Event1);
+                }
+                setEventFunction = true;
+            }
         }
-    }
 
-    IEnumerator ActivateDialouge()
-    {
-        yield return new WaitForSeconds(7);
-
-        if (panel.activeInHierarchy == false)
+        switch (currentDialogueNode)
         {
-            isInDialogue = false;
-            panel.SetActive(true);
-
-            startDialogue.SetActive(true);
-
+            // ENTRY POINT FOR DIALOGUE
+            case 0:
+                PlayDialogue("You solved the puzzle. You unleashed the power. There is no turning back - I will not rest until I get what I want. And what I want... is you.", 2, "Where did you take them?!", "I summoned you.", null, null);
+                AudioManager.Instance.PlaySFX("Dialogue1");
+                break;
+            // PLAYERS FIRST CHOICE
+            case 1:
+                switch (selectedOption)
+                {
+                    case 1:
+                        PlayDialogue("They are all with me now... But the balance is only four souls, and that, as you now know, was not our contract.", 1, "No...", null, null, null);
+                        AudioManager.Instance.PlaySFX("Dialogue2");
+                        break;
+                    case 2:
+                        PlayDialogue("You summoned me - I came.", 1, "This is not what I imagined.", null, null, null);
+                        AudioManager.Instance.PlaySFX("Dialogue5");
+                        choiceBoxes[1].ButtonFunction.onClick.AddListener(Event1);
+                        currentDialogueNode = 4;
+                        break;
+                }
+                break;
+            // PLAYERS SECOND CHOICE
+            case 2:
+                PlayDialogue("Welcome to the worst nightmare of all.", 1, "No!", null, null, null);
+                AudioManager.Instance.PlaySFX("Dialogue3");
+                break;
+            // PLAYERS THIRD CHOICE
+            case 3:
+                PlayDialogue("Reality.", 1, "NOOO!", null, null, null);
+                AudioManager.Instance.PlaySFX("Dialogue4");
+                break;
+            // FINAL CASE - DIALOGUE IS OVER
+            case 4:
+                EndOfDialogue();
+                CloseDialogue();
+                break;
         }
 
+        if (currentDialogueNode < 4 && panel.activeInHierarchy)
+        {
+            currentDialogueNode++;
+        }
     }
+
+    #endregion
 }

@@ -10,7 +10,7 @@ public class LetterByLetter : MonoBehaviour
     public string fullText;
     public string currentText = "";
 
-    private bool _dialogueFinished;
+    public bool _dialogueFinished;
 
     private PlayerControls playerControls;
     TextMeshProUGUI TMP;
@@ -30,20 +30,43 @@ public class LetterByLetter : MonoBehaviour
     {
         _dialogueFinished = false;
 
-        for (int i = 0; i < (fullText.Length + 1); i ++) 
+        if (!_dialogueFinished)
         {
-            currentText = fullText.Substring(0, i);
-            TMP.text = currentText;
-            yield return new WaitForSeconds(delay);
-
-            if (i == fullText.Length)
+            for (int i = 0; i < (fullText.Length + 1); i++)
             {
-                _dialogueFinished = true;
-
-                for (int j = 0; j < 1; j++)
+                if (_dialogueFinished)
                 {
-                    DialogueManagerScript.Instance.choiceBoxes[j].gameObject.SetActive(true);
+                    break;
                 }
+                currentText = fullText.Substring(0, i);
+                TMP.text = currentText;
+                yield return new WaitForSeconds(delay);
+
+                if (i == fullText.Length)
+                {
+                    _dialogueFinished = true;
+                    currentText = fullText;
+
+                    for (int j = 0; j < DialogueManagerScript.Instance.choicesToBeDisplayed; j++)
+                    {
+                        DialogueManagerScript.Instance.choiceBoxes[j].gameObject.SetActive(true);
+                    }
+                }
+            }
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && !_dialogueFinished)
+        {
+            _dialogueFinished = true;
+            currentText = fullText;
+            TMP.text = fullText;
+
+            for (int j = 0; j < DialogueManagerScript.Instance.choicesToBeDisplayed; j++)
+            {
+                DialogueManagerScript.Instance.choiceBoxes[j].gameObject.SetActive(true);
             }
         }
     }
