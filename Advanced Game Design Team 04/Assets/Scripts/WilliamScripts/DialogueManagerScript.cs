@@ -13,13 +13,15 @@ public class DialogueManagerScript : MonoBehaviour
 
     [SerializeField] private PlayerController _player;
 
-    [SerializeField] public LetterByLetter letterByLetterScript;
+    [SerializeField] private TextMeshProUGUI DialogueBoxTMP;
+
     [SerializeField] private OptionsLetterByLetter _optionsLetterByLetterScript;
 
-    [SerializeField] public GameObject DialogueBox;
-    [SerializeField] private TextMeshProUGUI DialogueBoxTMP;
-    [SerializeField] public OptionsLetterByLetter[] choiceBoxes;
-    [SerializeField] public GameObject[] choiceBoxesButtons;
+    public LetterByLetter letterByLetterScript;
+
+    public GameObject DialogueBox;
+    public GameObject[] choiceBoxesButtons;
+    public OptionsLetterByLetter[] choiceBoxes;
 
     public AudioClip dialogue1;
     public AudioClip dialogue2;
@@ -29,13 +31,10 @@ public class DialogueManagerScript : MonoBehaviour
     public float dialogueReopen = 25;
 
     public bool isInDialogue;
-
-    public int currentDialogueNode = 1;
-
-    public int selectedOption;
-
     private bool setEventFunction = false;
 
+    public int currentDialogueNode = 1;
+    public int selectedOption;
     public int choicesToBeDisplayed;
 
 
@@ -118,6 +117,8 @@ public class DialogueManagerScript : MonoBehaviour
 
     void CloseDialogue()
     {
+        AudioManager.Instance.sfxSource.Stop();
+
         currentDialogueNode = 0;
         panel.SetActive(false);
         DialogueBox.SetActive(false);
@@ -138,16 +139,14 @@ public class DialogueManagerScript : MonoBehaviour
     #region Events
     public void Event1()
     {
-        if (currentDialogueNode < 4)
+        if (!setEventFunction)
         {
-            if (!setEventFunction)
-            {
-                for (int i = 0; i < choiceBoxes.Length; i++)
-                {
+           for (int i = 0; i < choiceBoxes.Length; i++)
+           {
                     choiceBoxes[i].ButtonFunction.onClick.AddListener(Event1);
-                }
-                setEventFunction = true;
-            }
+           }
+
+           setEventFunction = true;
         }
 
         switch (currentDialogueNode)
@@ -188,9 +187,17 @@ public class DialogueManagerScript : MonoBehaviour
                 EndOfDialogue();
                 CloseDialogue();
                 break;
+
+            // ROUTE #2
+            case 5:
+                PlayDialogue("This is my body. This is my blood. Happy are they who come to my supper.", 1, "[End Dialogue]", null, null, null);
+                AudioManager.Instance.PlaySFX("Dialogue6");
+                choiceBoxes[1].ButtonFunction.onClick.AddListener(Event1);
+                currentDialogueNode = 3;
+                break;
         }
 
-        if (currentDialogueNode < 4 && panel.activeInHierarchy)
+        if (panel.activeInHierarchy)
         {
             currentDialogueNode++;
         }

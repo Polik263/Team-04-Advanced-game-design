@@ -2502,6 +2502,10 @@ PrefabInstance:
       propertyPath: sfxSounds.Array.data[17].name
       value: Dialogue6
       objectReference: {fileID: 0}
+    - target: {fileID: 6416455492075023083, guid: 45e462c844bf31542a52d07f2b519a1e, type: 3}
+      propertyPath: musicSounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d235857b03743e344a63644b4bf65258, type: 3}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 45e462c844bf31542a52d07f2b519a1e, type: 3}
