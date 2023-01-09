@@ -30,6 +30,8 @@ public class LetterByLetter : MonoBehaviour
     {
         _dialogueFinished = false;
 
+        StartCoroutine(TextSoundTest());
+
         if (!_dialogueFinished)
         {
             for (int i = 0; i < (fullText.Length + 1); i++)
@@ -53,6 +55,16 @@ public class LetterByLetter : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+
+    private IEnumerator TextSoundTest()
+    {
+        AudioManager.Instance.PlaySFX("Talking");
+        yield return new WaitForSeconds(3);
+        if (!_dialogueFinished)
+        {
+            StartCoroutine(TextSoundTest());
         }
     }
 

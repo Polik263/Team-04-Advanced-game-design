@@ -143,7 +143,7 @@ public class DialogueManagerScript : MonoBehaviour
         {
            for (int i = 0; i < choiceBoxes.Length; i++)
            {
-                    choiceBoxes[i].ButtonFunction.onClick.AddListener(Event1);
+               choiceBoxes[i].ButtonFunction.onClick.AddListener(Event1);
            }
 
            setEventFunction = true;
@@ -154,19 +154,17 @@ public class DialogueManagerScript : MonoBehaviour
             // ENTRY POINT FOR DIALOGUE
             case 0:
                 PlayDialogue("You solved the puzzle. You unleashed the power. There is no turning back - I will not rest until I get what I want. And what I want... is you.", 2, "Where did you take them?!", "I summoned you.", null, null);
-                AudioManager.Instance.PlaySFX("Dialogue1");
                 break;
             // PLAYERS FIRST CHOICE
             case 1:
+                // WHAT OPTION DID THE PLAYER SELECT?
                 switch (selectedOption)
                 {
                     case 1:
                         PlayDialogue("They are all with me now... But the balance is only four souls, and that, as you now know, was not our contract.", 1, "No...", null, null, null);
-                        AudioManager.Instance.PlaySFX("Dialogue2");
                         break;
                     case 2:
                         PlayDialogue("You summoned me - I came.", 1, "This is not what I imagined.", null, null, null);
-                        AudioManager.Instance.PlaySFX("Dialogue5");
                         choiceBoxes[1].ButtonFunction.onClick.AddListener(Event1);
                         currentDialogueNode = 4;
                         break;
@@ -175,12 +173,10 @@ public class DialogueManagerScript : MonoBehaviour
             // PLAYERS SECOND CHOICE
             case 2:
                 PlayDialogue("Welcome to the worst nightmare of all.", 1, "No!", null, null, null);
-                AudioManager.Instance.PlaySFX("Dialogue3");
                 break;
             // PLAYERS THIRD CHOICE
             case 3:
                 PlayDialogue("Reality.", 1, "NOOO!", null, null, null);
-                AudioManager.Instance.PlaySFX("Dialogue4");
                 break;
             // FINAL CASE - DIALOGUE IS OVER
             case 4:
@@ -191,7 +187,6 @@ public class DialogueManagerScript : MonoBehaviour
             // ROUTE #2
             case 5:
                 PlayDialogue("This is my body. This is my blood. Happy are they who come to my supper.", 1, "[End Dialogue]", null, null, null);
-                AudioManager.Instance.PlaySFX("Dialogue6");
                 choiceBoxes[1].ButtonFunction.onClick.AddListener(Event1);
                 currentDialogueNode = 3;
                 break;
