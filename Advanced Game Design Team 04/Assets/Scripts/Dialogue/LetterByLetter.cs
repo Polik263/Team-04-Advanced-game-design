@@ -60,7 +60,6 @@ public class LetterByLetter : MonoBehaviour
 
     private IEnumerator TextSoundTest()
     {
-        AudioManager.Instance.PlaySFX("Talking");
         yield return new WaitForSeconds(3);
         if (!_dialogueFinished)
         {
