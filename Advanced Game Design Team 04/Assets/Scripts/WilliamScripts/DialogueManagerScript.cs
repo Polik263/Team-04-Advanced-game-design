@@ -37,6 +37,9 @@ public class DialogueManagerScript : MonoBehaviour
     public int selectedOption;
     public int choicesToBeDisplayed;
 
+    private int badKarma = 0;
+    private int goodKarma = 0;
+
 
     [SerializeField] private bool isClosingDialogue;
 
@@ -190,6 +193,7 @@ public class DialogueManagerScript : MonoBehaviour
                 choiceBoxes[1].ButtonFunction.onClick.AddListener(Event1);
                 currentDialogueNode = 3;
                 break;
+
         }
 
         if (panel.activeInHierarchy)
