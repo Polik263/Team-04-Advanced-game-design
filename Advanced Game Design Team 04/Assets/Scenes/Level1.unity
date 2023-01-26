@@ -248,6 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 7593975}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &7593975
@@ -469,6 +470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 11337376}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &11337376
@@ -690,6 +692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 16474908}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &16474908
@@ -1055,6 +1058,8 @@ MonoBehaviour:
     that situation I really should do it I shall enhance your movement with the power
     of light... Who knows... Hopefully it will enlighten your mind  as well, at least
     a little bit..."
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &26583720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1218,6 +1223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: "1.\_Stop insulting me!\_"
+  ButtonFunction: {fileID: 0}
 --- !u!114 &31453486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1368,6 +1374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. Fun is fun. Let's jump
+  ButtonFunction: {fileID: 0}
 --- !u!114 &34958519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1661,6 +1668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 42129558}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &42129558
@@ -1816,6 +1824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 48655254}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &48655254
@@ -2052,6 +2061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 59693570}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &59693570
@@ -2205,6 +2215,8 @@ MonoBehaviour:
     But it\u2019s OK, I forgive you... This time... I\u2019ll help you out. Prove
     that you can really trust me. I\u2019ll help you out as much as possible, while
     you're alive at least."
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &60649855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2362,6 +2374,8 @@ MonoBehaviour:
     ahead. Such ambition, such drive. A real team player. I one hundred percent believe
     in us. Together I know we can do this. Together we can beat the odds, we can
     beat whatever comes in our way. Literally. Oh yes, literally my friend."
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &62301563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2520,6 +2534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. I'M NOT SURE I WANT TO RISK IT...
+  ButtonFunction: {fileID: 0}
 --- !u!114 &66050786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2671,6 +2686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 68134191}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &68134191
@@ -2897,6 +2913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 79803148}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &79803148
@@ -3406,6 +3423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. ... Long-reaching ears?
+  ButtonFunction: {fileID: 0}
 --- !u!114 &87275802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3627,6 +3645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. NO, NO I DIDN'T MEAN IT LIKE THAT. SURE LET'S TRY IT OUT
+  ButtonFunction: {fileID: 0}
 --- !u!114 &88795402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3783,6 +3802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 93150695}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &93150695
@@ -4002,6 +4022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 107860307}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &107860307
@@ -4164,6 +4185,8 @@ MonoBehaviour:
     Hero. Oh man, they really knew how to swing a sword. Thrusting here, chopping
     there, a bit of the ol\u2019 slicing. We even had this nickname... The Bringer
     of Destruction. I loved that. Really boosts your confidence you know. Good times!"
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &115396436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4874,6 +4897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 139163385}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &139163385
@@ -5254,6 +5278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. What's wrong with it?
+  ButtonFunction: {fileID: 0}
 --- !u!114 &165368022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5483,6 +5508,8 @@ MonoBehaviour:
     persume so, as my cutting abilities are incomperably better than of any weapon
     you could find. Too bad for you, I think being nice is a virtue. Thanks to my
     patience and kind nature I was able to withstand your company thus far.
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &170728845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5640,6 +5667,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. YOU ALREADY SAID THAT
+  ButtonFunction: {fileID: 0}
 --- !u!114 &171591941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5864,6 +5892,8 @@ MonoBehaviour:
     do remind me of someone... But don\u2019t worry, I will grant you the power.
     You really wanted to dash through the topic as fast as possible, didn\u2019t
     you? Guess you\u2019re just the fit..."
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &183889733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6018,6 +6048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 186823670}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &186823670
@@ -6239,6 +6270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 195977298}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &195977298
@@ -6395,6 +6427,8 @@ MonoBehaviour:
   fullText: "That\u2019s a long and complicated story anyway. Think we should be
     focusing on these grumpy and annoying spirits. And with focusing on them, I mean
     of course... jumping on them."
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &198991054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6555,6 +6589,8 @@ MonoBehaviour:
     to change everything for the better! Don't get discouraged by the word "ritual".
     It's completly safe. After that you'll be able to admire your beauty in the reflection
     of a mirror! Which actually reminds me, didn't you want power or something?
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &203296469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6798,6 +6834,8 @@ MonoBehaviour:
     do to keep themselves good looking. Make up, stylish clothes and much more. I
     know another way of doing that I might be in a mood to share with you after we
     reach the top.
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &221846195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6972,7 +7010,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7126,7 +7164,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7228,6 +7266,8 @@ MonoBehaviour:
     make you fly. Had enough of that from others. It\u2019s just a jump. A fun jump!
     But just a jump. I know I sold it like I would make you fly but I can\u2019t.
     I can do a lot of stuff but make you fly? No."
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &240728873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7339,6 +7379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 250667622}
   - component: {fileID: 250667621}
+  - component: {fileID: 250667623}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -7423,6 +7464,26 @@ Transform:
   m_Father: {fileID: 1082757692}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &250667623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250667620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1001 &253830206
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7552,6 +7613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. Tell me now!
+  ButtonFunction: {fileID: 0}
 --- !u!114 &254604744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7762,6 +7824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 257235514}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &257235514
@@ -8189,6 +8252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 271462142}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &271462142
@@ -8409,6 +8473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. Yeees, more offence!
+  ButtonFunction: {fileID: 0}
 --- !u!114 &272601702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8560,6 +8625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 276682640}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &276682640
@@ -8844,6 +8910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. JUST GIVE IT ALREADY
+  ButtonFunction: {fileID: 0}
 --- !u!114 &289744448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9327,6 +9394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 342941134}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &342941134
@@ -9476,6 +9544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. WHY NOT?
+  ButtonFunction: {fileID: 0}
 --- !u!114 &343828487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9770,6 +9839,8 @@ MonoBehaviour:
   fullText: "Oh yeah... That really wasn\u2019t something I would call a pleasant
     experience. It would be a shame to repeat that. So how about you start making
     sense and make some use out of me with the new power I just gave you, hmmm??"
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &356227844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10075,6 +10146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 391957962}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &391957962
@@ -10233,6 +10305,8 @@ MonoBehaviour:
     and spirits have built this tower. Soon afterwards people started dying. I think
     the spirits cursed us... All left for the rest of humans\u2019 existence were
     screams of agony"
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &395939544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10517,6 +10591,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: Quick, enter the tower!
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &399942014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10851,6 +10927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 419373511}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &419373511
@@ -11074,6 +11151,8 @@ MonoBehaviour:
     you\u2019ll make sure nothing is in the duration of killing us. Therefore, let
     me do that... Oh and this... Yes... Now the reaching area should be longer thanks
     to the energy released after swinging."
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &428372993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11286,6 +11365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. OH REALLY?
+  ButtonFunction: {fileID: 0}
 --- !u!114 &429065291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11518,6 +11598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 436112911}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &436112911
@@ -11676,6 +11757,8 @@ MonoBehaviour:
     it out on me. I honestly don\u2019t think anyone has ever talked to me in that
     way before, ever. And I\u2019ve lived a long time. I think you need a moment
     to calm yourself down."
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &444074510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12085,6 +12168,8 @@ MonoBehaviour:
     With this new beautiful power you can use me as a mirror  of the enemies projectiles!
     Yes, you can shoot their magic back at them with the light power, if that was
     too poetic for you to understand...
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &467930266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12387,6 +12472,8 @@ MonoBehaviour:
     hit back those glowing enemy attacks and boom-ka-zoom, avoiding certain death
     AND a health boost! Not bad for a random sword you found on the ground! You\u2019re
     welcome!"
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &481112284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12621,6 +12708,8 @@ MonoBehaviour:
     new power. You know that keeping you alive all the time can be a pain? I think
     that is just the price I pay for being such an amazing companion. I would kiss
     myself if I could see my reflection now.... and if I had some lips...
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &491255164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12776,6 +12865,8 @@ MonoBehaviour:
   fullText: My, my, how cold of you. Well, your loss... Have fun with running into
     each and every possible projectile. Who knows, maybe it will help you learn how
     to absorb magic with your face?
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &498148445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12927,7 +13018,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13525,6 +13616,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: Hey... Come here...
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &535940081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14064,6 +14157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: "1.\_..."
+  ButtonFunction: {fileID: 0}
 --- !u!114 &561273620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14477,6 +14571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. NO, SHUT UP
+  ButtonFunction: {fileID: 0}
 --- !u!114 &592633667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14838,6 +14933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. Apology accepted. Now teach me to jump
+  ButtonFunction: {fileID: 0}
 --- !u!114 &608271917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14989,6 +15085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 611943839}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &611943839
@@ -15217,6 +15314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. PLEASE SHUT UP!
+  ButtonFunction: {fileID: 0}
 --- !u!114 &617388544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15371,6 +15469,8 @@ MonoBehaviour:
     with your nice face. I just get so protective and excited when it comes to jumping.
     Really makes you feel like flying... which is a nice feeling, but you should
     be the one to know that..."
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &617948911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15678,6 +15778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 634776665}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &634776665
@@ -15834,6 +15935,8 @@ MonoBehaviour:
   fullText: "I\u2019m not the one commenting on trivial matters here! But yes, we
     can agree that it\u2019s time to give you the power now... Don\u2019t waste so
     much of my time in the future!"
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &643428777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16056,7 +16159,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16240,6 +16343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. I'm all ears
+  ButtonFunction: {fileID: 0}
 --- !u!114 &680066598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16607,7 +16711,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17140,6 +17244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 726153512}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &726153512
@@ -17300,6 +17405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 742543607}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &742543607
@@ -17452,6 +17558,8 @@ MonoBehaviour:
     ups, no help. See if I care. I\u2019m an immortal blade, I\u2019m totally fine.
     Let's see how you feel about it when the REAL tough guys start showing up. Oh
     yea, it gets worse. BELIEVE me! You won't blow me off so quickly then I bet."
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &742583759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17677,6 +17785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 747856836}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &747856836
@@ -17835,6 +17944,8 @@ MonoBehaviour:
     Or even better, jump on them? I need to admit, it\u2019s getting a little bit
     boring here on my end. Come on let\u2019s jump, let\u2019s reach for the sky
     and feel the wind while demolishing our enemies!"
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &755157390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18127,6 +18238,8 @@ MonoBehaviour:
     very words back at me? Oh, no problem. We can play this little game of yours..............................................
     Are you expecting something from me? I'm redirecting my attention in the opposite
     direction to you.
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &770796690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18283,6 +18396,8 @@ MonoBehaviour:
     creatures, do you? You, on the other hand, possess a pair of hands and a pair
     of legs very similar to them. Yet I do suppress myself from wasting your time
     on such trivial, yet harmful comments!"
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &774100275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18517,6 +18632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. ...
+  ButtonFunction: {fileID: 0}
 --- !u!114 &812319015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18758,6 +18874,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: "1.\_You also don\u2019t have a heart\_ "
+  ButtonFunction: {fileID: 0}
 --- !u!114 &833073200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19380,6 +19497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 904640835}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &904640835
@@ -19631,6 +19749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. WHAT HAPPENED TO THEM?
+  ButtonFunction: {fileID: 0}
 --- !u!114 &913176607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19783,6 +19902,8 @@ MonoBehaviour:
   fullText: Well, I really wouldn't like to have an even worse view accompany me
     throught the rest of our journey. I shall lend you my power yet again. Go, make
     the spirits uglier with their own magic! ... If it is even possible...
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &914501431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20259,6 +20380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 934530645}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &934530645
@@ -20577,6 +20699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 943682051}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &943682051
@@ -20794,6 +20917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 953157771}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &953157771
@@ -21014,6 +21138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. Who were you before becoming a sword?
+  ButtonFunction: {fileID: 0}
 --- !u!114 &958687741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21386,6 +21511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 971268443}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &971268443
@@ -21599,6 +21725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: "1.\_UM... BUT I DON'T WANT..."
+  ButtonFunction: {fileID: 0}
 --- !u!114 &976598645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21820,6 +21947,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: "2.\_UM... BUT I DON'T WANT..."
+  ButtonFunction: {fileID: 0}
 --- !u!114 &990200865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21983,6 +22111,8 @@ MonoBehaviour:
     They are very much humans but somehow magical, long-living and with comically
     long ears. If that was a price for immortality I would pass! That is at least
     what can be found in some of the fairy tales humans used to tell."
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1011768586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22136,6 +22266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. We can do that? Sounds fun
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1011872460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22433,6 +22564,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: I'll help you from there...
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1021170987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22829,6 +22962,8 @@ MonoBehaviour:
     knew why but the land seemed to be cursed afterwards. Plague has been scattered
     across this world. Surely, you\u2019re not interested. Should I give you the
     power?"
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1027021810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23282,6 +23417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 1060923410}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &1060923410
@@ -23441,6 +23577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. I'M GOOD...
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1080537729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24027,6 +24164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. I CAN DESTROY TOO!
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1114182831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24178,6 +24316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 1114671989}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &1114671989
@@ -24494,7 +24633,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24596,6 +24735,8 @@ MonoBehaviour:
     that your brain is as sluggish as your movements... And that body almost as disgusting
     as the one spirits possess... Why do I always need to end up with people like
     you?"
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1129192942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24749,6 +24890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. UPGRADE PLEASE!!!!
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1132874365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24909,6 +25051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. Um... Yeah
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1137299910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25139,6 +25282,8 @@ MonoBehaviour:
     Feeling stuff, smelling stuff, tasting those stuff. One time I felt, smelled
     and tasted some stuff at the same time! Can you you imagine?! Crazy times, crazy
     times."
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1146220497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25737,6 +25882,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. I got that from the beginning of this discussion. Just teach me!
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1197000800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25892,6 +26038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. EXACTLY!
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1203509003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26113,6 +26260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. JUST GIVE IT ALREADY
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1209043330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26265,6 +26413,8 @@ MonoBehaviour:
   fullText: "If you did, why aren\u2019t you more precise with your words?? Never
     mind... Time to make you fly! \u2026 Or jump\u2026 Yes, jump\u2026 I can\u2019t
     you fly, but you already know that, right\u2026?  Let\u2019s forget about that\u2026 "
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1211372108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26547,6 +26697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. I got that from the beginning of this discussion. Just teach me!
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1223067182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26920,6 +27071,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. Sure, why not...
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1231528682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27381,6 +27533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 1250870233}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &1250870233
@@ -27533,6 +27686,8 @@ MonoBehaviour:
     you meant form the very beginning, don't even assume otherwise. Ehm... Let the
     power of of light accumulate the energy and redirect is as the darkness of your
     soul! Sounds cool, doesn't it?
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1251401643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27686,6 +27841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. YES PLEASE, TEACH ME OH MASTER!
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1252065965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28053,7 +28209,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28152,6 +28308,8 @@ MonoBehaviour:
   delay: 0.06
   fullText: Yes! It's time to jump, so let's jump! But do remember to heal yourself
     once and a while cause it can actually kill you....
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1276890728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28927,6 +29085,8 @@ MonoBehaviour:
     like that name... Good new name... Is it possibly even better than before? *Deep
     in thought* Yes, I think this is a better name. It\u2019s so on the nose. No
     messing about. Straight to the point. *Deep in thought* Mmmmhummm, I love it."
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1321269864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29083,6 +29243,8 @@ MonoBehaviour:
     I could improve your terrible form. Make it sharper. More pointier? Of course
     I'm sure you've got this. Don't let me, an actual sword, tell you how to stab
     the bad guys. But if you want, I could help you along with your stabby stab?
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1322925739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29244,6 +29406,8 @@ MonoBehaviour:
     like a child! Stop derailing the conversation with these nonsensical topics of
     yours... Let me grant you the power already! Unless you have more stupid comments
     you would like to share with me, hmm??"
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1333621240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29397,6 +29561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: "2. Interesting, where\u2019s the power?"
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1334789729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29623,6 +29788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. It will be worse if you don't help!
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1345998989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29853,6 +30019,8 @@ MonoBehaviour:
     of powerful dark magic... You... um... might have a point... But don\u2019t let
     it go to your head. Let me grant you the power and let\u2019s forget about that
     little thing..."
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1352794208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29989,6 +30157,8 @@ MonoBehaviour:
   fullText: "I thought so. Now excuse me, but I\u2019m about to give you the power
     with been talking about for almost an hour now. No need to thank me, although
     I would say you should be grateful that I managed to withstand your behaviour."
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1353583048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30237,6 +30407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. That is mean
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1358599731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30463,6 +30634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: "2. Suuure. Let\u2019s do some jumping!"
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1365028230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30685,6 +30857,8 @@ MonoBehaviour:
     idea... More like... a dagger? Anyway! It\u2019s a pity to see a creature with
     so many flexible limbs performing so poorly. If I had some access to your body,
     I could enhance it."
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1369853114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30980,6 +31154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 1388716773}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &1388716773
@@ -31198,6 +31373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. Um... Yeah
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1397043218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31585,7 +31761,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31753,7 +31929,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31931,6 +32107,8 @@ MonoBehaviour:
     across? Sure, I\u2019m cool with that. Why wouldn\u2019t I be. You didn\u2019t
     hurt my feelings. A sword with feelings, that\u2019s not a thing.It\u2019s fine,
     I\u2019ll leave you alone."
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1442308862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32088,6 +32266,8 @@ MonoBehaviour:
     it so many times that we can easily jump on our problems. Probably mentioned
     it like 100 times... or maybe 43... or 12? or maybe I actually\_ haven't mentioned
     it yet. huh... Let me take a moment to consider that..."
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1445690251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32614,6 +32794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. I don't think you can, you've never mention that
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1476477314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32898,6 +33079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 1491758277}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &1491758277
@@ -33048,6 +33230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 1491940977}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &1491940977
@@ -33476,7 +33659,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33721,6 +33904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. I don't like the idea of it killing me
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1517971547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33943,6 +34127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 1525800573}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &1525800573
@@ -34164,6 +34349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 1528035287}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &1528035287
@@ -34447,6 +34633,8 @@ MonoBehaviour:
     It's super fun. It demands some dark magic which can technically kill you, but
     trust me it\u2019s definitely worth it... ok maybe more fun than worth it but
     hey! Fun is fun right?"
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1539621981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34894,6 +35082,8 @@ MonoBehaviour:
   delay: 0.06
   fullText: I will not only just teach you I will also!... oh no wait, I will just
     only teach you. There is nothing to add to that.
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1551997230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35176,6 +35366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 1559877859}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &1559877859
@@ -35467,6 +35658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. "Used to?"
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1570341613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36020,6 +36212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. I might need the power to reach it!
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1590041687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36515,6 +36708,8 @@ MonoBehaviour:
     you\u2019re not them, but we can power you up all the same. It\u2019ll be good
     enough. Then we can do some destruction of our very own! Oh yes, this will be
     fun!"
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1620479532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36821,6 +37016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 1634152697}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &1634152697
@@ -36973,6 +37169,8 @@ MonoBehaviour:
     squishy as you are. I\u2019m not judging of course. I would never presume to
     offend you and your jiggly bits. They\u2019re just... easier to chop off... damageable
     you know? I guess we should give you more damage to keep you alive... a bit longer."
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1637648873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37127,6 +37325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 1639715442}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &1639715442
@@ -37275,7 +37474,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37389,6 +37588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 1646177930}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &1646177930
@@ -37684,7 +37884,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37783,6 +37983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 1656125062}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &1656125062
@@ -38009,6 +38210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 1664153540}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &1664153540
@@ -38335,6 +38537,7 @@ GameObject:
   - component: {fileID: 1681876032}
   - component: {fileID: 1681876031}
   - component: {fileID: 1681876030}
+  - component: {fileID: 1681876034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -38423,6 +38626,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
+--- !u!114 &1681876034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681876029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1001 &1692329086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38844,6 +39080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 1709756016}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &1709756016
@@ -38995,6 +39232,8 @@ MonoBehaviour:
   fullText: As short as this discussion! Yet again here I am, offering you a helping
     hand and instead of any gratitude all I hear are some shameless jokes... Good
     luck without my help, I hope that even without extension you will last LONG
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1711523261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39212,6 +39451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 1729217756}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &1729217756
@@ -39462,6 +39702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. You're... Short?
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1745157833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39613,6 +39854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 1747142796}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &1747142796
@@ -39762,6 +40004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. Lend me some power so we won't scream in agony
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1758484869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39915,6 +40158,8 @@ MonoBehaviour:
     how lucky you are that there are no mirrors in this tower! You can't even imagine
     how hurtful to my eyes is having to watch you all this time... Your movements
     are one thing, but just this body... Gross...
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1758988225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40274,6 +40519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: "2. What you\u2019re doing now then?"
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1775608344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40583,6 +40829,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. Enough trivia, give me speed!
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1786429680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40875,6 +41122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. Offensive POWER
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1793778562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41026,6 +41274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 1800190987}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &1800190987
@@ -41272,6 +41521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 1820409835}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &1820409835
@@ -41422,6 +41672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 1822795944}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &1822795944
@@ -41709,6 +41960,8 @@ MonoBehaviour:
     taking those hits like a champ. I personally don't need to worry about things
     like that... seen as I'm a sword and all... Wouldn't it be cool if you had someone,
     something, that could help you out. Or even heal you?
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1834129909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41963,6 +42216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. Funny, power please?
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1858695994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42268,6 +42522,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: "1. YES, PLEASE\_"
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1875239207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42565,6 +42820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. OLD AGE....?
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1891979598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42877,6 +43133,8 @@ MonoBehaviour:
     you want me to try, I'm sure I could do something to help? I can't guarantee
     anything, but I guess there\u2019s only one way to find out? It couldn\u2019t
     possibly make things any worse..."
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1913032364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43625,6 +43883,8 @@ MonoBehaviour:
     hearts? Neither any other organs. Sounds natural, I know, considering how disgusting
     these creatures are... Don\u2019t you think the lack of consciousness fits them
     so well...?"
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1946952334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43920,7 +44180,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -44021,6 +44281,8 @@ MonoBehaviour:
     tell. It was Ignorance that killed The Bringer of Destruction. That day-old problem,
     you flesh bags have. Plain old stupidity. They got overconfident, sloppy, careless
     even. They stopped taking advice from me, then boom... Died of old age."
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1964761726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44174,6 +44436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: "2.\_ I'd rather keep the full control"
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1965455625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44404,7 +44667,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -44503,6 +44766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 1969613043}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &1969613043
@@ -44763,6 +45027,8 @@ MonoBehaviour:
     we can be a team. A good, trusting team. A slaughter machine... Team slaughter
     machine. What do you think of that? Slaughter machine, now I like that for a
     nickname!"
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1977045759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45048,6 +45314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 1981469223}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &1981469223
@@ -45197,6 +45464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. GO ON...
+  ButtonFunction: {fileID: 0}
 --- !u!114 &1981570741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45492,6 +45760,8 @@ MonoBehaviour:
     people say that the best defence is more offence maybe we should try to apply
     it? As you know I'm a sword with many hidden talents, so I could try make us
     be able to redirect the spirits' magic right back at them! What do you say...?
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &1991960827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45645,6 +45915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. You and talents...?
+  ButtonFunction: {fileID: 0}
 --- !u!114 &2009211110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45853,7 +46124,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -46031,6 +46302,8 @@ MonoBehaviour:
     frame of yours. It\u2019s really quite impressive how far you\u2019ve gotten
     already. I\u2019ve seen people who were way more capable than you. In fact, I
     even teamed up with one of them..."
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &2029111726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46292,7 +46565,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -46392,6 +46665,8 @@ MonoBehaviour:
   fullText: "I thought so. Now excuse me, but I\u2019m about to give you the power
     with been talking about for almost an hour now. No need to thank me, although
     I would say you should be grateful that I managed to withstand your behaviour."
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &2042857013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46879,6 +47154,8 @@ MonoBehaviour:
     I say with me? I thought that giving you the power of darkness would be enough,
     but here we are again... And before you make a foolish comment about my length,
     let me know you that I am very capable of extending our reach.
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &2083394110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47102,6 +47379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 2085793471}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &2085793471
@@ -47315,6 +47593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 2. OLD AGE....?
+  ButtonFunction: {fileID: 0}
 --- !u!114 &2096078886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47774,6 +48053,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 2110972852}
+  choiceNumber: 0
   key1: 332
   key2: 49
 --- !u!114 &2110972852
@@ -47932,6 +48212,8 @@ MonoBehaviour:
     that the knowledge is the key to obtain the true power, right? Guess you only
     care about the physical aspect of it. So, allow me to bless you with this new
     ability"
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &2113012066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48087,6 +48369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 2115427570}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &2115427570
@@ -48317,6 +48600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.06
   fullText: 1. Flying really sounds nice
+  ButtonFunction: {fileID: 0}
 --- !u!114 &2120357765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48624,6 +48908,8 @@ MonoBehaviour:
     already growing. But you need not worry about trying to stay alive too much,
     it\u2019s not like we won\u2019t have another try if you fail here...We always
     do..."
+  currentText: 
+  _dialogueFinished: 0
 --- !u!114 &2132680763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48920,6 +49206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 2138645011}
+  choiceNumber: 0
   key1: 330
   key2: 50
 --- !u!114 &2138645011
