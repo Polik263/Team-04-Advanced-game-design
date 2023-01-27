@@ -59,6 +59,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool _canSwitch = false;
 
     public bool canMove = true;
+    public bool busy = false;
 
     public bool gotSlam;
     public bool gotHeal;
@@ -260,7 +261,7 @@ public class PlayerController : MonoBehaviour
 
         void Dash()
         {
-            if (lastTimeDashed + dashCooldown < Time.time)
+            if (lastTimeDashed + dashCooldown < Time.time && !busy)
             {
                 lastTimeDashed = Time.time;
 

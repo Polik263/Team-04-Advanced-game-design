@@ -17,6 +17,7 @@ public class SlamScript : MonoBehaviour
     [SerializeField] private PlayerHealth playerHealth;
 
     [SerializeField] public int _selfDamage;
+
     private void Awake()
     {
         playerHealth = GetComponent<PlayerHealth>();
@@ -43,8 +44,9 @@ public class SlamScript : MonoBehaviour
     public void EndLeap()
     { 
         PlayerController.Instance.canMove = true;
+        slamInitiated = false;
 
-        if(playerHealth.currentHealth <= _selfDamage)
+        if (playerHealth.currentHealth <= _selfDamage)
         {
             playerHealth.currentHealth = 1;
         }
@@ -57,6 +59,7 @@ public class SlamScript : MonoBehaviour
     {
         if(isCoolingDown == false)
         {
+            PlayerController.Instance.busy = true;
             isCoolingDown = true;
             animator.Play("LeapSlam");
             AudioManager.Instance.PlaySFX("Jump");
@@ -66,20 +69,18 @@ public class SlamScript : MonoBehaviour
     public void AnimationFinished()
     {
         slamEnding = true;
+        PlayerController.Instance.busy = false;
     }
     
     private void LateUpdate()
     {
         if(slamEnding && slamInitiated)
         {
-            slamInitiated = false;
-
             animator.transform.parent.gameObject.transform.position = animator.transform.position;
             transform.localPosition = Vector3.zero;
             animator.Play("New State");
             AudioManager.Instance.PlaySFX("Slam");
             EndLeap();
-            
         } 
     }
 }
