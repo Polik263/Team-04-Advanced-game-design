@@ -27,6 +27,14 @@ public class PlayerController : MonoBehaviour
 
     [Header("Dash")]
     [SerializeField] private DashScript _dash;
+
+    enum DashTier
+    {
+        TierOne,
+        TierTwo,
+        TierThree
+    }
+
     [SerializeField] private float dashSpeed;
     [SerializeField] private float dashTime;
 
@@ -255,6 +263,7 @@ public class PlayerController : MonoBehaviour
             if (lastTimeDashed + dashCooldown < Time.time)
             {
                 lastTimeDashed = Time.time;
+
                 _dash.ApplyDash(movement, dashSpeed, dashTime);
             }
         }

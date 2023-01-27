@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SwordScript : MonoBehaviour
@@ -33,6 +34,8 @@ public class SwordScript : MonoBehaviour
     [SerializeField] private PlayerHealth _playerHealth;
     [SerializeField] private BoxCollider _weaponHitbox;
     [SerializeField] private LayerMask _enemyLayers;
+
+    List<GameObject> targetsHit = new List<GameObject>();
 
     [Header("Conditions")]
     [SerializeField] private bool _coolingDown;
@@ -92,6 +95,7 @@ public class SwordScript : MonoBehaviour
             {
                 _coolingDown = false;
                 _cooldown = _currentCooldown;
+                targetsHit.Clear();
             }
         }
         if (_attackCoolingDown == true)
@@ -197,8 +201,12 @@ public class SwordScript : MonoBehaviour
             {
                 if (collider.gameObject.layer == LayerMask.NameToLayer("EnemyHit") && _attackCoolingDown == true)
                 {
+                    if (!targetsHit.Contains(collider.gameObject))
+                    {
+                        collider.gameObject.GetComponent<DmgEnemy>().Damage(_damage);
+                        targetsHit.Add(collider.gameObject);
+                    }
 
-                    collider.gameObject.GetComponent<DmgEnemy>().Damage(_damage);
                     if (_playerHealth.currentHealth <= _selfDamage)
                     {
                         _playerHealth.currentHealth = 1;

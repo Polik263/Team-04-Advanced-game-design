@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class LightDashScript : MonoBehaviour
 {
+
+    enum DashTier
+    {
+        tierOne,
+        tierTwo,
+        tierThree
+    }
+
     [SerializeField] GameObject player;
     public GameObject swordobj;
     [SerializeField] SwordScript _sword;
@@ -18,11 +26,6 @@ public class LightDashScript : MonoBehaviour
     void Start()
     {
         _sword = swordobj.GetComponent<SwordScript>();
-    }
-
-    void Update()
-    {
-        
     }
 
     private void OnCollisionEnter(Collision collision)
