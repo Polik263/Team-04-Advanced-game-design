@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Enemy;
+using Player;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -10,7 +12,7 @@ public class Bullet : MonoBehaviour
     private GameObject player;
     public GameObject destroyableWall;
     [SerializeField] private PlayerHealth playerHealth;
-    [SerializeField] private EnemyStatsSo stats;
+    [SerializeField] private ProjectileStats stats;
     private Transform playerTransform;
     private Vector3 playerPos;
     WallHealth wallHealth;

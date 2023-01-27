@@ -4,7 +4,7 @@ using Random = UnityEngine.Random;
 
 public class EnemyCombat : MonoBehaviour
 {
-    [SerializeField] private EnemyStatsSo stats;
+    [SerializeField] private EnemyStats stats;
     [SerializeField] private Transform bulletPosition;
     [SerializeField] private GameObject bullet;
 
@@ -22,7 +22,7 @@ public class EnemyCombat : MonoBehaviour
         {
             var BulletSpawn = new Vector3(bulletPosition.position.x, bulletPosition.position.y,
                 bulletPosition.position.z);
-            currentFrame = stats.timeUntilNextShot;
+            currentFrame = stats.AttackSpeed;
 
             Instantiate(bullet, BulletSpawn, new Quaternion());
             //Instantiate(bullet[Random.Range(0,2)], BulletSpawn, new Quaternion()); 
