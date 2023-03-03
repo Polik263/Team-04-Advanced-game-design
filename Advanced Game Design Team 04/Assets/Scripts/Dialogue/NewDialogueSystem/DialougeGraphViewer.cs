@@ -68,9 +68,14 @@ public class DialogueGraphViewer : GraphView
     {
         var generatedPort = GeneratePort(dialogueNode, Direction.Output);
 
-        var outputPortCount = dialogueNode.outputContainer.Query("Connector").ToList().Count;
+        var outputPortCount = dialogueNode.outputContainer.Query("connector").ToList().Count;
 
-        var choicePortName = string.IsNullOrEmpty(overriddenPortName) ? $"{outputPortCount}" : overriddenPortName;
+        var choicePortName = string.IsNullOrEmpty(overriddenPortName) ? $"Choice {outputPortCount}" : overriddenPortName;
+
+        Foldout choiceFoldout = new Foldout()
+        {
+            text = $"Choice Text {outputPortCount}"
+        };
 
         var textField = new TextField
         {
@@ -78,18 +83,22 @@ public class DialogueGraphViewer : GraphView
             value = choicePortName
         };
 
-        textField.RegisterValueChangedCallback(evt => generatedPort.portName = evt.newValue);
-
-        generatedPort.contentContainer.Add(new Label(""));
-        generatedPort.contentContainer.Add(textField);
-
         var deleteButton = new Button(() => RemovePort(dialogueNode, generatedPort))
         {
             text = "X"
         };
 
-        generatedPort.contentContainer.Add(deleteButton);
+        textField.RegisterValueChangedCallback(evt => generatedPort.portName = evt.newValue);
 
+        choiceFoldout.Add(textField);
+        VisualElement customDataContainer = new VisualElement();
+
+        customDataContainer.Add(choiceFoldout);
+        dialogueNode.extensionContainer.Add(customDataContainer);
+
+        generatedPort.contentContainer.Add(new Label(""));
+        //generatedPort.contentContainer.Add(textField);
+        generatedPort.contentContainer.Add(deleteButton);
         generatedPort.portName = choicePortName; 
 
         dialogueNode.outputContainer.Add(generatedPort);
@@ -112,7 +121,7 @@ public class DialogueGraphViewer : GraphView
         };
 
         var inputPort = GeneratePort(dialogueNode, Direction.Input, Port.Capacity.Multi);
-        inputPort.portName = "Input                       :";
+        inputPort.portName = "Input";
 
         var button = new Button(() => { AddChoicePort(dialogueNode, null); });
         button.text = "Add New Choice";
