@@ -11,6 +11,8 @@ public class DialogueManagerScript : MonoBehaviour
 
     [SerializeField] private GameObject panel;
 
+    [SerializeField] private DialogueBox[] dialogueBoxInfo;
+
     [SerializeField] private PlayerController _player;
 
     [SerializeField] private TextMeshProUGUI DialogueBoxTMP;
