@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NotePickup : MonoBehaviour, IInteractable
+public class NotePickup : MonoBehaviour, IInteractable, ICancelable
 {
     [SerializeField] private GameObject noteBackground;
     [SerializeField] private GameObject noteText;
@@ -15,22 +15,22 @@ public class NotePickup : MonoBehaviour, IInteractable
     
     public bool Interact(Interactor interactor)
     {
-        var stateChecker = interactor.GetComponent<StateChecker>();
+       // var stateChecker = interactor.GetComponent<StateChecker>();
 
 
-        if (stateChecker == null) return false;
+        //if (stateChecker == null) return false;
 
-        if (stateChecker.CanRead)
-        {
+        //if (stateChecker.CanRead)
+       // {
             Time.timeScale = 0;
 
             noteBackground.SetActive(true);
             noteText.SetActive(true);
             return true;
-        }
+       // }
 
-        Debug.Log("CantRead");
-        return false;
+        //Debug.Log("CantRead");
+       // return false;
     }
 
     
@@ -42,15 +42,12 @@ public class NotePickup : MonoBehaviour, IInteractable
 
     }
 
-    private void Update()
+    public bool Cancel()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && noteBackground.activeInHierarchy == true && noteText.activeInHierarchy == true)
-        {
-            Time.timeScale = 1;
+        Time.timeScale = 1;
 
-            noteBackground.SetActive(false);
-            noteText.SetActive(false);
-        }
+        noteBackground.SetActive(false);
+        noteText.SetActive(false);
+        return true;
     }
-
 }

@@ -9,7 +9,7 @@ public class StateChecker : MonoBehaviour
 
     private void Update()
     {
-        if (Keyboard.current.qKey.wasPressedThisFrame) CanRead= !CanRead;
+        //if (Keyboard.current.qKey.wasPressedThisFrame) CanRead= !CanRead;
     }
 
 

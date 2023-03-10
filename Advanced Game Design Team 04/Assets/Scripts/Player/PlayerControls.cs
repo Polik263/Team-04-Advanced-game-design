@@ -98,6 +98,24 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""1b37be46-ffed-4ca8-ab74-029adc839a88"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Cancel"",
+                    ""type"": ""Button"",
+                    ""id"": ""206ced43-6cbb-4284-b148-eeee8d7d4640"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -224,17 +242,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""7c3a07b9-f833-43d5-94f3-1afe51a79874"",
-                    ""path"": ""<Keyboard>/leftShift"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KBM"",
-                    ""action"": ""SwitchForm"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""9e9c8d05-1a41-47e5-9317-12d8ee6b62fb"",
                     ""path"": ""<Gamepad>/rightShoulder"",
                     ""interactions"": """",
@@ -246,12 +253,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""56a91fbe-f930-405b-9468-1f1067cbe4e8"",
-                    ""path"": ""<Keyboard>/f"",
+                    ""id"": ""7c3a07b9-f833-43d5-94f3-1afe51a79874"",
+                    ""path"": ""<Keyboard>/leftShift"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""LevelUp"",
+                    ""groups"": ""KBM"",
+                    ""action"": ""SwitchForm"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -268,12 +275,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""bd924d14-20c1-449b-b0ac-8e234f9b17d8"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""id"": ""56a91fbe-f930-405b-9468-1f1067cbe4e8"",
+                    ""path"": ""<Keyboard>/f"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Slam"",
+                    ""groups"": ""KBM"",
+                    ""action"": ""LevelUp"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -283,7 +290,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""path"": ""<Gamepad>/leftTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Slam"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -305,8 +312,63 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/b"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""KBM"",
                     ""action"": ""LongerAttack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""69e80a8e-2276-4c90-9913-84419fa083f6"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KBM"",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ba9ce365-5bf2-4a35-a2b9-962022cf2de0"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bd924d14-20c1-449b-b0ac-8e234f9b17d8"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KBM"",
+                    ""action"": ""Slam"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fc3984a1-992a-4971-a18d-9ec47b25a69f"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""adb4b6f9-1071-46cb-99f0-1bdb148c0e35"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KBM"",
+                    ""action"": ""Cancel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -392,6 +454,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Controls_LevelUp = m_Controls.FindAction("LevelUp", throwIfNotFound: true);
         m_Controls_Slam = m_Controls.FindAction("Slam", throwIfNotFound: true);
         m_Controls_LongerAttack = m_Controls.FindAction("LongerAttack", throwIfNotFound: true);
+        m_Controls_Interact = m_Controls.FindAction("Interact", throwIfNotFound: true);
+        m_Controls_Cancel = m_Controls.FindAction("Cancel", throwIfNotFound: true);
         // Dialogue
         m_Dialogue = asset.FindActionMap("Dialogue", throwIfNotFound: true);
         m_Dialogue_Appear = m_Dialogue.FindAction("Appear", throwIfNotFound: true);
@@ -462,6 +526,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Controls_LevelUp;
     private readonly InputAction m_Controls_Slam;
     private readonly InputAction m_Controls_LongerAttack;
+    private readonly InputAction m_Controls_Interact;
+    private readonly InputAction m_Controls_Cancel;
     public struct ControlsActions
     {
         private @PlayerControls m_Wrapper;
@@ -474,6 +540,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @LevelUp => m_Wrapper.m_Controls_LevelUp;
         public InputAction @Slam => m_Wrapper.m_Controls_Slam;
         public InputAction @LongerAttack => m_Wrapper.m_Controls_LongerAttack;
+        public InputAction @Interact => m_Wrapper.m_Controls_Interact;
+        public InputAction @Cancel => m_Wrapper.m_Controls_Cancel;
         public InputActionMap Get() { return m_Wrapper.m_Controls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -507,6 +575,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @LongerAttack.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnLongerAttack;
                 @LongerAttack.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnLongerAttack;
                 @LongerAttack.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnLongerAttack;
+                @Interact.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnInteract;
+                @Interact.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnInteract;
+                @Interact.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnInteract;
+                @Cancel.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnCancel;
+                @Cancel.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnCancel;
+                @Cancel.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnCancel;
             }
             m_Wrapper.m_ControlsActionsCallbackInterface = instance;
             if (instance != null)
@@ -535,6 +609,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @LongerAttack.started += instance.OnLongerAttack;
                 @LongerAttack.performed += instance.OnLongerAttack;
                 @LongerAttack.canceled += instance.OnLongerAttack;
+                @Interact.started += instance.OnInteract;
+                @Interact.performed += instance.OnInteract;
+                @Interact.canceled += instance.OnInteract;
+                @Cancel.started += instance.OnCancel;
+                @Cancel.performed += instance.OnCancel;
+                @Cancel.canceled += instance.OnCancel;
             }
         }
     }
@@ -600,6 +680,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnLevelUp(InputAction.CallbackContext context);
         void OnSlam(InputAction.CallbackContext context);
         void OnLongerAttack(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
+        void OnCancel(InputAction.CallbackContext context);
     }
     public interface IDialogueActions
     {

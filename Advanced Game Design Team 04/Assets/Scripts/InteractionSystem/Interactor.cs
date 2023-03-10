@@ -5,35 +5,52 @@ using UnityEngine.InputSystem;
 
 public class Interactor : MonoBehaviour
 {
+    public PlayerControls playerControls;
+    private PlayerInput playerInput;
+
     [SerializeField] private Transform interactionPoint;
     [SerializeField] private float interactionPointRadius = 0.5f;
     [SerializeField] private LayerMask interactableMask;
-    [SerializeField] private UIPrompt interactablePrompt;
+    [SerializeField] private InteractionPromptUI interactionPromptUI;
 
     private readonly Collider[] colliders = new Collider[3];
     [SerializeField] private int numFound;
 
-    private IInteractable interactable1;
+    [SerializeField] private bool isInteracting;
+
+    private GameObject _interactable;
+
+    public void Interact (InputAction.CallbackContext context)
+    {
+        _interactable?.GetComponent<IInteractable>().Interact(this);
+
+    }
+
+    public void Cancel(InputAction.CallbackContext context)
+    {       
+        _interactable.GetComponent<ICancelable>().Cancel();
+
+    }
 
     private void Update()
     {
-        numFound = Physics.OverlapSphereNonAlloc(interactionPoint.position, interactionPointRadius, colliders, interactableMask);
+      numFound = Physics.OverlapSphereNonAlloc(interactionPoint.position, interactionPointRadius, colliders, interactableMask);
 
         if (numFound > 0)
         {
-            interactable1 = colliders[0].GetComponent<IInteractable>();
+            _interactable = colliders[0].gameObject;
 
-            if (interactable1 != null)
+            if (_interactable != null)
             {
-                if (interactablePrompt.IsDisplayed) interactablePrompt.SetUp(interactable1.InteractionPrompt);
+                if (!interactionPromptUI.isDisplayed) interactionPromptUI.SetUp(_interactable.GetComponent<IInteractable>().InteractionPrompt);
 
-                if (Keyboard.current.eKey.wasPressedThisFrame) interactable1.Interact(this);
             }
-            else
-            {
-                if (interactable1 != null) interactable1 = null;
-                if (interactablePrompt.IsDisplayed) interactablePrompt.Close();
-            }
+        }
+
+        else
+        {
+            if (_interactable != null) _interactable = null;
+            if (interactionPromptUI.isDisplayed) interactionPromptUI.Close();
         }
     }
 

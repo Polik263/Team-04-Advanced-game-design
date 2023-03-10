@@ -16579,7 +16579,7 @@ GameObject:
   - component: {fileID: 167512943}
   - component: {fileID: 167512942}
   - component: {fileID: 167512941}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Note2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16615,7 +16615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noteBackground: {fileID: 799871013}
   noteText: {fileID: 133723028}
-  nextToNote: 0
+  prompt: Read
 --- !u!65 &167512942
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63910,7 +63910,7 @@ GameObject:
   - component: {fileID: 1318526541}
   - component: {fileID: 1318526540}
   - component: {fileID: 1318526539}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Note1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63946,7 +63946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noteBackground: {fileID: 799871013}
   noteText: {fileID: 1818245098}
-  nextToNote: 0
+  prompt: Read
 --- !u!65 &1318526540
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70157,7 +70157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noteBackground: {fileID: 799871013}
   noteText: {fileID: 568706336}
-  nextToNote: 0
+  prompt: 
 --- !u!65 &1682882418
 BoxCollider:
   m_ObjectHideFlags: 0
