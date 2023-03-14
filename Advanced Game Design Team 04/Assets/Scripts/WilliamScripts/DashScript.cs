@@ -7,7 +7,7 @@ public class DashScript : MonoBehaviour
     [SerializeField] private CharacterController controller;
 
     [SerializeField] private float multiplier;
-    [SerializeField] private Action<bool> isDashing;
+    [SerializeField] public Action<bool> isDashing;
 
     private void Awake()
     {

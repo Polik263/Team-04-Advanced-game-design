@@ -17,6 +17,9 @@ public class LightDashScript : MonoBehaviour
     [SerializeField] SwordScript _sword;
     private bool _canMove;
     public int dmg;
+
+    [SerializeField] private DashScript _dashScript;
+    [SerializeField] private Collider _collider;
     
     GameObject dialogueManager;
 
@@ -28,10 +31,25 @@ public class LightDashScript : MonoBehaviour
         _sword = swordobj.GetComponent<SwordScript>();
     }
 
+    private void OnEnable()
+    {
+        _dashScript.isDashing += DisableCollider;
+    }
+    private void OnDisable()
+    {
+        _dashScript.isDashing -= DisableCollider;
+    }
+
+    //This makes sure collisions work even if you're touching the colliding object when starting the dash.
+    private void DisableCollider(bool dashState)
+    {
+        _collider.enabled = dashState;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         _canMove = player.GetComponent<PlayerController>().canMove;
-
+        
         if (_canMove == false)
         {
             if(gotLightDash == true && isInDialogue == false)
@@ -41,7 +59,7 @@ public class LightDashScript : MonoBehaviour
                 
                 }
 
-                else if (collision.rigidbody.CompareTag("Breakable Wall"))
+                else if (collision.rigidbody != null && collision.rigidbody.CompareTag("Breakable Wall"))
                 {
                     collision.gameObject.GetComponent<DashableWall>().DisableCollider();
                 }
