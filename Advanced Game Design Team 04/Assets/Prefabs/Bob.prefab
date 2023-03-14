@@ -1531,7 +1531,7 @@ GameObject:
   - component: {fileID: 7921307132585182284}
   - component: {fileID: 7921307132585182285}
   - component: {fileID: 7921307132585182282}
-  - component: {fileID: 7921307132585182286}
+  - component: {fileID: 6086235785697376759}
   - component: {fileID: 7921307132585182273}
   - component: {fileID: 1013805105418419290}
   - component: {fileID: 2078273368}
@@ -1558,7 +1558,7 @@ Transform:
   - {fileID: 5623849888209998286}
   - {fileID: 1380360539}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &7921307132585182284
 CharacterController:
@@ -1715,7 +1715,7 @@ MonoBehaviour:
   isGamepad: 0
   canMove: 1
   swordobj: {fileID: 1895247611286891868}
---- !u!114 &7921307132585182286
+--- !u!114 &6086235785697376759
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1724,9 +1724,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7921307132585182283}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8316bf58d9afd234382222a33ade8030, type: 3}
+  m_Script: {fileID: 11500000, guid: 08813d9d31ac4a44c9d13aeec44423a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 7921307132585182284}
   multiplier: 1.75
 --- !u!54 &7921307132585182273
 Rigidbody:
