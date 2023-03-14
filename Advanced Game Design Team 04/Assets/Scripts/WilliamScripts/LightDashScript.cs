@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LightDashScript : MonoBehaviour
 {
+    // DO WE NEED THIS AT ALL? Try removing component from main prefabs /William 
 
     [SerializeField] GameObject player;
     public GameObject swordobj;
