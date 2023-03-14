@@ -418,6 +418,8 @@ MonoBehaviour:
   swordobj: {fileID: 4957881588324412289}
   _sword: {fileID: 0}
   dmg: 10
+  _dashScript: {fileID: 3706049618726683284}
+  _collider: {fileID: 7884939349839908755}
   gotLightDash: 1
 --- !u!1 &3013832336707893936
 GameObject:
