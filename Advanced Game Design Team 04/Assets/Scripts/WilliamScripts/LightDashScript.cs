@@ -5,13 +5,6 @@ using UnityEngine;
 public class LightDashScript : MonoBehaviour
 {
 
-    enum DashTier
-    {
-        tierOne,
-        tierTwo,
-        tierThree
-    }
-
     [SerializeField] GameObject player;
     public GameObject swordobj;
     [SerializeField] SwordScript _sword;

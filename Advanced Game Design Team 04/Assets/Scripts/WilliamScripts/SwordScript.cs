@@ -25,6 +25,14 @@ public class SwordScript : MonoBehaviour
 
     public int currentForm = 0;
 
+    public enum SwordForm
+    {   
+        Dark,
+        Light
+    }
+
+    private SwordForm _swordState;
+
     [Header("Logistics")]
     [SerializeField] private GameObject _dialogueManagerGO;
     [SerializeField] private GameObject _reflectedBulletGO;

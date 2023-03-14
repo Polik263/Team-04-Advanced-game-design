@@ -34949,6 +34949,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!136 &841532711 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 7884939349839908755, guid: 5f72d4634eb7ee143ada90190bbd8cee, type: 3}
+  m_PrefabInstance: {fileID: 1947398881}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &856153251
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41378,7 +41383,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh89126
+  m_Name: pb_Mesh35220
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -84595,6 +84600,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 755684906304010303, guid: 5f72d4634eb7ee143ada90190bbd8cee, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3706049618726683282, guid: 5f72d4634eb7ee143ada90190bbd8cee, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -84639,6 +84648,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3706049618726683284, guid: 5f72d4634eb7ee143ada90190bbd8cee, type: 3}
+      propertyPath: _playerCollider
+      value: 
+      objectReference: {fileID: 841532711}
     - target: {fileID: 3706049618726683286, guid: 5f72d4634eb7ee143ada90190bbd8cee, type: 3}
       propertyPath: m_Name
       value: Protagonist
