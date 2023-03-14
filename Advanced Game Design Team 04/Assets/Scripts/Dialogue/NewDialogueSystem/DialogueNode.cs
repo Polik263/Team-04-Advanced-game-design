@@ -6,68 +6,74 @@ using UnityEngine.UIElements;
 using UnityEditor.UIElements;
 using UnityEditor;
 
-public class DialogueNode : Node
+namespace DS.Elements
 {
-    public string GUID;
-    public string Name;
-    public string DialogueNodeName;
-    public string DialogueText = "Sample Text";
+    using Data.Save;
 
-    public List<string> Choices { get; set; }
-
-    public bool entryPoint = false;
-
-    public void Initialize()
+    public class DialogueNode : Node
     {
-        Choices = new List<string>();
-    }
+        public string GUID;
+        public string Name;
+        public string DialogueNodeName;
+        public string DialogueText = "Sample Text";
 
-    public void Draw()
-    {
-        TextField nodeName = new TextField()
+        public List<ChoiceSaveData> Choices { get; set; }
+
+        public bool entryPoint = false;
+
+        public void Initialize()
         {
-            value = DialogueNodeName
-        };
+            Choices = new List<ChoiceSaveData>();
+        }
 
-        titleContainer.Insert(0, nodeName);
-
-        VisualElement customDataContainer = new VisualElement();
-
-        Foldout dialogueTextFoldout = new Foldout()
+        public void Draw()
         {
-            text = "Dialogue Text"
-        };
+            TextField nodeName = new TextField()
+            {
+                value = DialogueNodeName
+            };
 
-        TextField dialogueTextField = new TextField()
-        {
-            value = DialogueText
-        };
+            titleContainer.Insert(0, nodeName);
 
-        //foreach (string choice in Choices)
-        //{
-        //    Port choicePort = InstantiatePort(Orientation.Horizontal, Direction.Output, Port.Capacity.Single, typeof(bool));
+            VisualElement customDataContainer = new VisualElement();
 
-        //    choicePort.portName = choice;
+            Foldout dialogueTextFoldout = new Foldout()
+            {
+                text = "Dialogue Text"
+            };
 
-        //    Button deleteChoiceButton = new Button()
-        //    {
-        //        text = "X"
-        //    };
+            TextField dialogueTextField = new TextField()
+            {
+                value = DialogueText
+            };
 
-        //    TextField choiceTextField = new TextField()
-        //    {
-        //        value = choice
-        //    };
+            //foreach (string choice in Choices)
+            //{
+            //    Port choicePort = InstantiatePort(Orientation.Horizontal, Direction.Output, Port.Capacity.Single, typeof(bool));
 
-        //    choicePort.Add(choiceTextField);
-        //    choicePort.Add(deleteChoiceButton);
+            //    choicePort.portName = choice;
 
-        //    outputContainer.Add(choicePort);
-        //}
+            //    Button deleteChoiceButton = new Button()
+            //    {
+            //        text = "X"
+            //    };
 
-        dialogueTextFoldout.Add(dialogueTextField);
+            //    TextField choiceTextField = new TextField()
+            //    {
+            //        value = choice
+            //    };
 
-        customDataContainer.Add(dialogueTextFoldout);
-        extensionContainer.Add(customDataContainer);
+            //    choicePort.Add(choiceTextField);
+            //    choicePort.Add(deleteChoiceButton);
+
+            //    outputContainer.Add(choicePort);
+            //}
+
+            dialogueTextFoldout.Add(dialogueTextField);
+
+            customDataContainer.Add(dialogueTextFoldout);
+            extensionContainer.Add(customDataContainer);
+        }
     }
 }
+

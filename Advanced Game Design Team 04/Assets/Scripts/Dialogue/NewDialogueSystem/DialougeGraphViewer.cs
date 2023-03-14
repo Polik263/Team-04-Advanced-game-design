@@ -8,133 +8,136 @@ using UnityEngine.UIElements;
 using UnityEditor.UIElements;
 using UnityEditor;
 
-public class DialogueGraphViewer : GraphView
+namespace DS.Elements
 {
-    private readonly Vector2 _defaultNodeSize = new Vector2(150, 200);
-
-    public DialogueGraphViewer()
+    public class DialogueGraphViewer : GraphView
     {
-        SetupZoom(ContentZoomer.DefaultMinScale, ContentZoomer.DefaultMaxScale);
+        private readonly Vector2 _defaultNodeSize = new Vector2(150, 200);
 
-        this.AddManipulator(new ContentDragger());
-        this.AddManipulator(new SelectionDragger());
-        this.AddManipulator(new ContentDragger());
-
-        AddElement(GenerateEntryPointNode());
-    }
-
-    public void CreateNode(string nodeName)
-    {
-        AddElement(CreateDialogueNode(nodeName));
-    }
-
-    private Port GeneratePort(DialogueNode node, Direction portDirection, Port.Capacity capacity = Port.Capacity.Single)
-    {
-        return node.InstantiatePort(Orientation.Horizontal, portDirection, capacity, typeof(bool));
-    }
-
-    public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter)
-    {
-        var compatiblePorts = new List<Port>();
-        ports.ForEach(port => { if (startPort != port && startPort.node != port.node) { compatiblePorts.Add(port); } });
-
-        return compatiblePorts;
-    }
-
-    private DialogueNode GenerateEntryPointNode()
-    {
-        var node = new DialogueNode
+        public DialogueGraphViewer()
         {
-            title = "START",
-            GUID = Guid.NewGuid().ToString(),
-            DialogueNodeName = "ENTRYPOINT",
-            entryPoint = true
-        };
+            SetupZoom(ContentZoomer.DefaultMinScale, ContentZoomer.DefaultMaxScale);
 
-        var generatedPort = GeneratePort(node, Direction.Output);
-        generatedPort.portName = "Next Entry";
-        node.outputContainer.Add(generatedPort);
+            this.AddManipulator(new ContentDragger());
+            this.AddManipulator(new SelectionDragger());
+            this.AddManipulator(new ContentDragger());
 
-        node.RefreshExpandedState();
-        node.RefreshPorts();
+            AddElement(GenerateEntryPointNode());
+        }
 
-        var button = new Button(() => { AddChoicePort(node, null); });
-
-        node.SetPosition(new Rect(100, 200, 100, 150));
-        return node;
-    }
-
-    private void AddChoicePort(DialogueNode dialogueNode, string overriddenPortName)
-    {
-        var generatedPort = GeneratePort(dialogueNode, Direction.Output);
-
-        var outputPortCount = dialogueNode.outputContainer.Query("connector").ToList().Count;
-
-        var choicePortName = string.IsNullOrEmpty(overriddenPortName) ? $"Choice {outputPortCount}" : overriddenPortName;
-
-        Foldout choiceFoldout = new Foldout()
+        public void CreateNode(string nodeName)
         {
-            text = $"Choice Text {outputPortCount}"
-        };
+            AddElement(CreateDialogueNode(nodeName));
+        }
 
-        var textField = new TextField
+        private Port GeneratePort(DialogueNode node, Direction portDirection, Port.Capacity capacity = Port.Capacity.Single)
         {
-            name = string.Empty,
-            value = choicePortName
-        };
+            return node.InstantiatePort(Orientation.Horizontal, portDirection, capacity, typeof(bool));
+        }
 
-        var deleteButton = new Button(() => RemovePort(dialogueNode, generatedPort))
+        public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter)
         {
-            text = "X"
-        };
+            var compatiblePorts = new List<Port>();
+            ports.ForEach(port => { if (startPort != port && startPort.node != port.node) { compatiblePorts.Add(port); } });
 
-        textField.RegisterValueChangedCallback(evt => generatedPort.portName = evt.newValue);
+            return compatiblePorts;
+        }
 
-        choiceFoldout.Add(textField);
-        VisualElement customDataContainer = new VisualElement();
-
-        customDataContainer.Add(choiceFoldout);
-        dialogueNode.extensionContainer.Add(customDataContainer);
-
-        generatedPort.contentContainer.Add(new Label(""));
-        //generatedPort.contentContainer.Add(textField);
-        generatedPort.contentContainer.Add(deleteButton);
-        generatedPort.portName = choicePortName; 
-
-        dialogueNode.outputContainer.Add(generatedPort);
-        dialogueNode.RefreshPorts();
-        dialogueNode.RefreshExpandedState();
-    }
-
-    private void RemovePort(DialogueNode dialogueNode, Port generatedPort)
-    {
-        throw new NotImplementedException();
-    }
-
-    public DialogueNode CreateDialogueNode(string nodeName)
-    {
-        var dialogueNode = new DialogueNode
+        private DialogueNode GenerateEntryPointNode()
         {
-            Name = nodeName,
-            DialogueNodeName = nodeName,
-            GUID = Guid.NewGuid().ToString()
-        };
+            var node = new DialogueNode
+            {
+                title = "START",
+                GUID = Guid.NewGuid().ToString(),
+                DialogueNodeName = "ENTRYPOINT",
+                entryPoint = true
+            };
 
-        var inputPort = GeneratePort(dialogueNode, Direction.Input, Port.Capacity.Multi);
-        inputPort.portName = "Input";
+            var generatedPort = GeneratePort(node, Direction.Output);
+            generatedPort.portName = "Entry Point Node";
+            node.outputContainer.Add(generatedPort);
 
-        var button = new Button(() => { AddChoicePort(dialogueNode, null); });
-        button.text = "Add New Choice";
-        dialogueNode.titleContainer.Add(button);
+            node.RefreshExpandedState();
+            node.RefreshPorts();
 
-        dialogueNode.Initialize();
-        dialogueNode.Draw();
+            var button = new Button(() => { AddChoicePort(node, null); });
 
-        dialogueNode.inputContainer.Add(inputPort);
-        dialogueNode.RefreshExpandedState();
-        dialogueNode.RefreshPorts();
-        dialogueNode.SetPosition(new Rect(Vector2.zero, _defaultNodeSize));
+            node.SetPosition(new Rect(100, 200, 100, 150));
+            return node;
+        }
 
-        return dialogueNode;
+        private void AddChoicePort(DialogueNode dialogueNode, string overriddenPortName)
+        {
+            var generatedPort = GeneratePort(dialogueNode, Direction.Output);
+
+            var outputPortCount = dialogueNode.outputContainer.Query("connector").ToList().Count;
+
+            var choicePortName = string.IsNullOrEmpty(overriddenPortName) ? $"Choice {outputPortCount}" : overriddenPortName;
+
+            Foldout choiceFoldout = new Foldout()
+            {
+                text = $"Choice Text {outputPortCount}"
+            };
+
+            var textField = new TextField
+            {
+                name = string.Empty,
+                value = choicePortName
+            };
+
+            var deleteButton = new Button(() => RemovePort(dialogueNode, generatedPort))
+            {
+                text = "X"
+            };
+
+            textField.RegisterValueChangedCallback(evt => generatedPort.portName = evt.newValue);
+
+            choiceFoldout.Add(textField);
+            VisualElement customDataContainer = new VisualElement();
+
+            customDataContainer.Add(choiceFoldout);
+            dialogueNode.extensionContainer.Add(customDataContainer);
+
+            generatedPort.contentContainer.Add(new Label(""));
+            //generatedPort.contentContainer.Add(textField);
+            generatedPort.contentContainer.Add(deleteButton);
+            generatedPort.portName = choicePortName;
+
+            dialogueNode.outputContainer.Add(generatedPort);
+            dialogueNode.RefreshPorts();
+            dialogueNode.RefreshExpandedState();
+        }
+
+        private void RemovePort(DialogueNode dialogueNode, Port generatedPort)
+        {
+            throw new NotImplementedException();
+        }
+
+        public DialogueNode CreateDialogueNode(string nodeName)
+        {
+            var dialogueNode = new DialogueNode
+            {
+                Name = nodeName,
+                DialogueNodeName = nodeName,
+                GUID = Guid.NewGuid().ToString()
+            };
+
+            var inputPort = GeneratePort(dialogueNode, Direction.Input, Port.Capacity.Multi);
+            inputPort.portName = "Input";
+
+            var button = new Button(() => { AddChoicePort(dialogueNode, null); });
+            button.text = "Add New Choice";
+            dialogueNode.titleContainer.Add(button);
+
+            dialogueNode.Initialize();
+            dialogueNode.Draw();
+
+            dialogueNode.inputContainer.Add(inputPort);
+            dialogueNode.RefreshExpandedState();
+            dialogueNode.RefreshPorts();
+            dialogueNode.SetPosition(new Rect(Vector2.zero, _defaultNodeSize));
+
+            return dialogueNode;
+        }
     }
 }
