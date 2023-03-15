@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SwordScript : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class SwordScript : MonoBehaviour
     [SerializeField] private PlayerHealth _playerHealth;
     [SerializeField] private BoxCollider _weaponHitbox;
     [SerializeField] private LayerMask _enemyLayers;
+    [SerializeField] private PlayerInput _input;
 
     List<GameObject> targetsHit = new List<GameObject>();
 
@@ -66,6 +68,8 @@ public class SwordScript : MonoBehaviour
         {
             Instance = this;
         }
+
+        _input = GetComponentInParent<PlayerInput>();
     }
 
     void Start()
@@ -75,10 +79,23 @@ public class SwordScript : MonoBehaviour
         _playerHealth = GetComponentInParent<PlayerHealth>();
         _animator = _swordGO.GetComponent<Animator>();
         _weaponHitbox = gameObject.GetComponent<BoxCollider>();
+        
 
         _currentCooldown = _cooldown;
         _currentAttackCooldown = _attackCooldown;
         _currentParryCooldown = _parryCooldown;
+    }
+    private void OnEnable()
+    {
+        _input.actions.FindAction("Shotgun").started += Attack;
+        _input.actions.FindAction("LongerAttack").started += LongerAttack;
+        _input.actions.FindAction("SwitchForm").started += SwitchForm;
+    }
+    private void OnDisable()
+    {
+        _input.actions.FindAction("Shotgun").started -= Attack;
+        _input.actions.FindAction("LongerAttack").started -= Attack;
+        _input.actions.FindAction("SwitchForm").started -= SwitchForm;
     }
 
     void Update()
@@ -122,7 +139,7 @@ public class SwordScript : MonoBehaviour
         }
     }
 
-    public void Attack()
+    public void Attack(InputAction.CallbackContext context)
     {
         DialogueManagerScript.Instance.Event1();
 
@@ -145,7 +162,7 @@ public class SwordScript : MonoBehaviour
         }
     }
 
-    public void LongerAttack()
+    public void LongerAttack(InputAction.CallbackContext context)
     {
         if (_coolingDown == false)
         {
@@ -222,8 +239,9 @@ public class SwordScript : MonoBehaviour
     }
 
 
-    public void SwitchForm()
+    public void SwitchForm(InputAction.CallbackContext context)
     {
+        currentForm = 1 - currentForm;
         if (currentForm == 0)
         {
             _animator.Play("ToDark");

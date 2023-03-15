@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SlamScript : MonoBehaviour
 {
 
     [SerializeField] private float _slamCooldown;
-    private float _currentCooldown;
+    private float _lastUseTime;
 
     [SerializeField] private Animator animator;
 
-    [SerializeField] public bool isCoolingDown = false;
+    public bool isCoolingDown { get { return Time.time <= _lastUseTime + _slamCooldown; } }
     [SerializeField] public bool slamInitiated;
     [SerializeField] public bool slamEnding;
 
@@ -18,27 +19,22 @@ public class SlamScript : MonoBehaviour
 
     [SerializeField] public int _selfDamage;
 
+    [SerializeField] private PlayerInput _input;
+
     private void Awake()
     {
         playerHealth = GetComponent<PlayerHealth>();
         animator = GetComponent<Animator>();
+        _input = GetComponentInParent<PlayerInput>();
     }
-    void Start()
+    private void OnEnable()
     {
-        _currentCooldown = _slamCooldown;
+        _lastUseTime = Time.time;
+        _input.actions.FindAction("Slam").started += LeapSlam;
     }
-
-    void Update()
+    private void OnDisable()
     {
-        if(isCoolingDown == true)
-        {
-            _currentCooldown -= Time.deltaTime;
-            if(_currentCooldown <= 0)
-            {
-               isCoolingDown = false;
-               _currentCooldown = _slamCooldown;
-            }
-        }
+        _input.actions.FindAction("Slam").started -= LeapSlam;
     }
 
     public void EndLeap()
@@ -55,17 +51,23 @@ public class SlamScript : MonoBehaviour
             playerHealth.TakeDamage(_selfDamage);
         }
     }
-    public void LeapSlam()
+    public void LeapSlam(InputAction.CallbackContext context)
     {
-        if(isCoolingDown == false)
+        if(!isCoolingDown && SwordScript.Instance.currentForm == 0 && !DialogueManagerScript.Instance.isInDialogue)
         {
             PlayerController.Instance.busy = true;
-            isCoolingDown = true;
+            PlayerController.Instance.canMove = false;
+
+            slamInitiated = true;
+            slamEnding = false;
+            _lastUseTime = Time.time;
+
             animator.Play("LeapSlam");
             AudioManager.Instance.PlaySFX("Jump");
         }   
     }
 
+    //This method is called by the Animator when the LeapSlam animation ends.
     public void AnimationFinished()
     {
         slamEnding = true;
