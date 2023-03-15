@@ -183,7 +183,6 @@ public class SwordScript : MonoBehaviour
 
         if (gotDarkExtension)
         {
-            Debug.Log("AlsoHere");
             _damage = _extensionDamage;
             _weaponHitbox.size = ExtensionHitbox;
             _weaponHitbox.center = ExtentionCenter;
@@ -193,7 +192,6 @@ public class SwordScript : MonoBehaviour
         }
         else
         {
-            Debug.Log("Here");
             _damage = _normaldmg;
             _weaponHitbox.size = startHitbox;
             _weaponHitbox.center = startCenter;
@@ -204,48 +202,50 @@ public class SwordScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        if (_attackCoolingDown)
+        if (!_attackCoolingDown) { return; }
+
+        switch (CurrentSwordState)
         {
-            if (CurrentSwordState == SwordState.Light)
-            {
-                if (collider.gameObject.layer == LayerMask.NameToLayer("Bullet"))
+            case SwordState.Light:
+                if (collider.gameObject.layer != LayerMask.NameToLayer("Bullet")) { return; }
+
+                if (gotReflect)
                 {
-                    if (true && gotReflect == true)
-                    {
-                        var BulletSpawn = _bulletSpawnPosition;
+                    var BulletSpawn = _bulletSpawnPosition;
 
-                        _reflectedBulletGO = collider.gameObject;
-                        _reflectedBulletGO.transform.position = _playerGO.transform.position + _bulletSpawnPosition;
+                    _reflectedBulletGO = collider.gameObject;
+                    _reflectedBulletGO.transform.position = _playerGO.transform.position + _bulletSpawnPosition;
 
-                        Instantiate(hitParticles, collider.transform.position, collider.transform.rotation);
-                        Instantiate(_reflectedBulletGO, BulletSpawn, new Quaternion());
-                    }
-                    Destroy(collider.gameObject);
-                    _playerHealth.Heal(5);
-                    AudioManager.Instance.PlaySFX("Heal");
+                    Instantiate(hitParticles, collider.transform.position, collider.transform.rotation);
+                    Instantiate(_reflectedBulletGO, BulletSpawn, new Quaternion());
                 }
-            }
-            if (CurrentSwordState == SwordState.Dark && gotDamage == true)
-            {
-                if (collider.gameObject.layer == LayerMask.NameToLayer("EnemyHit") && _attackCoolingDown == true)
+
+                Destroy(collider.gameObject);
+                _playerHealth.Heal(5);
+                AudioManager.Instance.PlaySFX("Heal");
+
+                break;
+
+            case SwordState.Dark:
+                if (!gotDamage || !_attackCoolingDown || collider.gameObject.layer != LayerMask.NameToLayer("EnemyHit")) { return; }
+
+                if (!targetsHit.Contains(collider.gameObject))
                 {
-                    if (!targetsHit.Contains(collider.gameObject))
-                    {
-                        collider.gameObject.GetComponent<DmgEnemy>().Damage(_damage);
-                        targetsHit.Add(collider.gameObject);
-                    }
-
-                    if (_playerHealth.currentHealth <= _selfDamage)
-                    {
-                        _playerHealth.currentHealth = 1;
-                    }
-                    else if(canTakeDamage == true)
-                    {
-                        _playerHealth.TakeDamage(_selfDamage);
-                        StartCoroutine(TakeDamange());
-                    }  
+                    collider.gameObject.GetComponent<DmgEnemy>().Damage(_damage);
+                    targetsHit.Add(collider.gameObject);
                 }
-            }
+
+                if (_playerHealth.currentHealth <= _selfDamage)
+                {
+                    _playerHealth.currentHealth = 1;
+                }
+                else if (canTakeDamage == true)
+                {
+                    _playerHealth.TakeDamage(_selfDamage);
+                    StartCoroutine(TakeDamage());
+                }
+
+                break;
         }
     }
 
@@ -274,7 +274,7 @@ public class SwordScript : MonoBehaviour
         }
     }
 
-    IEnumerator TakeDamange()
+    IEnumerator TakeDamage()
     {
         canTakeDamage = false;
         yield return new WaitForSeconds(0.4f);
