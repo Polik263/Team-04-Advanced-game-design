@@ -5,6 +5,12 @@ using UnityEngine.InputSystem;
 
 public class SwordScript : MonoBehaviour
 {
+    public enum SwordState
+    {
+        Dark = 0,
+        Light = 1
+    }
+
     public static SwordScript Instance;
 
     [Header("Attributes")]
@@ -24,7 +30,7 @@ public class SwordScript : MonoBehaviour
     [SerializeField] private int _normaldmg = 20;
     [SerializeField] private int _conedmg = 10;
 
-    public int currentForm = 0;
+    public SwordState CurrentSwordState = SwordState.Dark;
 
     [Header("Logistics")]
     [SerializeField] private GameObject _dialogueManagerGO;
@@ -150,44 +156,49 @@ public class SwordScript : MonoBehaviour
             _attackCoolingDown = true;
             _weaponHitbox.size = startHitbox;
             _weaponHitbox.center = startCenter;
-            if (currentForm == 0)
+
+            switch(CurrentSwordState)
             {
-                _damage = _conedmg;
-                _animator.Play("DarkFrontal");
-            }
-            if (currentForm == 1)
-            {
-                _animator.Play("DarkSwing");
+                case SwordState.Dark:
+                    _damage = _conedmg;
+                    _animator.Play("DarkFrontal");
+                    break;
+                case SwordState.Light:
+                    _animator.Play("DarkSwing");
+                    break;
             }
         }
     }
 
     public void LongerAttack(InputAction.CallbackContext context)
     {
-        if (_coolingDown == false)
+        if (CurrentSwordState == SwordState.Light || _coolingDown)
         {
-           _weaponHitbox.enabled = true;
-           _coolingDown = true;
-           _attackCoolingDown = true;
-                    
-           if (currentForm == 0)
-           {
-              if (gotDarkExtension == true)
-              {
-                  _weaponHitbox.size = ExtensionHitbox;
-                  _weaponHitbox.center = ExtentionCenter;
-                  _animator.Play("Slapping");
-                  _parryCoolingDown = true;
-                  AudioManager.Instance.PlaySFX("Dark Attack");
-                  _damage = _extensionDamage;
-              }
-              else
-              {
-                  _animator.Play("Slapping");
-                  _damage = _normaldmg;     
-              }
-           }
-        }        
+            return;
+        }
+
+        _weaponHitbox.enabled = true;
+        _coolingDown = true;
+        _attackCoolingDown = true;
+
+        if (gotDarkExtension)
+        {
+            Debug.Log("AlsoHere");
+            _damage = _extensionDamage;
+            _weaponHitbox.size = ExtensionHitbox;
+            _weaponHitbox.center = ExtentionCenter;
+            _animator.Play("Slapping");
+            _parryCoolingDown = true;
+            AudioManager.Instance.PlaySFX("Dark Attack");
+        }
+        else
+        {
+            Debug.Log("Here");
+            _damage = _normaldmg;
+            _weaponHitbox.size = startHitbox;
+            _weaponHitbox.center = startCenter;
+            _animator.Play("Slapping");
+        }
     }
 
 
@@ -195,7 +206,7 @@ public class SwordScript : MonoBehaviour
     {
         if (_attackCoolingDown)
         {
-            if (currentForm == 1)
+            if (CurrentSwordState == SwordState.Light)
             {
                 if (collider.gameObject.layer == LayerMask.NameToLayer("Bullet"))
                 {
@@ -214,7 +225,7 @@ public class SwordScript : MonoBehaviour
                     AudioManager.Instance.PlaySFX("Heal");
                 }
             }
-            if (currentForm == 0 && gotDamage == true)
+            if (CurrentSwordState == SwordState.Dark && gotDamage == true)
             {
                 if (collider.gameObject.layer == LayerMask.NameToLayer("EnemyHit") && _attackCoolingDown == true)
                 {
@@ -241,22 +252,25 @@ public class SwordScript : MonoBehaviour
 
     public void SwitchForm(InputAction.CallbackContext context)
     {
-        currentForm = 1 - currentForm;
-        if (currentForm == 0)
+        switch(CurrentSwordState)
         {
-            _animator.Play("ToDark");
-        }
-        else if (currentForm == 1)
-        {
-            _animator.Play("ToLight");
-            float setpos = 0.14f;
-            setpos -= Time.deltaTime;
+            case SwordState.Dark:
+                CurrentSwordState = SwordState.Light;
+                _animator.Play("ToLight");
 
-            if (setpos <= 0)
-            {
-                Quaternion _playerRotation = Quaternion.Euler(39.396f, 27.271f, -1.9f);
-                gameObject.transform.rotation = _playerRotation;
-            }
+                float setpos = 0.14f;
+                setpos -= Time.deltaTime;
+                if (setpos <= 0)
+                {
+                    Quaternion _playerRotation = Quaternion.Euler(39.396f, 27.271f, -1.9f);
+                    gameObject.transform.rotation = _playerRotation;
+                }
+
+                break;
+            case SwordState.Light:
+                CurrentSwordState = SwordState.Dark;
+                _animator.Play("ToDark");
+                break;
         }
     }
 

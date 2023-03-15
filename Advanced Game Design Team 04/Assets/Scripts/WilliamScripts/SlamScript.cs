@@ -53,7 +53,7 @@ public class SlamScript : MonoBehaviour
     }
     public void LeapSlam(InputAction.CallbackContext context)
     {
-        if(!isCoolingDown && SwordScript.Instance.currentForm == 0 && !DialogueManagerScript.Instance.isInDialogue)
+        if(!isCoolingDown && SwordScript.Instance.CurrentSwordState == SwordScript.SwordState.Dark && !DialogueManagerScript.Instance.isInDialogue)
         {
             PlayerController.Instance.busy = true;
             PlayerController.Instance.canMove = false;

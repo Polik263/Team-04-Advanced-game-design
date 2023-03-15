@@ -22,7 +22,7 @@ public class DashScript : MonoBehaviour
         AudioManager.Instance.PlaySFX("Dash");
         PlayerController.Instance.canMove = false;
 
-        if (SwordScript.Instance.currentForm == 1 && PlayerController.Instance.gotLightDash == true)
+        if (SwordScript.Instance.CurrentSwordState == SwordScript.SwordState.Light && PlayerController.Instance.gotLightDash == true)
         {
             multiplier = 1.75f;
         }
