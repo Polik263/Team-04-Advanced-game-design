@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 5
   MoveSpeed: 20
-  Acceleration: 10
-  TurnSpeed: 180
+  Acceleration: 50
+  TurnSpeed: 500
   DetectionRadius: 20
-  DetectionAngle: 360
+  DetectionAngle: 120
   AttackSpeed: 1
   AttackDamage: 3
   AttackRange: 10
