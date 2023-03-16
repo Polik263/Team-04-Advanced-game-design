@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94e71c32d8f94aa2a56279e6a9b7da1e, type: 3}
   m_Name: ReachedTargetDecision
   m_EditorClassIdentifier: 
+  reachedTargetDistance: 5

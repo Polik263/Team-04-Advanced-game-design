@@ -6,7 +6,6 @@ namespace Enemy.AI.Actions
     public class ChaseAction : EnemyAction
     {
         
-        [SerializeField] private Transform target;
         
         public override void Act(EnemyStateController controller)
         {
@@ -16,18 +15,11 @@ namespace Enemy.AI.Actions
         
         private void Chase(EnemyStateController controller)
         {
-            if (controller.Target is not null)
-            {
-                var direction = controller.Target.position - controller.transform.position;
-                controller.Movement.Move(direction, controller.Stats.MoveSpeed);
-            }
-            else
-            {
-                var direction = controller.targetPosition - controller.transform.position;
-                controller.Movement.Move(direction, controller.Stats.MoveSpeed);
-            }
+            controller.StateVectorVariable = controller.Target.position;
+            controller.ResetOnTransition = false;
+            if (controller.Movement.HasPath()) return;
             
-            
+            controller.Movement.SetDestination(controller.Target.position);
         }
     }
 }
