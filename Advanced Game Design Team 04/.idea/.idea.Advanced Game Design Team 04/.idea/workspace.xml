@@ -1,42 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="732fe82d-0d0c-4a5a-9204-b047688c1f20" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Johan.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Johan/NavMesh.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Johan/NavMesh.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/StopMovingAction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/StopMovingAction.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decision/TargetDetectedDecision.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/FieldOfView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/FieldOfView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ScriptableObjects/AI/Actions/StopMovingAction.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ScriptableObjects/AI/Actions/StopMovingAction.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Advanced Game Design Team 04/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Advanced Game Design Team 04/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Johan.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Johan.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/AttackAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/AttackAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/ChaseAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/ChaseAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/GetRandomMoveLocationAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/GetRandomMoveLocationAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/MoveToTargetAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/MoveToTargetAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decision/AttackDecision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decision/AttackDecision.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decision/ReachedTargetDecision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decision/ReachedTargetDecision.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decision/TargetInRangeDecision.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decision/TargetInRangeDecision.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decision/TargetDetectedDecision.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/EnemyStateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/EnemyStateController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyStats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/ScriptableObjects/AI/Decisions/InAttackRangeDecision.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ScriptableObjects/AI/Decisions/CanAttackDecision.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/ScriptableObjects/AI/Decisions/InAttackRangeDecision.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ScriptableObjects/AI/Decisions/CanAttackDecision.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/ScriptableObjects/AI/Decisions/ReachedTargetDecision.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ScriptableObjects/AI/Decisions/ReachedTargetDecision.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/ScriptableObjects/AI/Decisions/TargetInRangeDecision.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ScriptableObjects/AI/Decisions/TargetDetectedDecision.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/ScriptableObjects/AI/Decisions/TargetInRangeDecision.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ScriptableObjects/AI/Decisions/TargetDetectedDecision.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/ScriptableObjects/AI/States/AttackState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ScriptableObjects/AI/States/AttackState.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/ScriptableObjects/AI/States/ChaseState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ScriptableObjects/AI/States/ChaseState.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/ScriptableObjects/EnemyBasicStats.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ScriptableObjects/EnemyBasicStats.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
-    </list>
+    <list default="true" id="732fe82d-0d0c-4a5a-9204-b047688c1f20" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -130,8 +95,16 @@
       <updated>1669729199939</updated>
       <workItem from="1669729203976" duration="8000" />
       <workItem from="1678885637251" duration="101000" />
-      <workItem from="1678885805110" duration="15489000" />
+      <workItem from="1678885805110" duration="15530000" />
     </task>
+    <task id="LOCAL-00001" summary="Reworked Enemy AI move system to Unity navmesh navigation">
+      <created>1678985035266</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678985035266</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,5 +126,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Reworked Enemy AI move system to Unity navmesh navigation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reworked Enemy AI move system to Unity navmesh navigation" />
   </component>
 </project>
