@@ -31,6 +31,9 @@ namespace Enemy.AI
 
         [Header("Debug")]
         public bool DebugModeOn;
+        [SerializeField] private bool _displayPath;
+        [SerializeField] private bool _displayPathDestination;
+
 
         private void Awake()
         {
@@ -111,12 +114,28 @@ namespace Enemy.AI
         }
 
 
-        private void OnDrawGizmos()
+        private void OnDrawGizmosSelected()
         {
             if (!DebugModeOn) return;
-            if (StateVectorVariable == null) return;
-            Gizmos.color = Color.blue;
-            Gizmos.DrawWireSphere(StateVectorVariable.Value, .5f);
+            if(_displayPathDestination)
+                DisplayPathDestination();
+            if(_displayPath)
+                DisplayPath();
         }
-    }
+
+        private void DisplayPath()
+        {
+            Gizmos.color = Color.green;
+            var path = Movement.GetPath();
+            for (var i = 0; i < path.corners.Length - 1; i++)
+            {
+                Gizmos.DrawLine(path.corners[i], path.corners[i + 1]);
+            }
+        }
+
+        private void DisplayPathDestination()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawSphere(Movement.GetPathDestination(), 0.5f);
+        }    }
 }

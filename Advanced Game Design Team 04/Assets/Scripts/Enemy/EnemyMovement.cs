@@ -8,7 +8,7 @@ public class EnemyMovement : MonoBehaviour
         [SerializeField] private float _gravity = -9.81f;
         private NavMeshAgent _agent;
         private Vector3 _enemyVelocity;
-
+        
         private void Awake()
         {
             _agent = GetComponent<NavMeshAgent>();
@@ -35,6 +35,26 @@ public class EnemyMovement : MonoBehaviour
         public bool HasPath()
         {
             return _agent.hasPath;
+        }
+        
+        public NavMeshPathStatus GetPathStatus()
+        {
+            return _agent.pathStatus;
+        }
+        
+        public NavMeshPath GetPath()
+        {
+            return _agent.path;
+        }
+        
+        public Vector3 GetPathDestination()
+        {
+            return _agent.pathEndPosition;
+        }
+        
+        public void Stop()
+        {
+            _agent.isStopped = true;
         }
         
         public void CalculateNewPath(EnemyStateController controller, Vector3 targetPosition)
@@ -84,5 +104,6 @@ public class EnemyMovement : MonoBehaviour
         {
             return Vector3.Distance(controller.transform.position, _agent.pathEndPosition);
         }
+
 
     }

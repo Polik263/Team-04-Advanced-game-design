@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="732fe82d-0d0c-4a5a-9204-b047688c1f20" name="Changes" comment="" />
+    <list default="true" id="732fe82d-0d0c-4a5a-9204-b047688c1f20" name="Changes" comment="Navmesh baked for Johan Scene">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Advanced Game Design Team 04/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Advanced Game Design Team 04/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Johan.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Johan.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/EnemyStateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/EnemyStateController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyStats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/FieldOfView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/FieldOfView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/ScriptableObjects/EnemyBasicStats.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ScriptableObjects/EnemyBasicStats.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +21,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8bac1b1eb804407b9109a1207ae3a1aa1aa00/6c/92635e11/CharacterController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8a522b806eac9bb894e6e4c5fe87f353457535e769447e79c6b396beecb5d0/System.Threading.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Johan/RiderProjects/Project LIARK/Advanced Game Design Team 04/Assets/Scripts/Enemy/AI/Actions/AttackAction.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Johan/RiderProjects/Project LIARK/Advanced Game Design Team 04/Assets/Scenes/Johan/NavMesh.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@13.1.8/Runtime/Debugging/DebugUpdater.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@13.1.8/Runtime/UniversalAdditionalCameraData.cs" root0="SKIP_HIGHLIGHTING" />
@@ -96,6 +104,7 @@
       <workItem from="1669729203976" duration="8000" />
       <workItem from="1678885637251" duration="101000" />
       <workItem from="1678885805110" duration="15530000" />
+      <workItem from="1678985088911" duration="1152000" />
     </task>
     <task id="LOCAL-00001" summary="Reworked Enemy AI move system to Unity navmesh navigation">
       <created>1678985035266</created>
@@ -104,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678985035266</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Navmesh baked for Johan Scene">
+      <created>1678985141251</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678985141251</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +143,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Reworked Enemy AI move system to Unity navmesh navigation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reworked Enemy AI move system to Unity navmesh navigation" />
+    <MESSAGE value="Navmesh baked for Johan Scene" />
+    <option name="LAST_COMMIT_MESSAGE" value="Navmesh baked for Johan Scene" />
   </component>
 </project>

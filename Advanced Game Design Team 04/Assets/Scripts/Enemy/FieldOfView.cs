@@ -48,10 +48,11 @@ namespace Enemy
         private void UpdateTargetsInView()
         {
             _targetsInViewRadius.Clear();
-            var targets = GetTargetsInRange();
+            var targets = GetCollidersInRange();
 
             foreach (var targetCol in targets)
             {
+                if(targetCol.gameObject == gameObject) continue;
                 var target = targetCol.transform;
                 var dirToTarget = (target.position - transform.position).normalized;
                 if (!(Vector3.Angle(transform.forward, dirToTarget) < _viewAngle / 2)) continue;
@@ -64,7 +65,7 @@ namespace Enemy
             }
         }
 
-        private Collider[] GetTargetsInRange()
+        private Collider[] GetCollidersInRange()
         {
             return Physics.OverlapSphere(transform.position, _viewRadius, _targetMask);
         }
