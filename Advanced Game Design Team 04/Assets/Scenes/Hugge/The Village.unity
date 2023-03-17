@@ -20316,7 +20316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  targetOffset: {x: 0, y: 15, z: -8}
+  targetOffset: {x: 0, y: 15, z: -9.5}
   movementSpeed: 5
 --- !u!114 &314689482
 MonoBehaviour:
