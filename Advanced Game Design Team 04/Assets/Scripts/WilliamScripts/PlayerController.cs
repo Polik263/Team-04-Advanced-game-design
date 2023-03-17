@@ -59,6 +59,7 @@ public class PlayerController : MonoBehaviour
     public bool gotLightDash;
     public bool gotDamage;
     public bool gotDarkExtension;
+    public bool gotDash;
 
     [Header("Stats and Attributes")]
 
