@@ -1,9 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SwordScript : MonoBehaviour
 {
+    public enum SwordState
+    {
+        Dark = 0,
+        Light = 1
+    }
+
     public static SwordScript Instance;
 
     [Header("Attributes")]
@@ -23,7 +30,7 @@ public class SwordScript : MonoBehaviour
     [SerializeField] private int _normaldmg = 20;
     [SerializeField] private int _conedmg = 10;
 
-    public int currentForm = 0;
+    public SwordState CurrentSwordState = SwordState.Dark;
 
     public enum SwordForm
     {   
@@ -42,6 +49,7 @@ public class SwordScript : MonoBehaviour
     [SerializeField] private PlayerHealth _playerHealth;
     [SerializeField] private BoxCollider _weaponHitbox;
     [SerializeField] private LayerMask _enemyLayers;
+    [SerializeField] private PlayerInput _input;
 
     List<GameObject> targetsHit = new List<GameObject>();
 
@@ -74,6 +82,8 @@ public class SwordScript : MonoBehaviour
         {
             Instance = this;
         }
+
+        _input = GetComponentInParent<PlayerInput>();
     }
 
     void Start()
@@ -83,10 +93,23 @@ public class SwordScript : MonoBehaviour
         _playerHealth = GetComponentInParent<PlayerHealth>();
         _animator = _swordGO.GetComponent<Animator>();
         _weaponHitbox = gameObject.GetComponent<BoxCollider>();
+        
 
         _currentCooldown = _cooldown;
         _currentAttackCooldown = _attackCooldown;
         _currentParryCooldown = _parryCooldown;
+    }
+    private void OnEnable()
+    {
+        _input.actions.FindAction("Shotgun").started += Attack;
+        _input.actions.FindAction("LongerAttack").started += LongerAttack;
+        _input.actions.FindAction("SwitchForm").started += SwitchForm;
+    }
+    private void OnDisable()
+    {
+        _input.actions.FindAction("Shotgun").started -= Attack;
+        _input.actions.FindAction("LongerAttack").started -= Attack;
+        _input.actions.FindAction("SwitchForm").started -= SwitchForm;
     }
 
     void Update()
@@ -130,7 +153,7 @@ public class SwordScript : MonoBehaviour
         }
     }
 
-    public void Attack()
+    public void Attack(InputAction.CallbackContext context)
     {
         DialogueManagerScript.Instance.Event1();
 
@@ -141,116 +164,125 @@ public class SwordScript : MonoBehaviour
             _attackCoolingDown = true;
             _weaponHitbox.size = startHitbox;
             _weaponHitbox.center = startCenter;
-            if (currentForm == 0)
+
+            switch(CurrentSwordState)
             {
-                _damage = _conedmg;
-                _animator.Play("DarkFrontal");
-            }
-            if (currentForm == 1)
-            {
-                _animator.Play("DarkSwing");
+                case SwordState.Dark:
+                    _damage = _conedmg;
+                    _animator.Play("DarkFrontal");
+                    break;
+                case SwordState.Light:
+                    _animator.Play("DarkSwing");
+                    break;
             }
         }
     }
 
-    public void LongerAttack()
+    public void LongerAttack(InputAction.CallbackContext context)
     {
-        if (_coolingDown == false)
+        if (CurrentSwordState == SwordState.Light || _coolingDown)
         {
-           _weaponHitbox.enabled = true;
-           _coolingDown = true;
-           _attackCoolingDown = true;
-                    
-           if (currentForm == 0)
-           {
-              if (gotDarkExtension == true)
-              {
-                  _weaponHitbox.size = ExtensionHitbox;
-                  _weaponHitbox.center = ExtentionCenter;
-                  _animator.Play("Slapping");
-                  _parryCoolingDown = true;
-                  AudioManager.Instance.PlaySFX("Dark Attack");
-                  _damage = _extensionDamage;
-              }
-              else
-              {
-                  _animator.Play("Slapping");
-                  _damage = _normaldmg;     
-              }
-           }
-        }        
+            return;
+        }
+
+        _weaponHitbox.enabled = true;
+        _coolingDown = true;
+        _attackCoolingDown = true;
+
+        if (gotDarkExtension)
+        {
+            _damage = _extensionDamage;
+            _weaponHitbox.size = ExtensionHitbox;
+            _weaponHitbox.center = ExtentionCenter;
+            _animator.Play("Slapping");
+            _parryCoolingDown = true;
+            AudioManager.Instance.PlaySFX("Dark Attack");
+        }
+        else
+        {
+            _damage = _normaldmg;
+            _weaponHitbox.size = startHitbox;
+            _weaponHitbox.center = startCenter;
+            _animator.Play("Slapping");
+        }
     }
 
 
     private void OnTriggerEnter(Collider collider)
     {
-        if (_attackCoolingDown)
+        if (!_attackCoolingDown) { return; }
+
+        switch (CurrentSwordState)
         {
-            if (currentForm == 1)
-            {
-                if (collider.gameObject.layer == LayerMask.NameToLayer("Bullet"))
+            case SwordState.Light:
+                if (collider.gameObject.layer != LayerMask.NameToLayer("Bullet")) { return; }
+
+                if (gotReflect)
                 {
-                    if (true && gotReflect == true)
-                    {
-                        var BulletSpawn = _bulletSpawnPosition;
+                    var BulletSpawn = _bulletSpawnPosition;
 
-                        _reflectedBulletGO = collider.gameObject;
-                        _reflectedBulletGO.transform.position = _playerGO.transform.position + _bulletSpawnPosition;
+                    _reflectedBulletGO = collider.gameObject;
+                    _reflectedBulletGO.transform.position = _playerGO.transform.position + _bulletSpawnPosition;
 
-                        Instantiate(hitParticles, collider.transform.position, collider.transform.rotation);
-                        Instantiate(_reflectedBulletGO, BulletSpawn, new Quaternion());
-                    }
-                    Destroy(collider.gameObject);
-                    _playerHealth.Heal(5);
-                    AudioManager.Instance.PlaySFX("Heal");
+                    Instantiate(hitParticles, collider.transform.position, collider.transform.rotation);
+                    Instantiate(_reflectedBulletGO, BulletSpawn, new Quaternion());
                 }
-            }
-            if (currentForm == 0 && gotDamage == true)
-            {
-                if (collider.gameObject.layer == LayerMask.NameToLayer("EnemyHit") && _attackCoolingDown == true)
+
+                Destroy(collider.gameObject);
+                _playerHealth.Heal(5);
+                AudioManager.Instance.PlaySFX("Heal");
+
+                break;
+
+            case SwordState.Dark:
+                if (!gotDamage || !_attackCoolingDown || collider.gameObject.layer != LayerMask.NameToLayer("EnemyHit")) { return; }
+
+                if (!targetsHit.Contains(collider.gameObject))
                 {
-                    if (!targetsHit.Contains(collider.gameObject))
-                    {
-                        collider.gameObject.GetComponent<DmgEnemy>().Damage(_damage);
-                        targetsHit.Add(collider.gameObject);
-                    }
-
-                    if (_playerHealth.currentHealth <= _selfDamage)
-                    {
-                        _playerHealth.currentHealth = 1;
-                    }
-                    else if(canTakeDamage == true)
-                    {
-                        _playerHealth.TakeDamage(_selfDamage);
-                        StartCoroutine(TakeDamange());
-                    }  
+                    collider.gameObject.GetComponent<DmgEnemy>().Damage(_damage);
+                    targetsHit.Add(collider.gameObject);
                 }
-            }
+
+                if (_playerHealth.currentHealth <= _selfDamage)
+                {
+                    _playerHealth.currentHealth = 1;
+                }
+                else if (canTakeDamage == true)
+                {
+                    _playerHealth.TakeDamage(_selfDamage);
+                    StartCoroutine(TakeDamage());
+                }
+
+                break;
         }
     }
 
 
-    public void SwitchForm()
+    public void SwitchForm(InputAction.CallbackContext context)
     {
-        if (currentForm == 0)
+        switch(CurrentSwordState)
         {
-            _animator.Play("ToDark");
-        }
-        else if (currentForm == 1)
-        {
-            _animator.Play("ToLight");
-            float setpos = 0.14f;
-            setpos -= Time.deltaTime;
+            case SwordState.Dark:
+                CurrentSwordState = SwordState.Light;
+                _animator.Play("ToLight");
 
-            if (setpos <= 0)
-            {
-                Quaternion _playerRotation = Quaternion.Euler(39.396f, 27.271f, -1.9f);
-                gameObject.transform.rotation = _playerRotation;
-            }
+                float setpos = 0.14f;
+                setpos -= Time.deltaTime;
+                if (setpos <= 0)
+                {
+                    Quaternion _playerRotation = Quaternion.Euler(39.396f, 27.271f, -1.9f);
+                    gameObject.transform.rotation = _playerRotation;
+                }
+
+                break;
+            case SwordState.Light:
+                CurrentSwordState = SwordState.Dark;
+                _animator.Play("ToDark");
+                break;
         }
     }
 
-    IEnumerator TakeDamange()
+    IEnumerator TakeDamage()
     {
         canTakeDamage = false;
         yield return new WaitForSeconds(0.4f);
