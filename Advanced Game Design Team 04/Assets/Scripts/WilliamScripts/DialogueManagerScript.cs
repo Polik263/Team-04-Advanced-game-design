@@ -25,6 +25,8 @@ public class DialogueManagerScript : MonoBehaviour
     public GameObject[] choiceBoxesButtons;
     public OptionsLetterByLetter[] choiceBoxes;
 
+    public Color32 NarrationTextColor = new Color32(255, 255, 255, 255);
+
     public AudioClip dialogue1;
     public AudioClip dialogue2;
 
@@ -204,5 +206,167 @@ public class DialogueManagerScript : MonoBehaviour
         }
     }
 
+    public void Event2()
+    {
+        if (!setEventFunction)
+        {
+            for (int i = 0; i < choiceBoxes.Length; i++)
+            {
+                choiceBoxes[i].ButtonFunction.onClick.AddListener(Event2);
+            }
+
+            setEventFunction = true;
+        }
+
+        switch (currentDialogueNode)
+        {
+            // ENTRY POINT FOR DIALOGUE
+            case 0:
+                PlayDialogue("My, my, your technique is genuinely terrible. Well, you’re lucky, because this sword can teach you how to swing a sword! With an addition of some dark magic… If you’re interested?", 2, "Yes, help me!", "I’ll do it on my own!", null, null);
+                break;
+            // PLAYERS FIRST CHOICE
+            case 1:
+                // WHAT OPTION DID THE PLAYER SELECT?
+                switch (selectedOption)
+                {
+                    case 1:
+                        // do something with the sword?
+                        break;
+                    case 2:
+                        // Invoke event3
+                        Invoke("Event3", 10f);
+                        break;
+                }
+
+                EndOfDialogue();
+                CloseDialogue();
+                break;
+            // FINAL CASE - DIALOGUE IS OVER
+        }
+
+        if (panel.activeInHierarchy)
+        {
+            currentDialogueNode++;
+        }
+    }
+
+    public void Event3()
+    {
+        if (!setEventFunction)
+        {
+            for (int i = 0; i < choiceBoxes.Length; i++)
+            {
+                choiceBoxes[i].ButtonFunction.onClick.AddListener(Event3);
+            }
+
+            setEventFunction = true;
+        }
+
+        switch (currentDialogueNode)
+        {
+            // ENTRY POINT FOR DIALOGUE
+            case 0:
+                PlayDialogue("Are… Are you sure you don’t want my help? Not to be rude, but… You are not doing great…", 1, "Yeah, I could use a hand.", null, null, null);
+                break;
+            // FINAL CASE - DIALOGUE IS OVER
+            case 1:
+                Invoke("Event4", 5f);
+                EndOfDialogue();
+                CloseDialogue();
+                break;
+        }
+
+        if (panel.activeInHierarchy)
+        {
+            currentDialogueNode++;
+        }
+    }
+
+    public void Event4()
+    {
+        if (!setEventFunction)
+        {
+            for (int i = 0; i < choiceBoxes.Length; i++)
+            {
+                choiceBoxes[i].ButtonFunction.onClick.AddListener(Event4);
+            }
+
+            setEventFunction = true;
+        }
+
+        switch (currentDialogueNode)
+        {
+            // ENTRY POINT FOR DIALOGUE
+            case 0:
+                PlayDialogue("Oh my, you really are squishy, aren’t you? Didn’t I tell you? Dark magic is dark, and using it might be quite dangerous, you know? Don’t worry though, I have just the right medicine… What do you say for a little bit of light magic?", 2, "W…Whatever you say…", "Sure, enlighten me…", null, null);
+                break;
+            // FINAL CASE - DIALOGUE IS OVER
+            case 1:
+                PlayDialogue("No need to thank me! Now, try parrying their attacks!", 1, "...", null, null, null);
+                break;
+            case 2:
+                EndOfDialogue();
+                CloseDialogue();
+                break;
+        }
+
+        if (panel.activeInHierarchy)
+        {
+            currentDialogueNode++;
+        }
+    }
+
+    public void Event5()
+    {
+        if (!setEventFunction)
+        {
+            for (int i = 0; i < choiceBoxes.Length; i++)
+            {
+                choiceBoxes[i].ButtonFunction.onClick.AddListener(Event5);
+            }
+
+            setEventFunction = true;
+        }
+
+        switch (currentDialogueNode)
+        {
+            // ENTRY POINT FOR DIALOGUE
+            case 0:
+                PlayDialogue("Wow, this time we did it! Forgive my manners, I am…  um… I’m not quite sure, what was my name… Anyway, you shall refer to me as The Blade of Light and Darkness!", 2, "Wait, you’re a talking sword?!", "Thanks for saving me back there", null, null);
+                break;
+            // FINAL CASE - DIALOGUE IS OVER
+            case 1:
+                switch (selectedOption)
+                {
+                    case 1:
+                        PlayDialogue("Not just any talking sword! I am the artifact of this tower, I am the lord of the light and darkness, and I am the only weapon able to defeat these foul creatures called spirits", 2, "What happened to the village?", "Spirits?", null, null);
+                        break;
+                    case 2:
+                        PlayDialogue("You’re welcome!  You need not fear any further, as I’m the lord of the light and darkness, and the weapon capable of defeating these monsters called spirits.", 2, "What happened to the village?", "Spirits?", null, null);
+                        break;
+                }
+                break;
+            case 2:
+                switch (selectedOption)
+                {
+                    case 1:
+                        PlayDialogue("Oh, you mean the one right outside? I’m not sure exactly sure... However, maybe we could find some information about it inside the tower. It’s too dangerous to roam around the forest without, at least, a map anyway", 1, "[End Dialogue]", null, null, null);
+                        break;
+                    case 2:
+                        PlayDialogue("The creatures of darkness. Their only purpose is to destroy all living matter. This forest is filled with them. Therefore, it might be wise to use this tower as a temporary shelter. Who knows? Maybe we will find something useful inside.", 1, "[End Dialogue]", null, null, null);
+                        break;
+                }
+                break;
+            case 3:
+                EndOfDialogue();
+                CloseDialogue();
+                break;
+        }
+
+        if (panel.activeInHierarchy)
+        {
+            currentDialogueNode++;
+        }
+    }
     #endregion
 }
