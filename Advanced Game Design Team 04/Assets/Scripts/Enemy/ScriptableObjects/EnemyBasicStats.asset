@@ -13,11 +13,8 @@ MonoBehaviour:
   m_Name: EnemyBasicStats
   m_EditorClassIdentifier: 
   MaxHealth: 5
-  MoveSpeed: 20
-  Acceleration: 50
-  TurnSpeed: 500
+  MoveSpeed: 10
   DetectionRadius: 20
-  DetectionAngle: 120
   AttackSpeed: 1
   AttackDamage: 3
   AttackRange: 10

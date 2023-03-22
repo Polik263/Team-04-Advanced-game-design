@@ -12,11 +12,8 @@ namespace Enemy.AI.Actions
 
         private void MoveToTarget(EnemyStateController controller)
         {
-            if(controller.StateVectorVariable is null)
-                return;
-            if(controller.Movement.HasPath())
-                return;
-            controller.Movement.SetDestination((Vector3) controller.StateVectorVariable);
+            var moveDirection = controller.targetPosition - controller.transform.position;
+            controller.Movement.Move(moveDirection, controller.Stats.MoveSpeed);
         }
     }
 }

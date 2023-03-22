@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class Interactor : MonoBehaviour
 {
     public PlayerControls playerControls;
-    private PlayerInput _input;
+    private PlayerInput playerInput;
 
     [SerializeField] private Transform interactionPoint;
     [SerializeField] private float interactionPointRadius = 0.5f;
@@ -19,21 +19,6 @@ public class Interactor : MonoBehaviour
     [SerializeField] private bool isInteracting;
 
     private GameObject _interactable;
-
-    private void Awake()
-    {
-        _input = GetComponent<PlayerInput>();
-    }
-    private void OnEnable()
-    {
-        _input.actions.FindAction("Interact").started += Interact;
-        _input.actions.FindAction("Cancel").started += Cancel;
-    }
-    private void OnDisable()
-    {
-        _input.actions.FindAction("Interact").started -= Interact;
-        _input.actions.FindAction("Cancel").started -= Cancel;
-    }
 
     public void Interact (InputAction.CallbackContext context)
     {

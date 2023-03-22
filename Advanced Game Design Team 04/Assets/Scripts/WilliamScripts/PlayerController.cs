@@ -19,6 +19,11 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private CharacterController controller;
     [SerializeField] private PlayerControls playerControls;
+    [SerializeField] private PlayerInput playerInput;
+
+    [Header("Weapon")]
+    [SerializeField] private GameObject SwordGO;
+    [SerializeField] private SwordScript sword;
 
     [Header("Dash")]
     [SerializeField] private DashScript _dash;
@@ -38,6 +43,9 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float dashCooldown;
     [SerializeField] private float lastTimeDashed = 0;
+
+    [Header("Slam")]
+    [SerializeField] private SlamScript slam;
 
     [Header("Vectors & Input")]
     [SerializeField] private Vector2 smoothInputVelocity;
@@ -59,7 +67,6 @@ public class PlayerController : MonoBehaviour
     public bool gotLightDash;
     public bool gotDamage;
     public bool gotDarkExtension;
-    public bool gotDash;
 
     [Header("Stats and Attributes")]
 
@@ -79,7 +86,13 @@ public class PlayerController : MonoBehaviour
 
         xpSystem = GetComponent<XpSystem>();
         controller = GetComponent<CharacterController>();
+
+        playerInput = GetComponent<PlayerInput>();
+
         _dash = GetComponent<DashScript>();
+        slam = GetComponentInChildren<SlamScript>();
+
+        sword = SwordScript.Instance;
     }
 
     private void OnEnable()
@@ -99,6 +112,10 @@ public class PlayerController : MonoBehaviour
         HandleMovement();
         HandleRotation();
         HandleDash();
+        MeleeAttack();
+        SwitchForm();
+        SlamAttack();
+        LongAttack();
     }
 
     void HandleInput()
@@ -154,6 +171,67 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 heightCorrectedPoint = new Vector3(lookPoint.x, transform.position.y, lookPoint.z);
         transform.LookAt(heightCorrectedPoint);
+    }
+
+    void MeleeAttack()
+    {
+        if (playerControls.Controls.Shotgun.ReadValue<float>() > 0 && DialogueManagerScript.Instance.isInDialogue == false)
+        {
+            sword.Attack();
+        }    
+    }
+
+    void LongAttack()
+    {
+        if(playerControls.Controls.LongerAttack.ReadValue<float>() > 0)
+        {
+            sword.LongerAttack();
+        }
+    }
+
+    void SlamAttack()
+    {
+        if (sword.currentForm == 0 && gotSlam == true && DialogueManagerScript.Instance.isInDialogue == false)
+        {
+            if (playerControls.Controls.Slam.ReadValue<float>() > 0)
+            {
+                if(slam.isCoolingDown == false)
+                {
+                    slam.slamInitiated = true;
+                    slam.slamEnding = false;
+                    canMove = false;
+                    slam.LeapSlam();
+                }
+            }
+        }
+
+    }
+
+    void SwitchForm()
+    {
+        if (playerControls.Controls.SwitchForm.ReadValue<float>() > 0)
+        {
+            if (_canSwitch)
+            {
+                if (sword.currentForm == 0)
+                {
+                    sword.currentForm = 1;
+                    sword.SwitchForm();
+                    _canSwitch = false;
+                }
+
+                else if (sword.currentForm == 1)
+                {
+                    sword.currentForm = 0;
+                    sword.SwitchForm();
+                    _canSwitch = false;
+                }
+            }
+        }
+        else
+        {
+            _canSwitch = true;
+        }
     }
 
     void LevelUp()

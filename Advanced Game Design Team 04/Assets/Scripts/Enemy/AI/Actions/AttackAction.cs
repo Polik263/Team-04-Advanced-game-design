@@ -14,11 +14,13 @@ namespace Enemy.AI.Actions
 
         private void Attack(EnemyStateController controller)
         {
+            if (controller.Target is null) return;
 
             if (!controller.StateBoolVariable)
             {
                 controller.StateBoolVariable = true;
                 controller.StateFloatVariable = controller.Stats.AttackSpeed;
+                Debug.Log("First Attack");
             }
             
             var distance = Vector3.Distance(controller.transform.position, controller.Target.position);

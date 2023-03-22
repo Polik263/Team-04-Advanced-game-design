@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace Enemy.AI.Actions
 {
@@ -13,10 +12,25 @@ namespace Enemy.AI.Actions
         
         private void SetRandomMoveLocation(EnemyStateController controller)
         {
-            var point = Random.insideUnitSphere * controller.Stats.MoveSpeed + controller.transform.position;
-            NavMeshHit hit;
-            NavMesh.SamplePosition(point, out hit, controller.Stats.MoveSpeed, 1);
-            controller.Movement.SetDestination(hit.position);
+            RaycastHit hit;
+            Vector3 direction;
+            float distance;
+            direction = Random.insideUnitSphere;
+            direction.y = 0;
+            distance = Random.Range(0, controller.Stats.MoveSpeed * 100);
+            Physics.Raycast(controller.transform.position, direction, out hit, distance);
+
+            Debug.DrawRay(controller.transform.position, direction * distance, Color.red, 1f);
+            
+            if (hit.collider is null)
+            {
+                controller.targetPosition = controller.transform.position + direction * distance;
+            }
+            else
+            {
+                controller.targetPosition = hit.point - direction.normalized * 2;
+            }
+            
         }
 
     }

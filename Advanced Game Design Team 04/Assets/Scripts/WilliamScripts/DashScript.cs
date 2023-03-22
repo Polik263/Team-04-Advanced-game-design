@@ -27,15 +27,11 @@ public class DashScript : MonoBehaviour
 
     IEnumerator Execute(Vector3 Direction, float speed, float duration)
     {
-        if (PlayerController.Instance.gotDash == true)
-        {
-            isDashing?.Invoke(true);
-            AudioManager.Instance.PlaySFX("Dash");
-            PlayerController.Instance.canMove = false;
-        }
-      
+        isDashing?.Invoke(true);
+        AudioManager.Instance.PlaySFX("Dash");
+        PlayerController.Instance.canMove = false;
 
-        if (SwordScript.Instance.CurrentSwordState == SwordScript.SwordState.Light && PlayerController.Instance.gotLightDash == true)
+        if (SwordScript.Instance.currentForm == 1 && PlayerController.Instance.gotLightDash == true)
         {
             multiplier = 1.75f;
         }
@@ -44,7 +40,7 @@ public class DashScript : MonoBehaviour
             multiplier = 1f;
         }
 
-        while(duration > 0 && PlayerController.Instance.gotDash == true)
+        while(duration > 0)
         {
             duration -= Time.deltaTime;
             controller.Move(new Vector3(Direction.x, 0, Direction.y) * Time.deltaTime * speed * multiplier);

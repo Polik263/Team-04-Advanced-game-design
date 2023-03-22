@@ -1,109 +1,23 @@
-using Enemy.AI;
 using UnityEngine;
-using UnityEngine.AI;
 
-public class EnemyMovement : MonoBehaviour
+    public class EnemyMovement : MonoBehaviour
     {
         [SerializeField] private EnemyStats stats;
         [SerializeField] private float _gravity = -9.81f;
-        private NavMeshAgent _agent;
+        private CharacterController _controller;
         private Vector3 _enemyVelocity;
-        
+
         private void Awake()
         {
-            _agent = GetComponent<NavMeshAgent>();
-            Init();
-        }
-
-        private void Init()
-        {
-            _agent.speed = stats.MoveSpeed;
-            _agent.acceleration = stats.Acceleration;
-            _agent.angularSpeed = stats.TurnSpeed;
+            _controller = GetComponent<CharacterController>();
         }
         
-        public void SetDestination(Vector3 destination)
+        public void Move(Vector3 direction, float speed)
         {
-            _agent.SetDestination(destination);
+            if(direction.magnitude < .1f || direction.magnitude > 1f)
+                direction = direction.normalized;
+            _enemyVelocity = direction * speed;
+            _enemyVelocity.y += _gravity;
+            _controller.Move(_enemyVelocity * Time.deltaTime);
         }
-        
-        public void SetSpeed(float speed)
-        {
-            _agent.speed = speed;
-        }
-        
-        public bool HasPath()
-        {
-            return _agent.hasPath;
-        }
-        
-        public NavMeshPathStatus GetPathStatus()
-        {
-            return _agent.pathStatus;
-        }
-        
-        public NavMeshPath GetPath()
-        {
-            return _agent.path;
-        }
-        
-        public Vector3 GetPathDestination()
-        {
-            return _agent.pathEndPosition;
-        }
-        
-        public void Stop()
-        {
-            _agent.isStopped = true;
-        }
-        
-        public void CalculateNewPath(EnemyStateController controller, Vector3 targetPosition)
-        {
-            bool onNavMesh;
-            var maxDistance = 0.1f;
-            NavMeshHit hit;
-            do            
-            {
-                onNavMesh = NavMesh.SamplePosition(targetPosition, out hit, maxDistance, NavMesh.AllAreas);
-                maxDistance += 0.1f;
-                Vector3.MoveTowards(targetPosition, controller.transform.position, 0.1f);
-            } while (!onNavMesh);
-
-            var path = new NavMeshPath();
-            _agent.CalculatePath(hit.position, path);
-            _agent.SetPath(path);
-        }
-        
-        public bool HasLineOfSight(EnemyStateController controller)
-        {
-            var targetPos = controller.Target.position;
-            if (!_agent.Raycast(targetPos, out var hit))
-                return true;
-            return hit.position == targetPos;
-        }
-        
-        public void Move()
-        {
-            _agent.Move(_enemyVelocity * Time.deltaTime);
-        }
-        
-        public void ToggleMoving(bool canMove)
-        {
-            if (canMove)
-            {
-                _agent.speed = stats.MoveSpeed;
-            }        
-            else
-            {
-                _agent.speed = 0;
-                _agent.velocity = Vector3.zero;
-            }        
-        }
-        
-        public float GetDistanceToPathTarget(EnemyStateController controller)
-        {
-            return Vector3.Distance(controller.transform.position, _agent.pathEndPosition);
-        }
-
-
     }
