@@ -13,7 +13,9 @@ namespace Enemy.AI.Decision
 
         private bool HasReachedTarget(EnemyStateController controller)
         {
-            return Vector3.Distance(controller.targetPosition, controller.transform.position) < reachedTargetDistance;
+            if(!controller.Movement.HasPath())
+                return false;
+            return controller.Movement.GetDistanceToPathTarget(controller) <= reachedTargetDistance;
         }
     }
 }

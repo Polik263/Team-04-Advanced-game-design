@@ -12,13 +12,9 @@ namespace Enemy.AI.Decision
 
             private bool CanAttack(EnemyStateController controller)
             {
-                if(controller.Target is null)
-                    return false;
-            
+                if(!controller.FieldOfView.IsTargetInView(controller.Target)) return false;
                 var distanceToTarget = Vector3.Distance(controller.transform.position, controller.Target.position);
-                if (distanceToTarget > controller.Stats.AttackRange) return false;
-
-                return true;
+                return !(distanceToTarget > controller.Stats.AttackRange);
             }
 
     }
