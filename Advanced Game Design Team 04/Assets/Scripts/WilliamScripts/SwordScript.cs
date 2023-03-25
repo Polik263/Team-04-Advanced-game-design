@@ -73,9 +73,11 @@ public class SwordScript : MonoBehaviour
     [SerializeField] private bool gotDarkExtension;
 
     [Header("Light Mode Parrying")]
-    [SerializeField] [Range(0.0f, 5.0f)] private float _meleeParryDuration = 0.5f;
+    [SerializeField] [Range(0.0f, 5.0f)] private float _parryingWindupDuration = 0.5f;
+    [SerializeField] [Range(0.0f, 5.0f)] private float _meleeParryDuration = 0.5f; 
     [SerializeField] [Range(0, 20)] private int _rangedParryHealAmount = 5;
     [SerializeField] [Range(0, 20)] private int _meleeParryHealAmount = 5;
+    [SerializeField] private string _parryingWindupAnimation;
     [SerializeField] private string _meleeParryIdleAnimation;
     [SerializeField] private string _meleeParryHitAnimation;
     [SerializeField] private string _rangedParryIdleAnimation;
@@ -210,6 +212,10 @@ public class SwordScript : MonoBehaviour
 
     private IEnumerator LightModeParryRoutine()
     {
+        _animator.Play(_parryingWindupAnimation);
+
+        yield return new WaitForSeconds(_parryingWindupDuration);
+
         CurrentParryingState = ParryingState.Melee;
         _animator.Play(_meleeParryIdleAnimation);
 
@@ -284,6 +290,8 @@ public class SwordScript : MonoBehaviour
                 _playerHealth.Heal(_meleeParryHealAmount);
                 AudioManager.Instance.PlaySFX("Heal");
                 _animator.Play(_meleeParryHitAnimation);
+
+                Debug.Log("Melee parrying not implemented yet");
                 //NOT SURE HOW TO IMPLEMENT THIS YET AS WE HAVENT FINALIZED HOW ENEMY MELEE ATTACKS WORK
 
                 break;
