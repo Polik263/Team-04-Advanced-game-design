@@ -31,11 +31,19 @@ public class SwordScript : MonoBehaviour
     [SerializeField] private int _conedmg = 10;
 
     public SwordState CurrentSwordState = SwordState.Dark;
+    public ParryingState CurrentParryingState { get; private set; }
 
     public enum SwordForm
     {   
         Dark,
         Light
+    }
+
+    public enum ParryingState
+    {
+        None,
+        Melee,
+        Ranged
     }
 
     private SwordForm _swordState;
@@ -63,6 +71,16 @@ public class SwordScript : MonoBehaviour
     [SerializeField] private bool gotReflect;
     [SerializeField] private bool gotDamage;
     [SerializeField] private bool gotDarkExtension;
+
+    [Header("Light Mode Parrying")]
+    [SerializeField] [Range(0.0f, 5.0f)] private float _meleeParryDuration = 0.5f;
+    [SerializeField] [Range(0, 20)] private int _rangedParryHealAmount = 5;
+    [SerializeField] [Range(0, 20)] private int _meleeParryHealAmount = 5;
+    [SerializeField] private string _meleeParryIdleAnimation;
+    [SerializeField] private string _meleeParryHitAnimation;
+    [SerializeField] private string _rangedParryIdleAnimation;
+    [SerializeField] private string _rangedParryHitAnimation;
+    private Coroutine _parryingRoutine;
 
     [Header("Cosmetics")]
     [SerializeField] private ParticleSystem hitParticles;
@@ -102,12 +120,14 @@ public class SwordScript : MonoBehaviour
     private void OnEnable()
     {
         _input.actions.FindAction("Shotgun").started += Attack;
+        _input.actions.FindAction("Shotgun").canceled += ReleaseLightAttack;
         _input.actions.FindAction("LongerAttack").started += LongerAttack;
         _input.actions.FindAction("SwitchForm").started += SwitchForm;
     }
     private void OnDisable()
     {
         _input.actions.FindAction("Shotgun").started -= Attack;
+        _input.actions.FindAction("Shotgun").canceled -= ReleaseLightAttack;
         _input.actions.FindAction("LongerAttack").started -= Attack;
         _input.actions.FindAction("SwitchForm").started -= SwitchForm;
     }
@@ -157,25 +177,46 @@ public class SwordScript : MonoBehaviour
     {
         DialogueManagerScript.Instance?.Event1();
 
-        if (_coolingDown == false)
+        switch (CurrentSwordState)
         {
-            _weaponHitbox.enabled = true;
-            _coolingDown = true;
-            _attackCoolingDown = true;
-            _weaponHitbox.size = startHitbox;
-            _weaponHitbox.center = startCenter;
-
-            switch(CurrentSwordState)
-            {
-                case SwordState.Dark:
-                    _damage = _conedmg;
-                    _animator.Play("DarkFrontal");
-                    break;
-                case SwordState.Light:
-                    _animator.Play("DarkSwing");
-                    break;
-            }
+            case SwordState.Dark:
+                if (_coolingDown) { return; }
+                _weaponHitbox.size = startHitbox;
+                _weaponHitbox.center = startCenter;
+                _damage = _conedmg;
+                _weaponHitbox.enabled = true;
+                _coolingDown = true;
+                _attackCoolingDown = true;
+                _animator.Play("DarkFrontal");
+                break;
+            case SwordState.Light:
+                if (CurrentParryingState != ParryingState.None) { return; }
+                _parryingRoutine = StartCoroutine(LightModeParryRoutine());
+                break;
         }
+    }
+
+    public void ReleaseLightAttack(InputAction.CallbackContext context) => ReleaseLightAttack();
+    public void ReleaseLightAttack()
+    {
+        if (CurrentParryingState != ParryingState.None)
+        {
+            StopCoroutine(_parryingRoutine);
+            _parryingRoutine = null;
+            CurrentParryingState = ParryingState.None;
+            _animator.Play("IdleLight");
+        }
+    }
+
+    private IEnumerator LightModeParryRoutine()
+    {
+        CurrentParryingState = ParryingState.Melee;
+        _animator.Play(_meleeParryIdleAnimation);
+
+        yield return new WaitForSeconds(_meleeParryDuration);
+
+        CurrentParryingState = ParryingState.Ranged;
+        _animator.Play(_rangedParryIdleAnimation);
     }
 
     public void LongerAttack(InputAction.CallbackContext context)
@@ -210,53 +251,65 @@ public class SwordScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        if (!_attackCoolingDown) { return; }
-
         switch (CurrentSwordState)
         {
             case SwordState.Light:
-                if (collider.gameObject.layer != LayerMask.NameToLayer("Bullet")) { return; }
+                LightFormCollision(collider);
+                break;
+            case SwordState.Dark:
+                DarkFormCollision(collider);
+                break;
+        }
+    }
 
+    private void LightFormCollision(Collider collider)
+    {
+        switch (LayerMask.LayerToName(collider.gameObject.layer))
+        {
+            case "Bullet":
+                if (CurrentParryingState != ParryingState.Ranged) { return; }
                 if (gotReflect)
                 {
-                    var BulletSpawn = _bulletSpawnPosition;
-
-                    _reflectedBulletGO = collider.gameObject;
-                    _reflectedBulletGO.transform.position = _playerGO.transform.position + _bulletSpawnPosition;
-
                     Instantiate(hitParticles, collider.transform.position, collider.transform.rotation);
-                    Instantiate(_reflectedBulletGO, BulletSpawn, new Quaternion());
+                    Instantiate(_reflectedBulletGO, _bulletSpawnPosition, Quaternion.identity);
                 }
-
                 Destroy(collider.gameObject);
-                _playerHealth.Heal(5);
+                _playerHealth.Heal(_rangedParryHealAmount);
                 AudioManager.Instance.PlaySFX("Heal");
-
+                _animator.Play(_rangedParryHitAnimation);
                 break;
+            case "EnemyHit":
+                if (CurrentParryingState != ParryingState.Melee) { return; }
 
-            case SwordState.Dark:
-                if (!gotDamage || !_attackCoolingDown || collider.gameObject.layer != LayerMask.NameToLayer("EnemyHit")) { return; }
-
-                if (!targetsHit.Contains(collider.gameObject))
-                {
-                    collider.gameObject.GetComponent<DmgEnemy>().Damage(_damage);
-                    targetsHit.Add(collider.gameObject);
-                }
-
-                if (_playerHealth.currentHealth <= _selfDamage)
-                {
-                    _playerHealth.currentHealth = 1;
-                }
-                else if (canTakeDamage == true)
-                {
-                    _playerHealth.TakeDamage(_selfDamage);
-                    StartCoroutine(TakeDamage());
-                }
+                _playerHealth.Heal(_meleeParryHealAmount);
+                AudioManager.Instance.PlaySFX("Heal");
+                _animator.Play(_meleeParryHitAnimation);
+                //NOT SURE HOW TO IMPLEMENT THIS YET AS WE HAVENT FINALIZED HOW ENEMY MELEE ATTACKS WORK
 
                 break;
         }
     }
 
+    private void DarkFormCollision(Collider collider)
+    {
+        if (!gotDamage || !_attackCoolingDown || collider.gameObject.layer != LayerMask.NameToLayer("EnemyHit")) { return; }
+
+        if (!targetsHit.Contains(collider.gameObject))
+        {
+            collider.gameObject.GetComponent<DmgEnemy>().Damage(_damage);
+            targetsHit.Add(collider.gameObject);
+        }
+
+        if (_playerHealth.currentHealth <= _selfDamage)
+        {
+            _playerHealth.currentHealth = 1;
+        }
+        else if (canTakeDamage == true)
+        {
+            _playerHealth.TakeDamage(_selfDamage);
+            StartCoroutine(TakeDamage());
+        }
+    }
 
     public void SwitchForm(InputAction.CallbackContext context)
     {
@@ -277,6 +330,7 @@ public class SwordScript : MonoBehaviour
                 break;
             case SwordState.Light:
                 CurrentSwordState = SwordState.Dark;
+                ReleaseLightAttack();
                 _animator.Play("ToDark");
                 break;
         }
