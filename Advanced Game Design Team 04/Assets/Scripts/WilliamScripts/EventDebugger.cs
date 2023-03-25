@@ -10,7 +10,7 @@ public class EventDebugger : MonoBehaviour
     {
         if (other.tag == "Player" && !activated)
         {
-            DialogueManagerScript.Instance.Event5();
+            DialogueManagerScript.Instance?.Event5();
             activated = true;
         }
     }

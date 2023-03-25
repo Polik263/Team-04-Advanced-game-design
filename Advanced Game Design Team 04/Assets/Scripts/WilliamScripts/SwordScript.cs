@@ -155,7 +155,7 @@ public class SwordScript : MonoBehaviour
 
     public void Attack(InputAction.CallbackContext context)
     {
-        DialogueManagerScript.Instance.Event1();
+        DialogueManagerScript.Instance?.Event1();
 
         if (_coolingDown == false)
         {
