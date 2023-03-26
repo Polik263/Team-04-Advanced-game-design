@@ -12,13 +12,15 @@ public class PlayerController : MonoBehaviour
 
     [Header("Movement")]
     [SerializeField] private float playerSpeed = 5f; //Base speed
-    private float currentSpeed;
+    private float currentSpeed; //Actual speed after modifiers
+    private Dictionary<MonoBehaviour, float> _speedModifiers = new Dictionary<MonoBehaviour, float>(); //Keeps track of ongoing speed modifiers
+
     [SerializeField] private float gravityValue = -9.81f;
     [SerializeField] private float controllerDeadzone = 0.1f;
     [SerializeField] private float gamepadRotateSmoothing = 1000f;
     [SerializeField] private float smoothInputSpeed = .2f;
 
-    private Dictionary<MonoBehaviour, float> _speedModifiers = new Dictionary<MonoBehaviour, float>();
+    
 
     [SerializeField] private CharacterController controller;
     [SerializeField] private PlayerControls playerControls;
