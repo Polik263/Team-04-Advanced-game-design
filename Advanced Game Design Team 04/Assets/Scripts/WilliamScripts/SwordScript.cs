@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class SwordScript : MonoBehaviour
@@ -30,21 +31,32 @@ public class SwordScript : MonoBehaviour
     [SerializeField] private int _normaldmg = 20;
     [SerializeField] private int _conedmg = 10;
 
-    public SwordState CurrentSwordState = SwordState.Dark;
-    public ParryingState CurrentParryingState { get; private set; }
-
     public enum SwordForm
-    {   
+    {
         Dark,
         Light
     }
-
+    public SwordState CurrentSwordState = SwordState.Dark;
+    
     public enum ParryingState
     {
         None,
+        Windup,
         Melee,
         Ranged
     }
+    public ParryingState CurrentParryingState
+    {
+        get { return _currentParryingState; }
+        private set
+        {
+            if (value != _currentParryingState) { OnParryingStateChange.Invoke(value); }
+            _currentParryingState = value;
+        }
+    }
+    private ParryingState _currentParryingState;
+
+    
 
     private SwordForm _swordState;
 
@@ -77,12 +89,16 @@ public class SwordScript : MonoBehaviour
     [SerializeField] [Range(0.0f, 5.0f)] private float _meleeParryDuration = 0.5f; 
     [SerializeField] [Range(0, 20)] private int _rangedParryHealAmount = 5;
     [SerializeField] [Range(0, 20)] private int _meleeParryHealAmount = 5;
+    [Range(0f, 1f)] public float _windupParrySpeedModifier = 0.7f;
+    [Range(0f, 1f)] public float _meleeParrySpeedModifier = 0.4f;
+    [Range(0f, 1f)] public float _rangedParrySpeedModifier = 0.1f;
     [SerializeField] private string _parryingWindupAnimation;
     [SerializeField] private string _meleeParryIdleAnimation;
     [SerializeField] private string _meleeParryHitAnimation;
     [SerializeField] private string _rangedParryIdleAnimation;
     [SerializeField] private string _rangedParryHitAnimation;
     private Coroutine _parryingRoutine;
+    public UnityEvent<ParryingState> OnParryingStateChange;
 
     [Header("Cosmetics")]
     [SerializeField] private ParticleSystem hitParticles;
@@ -125,6 +141,7 @@ public class SwordScript : MonoBehaviour
         _input.actions.FindAction("Shotgun").canceled += ReleaseLightAttack;
         _input.actions.FindAction("LongerAttack").started += LongerAttack;
         _input.actions.FindAction("SwitchForm").started += SwitchForm;
+        OnParryingStateChange.AddListener(SlowPlayerControllerOnParry);
     }
     private void OnDisable()
     {
@@ -132,6 +149,7 @@ public class SwordScript : MonoBehaviour
         _input.actions.FindAction("Shotgun").canceled -= ReleaseLightAttack;
         _input.actions.FindAction("LongerAttack").started -= Attack;
         _input.actions.FindAction("SwitchForm").started -= SwitchForm;
+        OnParryingStateChange.RemoveListener(SlowPlayerControllerOnParry);
     }
 
     void Update()
@@ -213,6 +231,7 @@ public class SwordScript : MonoBehaviour
     private IEnumerator LightModeParryRoutine()
     {
         _animator.Play(_parryingWindupAnimation);
+        CurrentParryingState = ParryingState.Windup;
 
         yield return new WaitForSeconds(_parryingWindupDuration);
 
@@ -349,5 +368,25 @@ public class SwordScript : MonoBehaviour
         canTakeDamage = false;
         yield return new WaitForSeconds(0.4f);
         canTakeDamage = true;
+    }
+
+    private void SlowPlayerControllerOnParry(ParryingState newState)
+    {
+        if (PlayerController.Instance == null) { return; }
+        switch(newState)
+        {
+            case ParryingState.Ranged:
+                PlayerController.Instance.Slow(this, _rangedParrySpeedModifier);
+                break;
+            case ParryingState.Melee:
+                PlayerController.Instance.Slow(this, _meleeParrySpeedModifier);
+                break;
+            case ParryingState.Windup:
+                PlayerController.Instance.Slow(this, _windupParrySpeedModifier);
+                break;
+            case ParryingState.None:
+                PlayerController.Instance.Slow(this);
+                break;
+        }
     }
 }

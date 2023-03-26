@@ -11,11 +11,14 @@ public class PlayerController : MonoBehaviour
     public static PlayerController Instance;
 
     [Header("Movement")]
-    [SerializeField] private float playerSpeed = 5f;
+    [SerializeField] private float playerSpeed = 5f; //Base speed
+    private float currentSpeed;
     [SerializeField] private float gravityValue = -9.81f;
     [SerializeField] private float controllerDeadzone = 0.1f;
     [SerializeField] private float gamepadRotateSmoothing = 1000f;
     [SerializeField] private float smoothInputSpeed = .2f;
+
+    private Dictionary<MonoBehaviour, float> _speedModifiers = new Dictionary<MonoBehaviour, float>();
 
     [SerializeField] private CharacterController controller;
     [SerializeField] private PlayerControls playerControls;
@@ -80,6 +83,7 @@ public class PlayerController : MonoBehaviour
         xpSystem = GetComponent<XpSystem>();
         controller = GetComponent<CharacterController>();
         _dash = GetComponent<DashScript>();
+        currentSpeed = playerSpeed;
     }
 
     private void OnEnable()
@@ -113,7 +117,7 @@ public class PlayerController : MonoBehaviour
             currentInputVector = Vector2.SmoothDamp(currentInputVector, movement, ref smoothInputVelocity, smoothInputSpeed);
 
             Vector3 move = new Vector3(currentInputVector.x, 0, currentInputVector.y);
-            controller.Move(move * Time.deltaTime * playerSpeed);
+            controller.Move(move * Time.deltaTime * currentSpeed);
             playerVelocity.y += gravityValue * Time.deltaTime;
             controller.Move(playerVelocity * Time.deltaTime);
         }
@@ -189,6 +193,24 @@ public class PlayerController : MonoBehaviour
 
                 _dash.ApplyDash(movement, dashSpeed, dashTime);
             }
+        }
+    }
+
+    // Keeps track of slows from various sources. Each source can only have 1 slow active, new slows from the same source override the previous one.
+    // If speedModifier is negative, remove the slow from this source.
+    public void Slow(MonoBehaviour source, float speedModifier = -1f)
+    {
+        _speedModifiers.Remove(source);
+        if (speedModifier >= 0f) { _speedModifiers.Add(source, speedModifier); }
+        CalculateMovementSpeed();
+    }
+
+    private void CalculateMovementSpeed()
+    {
+        currentSpeed = playerSpeed;
+        foreach(KeyValuePair<MonoBehaviour, float> pair in _speedModifiers)
+        {
+            currentSpeed *= pair.Value;
         }
     }
 }
