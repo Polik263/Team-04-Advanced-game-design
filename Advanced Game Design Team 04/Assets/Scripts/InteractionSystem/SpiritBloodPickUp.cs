@@ -20,6 +20,8 @@ public class SpiritBloodPickUp : MonoBehaviour, IInteractable, ICancelable
 
         PlayerController.Instance.gotDash = true;
 
+        Destroy(this.gameObject);
+
         return true;
         // }
 
