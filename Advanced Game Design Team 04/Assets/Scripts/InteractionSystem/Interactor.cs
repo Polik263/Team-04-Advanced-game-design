@@ -43,7 +43,7 @@ public class Interactor : MonoBehaviour
 
     public void Cancel(InputAction.CallbackContext context)
     {       
-        _interactable.GetComponent<ICancelable>().Cancel();
+        _interactable?.GetComponent<ICancelable>().Cancel();
 
     }
 
